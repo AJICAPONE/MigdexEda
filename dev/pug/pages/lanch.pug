@@ -1,0 +1,62 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Конструктор ланчей'
+    - var pageClass = 'other-page lanch-page'
+
+block content
+    include ../modules/breadcrumbs
+    .container
+        .construct-lanch
+            .col-xl-9.col-lg-9.col-md-12.col-sm-12.construct-lanch--content.pl-0
+                include lanch/section1
+                include lanch/section2
+                include lanch/section3
+                include lanch/section4
+                include lanch/section5
+                include lanch/section6
+                include lanch/section7
+                include lanch/section8
+            .col-xl-3.col-lg-3.col-md-12.col-sm-12.construct-lanch--components.pr-0
+                .lanch-components--stycky
+                    .lanch-components--block
+                        .lanch-components--top
+                            .lanch-components--title Состав ланча
+                            .lanch-components--count 4 позиции
+                        .lanch-components--middle
+                            .lanch-components--middle__item
+                                .lanch-components--middle--name Хинкали из баранины
+                                .lanch-components--middle--price 325 ₽
+                            .lanch-components--middle__item
+                                .lanch-components--middle--name Соус чесночный
+                                .lanch-components--middle--price 325 ₽
+                            .lanch-components--middle__item
+                                .lanch-components--middle--name Хинкали из баранины
+                                .lanch-components--middle--price 325 ₽
+                            .lanch-components--middle__item
+                                .lanch-components--middle--name Соус чесночный
+                                .lanch-components--middle--price 325 ₽
+                        .lanch-components--bottom
+                            .lanch-components--out--wrap
+                                .lanch-components--out Итого:
+                                .lanch-components--out__price 537 ₽
+                            .card-content-count--added
+                                .button-basket--product__wrap
+                                    .main-button-transparent.max-content Заказать
+                                    .basket-product--count
+                                        .basket-product--minus -
+                                        input.basket-product--input(type="text" value="1" min="1" readonly="readonly")
+                                        .basket-product--plus +
+                    .lanch-components--buttons
+                        .card-content-added-one-click.main-button-transparent(data-toggle="modal" data-target="#popup-one-click") Купить в 1 клик
+                        .card-content-added-one-click.main-button-transparent Создать шаблон
+        section.section8.section-recommend.section-recom-m.p-60-0
+            .container
+                .section-title--wrap.justify-content-between
+                    .section-title.mb-20 Соберите свой ланч
+                .section-container
+                    p.catalog-desc-p Orci mi integer et nisi ut massa. Donec adipiscing nullam urna odio pharetra, lorem nulla tellus. Suspendisse donec interdum massa, rhoncus, dolor sed porttitor. Arcu, vitae in volutpat aliquet. Sit suspendisse interdum nec sem rhoncus dui cras neque platea. Nunc diam lectus vitae, arcu, auctor diam. Dignissim amet, dolor pharetra, cursus arcu lacus, ut quam facilisi.
+                        br
+                        br
+                        | | In id urna, faucibus est et, facilisis consectetur cursus aliquam. Eu quis magna adipiscing augue. Porta netus congue porta dui nunc, est ligula mauris at. Sapien urna, proin duis malesuada at porttitor id. Suscipit suspendisse amet amet, scelerisque ullamcorper. Placerat viverra sociis tellus dignissim purus proin fermentum tellus. Proin sollicitudin dolor bibendum a. Arcu cras egestas quis ultrices vitae viverra ultrices. Sed sit euismod id pellentesque quis. Sed erat vel mauris, porttitor. Tortor tempus, posuere cras nibh. Vel at fringilla et pellentesque tincidunt hac elit pulvinar. Bibendum sed ipsum consequat ut. Amet laoreet arcu sagittis dolor bibendum sed adipiscing. Aliquet netus velit fermentum nibh adipiscing et convallis. In consequat eu ultricies diam tincidunt sit pretium. Dictum eget fermentum lacus at ac sem cras laoreet pellentesque. Sit eget quis ante amet, aliquet euismod.
+

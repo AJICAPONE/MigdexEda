@@ -1,0 +1,178 @@
+footer.pt-100
+    .footer-top(style="background-image:url('/static/img/general/ban/bgbaner.jpg')")
+        .container
+            .col-xl-3.col-lg-3.col-md-3.col-sm-12.footer-top-left
+                .section-title--v2 Подпишитесь
+                .footer-top-desc Чтобы регулярно получать новости о скидках и акциях
+            .col-xl-5.col-lg-5.col-md-5.col-sm-12.footer-top-middle
+                form.footer-top-input--wrap
+                    input.footer-sub(type="email" placeholder="Email...")
+                    button.footer-top-sub(type="submit")
+                        +icon('send')
+            .col-xl-4.col-lg-4.col-md-4.col-sm-12.footer-top-bottom
+                .footer-top-bottom__img(style="background-image:url('/static/img/general/fut1.png')")
+    .footer-middle
+        .container
+            .footer-middle--list
+                .footer-middle--title Кухни
+                ul.footer-middle--item
+                    a.footer-middle--link(href="/") Кавказская кухня
+                    a.footer-middle--link(href="/") Азиатская кухня
+                    a.footer-middle--link(href="/") Азиатская кухня
+                    a.footer-middle--link(href="/") Русская кухня
+            .footer-middle--list
+                .footer-middle--title Блюда
+                ul.footer-middle--item
+                    a.footer-middle--link(href="/") Хинкали
+                    a.footer-middle--link(href="/") Чебуреки
+                    a.footer-middle--link(href="/") Манты
+                    a.footer-middle--link(href="/") Все меню
+            .footer-middle--list
+                .footer-middle--title Информация
+                ul.footer-middle--item
+                    a.footer-middle--link(href="/") Доставка
+                    a.footer-middle--link(href="/") Оплата
+                    a.footer-middle--link(href="/") О нас
+                    a.footer-middle--link(href="/") Контакты
+            .footer-middle--list
+                .footer-middle--title Контакты
+                ul.footer-middle--item
+                    a.footer-middle--link(href="/") Реквизиты
+                    a.footer-middle--link(href="/") Сертификаты
+                    a.footer-middle--link(href="/") Спаравки проверок
+                    a.footer-middle--link(href="/") Правовая информация
+            .footer-middle--list__contact
+                .footer-middle--callback__tel
+                    a.footer-middle--phone(href="tel:89991234567") 8 (999) 123 45 67
+                    .footer-middle--callback Обратный звонок
+                .footer-middle--email__time
+                    a.footer-middle--email(href="mailto:Info@name.com") Info@name.com
+                    .footer-middle--time Ежедневно с 08:00 по 20:00
+            .foorer-mobile-category
+                .footer-middle--list
+                    .footer-middle--title--wrap
+                        .footer-middle--title Кухни
+                        .footer-middle--title__icon
+                            +icon('arrow-down')
+                    ul.footer-middle--item
+                        a.footer-middle--link(href="/") Кавказская кухня
+                        a.footer-middle--link(href="/") Азиатская кухня
+                        a.footer-middle--link(href="/") Азиатская кухня
+                        a.footer-middle--link(href="/") Русская кухня
+                .footer-middle--list
+                    .footer-middle--title--wrap
+                        .footer-middle--title Блюда
+                        .footer-middle--title__icon
+                            +icon('arrow-down')
+                    ul.footer-middle--item
+                        a.footer-middle--link(href="/") Хинкали
+                        a.footer-middle--link(href="/") Чебуреки
+                        a.footer-middle--link(href="/") Манты
+                        a.footer-middle--link(href="/") Все меню
+                .footer-middle--list
+                    .footer-middle--title--wrap
+                        .footer-middle--title Информация
+                        .footer-middle--title__icon
+                            +icon('arrow-down')
+                    ul.footer-middle--item
+                        a.footer-middle--link(href="/") Доставка
+                        a.footer-middle--link(href="/") Оплата
+                        a.footer-middle--link(href="/") О нас
+                        a.footer-middle--link(href="/") Контакты
+                .footer-middle--list
+                    .footer-middle--title--wrap
+                        .footer-middle--title Контакты
+                        .footer-middle--title__icon
+                            +icon('arrow-down')
+                    ul.footer-middle--item
+                        a.footer-middle--link(href="/") Реквизиты
+                        a.footer-middle--link(href="/") Сертификаты
+                        a.footer-middle--link(href="/") Спаравки проверок
+                        a.footer-middle--link(href="/") Правовая информация
+    .footer-bottom
+        .container
+            a.footer-bottom--copyright(href="/") © 2020 ООО «Название». Все права защищены.
+            .footer-bottom--social
+                a.footer-bottom--social__link(href="/")
+                    +icon('fb')
+                a.footer-bottom--social__link(href="/")
+                    +icon('inst')
+                a.footer-bottom--social__link(href="/")
+                    +icon('twit')
+                a.footer-bottom--social__link(href="/")
+                    +icon('whats')
+    .footer-mobile-card-b--fixed
+        .mobile-mini-basket-count--wrap
+            .mobile-mini-bakset-added--button
+                +icon('basket')
+            .basket-product--count
+                .basket-product--minus -
+                input.basket-product--input(type="text" value="1" min="1" readonly="readonly")
+                .basket-product--plus +
+        .card-content-added-one-click.main-button-transparent(data-custom-modal="#custom-mobile-one-click") Купить в 1 клик
+    .footer-mobile-card-lanch-fixed
+        .footer-mobile-card-lanch--one__click(data-custom-modal="#custom-mobile-one-click") Купить в 1 клик
+        .foorder-added-and-search--wrap
+            .product-basket-added--card
+                .button-product-basket--count
+                .button-basket--product--v2__wrap
+                    .button-basket--v2
+                        +icon('basket')
+                    .product-basket-product--count
+                        .product-basket-product--minus -
+                        input.basket-product--input(type="text" value="1" min="1" readonly="readonly")
+                    .product-basket-product--plus
+            .mobile-lanch-search--button
+                +icon('search')
+    .mobile-lanch-list--show.main-button-transparent(data-custom-modal="#custom-mobile-lanch-basket")
+        +icon('lanch-list')
+    .mobile-lanch-search--fixed
+        .mobile-lanch-search--top
+            .mobile-lanch-search--icon
+                +icon('search')
+            input.mobile-lanch-search--input(type="text" placeholder="Название или блюдо...")
+            .mobile-lanch-search--close
+                +icon('close')
+        .mobile-lanch-search--content--wrap
+            .mobile-lanch-search--clear Очистить
+            .mobile-lanch-search--content
+                .mobile-lanch-search--list--wrap
+                    .mobile-lanch-search--title История
+                    ul.mobile-lanch-search--list
+                        a.mobile-lanch-search--item(href="/") Хинкали
+                        a.mobile-lanch-search--item(href="/") Самса с телятиной
+                        a.mobile-lanch-search--item(href="/") Cоус Чесночный
+                .mobile-lanch-search--list--wrap
+                    .mobile-lanch-search--title Популярные
+                    ul.mobile-lanch-search--list
+                        a.mobile-lanch-search--item(href="/") Хинкали
+                        a.mobile-lanch-search--item(href="/") Самса с телятиной
+                        a.mobile-lanch-search--item(href="/") Cоус Чесночный
+                        a.mobile-lanch-search--item(href="/") Капучино
+
+
+
+    .footer-mobile-menu--fixed
+        ul.footer-mobile-menu--list
+            a.footer-mobile-menu--item(href="")
+                .footer-mobile-menu--icon
+                    +icon('home')
+                span Главная
+            a.footer-mobile-menu--item(href="/lk-catalog-mobile.html")
+                .footer-mobile-menu--icon
+                    +icon('menu2')
+                span Меню
+            a.footer-mobile-menu--item(href="")
+                .footer-mobile-menu--icon
+                    +icon('like-m')
+                span Избранное
+            .footer-mobile-menu--item(data-custom-modal="#custom-mobile-auth")
+                .footer-mobile-menu--icon
+                    +icon('user2')
+                span Аккаунт
+            .footer-mobile-menu--item.fmm-basket(data-custom-modal="#custom-mobile-mini-basket")
+                .footer-mobile-menu--icon
+                    +icon('basket')
+                    span 3
+
+

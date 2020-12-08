@@ -1,0 +1,23 @@
+#popup-add-question.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true')
+    form.modal-dialog.modal-dialog-centered(role='document')
+        .modal-content.popup-content
+            .popup-header.modal-header.pb-0
+                .popup-header--close__wrap
+                    .popup-header--close(data-dismiss="modal")
+                        +icon('close2')
+                .popup-header--title Остались вопросы?
+                .popup-header--desc.text-center Заполните заявку, наши специалисты ответят на все Ваши вопросы!
+
+            .popup-body.modal-body.p-40-70
+                .popup-input--wrapper
+                    label ФИО:
+                    input.popup-input(type="text")
+                .popup-input--wrapper
+                    label Email:
+                    input.popup-input(type="email")
+                .popup-input--wrapper
+                    label Вопрос:
+                    textarea.popup-textarea(cols="5" rows="3")
+
+            .popup-footer.modal-footer
+                button.main-button.w-230.m-0-auto.mb-30(type="submit") Отправить

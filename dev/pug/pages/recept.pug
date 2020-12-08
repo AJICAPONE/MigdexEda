@@ -1,0 +1,11 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Рецепт'
+    - var pageClass = 'other-page recept-page'
+
+block content
+    include ../modules/breadcrumbs
+    include recept/section1
+    include recept/section2
+    include recept/section3

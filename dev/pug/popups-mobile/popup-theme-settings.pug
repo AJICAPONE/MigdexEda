@@ -1,0 +1,21 @@
+form.popup-mobile-added#custom-popup-mobile-lanch-sett
+    .popup-header.modal-header.pb-0
+        .popup-mobile-line--close
+        .popup-header--title.mbm-15.color-21 Настроить автопокупку
+    .popup-body.modal-body.p-3
+        .popup-input--wrapper
+            .order-input-block
+                input.order-input(type="text" data-mask="00:00" placeholder="К какому времени привезти?")
+                .order-input--icon
+                    +icon('clock2')
+        .popup-input--wrapper
+            .order-input-block
+                input.order-input.order-date(type="text" placeholder="На какой день недели?")
+                .order-input--icon
+                    +icon('calendar')
+        .order-checkbox-everyday
+            .order-checkbox-everyday--check
+            input(type="checkbox")
+            span Включить автопродление
+    .popup-footer.modal-footer.p-0-16
+        button.main-button.m-0-auto.mb-30(type="submit") Сохранить

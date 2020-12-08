@@ -1,0 +1,14 @@
+#popup-attention.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered.mw-630(role='document')
+        .modal-content.popup-content
+            .popup-header.modal-header.pb-0
+                .popup-header--close__wrap
+                    .popup-header--close(data-dismiss="modal")
+                        +icon('close2')
+                .popup-svg-icon
+                    +icon2('fill-closed')
+                .popup-header--title--v2 “Название”
+                .popup-header--desc--v2 Уважаемый клиент, сейчас мы не работаем, но вы можете оставить свой заказ и мы выполним его в рабочее время!
+                .popup-header--desc--v2 ЧАСЫ РАБОТЫ: 10:30 – 22:30
+            .popup-body.modal-body
+                .main-button.w-230.m-0-auto.mb-4(data-dismiss="modal") Показать дальше

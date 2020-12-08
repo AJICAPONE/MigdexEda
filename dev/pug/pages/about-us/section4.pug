@@ -1,0 +1,26 @@
+section.section4.section-team.p-60-0
+    .container
+        .have-question.col-xl-10.col-lg-12.col-md-12.col-sm-12
+            .have-question--left(style="background-image:url('static/img/general/call.png')")
+                .have-question--title Остались вопросы?
+                .have-question--desc Оставьте заявку, мы свяжемся с вами в течении 30 минут!
+                .have-question--tel
+                    .have-question--tel__icon
+                        +icon2('fill-tell')
+                    .have-question--info
+                        .have-question--tel__title Или позвоните оп номеру:
+                        a.have-question--tel__link(href="tel:8(999)1234567") 8 (999) 123 45 67
+            .have-question--right
+                .have-question--title Остались вопросы?
+                .have-question--desc Оставьте заявку, мы свяжемся с вами в течении 30 минут!
+                form.have-question-form
+                    .main-input--wrap
+                        label Имя:
+                        input.main-input(type="text" required)
+                    .main-input--wrap
+                        label Телефон:
+                        input.main-input(type="tel" data-mask="+7 (000) 000 00 00" required)
+                    .main-input--wrap.mb-30
+                        label Комментарий:
+                        textarea.main-textarea(cols="5" rows="3")
+                    button.main-button.w-230.m-0-auto(type="submit") Отправить

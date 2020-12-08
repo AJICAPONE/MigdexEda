@@ -1,0 +1,23 @@
+section.section1.section-delivery
+    .container
+        .section-title--wrap.justify-content-between.mb-80
+            .section-title.text-left.mb-0 Контакты
+        .dots-relative
+            .section-container.mobile-delivery-icon--slider.swiper-container
+                .section-container-delivery.d-flex.flex-wrap.swiper-wrapper
+                    .col-xl-4.col-lg-4.col-md-4.col-sm-12.section-delivery--item.swiper-slide
+                        .section-delivery--icon
+                            +icon2('fill-contact1')
+                        .contact-item--title Телефон:
+                        a.contact-item--link(href="tel:89991234567") 8 (999) 123 45 67
+                    .col-xl-4.col-lg-4.col-md-4.col-sm-12.section-delivery--item.swiper-slide
+                        .section-delivery--icon
+                            +icon2('fill-contact2')
+                        .contact-item--title Email:
+                        a.contact-item--link(href="mailto:Info@name.com") Info@name.com
+                    .col-xl-4.col-lg-4.col-md-4.col-sm-12.section-delivery--item.swiper-slide
+                        .section-delivery--icon
+                            +icon2('fill-contact3')
+                        .contact-item--title Время работы:
+                        .contact-item--link Ежедневно с 08:00 по 20:00
+            .mobile-delivery-pagination

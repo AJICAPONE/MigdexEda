@@ -1,0 +1,41 @@
+.popup-mobile-added#custom-mobile-filter
+    .popup-header.modal-header.pb-0
+        .popup-mobile-line--close
+    .popup-mobile-title Фильтр
+    .popup-body.modal-body
+        .popup-mobile-eat--list
+            .popup-mobile-eat--item
+                span Хинкали
+                +icon('close')
+            .popup-mobile-eat--item
+                span Самса
+                +icon('close')
+            .popup-mobile-eat--item
+                span Халяль
+                +icon('close')
+            .popup-mobile-eat--item
+                span Хинкали
+                +icon('close')
+            .popup-mobile-eat--item
+                span Самса
+                +icon('close')
+            .popup-mobile-eat--item
+                span Халяль
+                +icon('close')
+        .popup-mobile-cat--list
+            .popup-mobile-filter--item(data-custom-dismiss="modal" data-custom-modal="#custom-mobile-filter-kuhnya")
+                span Кухня
+                +icon('arrow-right')
+            .popup-mobile-filter--item(data-custom-dismiss="modal" data-custom-modal="#custom-mobile-filter-type")
+                span Тип блюда
+                +icon('arrow-right')
+            .popup-mobile-filter--item(data-custom-dismiss="modal" data-custom-modal="#custom-mobile-filter-type")
+                span Тип приготовления
+                +icon('arrow-right')
+            .popup-mobile-filter--item(data-custom-dismiss="modal" data-custom-modal="#custom-mobile-filter-type")
+                span Акция
+                +icon('arrow-right')
+            .popup-mobile-filter--item(data-custom-dismiss="modal" data-custom-modal="#custom-mobile-filter-price")
+                span Цена
+                +icon('arrow-right')
+        .popup-reset-filter Сбросить фильтр

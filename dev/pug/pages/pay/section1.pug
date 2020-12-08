@@ -1,0 +1,50 @@
+section.section1.section-pay
+    .container
+        .section-title--wrap.justify-content-center
+            .section-title.mb-30 Оплата заказа онлайн
+        .section-container
+            .pay-tabs--wrap
+                .tab-item.active(data-tab="pay-by-card") Банковской картой
+                .tab-item(data-tab="pay-yandex") Яндекс.Кошелек
+            .tab-content--wrap
+                .tab-content.pay-by-card.active
+                    .tab-title.fs-22 Укажите карту для оплаты
+                    .col-xl-7.col-lg-9.col-md-12.col-sm-12.pay-card--col
+                        .pay-card--wrapper
+                            .pay-front-card
+                                .pay-card--input.mb-30
+                                    label Номер
+                                    input(type="text" placeholder="**** **** **** ****" data-mask="0000 0000 0000 0000")
+                                .pay-card-bottom
+                                    .pay-type--wrap
+                                        .pay-type-item
+                                            +icon2('fill-mast')
+                                        .pay-type-item
+                                            +icon2('fill-visa')
+                                    .pay-card--input.w-140
+                                        label Срок действия:
+                                        input(type="text" placeholder="ММ / ГГ" data-mask="00 / 00")
+                            .pay-back-card
+                                .pay-back-card--color
+                                .pay-card--input__back.pay-card--input.w-140
+                                    label CVV2/CVC2:
+                                    input(type="text" placeholder="* * * *" data-mask="0 0 0 0")
+                                    span Цифровой код на обратной стороне
+                        .pay-card--price Сумма платежа: #[span 632 ₽]
+                        .main-button.w-170.m-0-auto Оплатить
+                .tab-content.pay-yandex
+                    .tab-title.fs-22 Оплата заказа №900100-002
+                    .col-xl-7.col-lg-7.col-md-10.col-sm-12.pay-card--col
+                        .pay-card--wrapper
+                            .pay-front-card
+                                .pay-card--input.mb-20
+                                    label Номер кошелька:
+                                    input(type="text" placeholder="" data-mask="+7 (000) 000 00 00")
+                                .pay-card--input
+                                    label Комментарий:
+                                    input(type="text")
+
+
+                        .pay-card--price Сумма платежа: #[span 632 ₽]
+                        .main-button.w-170.m-0-auto Оплатить
+

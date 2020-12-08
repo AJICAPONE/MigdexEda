@@ -1,0 +1,73 @@
+section.section1.section-basket
+    .container
+        .section-title--wrap.justify-content-between
+            .section-title.mb-30 Мой заказ
+        .basket-wrapper
+            .col-xl-8.col-lg-8.col-md-12.col-sm-12.basket-content.pl-0
+                .header-mini-basket__items
+                    .basket-content-mini-basket__item
+                        .header-mini-basket__item
+                            .header-mini-basket__left
+                                .header-mini-basket__img(style="background-image:url('/static/img/content/product-item/img1.png')")
+                                .header-mini-basket__title Хинкали из баранины
+                            .header-mini-basket__right
+                                .basket-product--count
+                                    .basket-product--minus -
+                                    input.basket-product--input(type="text" value="1" min="1" readonly="readonly")
+                                    .basket-product--plus +
+                                .header-mini-basket__right__attr
+                                    .header-mini-basket__price 325 ₽
+                                    .header-mini-basket__delete
+                                        +icon('delete')
+                        .basket-header-mini-basket__delete
+                            +icon('delete')
+                    .basket-content-mini-basket__item
+                        .header-mini-basket__item
+                            .header-mini-basket__left
+                                .header-mini-basket__img(style="background-image:url('/static/img/content/products/img12.png')")
+                                .header-mini-basket__title Соус чесночный
+                            .header-mini-basket__right
+                                .basket-product--count
+                                    .basket-product--minus -
+                                    input.basket-product--input(type="text" value="1" min="1" readonly="readonly")
+                                    .basket-product--plus +
+                                .header-mini-basket__right__attr
+                                    .header-mini-basket__price 58 ₽
+                                    .header-mini-basket__delete
+                                        +icon('delete')
+                        .basket-header-mini-basket__delete
+                            +icon('delete')
+                .basket-promo
+                    .basket-promo--wrap
+                        input.basket-promo-input(type="text" placeholder="Введите промокод")
+                        button.basket-promo-submit(type="submit") Применить
+                    .create-theme Создать шаблон
+            .col-xl-4.col-lg-4.col-md-12.col-sm-12.basket-out.pr-0
+                .lanch-components--stycky
+                    .lanch-components--block
+                        .lanch-components--top
+                            .lanch-components--title Оформить заказ
+                            .lanch-components--count 490 г.
+                        .lanch-components--middle
+                            .lanch-components--middle__item
+                                .lanch-components--middle--name Хинкали из баранины
+                                .lanch-components--middle--price 325 ₽
+                            .lanch-components--middle__item
+                                .lanch-components--middle--name Соус чесночный
+                                .lanch-components--middle--price 325 ₽
+                            .lanch-components--middle__item.basket-out-deliver--price
+                                .lanch-components--middle--name Доставка
+                                .lanch-components--middle--price 249 ₽
+
+                        .lanch-components--bottom
+                            .lanch-components--out--wrap
+                                .lanch-components--out Итого:
+                                .lanch-components--out__price 537 ₽
+                            .main-button Оформить заказ
+                    .basket-free-delivery
+                        .basket-free-delivery--icon
+                            +icon2('fill-delivery')
+                        .basket-free-delivery--info
+                            .basket-free-delivery--title Бесплатная доставка от
+                                span 700 ₽
+                            .basket-free-delivery--desc Добавьте блюда еще на 68 ₽

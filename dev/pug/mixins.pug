@@ -1,0 +1,21 @@
+mixin icon(name,mod)
+	- mod = mod || ''
+	svg(class="icon icon-" + name + ' ' + mod)
+		use(xlink:href="static/img/svg/symbol/sprite.svg#" + name)
+mixin icon2(name,mod)
+	- mod = mod || ''
+	svg(class="icon icon-" + name + ' ' + mod)
+		use(xlink:href="static/img/svg2/symbol/sprite2.svg#" + name)
+mixin video(name,mod)
+	- mod = mod || ''
+	svg(class="icon icon-" + name + ' ' + mod width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg")
+		path(d="M1 13V1L14 7.54545L5.17857 11.3636" stroke="#FF651D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+
+mixin arrow(name,mod)
+	- mod = mod || ''
+	svg(class="icon icon-" + name + ' ' + mod width="121" height="60" viewBox="0 0 121 60" fill="none" xmlns="http://www.w3.org/2000/svg")
+		path(d="M120.5 48C96.8333 62.1667 40.8 73.1 6 3.5" stroke="white" stroke-dasharray="5 4")
+		path(d="M3.60822 11.5237L5.79695 3.32556L13.9951 5.51429" stroke="white")
+
+
+

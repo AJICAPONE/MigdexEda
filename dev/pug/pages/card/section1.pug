@@ -1,0 +1,156 @@
+section.section1.section-card
+    .container
+        .card-content-wrapper
+            .card-content--left.pl-0
+                .card-content-swiper.swiper-container
+                    .swiper-wrapper
+                        .card-content-img.swiper-slide(style="background-image:url('/static/img/content/img1.png')")
+                        .card-content-img.swiper-slide(style="background-image:url('/static/img/content/img1.png')")
+                        .card-content-img.swiper-slide(style="background-image:url('/static/img/content/img1.png')")
+                    .card-swiper-pagination
+                .card-content--mobile
+                    .card-content-title Хинкали из говядины
+                    a.card-content-reviews(href="/") Отзывы
+                        span (23)
+                    .card-content-price 55 ₽ /
+                        span 1 шт.
+                .card-content-time--prepare--delivery
+                    .card-content-time--prepare
+                        .card-content-time--icon
+                            +icon('clock')
+                        .card-content-time--text
+                            span.card-content-time--title Приготовка:
+                            span 40 мин.
+                    .card-content-time--delivery
+                        .card-content-time--icon
+                            +icon('food-del')
+                        .card-content-time--text
+                            span.card-content-time--title Доставка:
+                            span 40 мин.
+                .card-content-filling--wrap
+                    .card-content-filling--title Начинка:
+                    .card-content-filling--list
+                        .card-content-filling--item
+                            .card-content-filling--dot
+                            .card-content-filling--name Говядина
+                        .card-content-filling--item
+                            .card-content-filling--dot
+                            .card-content-filling--name Телятина
+                        .card-content-filling--item
+                            .card-content-filling--dot
+                            .card-content-filling--name Баранина
+                .card-content-mobile--tabs__wrap
+                    .card-content-mobile--tabs
+                        .card-content-mobile--tabs__item.active(data-tab="card-components") Состав блюда
+                        .card-content-mobile--tabs__item(data-tab="card-cen") Пищевая ценность
+                    .card-content-mobile--tabs__content
+                        .card-content-mobile--tabs__content--item.card-components.active
+                            .card-content-composition--list
+                                .card-content-composition--item
+                                    .card-content-composition--name Говядина
+                                    .card-content-composition--dashed
+                                    .card-content-composition--val 250 г
+                                .card-content-composition--item
+                                    .card-content-composition--name Репчатый лук
+                                    .card-content-composition--dashed
+                                    .card-content-composition--val 100 г
+                                .card-content-composition--item
+                                    .card-content-composition--name Мясной бульон
+                                    .card-content-composition--dashed
+                                    .card-content-composition--val 1 ст.
+                                .card-content-composition--item
+                                    .card-content-composition--name Мука
+                                    .card-content-composition--dashed
+                                    .card-content-composition--val 3 ст.
+                                .card-content-composition--item
+                                    .card-content-composition--name Вода
+                                    .card-content-composition--dashed
+                                    .card-content-composition--val 1 ст.
+                                .card-content-composition--item
+                                    .card-content-composition--name Яйца куриные
+                                    .card-content-composition--dashed
+                                    .card-content-composition--val 1 шт.
+                                .card-content-composition--item
+                                    .card-content-composition--name Соль
+                                    .card-content-composition--dashed
+                                    .card-content-composition--val по вкусу
+                                .card-content-composition--item
+                                    .card-content-composition--name Перец черный
+                                    .card-content-composition--dashed
+                                    .card-content-composition--val по вкусу
+
+                        .card-content-mobile--tabs__content--item.card-cen
+                            .card-content-eat-val Пищевая ценность (на 100 г):
+                                .card-content-comp
+                                    .card-content-comp--name Белки:
+                                        span.card-content-comp--val 9.6 г
+                                    .card-content-comp--name Жиры:
+                                        span.card-content-comp--val 17.3 г
+                                    .card-content-comp--name Углеводы:
+                                        span.card-content-comp--val 26.6 г
+                                    .card-content-comp--name Ккал:
+                                        span.card-content-comp--val 301.1
+
+            .card-content--right.pr-0
+                .card-content-title Хинкали из говядины
+                a.card-content-reviews(href="/") Отзывы
+                    span (23)
+                .card-content-comp--wrap
+                    .card-content-eat-val Пищевая ценность (на 100 г):
+                    .card-content-comp
+                        .card-content-comp--name Белки:
+                            span.card-content-comp--val 9.6 г
+                        .card-content-comp--name Жиры:
+                            span.card-content-comp--val 17.3 г
+                        .card-content-comp--name Углеводы:
+                            span.card-content-comp--val 26.6 г
+                        .card-content-comp--name Ккал:
+                            span.card-content-comp--val 301.1
+                .card-content-price-and-added
+                    .card-content-price 55 ₽ /
+                        span 1 шт.
+                    .card-content-added--wrap
+                        .card-content-count--added
+                            .button-basket--product__wrap
+                                .main-button-transparent.max-content Заказать
+                                .basket-product--count
+                                    .basket-product--minus -
+                                    input.basket-product--input(type="text" value="1" min="1" readonly="readonly")
+                                    .basket-product--plus +
+                        .card-content-added-one-click.main-button-transparent(data-toggle="modal" data-target="#popup-one-click") Купить в 1 клик
+                .col-xl-9.col-lg-9.col-md-12.col-sm-12.card-content-composition--wrap.p-0
+                    .card-content-composition--title Состав:
+                    .card-content-composition--list
+                        .card-content-composition--item
+                            .card-content-composition--name Говядина
+                            .card-content-composition--dashed
+                            .card-content-composition--val 250 г
+                        .card-content-composition--item
+                            .card-content-composition--name Репчатый лук
+                            .card-content-composition--dashed
+                            .card-content-composition--val 100 г
+                        .card-content-composition--item
+                            .card-content-composition--name Мясной бульон
+                            .card-content-composition--dashed
+                            .card-content-composition--val 1 ст.
+                        .card-content-composition--item
+                            .card-content-composition--name Мука
+                            .card-content-composition--dashed
+                            .card-content-composition--val 3 ст.
+                        .card-content-composition--item
+                            .card-content-composition--name Вода
+                            .card-content-composition--dashed
+                            .card-content-composition--val 1 ст.
+                        .card-content-composition--item
+                            .card-content-composition--name Яйца куриные
+                            .card-content-composition--dashed
+                            .card-content-composition--val 1 шт.
+                        .card-content-composition--item
+                            .card-content-composition--name Соль
+                            .card-content-composition--dashed
+                            .card-content-composition--val по вкусу
+                        .card-content-composition--item
+                            .card-content-composition--name Перец черный
+                            .card-content-composition--dashed
+                            .card-content-composition--val по вкусу
+                        .card-content-composition--link Подробнее

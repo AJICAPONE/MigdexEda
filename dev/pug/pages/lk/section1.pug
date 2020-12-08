@@ -1,0 +1,51 @@
+form.section-lk-profile
+    .lk-profile-add--photo
+        .lk-profile-photo
+            .lk-profile-icon
+                +icon('camera')
+            span Добавить фото
+            .lk-photo-added
+            input.add-photo#user-photo(type="file")
+        .lk-profile-info
+            .lk-profile-name Евгений Трофимов
+            a.lk-profile-link(href="mailto:Trofimov@gmail.com") Trofimov@gmail.com
+    .lk-inputs--wrapper
+        .lk-inputs--title Личные данные
+        .li-inputs--container
+            .main-input--wrap
+                label Имя
+                input.main-input(type="text")
+            .main-input--wrap
+                label Фамилия
+                input.main-input(type="text")
+            .main-input--wrap
+                label Отчество
+                input.main-input(type="text")
+            .main-input--wrap
+                label Телефон
+                input.main-input(type="tel" data-mask="+7 (000) 000 00 00")
+            .main-input--wrap
+                label Email
+                input.main-input(type="email")
+            .main-input--wrap.lk-input-wrap
+                label Пол
+                .lk-input-input
+                    .main-input
+                    .lk-input-arrow
+                        +icon('arrow-down')
+                    .lk-input--list
+                        .lk-input--item Мужской
+                        .lk-input--item Женский
+    .lk-inputs--wrapper
+        .lk-inputs--title Безопасность
+        .li-inputs--container
+            .main-input--wrap
+                label Старый пароль
+                input.main-input(type="password")
+            .main-input--wrap
+                label Новый пароль
+                input.main-input(type="password")
+            .main-input--wrap
+                label Подтвердите пароль
+                input.main-input(type="password")
+    button.main-button.w-200(type="submit") Сохранить

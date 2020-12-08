@@ -1,0 +1,16 @@
+form.popup-mobile-added#custom-mobile-auth
+    .popup-header.modal-header.pb-0
+        .popup-mobile-line--close
+        .popup-header--title.mbm-15 Войдите в аккаунт
+    .popup-body.modal-body.p-40-70
+        .popup-input--wrapper
+            label Email:
+            input.popup-input(type="email" placeholder="Email")
+        .popup-input--wrapper
+            label Пароль:
+            input.popup-input(type="password" placeholder="Пароль")
+
+    .popup-footer.modal-footer
+        button.main-button.w-170.m-0-auto.mb-30(type="submit") Войти
+        .popup-not-reg Еще нет аккаунта?
+            span(data-custom-dismiss="modal" data-custom-modal="#custom-mobile-reg") Зарегистрируйтесь!

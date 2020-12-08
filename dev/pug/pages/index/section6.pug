@@ -1,0 +1,78 @@
+section.section6.section-reviews.p-60-0
+    .container
+        .section-title.mb-20 Отзывы
+        .section-title--wrap.pb-3
+            .review-button-tabs
+                .review-button-tab.active(data-tab="review-tab") Отзывы
+                .review-button-tab(data-tab="review-video-tab") Видео отзывы
+            .review-swiper-arrows.swiper-arrows.review-tab.active
+                .review-swiper-button-prev
+                    +icon('arrow-left')
+                .review-swiper-button-next
+                    +icon('arrow-right')
+            .review-swiper-arrows.swiper-arrows.review-video-tab
+                .review-v-swiper-button-prev
+                    +icon('arrow-left')
+                .review-v-swiper-button-next
+                    +icon('arrow-right')
+        .section-content-tabs
+            .section-content-tab.review-tab.swiper-container.active
+                .swiper-wrapper.p-40-0
+                    .col-xl-4.col-lg-4.col-md-6.col-sm-6.review-card-review--col.swiper-slide
+                        .review-card-review--item
+                            .review-card-review__top
+                                .review-card-review__left
+                                    .review-card-review__name Имя Фамилия
+                                    .review-card-review__date 13.10.2020
+                                .reviews-slider-comment-rating(data-rating="3")
+                            .review-card-review__bottom Enim, ut lectus blandit feugiat ligula adipiscing. Mattis aliquam commodo lectus sed dis mauris metus, faucibus sed. Ullamcorper feugiat elit, id in cras rutrum.
+                    .col-xl-4.col-lg-4.col-md-6.col-sm-6.review-card-review--col.swiper-slide
+                        .review-card-review--item
+                            .review-card-review__top
+                                .review-card-review__left
+                                    .review-card-review__name Имя Фамилия
+                                    .review-card-review__date 13.10.2020
+                                .reviews-slider-comment-rating(data-rating="5")
+                            .review-card-review__bottom Enim, ut lectus blandit feugiat ligula adipiscing. Mattis aliquam commodo lectus sed dis mauris metus, faucibus sed. Ullamcorper feugiat elit, id in cras rutrum.
+                    .col-xl-4.col-lg-4.col-md-6.col-sm-6.review-card-review--col.swiper-slide
+                        .review-card-review--item
+                            .review-card-review__top
+                                .review-card-review__left
+                                    .review-card-review__name Имя Фамилия
+                                    .review-card-review__date 13.10.2020
+                                .reviews-slider-comment-rating(data-rating="5")
+                            .review-card-review__bottom Enim, ut lectus blandit feugiat ligula adipiscing. Mattis aliquam commodo lectus sed dis mauris metus, faucibus sed. Ullamcorper feugiat elit, id in cras rutrum.
+                    .col-xl-4.col-lg-4.col-md-6.col-sm-6.review-card-review--col.swiper-slide
+                        .review-card-review--item
+                            .review-card-review__top
+                                .review-card-review__left
+                                    .review-card-review__name Имя Фамилия
+                                    .review-card-review__date 13.10.2020
+                                .reviews-slider-comment-rating(data-rating="3")
+                            .review-card-review__bottom Enim, ut lectus blandit feugiat ligula adipiscing. Mattis aliquam commodo lectus sed dis mauris metus, faucibus sed. Ullamcorper feugiat elit, id in cras rutrum.
+                .main-button.w-230.m-0-auto(data-toggle="modal" data-target="#popup-add-review") Оставить свой отзыв
+
+
+            .section-content-tab.review-video-tab--slider.review-video-tab.swiper-container
+                .swiper-wrapper.p-40-0
+                    .review-v-card-review--col.swiper-slide
+                        a.review-card-video--item(data-fancybox href="https://www.youtube.com/watch?v=KWvvRaoWkoc&ab_channel=%D0%9AOSTV%D0%9AOSTV")
+                            .review-card-video--item__img(style="background-image:url('/static/img/general/vid1.jpg')")
+                            .review-card-video--icon
+                                +icon('play')
+                    .review-v-card-review--col.swiper-slide
+                        a.review-card-video--item(data-fancybox href="https://www.youtube.com/watch?v=KWvvRaoWkoc&ab_channel=%D0%9AOSTV%D0%9AOSTV")
+                            .review-card-video--item__img(style="background-image:url('/static/img/general/vid1.jpg')")
+                            .review-card-video--icon
+                                +icon('play')
+                    .review-v-card-review--col.swiper-slide
+                        a.review-card-video--item(data-fancybox href="https://www.youtube.com/watch?v=KWvvRaoWkoc&ab_channel=%D0%9AOSTV%D0%9AOSTV")
+                            .review-card-video--item__img(style="background-image:url('/static/img/general/vid1.jpg')")
+                            .review-card-video--icon
+                                +icon('play')
+                    .review-v-card-review--col.swiper-slide
+                        a.review-card-video--item(data-fancybox href="https://www.youtube.com/watch?v=KWvvRaoWkoc&ab_channel=%D0%9AOSTV%D0%9AOSTV")
+                            .review-card-video--item__img(style="background-image:url('/static/img/general/vid1.jpg')")
+                            .review-card-video--icon
+                                +icon('play')
+                .main-button.w-230.m-0-auto Оставить свой отзыв

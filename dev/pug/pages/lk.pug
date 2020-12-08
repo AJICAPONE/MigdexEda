@@ -1,0 +1,32 @@
+extends ../layout/main
+
+block variables
+    - var title = 'ЛК (Профиль)'
+    - var pageClass = 'other-page lk-page'
+
+block content
+    include ../modules/breadcrumbs
+    .lk-link-go-back--wrap
+        .container
+            a.lk-link-go-back(href="/")
+                +icon('left-arrow')
+                span Личный кабинет
+    .lk-wrapper
+        .container
+            .section-title.text-left.mb-30 Мой профиль
+            .lk-container
+                .col-xl-3.col-lg-3.col-md-6.col-sm-12.lk-sidebar.pl-0
+                    .lanch-components--stycky
+                        .lanch-components--block
+                            .lanch-components--top
+                                .lanch-components--title.fs-18 Евгений Трофимов
+                            .lanch-components--middle.favourite-links--wrap
+                                a.favourite-links.active(href="/") Личные данные
+                                a.favourite-links(href="/") Адреса
+                                a.favourite-links(href="/") Мои заказы
+                                a.favourite-links(href="/") Подписка
+                                a.favourite-links.mb-30(href="/") Шаблоны
+                                a.favourite-links.lk-exit-button(href="/") Выйти
+                .col-xl-9.col-lg-9.col-md-12.col-sm-12.lk-content
+                    include lk/section1
+

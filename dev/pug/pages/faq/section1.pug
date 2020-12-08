@@ -1,0 +1,19 @@
+section.section1.section-faq
+    .container
+        .section-title--wrap.justify-content-between.mb-30
+            .section-title.text-left.mb-0 FAQ
+        .faq-content--wrap
+            .col-xl-4.col-lg-4.col-md-12.col-sm-12.faq-sidebar
+                .faq-sidebar--info
+                    .faq-icon
+                        +icon2('fill-faq')
+                    .faq-question--info--wrapper
+                        .faq-question--title Остались вопросы?
+                        .faq-question--text Заполните заявку, наши специалисты ответят на все Ваши вопросы!
+                        .main-button.faq-question--button(data-toggle="modal" data-target="#popup-add-question" data-custom-modal="#custom-popup-mobile-add-question") Задать вопрос
+            .col-xl-8.col-lg-8.col-md-12.col-sm-12.faq-content
+                .faq-content--list
+                    include ../../modules/lanch-item
+                    include ../../modules/lanch-item
+                    include ../../modules/lanch-item
+                    include ../../modules/lanch-item

@@ -1,0 +1,436 @@
+footer
+  flex 0 0 auto
+.footer-top
+  background-size cover
+  background-repeat no-repeat
+  padding 20px 0
+  .container
+    display flex
+    align-items center
+    justify-content space-between
+.footer-middle
+  .container
+    display flex
+    justify-content space-between
+.section-title--v2
+  font-family Ow600
+  font-size 26px
+  color #fff
+  position relative
+  display flex
+  flex-direction column
+  align-items center
+  justify-content center
+  margin-bottom 8px
+
+  &:after
+    content ''
+    position relative
+    background-image:url("/static/img/general/line.svg")
+    size(50px,10px)
+    display block
+    margin-top 5px
+    background-repeat no-repeat
+.footer-top-desc
+  text-align center
+  font-family Rb400
+  font-size 14px
+  color rgba(255,255,255,0.6)
+  max-width 200px
+  margin 0 auto
+.footer-top-input--wrap
+  display flex
+  align-items center
+  position relative
+.footer-sub
+  padding 17px 25px
+  background-color #65676B
+  font-family Rb400
+  font-size 14px
+  color rgba(255,255,255,0.6)
+  border-radius 25px
+  width 100%
+  height 50px
+  border none
+  padding-right 50px
+  &::placeholder
+    color rgba(255,255,255,0.4)
+
+.footer-top-sub
+  size(40px)
+  position absolute
+  right 5px
+  background-color colorMain
+  border-radius 50%
+  border none
+  .icon
+    size(20px)
+    fill #fff
+.footer-top-bottom
+  position relative
+.footer-top-bottom__img
+  position absolute
+  background-repeat no-repeat
+  background-size contain
+  background-position center
+  width 100%
+  height: 220px;
+  bottom: -71.5px;
+  right 0
+.pt-100
+  padding-top 100px
+.footer-middle
+  display flex
+  background-color #212121
+  padding 60px 0
+.footer-middle--list
+  display flex
+  flex-direction column
+.footer-middle--item
+  display flex
+  flex-direction column
+.footer-middle--title
+  font-family Ow600
+  font-size 16px
+  color #fff
+  margin-bottom 15px
+  text-align center
+.footer-middle--link
+  font-family Rb400
+  font-size 14px
+  color rgba(255,255,255,0.6)
+  margin-bottom 10px
+  text-align center
+  &:last-child
+    margin-bottom 0
+.footer-middle--phone
+  font-family Ow700
+  font-size 23px
+  color #fff
+  margin-bottom 10px
+  text-align center
+.footer-middle--callback
+  font-family Rb400
+  font-size 14px
+  color colorMain
+  margin-bottom 25px
+  text-align center
+  cursor pointer
+.footer-middle--email
+  font-family Ow700
+  font-size 14px
+  color #fff
+  margin-bottom 10px
+  text-align center
+  display flex
+  align-items center
+.footer-middle--time
+  font-family Rb400
+  font-size 14px
+  color rgba(255,255,255,0.6)
+  text-align center
+  display flex
+  align-items center
+.footer-middle--list__contact
+  display flex
+  flex-direction column
+  align-items center
+  justify-content space-between
+.footer-middle--email__time
+  display flex
+  flex-direction column
+  align-items center
+.footer-bottom
+  background-color #2C2C2C
+  padding 15px 0
+  .container
+    display flex
+    justify-content space-between
+    align-items center
+.footer-bottom--copyright
+  font-family Rb400
+  font-size 14px
+  color rgba(255,255,255,0.6)
+.footer-bottom--social
+  display flex
+  align-items center
+.footer-bottom--social__link
+  display flex
+  justify-content center
+  align-items center
+  border-radius 50%
+  size(28px)
+  border 2px solid #fff
+  margin-right 15px
+  transition all linear .3
+  &:last-child
+    margin-right 0
+  .icon
+    size(15px)
+    fill #fff
+    transition all linear .3s
+.footer-bottom--social__link:hover
+    border 2px solid colorMain
+    .icon
+      fill colorMain
+
+
+// .footer-basket
+.footer-basket
+  position fixed
+  display flex
+  align-items center
+  bottom 0
+  left 0
+  right 0
+  height 100px
+  background: rgba(94, 94, 94, 0.25);
+  backdrop-filter: blur(35px);
+  transform translateY(100px)
+  transition .3s ease
+  z-index 200
+
+.footer-basket.active
+  transform translateY(0)
+
+.footer-basket-slider--lanch
+  position relative
+  .icon
+    size(22px)
+    fill #fff
+.footer-basket .container
+  height 100%
+  position relative
+.footer-basket-slider--item
+  display flex
+  align-items center
+  width 25%
+  border-right: 1px solid #fff;
+  padding-right: 15px;
+  pointer-events auto
+.footer-basket-slider--img
+  size(65px)
+  background-repeat no-repeat
+  background-size cover
+  background-position center
+  border-radius 10px
+.footer-basket-slider--left
+  margin-right 15px
+.footer-basket-slider--right__top
+  display flex
+  align-items center
+  margin-bottom 10px
+.footer-basket-slider--title
+  font-family Ow400
+  font-size 15px
+  color #fff
+  margin-right 10px
+.footer-basket-slider--right__bottom
+  .basket-product--count
+    position relative
+    display flex
+    padding-right 10px
+    width 88px
+    height 30px
+  .basket-product--minus,.basket-product--plus,.basket-product--input
+    color #fff
+.footer-basket-slider--right__delete
+  cursor pointer
+  &:hover
+    .icon
+      fill #FF2525
+  .icon
+    size(20px)
+    fill #fff
+    transition all linear .2s
+.footer-basket-slider--right
+  display flex
+  align-items center
+  justify-content space-between
+  width 100%
+.footer-basket-slider--right__info
+  margin-right 10px
+.footer-basket-swiper
+  position relative
+  padding-top: 45%;
+  top: -480px;
+  pointer-events none
+.footer-basket-slider--wrapper
+  position relative
+.footer-swiper--arrows
+  display flex
+  justify-content space-between
+  align-items center
+  absolute-center()
+  top 50px
+  width 100%
+  z-index 2
+  pointer-events none
+.footer-swiper-button-prev
+  margin-left -70px
+.footer-swiper-button-next
+  margin-right -70px
+.footer-swiper-button-prev,.footer-swiper-button-next
+  display flex
+  justify-content center
+  align-items center
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  outline none
+  size(46px)
+  transition .1s ease
+  background-color #F2F2F2
+  pointer-events auto
+  .icon
+    size(12px)
+    fill #FF651D
+  &:active
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.05);
+.footer-swiper-button-prev.swiper-button-disabled,.footer-swiper-button-next.swiper-button-disabled
+  background-color #F2F2F2
+  box-shadow none
+  .icon
+    fill rgba(33, 33, 33, 0.5);
+.footer-basket-lanch--wrap
+  position absolute
+  opacity 0
+  pointer-events none
+  //background-color #fff
+  height 420px
+  width 570px
+  bottom 25px
+  left -120px
+  z-index 2
+  transition .3s ease
+
+.footer-basket-slider--item.swiper-slide .footer-basket-lanch--wrap
+  transform translateX(-66%)
+
+  &:before
+    content ''
+    position absolute
+    right 50px
+    bottom 26px
+    clip-path: polygon(100% 0, 0 0, 50% 90%);
+    size(24px)
+    background-color #fff
+    z-index 2
+.footer-basket-slider--item.swiper-slide-active .footer-basket-lanch--wrap
+  transform translateX(0)
+  &:before
+    content ''
+    position absolute
+    left 120px
+    right auto
+    bottom 26px
+    clip-path: polygon(100% 0, 0 0, 50% 90%);
+    size(24px)
+    background-color #fff
+    z-index 2
+.footer-basket-slider--item.swiper-slide-next .footer-basket-lanch--wrap
+  transform translateX(0)
+  &:before
+    content ''
+    position absolute
+    left 120px
+    right auto
+    bottom 26px
+    clip-path: polygon(100% 0, 0 0, 50% 90%);
+    size(24px)
+    background-color #fff
+    z-index 2
+.footer-basket-lanch
+  position absolute
+  bottom 50px
+  overflow-y auto
+  background-color #fff
+  border-radius: 10px;
+  box-shadow: 0px 0px 30px rgba(0,0,0,0.06);
+  height 420px
+  width 570px
+  padding 0 16px
+.footer-basket-lanch::-webkit-scrollbar
+  width 0
+.footer-basket-slider--lanch:hover
+  .footer-basket-lanch--wrap
+    opacity 1
+    pointer-events auto
+.footer-basket-lanch__item,.header-mini-basket__item
+  display flex
+  align-items center
+  justify-content space-between
+  padding 15px 0
+  border-bottom 1px solid rgba(0,0,0,0.1)
+  &:last-child
+    border-bottom 0
+.footer-basket-lanch__left,.footer-basket-lanch__center,.footer-basket-lanch__right,.header-mini-basket__left,.header-mini-basket__right
+  display flex
+  align-items center
+.footer-basket-lanch__right,.header-mini-basket__right
+  justify-content space-between
+.footer-basket-lanch__left,.footer-basket-lanch__right,.header-mini-basket__left,.header-mini-basket__right
+  width 49%
+.footer-basket-lanch__delete,.header-mini-basket__delete
+  display flex
+  cursor pointer
+  .icon
+    size(20px)
+    fill #FF2525
+.footer-basket-lanch__right,.header-mini-basket__right,.mobile-mini-basket--info
+  .basket-product--count
+    display flex
+    position relative
+    padding-right 10px
+    height 37px
+    width 100px
+  .basket-product--input
+    color color21
+.footer-basket-lanch__img,.header-mini-basket__img
+  background-size cover
+  background-repeat no-repeat
+  size(67px)
+  background-position center
+  margin-right 15px
+.footer-basket-lanch__title,.header-mini-basket__title
+  font-family Ow400
+  font-size 15px
+  color color21
+.footer-basket-lanch__price,.header-mini-basket__price
+  font-family Ow500
+  font-size 15px
+  color color21
+  margin-right 35px
+.footer-basket-lanch__right__attr,.header-mini-basket__right__attr
+  display flex
+  align-items center
+.footer-basket-arrow
+  position absolute
+  display flex
+  justify-content center
+  align-items center
+  right 50px
+  background: colorMain
+  width 46px
+  height 38px
+  top -38px
+  border-radius 10px 10px 0 0
+  cursor pointer
+  z-index 2
+  transition all linear .2s
+  .icon
+    size(12px)
+    fill #fff
+    transform rotate(180deg)
+
+.footer-basket-arrow.active
+  background: rgba(94,94,94,0.25);
+  .icon
+    transform rotate(0deg)
+
+
+
+
+
+
+
+

@@ -1,0 +1,55 @@
+header
+    .header-relative
+        .container
+            .header-container
+                .header-logo
+                    +icon('logo')
+                ul.header-nav--menu
+                    a.header-nav--menu__item(href="/") О нас
+                    a.header-nav--menu__item(href="/") Меню
+                    a.header-nav--menu__item(href="/") Доставка и оплата
+                    a.header-nav--menu__item(href="/") Акции
+                    a.header-nav--menu__item(href="/") Контакты
+
+                .header-phone--attr
+                    a.header-phone--link(href="tel:89991234567") 8 (999) 123 45 67
+                    .header-callback Обратный звонок
+                .header-attr
+                    .header-attr--profile(data-toggle="modal" data-target="#popup-auth")
+                        +icon('user')
+                    .header-attr--favourite
+                        +icon('like')
+                        .header-attr--favourite__count 1
+                    .header-attr--basket__wrap
+                        .header-attr--basket
+                            +icon('basket')
+                        .header-attr--basket__count Мой заказ  |  3
+                        include ../modules/mini-basket
+                    .header-mobile-menu--icon
+                        +icon2('fill-menu')
+    .header-card-fixed
+        .container
+            .header-card-fixed--container
+                .header-card-fixed--left
+                    .header-card-fixed--name Ланч “Ужин”
+                    .header-card-fixed--price 650 ₽ #[span.slash /] #[span.count-card-f 1 шт.]
+                .header-card-fixed--right
+                    .card-content-added--wrap
+                        .card-content-count--added
+                            .button-basket--product__wrap
+                                .main-button-transparent.max-content Заказать
+                                .basket-product--count
+                                    .basket-product--minus -
+                                    input.basket-product--input(type="text" value="1" min="1" readonly="readonly")
+                                    .basket-product--plus +
+                        .card-content-added-one-click.main-button-transparent(data-toggle="modal" data-target="#popup-one-click") Купить в 1 клик
+    .header-mobile-search
+        a.header-m-back(href="/")
+            +icon('left-arrow')
+        .header-m-search--icon
+            +icon('search')
+        input.header-m-input(type="text" placeholder="Название или блюдо...")
+        .header-mobile-sandwich-menu
+            +icon2('fill-menu')
+
+

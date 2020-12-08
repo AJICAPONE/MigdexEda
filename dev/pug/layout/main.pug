@@ -1,0 +1,69 @@
+include ../mixins
+block variables
+
+doctype html
+html(lang="ru-RU")
+	head
+		meta(charset="utf-8")
+		title #{title}
+		<!--[if IE]>
+		meta(http-equiv='X-UA-Compatible', content="IE = edge")
+		<![endif]-->
+		meta(name="viewport" content="width=device-width,initial-scale=1")
+		meta(name="keywords" content="")
+		link(rel="stylesheet" type='text/css' href="static/css/main.css")
+		link(rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css")
+		<!--[if lt IE 9]>
+		script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
+		<![endif]-->
+	body(class=pageClass)
+		.wrapper
+			include ../modules/header
+			include ../modules/planwet-fixed
+			.content
+				block content
+			include ../modules/footer-basket
+			include ../modules/footer
+			.popups
+				include ../popups/popup-added-basket
+				include ../popups/popup-auth
+				include ../popups/popup-reg
+				include ../popups/popup-one-click
+				include ../popups/popup-garnir
+				include ../popups/popup-add-review
+				include ../popups/popup-lk-adress
+				include ../popups/popup-theme-edit
+				include ../popups/popup-theme-settings
+				include ../popups/popup-card-remove
+				include ../popups/popup-question
+			.popups-mobile
+				include ../popups-mobile/popup-basket-added
+				include ../popups-mobile/popup-auth
+				include ../popups-mobile/popup-reg
+				include ../popups-mobile/popup-mini-basket
+				include ../popups-mobile/popup-sort
+				include ../popups-mobile/popup-cat-list
+				include ../popups-mobile/popup-filter
+				include ../popups-mobile/popup-kuhnya
+				include ../popups-mobile/popup-type
+				include ../popups-mobile/popup-price
+				include ../popups-mobile/popup-attention
+				include ../popups-mobile/popup-one-click
+				include ../popups-mobile/popup-garnir
+				include ../popups-mobile/popup-lanch-order
+				include ../popups-mobile/popup-lk-adress
+				include ../popups-mobile/popup-theme-edit
+				include ../popups-mobile/popup-theme-settings
+				include ../popups-mobile/popup-card-update
+				include ../popups-mobile/popup-add-review
+				include ../popups-mobile/popup-question
+
+		script(src="static/js/jquery.min.js")
+		script(src="static/js/libs.min.js")
+		script(src="static/js/main.js")
+		script(src="static/js/sliders.js")
+		script(src="static/js/jquery.hoverIntent.min.js")
+		script(src="static/js/jquery.simplePagination.js")
+		script(src="static/js/datepicker.ru-RU.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js")
+		block script
