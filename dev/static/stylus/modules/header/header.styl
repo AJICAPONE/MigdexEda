@@ -11,9 +11,16 @@ header
 
 .header-card-fixed
   display none
+  position absolute
+  width 100%
+  top 0
+  left 0
+  right 0
   background-color #fff
   border-top 1px solid rgba(33,33,33,0.05)
-  padding 23px 0
+  padding 6.5px 0
+  .header-logo
+    margin-right 50px
 
 .card-header-fixed--added .header-fix
   .header-card-fixed
@@ -38,7 +45,7 @@ header
   display none !important
 .other-page
   .header-logo .icon
-    fill color21
+    fill #FF651D
   header
     box-shadow: 0px 5px 20px -10px rgba(0, 0, 0, 0.1);
   .content
@@ -59,15 +66,15 @@ header
   justify-content space-between
 .header-logo
   .icon
-    size(75px)
-    fill #fff
+    size(135px,76px)
+    fill #FF651D
 .header-nav--menu
   margin 0 45px
 .header-nav--menu__item
   font-family Rb400
   font-size 15px
   color #fff
-  margin-right 43px
+  margin-right 30px
   text-decoration none
   &:last-child
     margin-right 0
@@ -197,6 +204,7 @@ header
 .header-card-fixed--container
   display flex
   justify-content space-between
+  align-items center
 .header-card-fixed--left
   display flex
   align-items center

@@ -117,7 +117,7 @@ $(document).ready(function () {
 
         over: function () {
             var item = $(this);
-            var timer = 2000;
+            var timer = 1000;
             let timeout;
 
             $(this).mouseover(function () {

@@ -31,8 +31,11 @@ header
         .container
             .header-card-fixed--container
                 .header-card-fixed--left
-                    .header-card-fixed--name Ланч “Ужин”
-                    .header-card-fixed--price 650 ₽ #[span.slash /] #[span.count-card-f 1 шт.]
+                    .header-logo
+                        +icon('logo')
+                    .header-card-name-and-price
+                        .header-card-fixed--name Ланч “Ужин”
+                        .header-card-fixed--price 650 ₽ #[span.slash /] #[span.count-card-f 1 шт.]
                 .header-card-fixed--right
                     .card-content-added--wrap
                         .card-content-count--added

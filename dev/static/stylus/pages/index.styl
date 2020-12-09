@@ -3169,7 +3169,7 @@
   border-bottom 1px solid rgba(33,33,33,0.1)
   .header-logo
     .icon
-      fill color21
+      fill #FF651D
   .header-phone--link
     color color21
 
@@ -3768,3 +3768,16 @@
     size(66px)
 .pay-pages--section
   padding-bottom 50px
+.section-menu-sidebar--list
+  position: sticky;
+  width: 100%;
+  display: inline-block;
+  top: 90px;
+  overflow-y: auto;
+  height: calc(100vh - 90px);
+  padding-top: 20px;
+  &::-webkit-scrollbar
+    width 0
+.header-card-name-and-price
+  display flex
+  align-items center

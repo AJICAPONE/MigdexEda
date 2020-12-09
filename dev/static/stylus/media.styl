@@ -10,6 +10,7 @@
     display none
 
 @media screen and (max-width: 1200px)
+
   .footer-basket
     transform: translateY(80px);
   .footer-basket-slider--item.swiper-slide .footer-basket-lanch--wrap:before
@@ -22,9 +23,11 @@
     transform: translateX(0%);
   .header-nav--menu__item
     font-size 13px
-    margin-right 14px
+    margin-right 12px
   .header-logo .icon
-    size(68px)
+    size(110px,75px)
+  .header-nav--menu
+    margin 0 30px
   .header-phone--link
     font-size 18px
   .slider-main--title
@@ -636,7 +639,18 @@
     padding 0
   .faq-content
     padding 0
-
+  .header-logo .icon
+    size(123px,75px)
+  .header-card-name-and-price
+    flex-direction column
+    align-items flex-start
+    .header-card-fixed--name
+      margin-right 0
+  .section-menu-sidebar--list
+    position relative
+    top auto
+    overflow-y hidden
+    height auto
 @media screen and (max-width: 768px)
   .index-menu--content
     overflow hidden
@@ -1543,7 +1557,12 @@
       transform translateY(0)
   .pay-info--wrap
     padding 0 15px
-
+  .tel-menu-sandwich
+    .header-logo
+      .icon
+        size(80px,30px)
+    .tablet-menu--top
+      padding-bottom 10px
 @media screen and (max-width: 576px)
   .index-menu--content .section-menu-content--list
     margin 0
