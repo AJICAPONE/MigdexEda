@@ -51,5 +51,19 @@ header
         input.header-m-input(type="text" placeholder="Название или блюдо...")
         .header-mobile-sandwich-menu
             +icon2('fill-menu')
+    .footer-mobile-card-lanch-fixed
+        .footer-mobile-card-lanch--one__click(data-custom-modal="#custom-mobile-one-click") Купить в 1 клик
+        .foorder-added-and-search--wrap
+            .product-basket-added--card
+                .button-product-basket--count
+                .button-basket--product--v2__wrap
+                    .button-basket--v2
+                        +icon('basket')
+                    .product-basket-product--count
+                        .product-basket-product--minus -
+                        input.basket-product--input(type="text" value="1" min="1" readonly="readonly")
+                    .product-basket-product--plus
+            .mobile-lanch-search--button
+                +icon('search')
 
 

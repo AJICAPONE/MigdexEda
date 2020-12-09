@@ -1,0 +1,31 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Карточка товара (Ланч)'
+    - var pageClass = 'other-page card-header-fixed--added'
+
+block content
+    include ../modules/breadcrumbs
+    include card-product/section1
+    include card-product/section3
+    include card-product/section-dop-lanch
+    include card-product/section4
+    include card-product/section6
+    include card-product/section7
+    include ../popups/popup-attention
+
+block script
+    script.
+        $("#popup-attention").modal('show');
+        var mobile_auto = function () {
+            if ($(window).width() <= 768) {
+                $(window).on('load', function () {
+                    $('.card-header-fixed--added #custom-mobile-attention').addClass('active');
+                    $('.card-header-fixed--added .content').addClass('mobile-popup-bg');
+                    $('header').addClass('header-transform-hidden');
+                    $('body').addClass('overflow-hidden');
+                });
+            }
+        };
+        mobile_auto();
+        $(window).resize(mobile_auto);
