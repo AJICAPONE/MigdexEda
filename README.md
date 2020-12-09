@@ -2,4 +2,4 @@
 
 1. git clone https://github.com/AJICAPONE/MigdexEda
 2. npm i
-3. gulp"# MigdexEda" 
+3. gulp
