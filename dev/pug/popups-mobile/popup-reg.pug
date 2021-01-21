@@ -1,4 +1,4 @@
-form.popup-mobile-added#custom-mobile-reg
+.popup-mobile-added#custom-mobile-reg
     .popup-header.modal-header.pb-0
         .popup-mobile-line--close
         .popup-header--title.mbm-15 Создайте аккаунт
@@ -7,16 +7,26 @@ form.popup-mobile-added#custom-mobile-reg
             label ФИО:
             input.popup-input(type="text" placeholder="ФИО")
         .popup-input--wrapper
+            label Телефон:
+            input.popup-input(type="text" data-mask="+7 (000) 000 00 00" placeholder="Телефон")
+        .popup-input--wrapper
             label Email:
             input.popup-input(type="email" placeholder="Email")
         .popup-input--wrapper
             label Пароль:
             input.popup-input(type="password" placeholder="Пароль")
-        .popup-input--wrapper
-            label Повторите пароль:
-            input.popup-input(type="password" placeholder="Повторите пароль")
+
 
     .popup-footer.modal-footer
-        button.main-button.w-170.m-0-auto.mb-30(type="submit") Создать аккаунт
+        button.main-button.w-170.m-0-auto.mb-30(data-custom-dismiss="modal" data-custom-modal="#custom-mobile-code") Создать аккаунт
         .popup-not-reg Уже есть аккаунта?
             span(data-custom-dismiss="modal" data-custom-modal="#custom-mobile-auth") Войдите!
+        .popup-login--social
+            .popup-login--title Или войдите через социальные сети:
+            .popup-login--list
+                .popup-login--item
+                    +icon('social-fb')
+                .popup-login--item
+                    +icon('social-vk')
+                .popup-login--item
+                    +icon('social-google')

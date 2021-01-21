@@ -12,7 +12,19 @@ block content
     include card-product/section4
     include card-product/section6
     include card-product/section7
-    include ../popups/popup-attention
+
+    .popups
+        include ../popups/popup-added-basket
+        include ../popups/popup-one-click
+        include ../popups/popup-attention
+        include ../popups/popup-complex
+        include ../popups/popup-card-remove
+    .popups-mobile
+        include ../popups-mobile/popup-basket-added
+        include ../popups-mobile/popup-one-click
+        include ../popups-mobile/popup-attention
+        include ../popups-mobile/popup-complex
+        include ../popups-mobile/popup-card-update
 
 block script
     script.

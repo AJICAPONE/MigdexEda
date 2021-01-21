@@ -11,13 +11,13 @@
                 .popup-input--wrapper
                     label К какому времени привезти Ваш заказ?
                     .order-input-block
-                        input.order-input(type="text" data-mask="00:00" placeholder="Например: 12:00")
-                        .order-input--icon
+                        input.order-input(type="time" data-mask="00:00" placeholder="Например: 12:00")
+                        .order-input--icon.theme-sett-time
                             +icon('clock2')
                 .popup-input--wrapper
                     label На какой день недели Вам нужен заказ?
                     .order-input-block
-                        input.order-input.order-date(type="text")
+                        input.order-input.order-date(type="text" data-mask="00.00.0000")
                         .order-input--icon
                             +icon('calendar')
                 .order-checkbox-everyday

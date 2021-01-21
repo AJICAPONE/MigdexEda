@@ -8,7 +8,7 @@
                 .header-mini-basket__right
                     .basket-product--count
                         .basket-product--minus -
-                        input.basket-product--input(type="text" value="1" min="1" readonly="readonly")
+                        input.basket-product--input(type="text" value="1" min="1" )
                         .basket-product--plus +
                     .header-mini-basket__right__attr
                         .header-mini-basket__price 325 ₽
@@ -21,7 +21,7 @@
                 .header-mini-basket__right
                     .basket-product--count
                         .basket-product--minus -
-                        input.basket-product--input(type="text" value="1" min="1" readonly="readonly")
+                        input.basket-product--input(type="text" value="1" min="1" )
                         .basket-product--plus +
                     .header-mini-basket__right__attr
                         .header-mini-basket__price 58 ₽
@@ -29,6 +29,8 @@
                             +icon('delete')
 
     .header-mini-basket__over
-        .header-mini-basket__over--title Общая стоимость:
+        .header-mini-basket__over--wrap
+            .header-mini-basket__over--title.mr-100 Общая стоимость:
+            a.header-mini-basket__over--title.color-main(href="/basket.html") Перейти в корзину
         .header-mini-basket__over--price 383 ₽
 

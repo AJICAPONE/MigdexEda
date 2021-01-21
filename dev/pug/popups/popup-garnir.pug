@@ -1,71 +1,404 @@
 #popup-garnir.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true')
-    .modal-dialog.modal-dialog-centered.mw-630(role='document')
+    .modal-dialog.modal-dialog-centered.mw-container(role='document')
         .modal-content.popup-content
             .popup-header.modal-header.pb-0
                 .popup-header--close__wrap
                     .popup-header--close(data-dismiss="modal")
                         +icon('close2')
-                .popup-header--title Добавьте гарнир к блюду
+                .popup-header--title Блюдо добавлено в Ваш заказ!
                 .popup-header--desc С этим блюдом часто заказывают:
             .popup-body.modal-body
-                .popup-basket-notific.swiper-container
-                    .swiper-wrapper
-                        .section-menu-content--col.swiper-slide
-                            .section-menu-content--item
-                                a.section-menu-content--item__top(href="/")
-                                    .section-menu-content--img(style="background-image:url('/static/img/content/products/img10.png')")
-                                    .section-menu-content--item__info
-                                        .section-menu-content--name.mb-10 Соус Томатный
-                                        .section-menu-content--desc.mb-20 Пикантный соус с нежным томатным вкусом и чесноком.
-                                .section-menu-content--item__bottom
-                                    .section-menu-content--order
-                                        .section-menu-content--price__wrap
-                                            .section-menu-content--price__stock
-                                            .section-menu-content--price 29 ₽ / #[span 1 шт.]
-                                        .button-basket--product__wrap
-                                            .main-button-transparent.max-content.button-basket--product Добавить
-                                            .basket-product--count
-                                                .basket-product--minus -
-                                                input.basket-product--input(type="text" value="1" min="1" readonly="readonly")
-                                                .basket-product--plus +
-                        .section-menu-content--col.swiper-slide
-                            .section-menu-content--item
-                                a.section-menu-content--item__top(href="/")
-                                    .section-menu-content--img(style="background-image:url('/static/img/content/products/img12.png')")
-                                    .section-menu-content--item__info
-                                        .section-menu-content--name.mb-10 Соус Чесночный
-                                        .section-menu-content--desc.mb-20 Пикантный соус с нежным сливочно-чесночным вкусом.
-                                .section-menu-content--item__bottom
-                                    .section-menu-content--order
-                                        .section-menu-content--price__wrap
-                                            .section-menu-content--price__stock
-                                            .section-menu-content--price 29 ₽ / #[span 1 шт.]
-                                        .button-basket--product__wrap
-                                            .main-button-transparent.max-content.button-basket--product Добавить
-                                            .basket-product--count
-                                                .basket-product--minus -
-                                                input.basket-product--input(type="text" value="1" min="1" readonly="readonly")
-                                                .basket-product--plus +
-                        .section-menu-content--col.swiper-slide
-                            .section-menu-content--item
-                                a.section-menu-content--item__top(href="/")
-                                    .section-menu-content--img(style="background-image:url('/static/img/content/product-item/img1.png')")
-                                    .section-menu-content--item__info
-                                        .section-menu-content--name.mb-10 Хинкали из баранины
-                                        .section-menu-content--desc.mb-20 Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.
-                                .section-menu-content--item__bottom
-                                    .section-menu-content--order
-                                        .section-menu-content--price__wrap
-                                            .section-menu-content--price__stock
-                                            .section-menu-content--price 65 ₽ / #[span 1 шт.]
-                                        .button-basket--product__wrap
-                                            .main-button-transparent.max-content.button-basket--product Добавить
-                                            .basket-product--count
-                                                .basket-product--minus -
-                                                input.basket-product--input(type="text" value="1" min="1" readonly="readonly")
-                                                .basket-product--plus +
-                .popup-arrow-notific
-                    .popup-swiper-button-prev
-                        +icon('arrow-left')
-                    .popup-swiper-button-next
-                        +icon('arrow-right')
+                .popup-tabs--container--wrap
+                    .popup-tabs--container.swiper-container
+                        .swiper-wrapper
+                            .popup-tabs--item.swiper-slide.tab-item.active(data-tab="popup-sous") Соус
+                            .popup-tabs--item.swiper-slide.tab-item(data-tab="popup-drinks") Напитки
+                            .popup-tabs--item.swiper-slide.tab-item(data-tab="popup-salat") Салат
+                            .popup-tabs--item.swiper-slide.tab-item(data-tab="popup-desert") Десерт
+                    .popup-swiper-categ--wrap
+                        .popup-swiper-categ-prev
+                            +icon('arrow-left')
+                        .popup-swiper-categ-next
+                            +icon('arrow-right')
+                .popup-tabs--content.tab-content--wrap
+                    .popup-tab--item.popup-sous.active
+                        .popup-basket-notific.swiper-container
+                            .swiper-wrapper
+                                .section-menu-content--col.swiper-slide
+                                    .section-menu-content--item
+                                        .section-menu-content--favourite
+                                            +icon('like2')
+                                        a.section-menu-content--item__top(href="/")
+                                            .section-menu-content--img(style="background-image:url('/static/img/content/products/img10.png')")
+                                            .section-menu-content--item__info
+                                                .section-menu-content--name.mb-10 Соус Томатный
+                                                .section-menu-content--desc.mb-20 Пикантный соус с нежным томатным вкусом и чесноком.
+                                        .section-menu-content--item__bottom.basket-count-buttons--wrapper
+                                            .section-menu-content--order.basket-el-selector
+                                                .section-menu-content--price__wrap
+                                                    .section-menu-content--price__stock
+                                                    .section-menu-content--price 29 ₽ / #[span 1 шт.]
+                                                .lanch-choise-product--wrap
+                                                    .lanch-choise-button
+                                                        span Выбрать
+                                .section-menu-content--col.swiper-slide
+                                    .section-menu-content--item
+                                        .section-menu-content--favourite
+                                            +icon('like2')
+                                        a.section-menu-content--item__top(href="/")
+                                            .section-menu-content--img(style="background-image:url('/static/img/content/products/img12.png')")
+                                            .section-menu-content--item__info
+                                                .section-menu-content--name.mb-10 Соус Чесночный
+                                                .section-menu-content--desc.mb-20 Пикантный соус с нежным сливочно-чесночным вкусом.
+                                        .section-menu-content--item__bottom.basket-count-buttons--wrapper
+                                            .section-menu-content--order.basket-el-selector
+                                                .section-menu-content--price__wrap
+                                                    .section-menu-content--price__stock
+                                                    .section-menu-content--price 29 ₽ / #[span 1 шт.]
+                                                .lanch-choise-product--wrap
+                                                    .lanch-choise-button
+                                                        span Выбрать
+                                .section-menu-content--col.swiper-slide
+                                    .section-menu-content--item
+                                        .section-menu-content--favourite
+                                            +icon('like2')
+                                        a.section-menu-content--item__top(href="/")
+                                            .section-menu-content--img(style="background-image:url('/static/img/content/product-item/img1.png')")
+                                            .section-menu-content--item__info
+                                                .section-menu-content--name.mb-10 Хинкали из баранины
+                                                .section-menu-content--desc.mb-20 Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.
+                                        .section-menu-content--item__bottom.basket-count-buttons--wrapper
+                                            .section-menu-content--order.basket-el-selector
+                                                .section-menu-content--price__wrap
+                                                    .section-menu-content--price__stock
+                                                    .section-menu-content--price 65 ₽ / #[span 1 шт.]
+                                                .lanch-choise-product--wrap
+                                                    .lanch-choise-button
+                                                        span Выбрать
+                                .section-menu-content--col.swiper-slide
+                                    .section-menu-content--item
+                                        .section-menu-content--favourite
+                                            +icon('like2')
+                                        a.section-menu-content--item__top(href="/")
+                                            .section-menu-content--img(style="background-image:url('/static/img/content/product-item/img1.png')")
+                                            .section-menu-content--item__info
+                                                .section-menu-content--name.mb-10 Хинкали из баранины
+                                                .section-menu-content--desc.mb-20 Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.
+                                        .section-menu-content--item__bottom.basket-count-buttons--wrapper
+                                            .section-menu-content--order.basket-el-selector
+                                                .section-menu-content--price__wrap
+                                                    .section-menu-content--price__stock
+                                                    .section-menu-content--price 65 ₽ / #[span 1 шт.]
+                                                .lanch-choise-product--wrap
+                                                    .lanch-choise-button
+                                                        span Выбрать
+                                .section-menu-content--col.swiper-slide
+                                    .section-menu-content--item
+                                        .section-menu-content--favourite
+                                            +icon('like2')
+                                        a.section-menu-content--item__top(href="/")
+                                            .section-menu-content--img(style="background-image:url('/static/img/content/product-item/img1.png')")
+                                            .section-menu-content--item__info
+                                                .section-menu-content--name.mb-10 Хинкали из баранины
+                                                .section-menu-content--desc.mb-20 Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.
+                                        .section-menu-content--item__bottom.basket-count-buttons--wrapper
+                                            .section-menu-content--order.basket-el-selector
+                                                .section-menu-content--price__wrap
+                                                    .section-menu-content--price__stock
+                                                    .section-menu-content--price 65 ₽ / #[span 1 шт.]
+                                                .lanch-choise-product--wrap
+                                                    .lanch-choise-button
+                                                        span Выбрать
+
+                        .popup-arrow-notific
+                            .popup-swiper-button-prev
+                                +icon('arrow-left')
+                            .popup-swiper-button-next
+                                +icon('arrow-right')
+
+
+                    .popup-tab--item.popup-drinks
+                        .popup-basket-notific.swiper-container
+                            .swiper-wrapper
+                                .section-menu-content--col.swiper-slide
+                                    .section-menu-content--item
+                                        .section-menu-content--favourite
+                                            +icon('like2')
+                                        a.section-menu-content--item__top(href="/")
+                                            .section-menu-content--img(style="background-image:url('/static/img/content/products/img10.png')")
+                                            .section-menu-content--item__info
+                                                .section-menu-content--name.mb-10 Соус Томатный
+                                                .section-menu-content--desc.mb-20 Пикантный соус с нежным томатным вкусом и чесноком.
+                                        .section-menu-content--item__bottom.basket-count-buttons--wrapper
+                                            .section-menu-content--order.basket-el-selector
+                                                .section-menu-content--price__wrap
+                                                    .section-menu-content--price__stock
+                                                    .section-menu-content--price 29 ₽ / #[span 1 шт.]
+                                                .lanch-choise-product--wrap
+                                                    .lanch-choise-button
+                                                        span Выбрать
+                                .section-menu-content--col.swiper-slide
+                                    .section-menu-content--item
+                                        .section-menu-content--favourite
+                                            +icon('like2')
+                                        a.section-menu-content--item__top(href="/")
+                                            .section-menu-content--img(style="background-image:url('/static/img/content/products/img12.png')")
+                                            .section-menu-content--item__info
+                                                .section-menu-content--name.mb-10 Соус Чесночный
+                                                .section-menu-content--desc.mb-20 Пикантный соус с нежным сливочно-чесночным вкусом.
+                                        .section-menu-content--item__bottom.basket-count-buttons--wrapper
+                                            .section-menu-content--order.basket-el-selector
+                                                .section-menu-content--price__wrap
+                                                    .section-menu-content--price__stock
+                                                    .section-menu-content--price 29 ₽ / #[span 1 шт.]
+                                                .lanch-choise-product--wrap
+                                                    .lanch-choise-button
+                                                        span Выбрать
+                                .section-menu-content--col.swiper-slide
+                                    .section-menu-content--item
+                                        .section-menu-content--favourite
+                                            +icon('like2')
+                                        a.section-menu-content--item__top(href="/")
+                                            .section-menu-content--img(style="background-image:url('/static/img/content/product-item/img1.png')")
+                                            .section-menu-content--item__info
+                                                .section-menu-content--name.mb-10 Хинкали из баранины
+                                                .section-menu-content--desc.mb-20 Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.
+                                        .section-menu-content--item__bottom.basket-count-buttons--wrapper
+                                            .section-menu-content--order.basket-el-selector
+                                                .section-menu-content--price__wrap
+                                                    .section-menu-content--price__stock
+                                                    .section-menu-content--price 65 ₽ / #[span 1 шт.]
+                                                .lanch-choise-product--wrap
+                                                    .lanch-choise-button
+                                                        span Выбрать
+                                .section-menu-content--col.swiper-slide
+                                    .section-menu-content--item
+                                        .section-menu-content--favourite
+                                            +icon('like2')
+                                        a.section-menu-content--item__top(href="/")
+                                            .section-menu-content--img(style="background-image:url('/static/img/content/product-item/img1.png')")
+                                            .section-menu-content--item__info
+                                                .section-menu-content--name.mb-10 Хинкали из баранины
+                                                .section-menu-content--desc.mb-20 Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.
+                                        .section-menu-content--item__bottom.basket-count-buttons--wrapper
+                                            .section-menu-content--order.basket-el-selector
+                                                .section-menu-content--price__wrap
+                                                    .section-menu-content--price__stock
+                                                    .section-menu-content--price 65 ₽ / #[span 1 шт.]
+                                                .lanch-choise-product--wrap
+                                                    .lanch-choise-button
+                                                        span Выбрать
+                                .section-menu-content--col.swiper-slide
+                                    .section-menu-content--item
+                                        .section-menu-content--favourite
+                                            +icon('like2')
+                                        a.section-menu-content--item__top(href="/")
+                                            .section-menu-content--img(style="background-image:url('/static/img/content/product-item/img1.png')")
+                                            .section-menu-content--item__info
+                                                .section-menu-content--name.mb-10 Хинкали из баранины
+                                                .section-menu-content--desc.mb-20 Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.
+                                        .section-menu-content--item__bottom.basket-count-buttons--wrapper
+                                            .section-menu-content--order.basket-el-selector
+                                                .section-menu-content--price__wrap
+                                                    .section-menu-content--price__stock
+                                                    .section-menu-content--price 65 ₽ / #[span 1 шт.]
+                                                .lanch-choise-product--wrap
+                                                    .lanch-choise-button
+                                                        span Выбрать
+
+                        .popup-arrow-notific
+                            .popup-swiper-button-prev
+                                +icon('arrow-left')
+                            .popup-swiper-button-next
+                                +icon('arrow-right')
+
+                    .popup-tab--item.popup-salat
+                        .popup-basket-notific.swiper-container
+                            .swiper-wrapper
+                                .section-menu-content--col.swiper-slide
+                                    .section-menu-content--item
+                                        .section-menu-content--favourite
+                                            +icon('like2')
+                                        a.section-menu-content--item__top(href="/")
+                                            .section-menu-content--img(style="background-image:url('/static/img/content/products/img10.png')")
+                                            .section-menu-content--item__info
+                                                .section-menu-content--name.mb-10 Соус Томатный
+                                                .section-menu-content--desc.mb-20 Пикантный соус с нежным томатным вкусом и чесноком.
+                                        .section-menu-content--item__bottom.basket-count-buttons--wrapper
+                                            .section-menu-content--order.basket-el-selector
+                                                .section-menu-content--price__wrap
+                                                    .section-menu-content--price__stock
+                                                    .section-menu-content--price 29 ₽ / #[span 1 шт.]
+                                                .lanch-choise-product--wrap
+                                                    .lanch-choise-button
+                                                        span Выбрать
+                                .section-menu-content--col.swiper-slide
+                                    .section-menu-content--item
+                                        .section-menu-content--favourite
+                                            +icon('like2')
+                                        a.section-menu-content--item__top(href="/")
+                                            .section-menu-content--img(style="background-image:url('/static/img/content/products/img12.png')")
+                                            .section-menu-content--item__info
+                                                .section-menu-content--name.mb-10 Соус Чесночный
+                                                .section-menu-content--desc.mb-20 Пикантный соус с нежным сливочно-чесночным вкусом.
+                                        .section-menu-content--item__bottom.basket-count-buttons--wrapper
+                                            .section-menu-content--order.basket-el-selector
+                                                .section-menu-content--price__wrap
+                                                    .section-menu-content--price__stock
+                                                    .section-menu-content--price 29 ₽ / #[span 1 шт.]
+                                                .lanch-choise-product--wrap
+                                                    .lanch-choise-button
+                                                        span Выбрать
+                                .section-menu-content--col.swiper-slide
+                                    .section-menu-content--item
+                                        .section-menu-content--favourite
+                                            +icon('like2')
+                                        a.section-menu-content--item__top(href="/")
+                                            .section-menu-content--img(style="background-image:url('/static/img/content/product-item/img1.png')")
+                                            .section-menu-content--item__info
+                                                .section-menu-content--name.mb-10 Хинкали из баранины
+                                                .section-menu-content--desc.mb-20 Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.
+                                        .section-menu-content--item__bottom.basket-count-buttons--wrapper
+                                            .section-menu-content--order.basket-el-selector
+                                                .section-menu-content--price__wrap
+                                                    .section-menu-content--price__stock
+                                                    .section-menu-content--price 65 ₽ / #[span 1 шт.]
+                                                .lanch-choise-product--wrap
+                                                    .lanch-choise-button
+                                                        span Выбрать
+                                .section-menu-content--col.swiper-slide
+                                    .section-menu-content--item
+                                        .section-menu-content--favourite
+                                            +icon('like2')
+                                        a.section-menu-content--item__top(href="/")
+                                            .section-menu-content--img(style="background-image:url('/static/img/content/product-item/img1.png')")
+                                            .section-menu-content--item__info
+                                                .section-menu-content--name.mb-10 Хинкали из баранины
+                                                .section-menu-content--desc.mb-20 Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.
+                                        .section-menu-content--item__bottom.basket-count-buttons--wrapper
+                                            .section-menu-content--order.basket-el-selector
+                                                .section-menu-content--price__wrap
+                                                    .section-menu-content--price__stock
+                                                    .section-menu-content--price 65 ₽ / #[span 1 шт.]
+                                                .lanch-choise-product--wrap
+                                                    .lanch-choise-button
+                                                        span Выбрать
+                                .section-menu-content--col.swiper-slide
+                                    .section-menu-content--item
+                                        .section-menu-content--favourite
+                                            +icon('like2')
+                                        a.section-menu-content--item__top(href="/")
+                                            .section-menu-content--img(style="background-image:url('/static/img/content/product-item/img1.png')")
+                                            .section-menu-content--item__info
+                                                .section-menu-content--name.mb-10 Хинкали из баранины
+                                                .section-menu-content--desc.mb-20 Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.
+                                        .section-menu-content--item__bottom.basket-count-buttons--wrapper
+                                            .section-menu-content--order.basket-el-selector
+                                                .section-menu-content--price__wrap
+                                                    .section-menu-content--price__stock
+                                                    .section-menu-content--price 65 ₽ / #[span 1 шт.]
+                                                .lanch-choise-product--wrap
+                                                    .lanch-choise-button
+                                                        span Выбрать
+
+                        .popup-arrow-notific
+                            .popup-swiper-button-prev
+                                +icon('arrow-left')
+                            .popup-swiper-button-next
+                                +icon('arrow-right')
+
+                    .popup-tab--item.popup-desert
+                        .popup-basket-notific.swiper-container
+                            .swiper-wrapper
+                                .section-menu-content--col.swiper-slide
+                                    .section-menu-content--item
+                                        .section-menu-content--favourite
+                                            +icon('like2')
+                                        a.section-menu-content--item__top(href="/")
+                                            .section-menu-content--img(style="background-image:url('/static/img/content/products/img10.png')")
+                                            .section-menu-content--item__info
+                                                .section-menu-content--name.mb-10 Соус Томатный
+                                                .section-menu-content--desc.mb-20 Пикантный соус с нежным томатным вкусом и чесноком.
+                                        .section-menu-content--item__bottom.basket-count-buttons--wrapper
+                                            .section-menu-content--order.basket-el-selector
+                                                .section-menu-content--price__wrap
+                                                    .section-menu-content--price__stock
+                                                    .section-menu-content--price 29 ₽ / #[span 1 шт.]
+                                                .lanch-choise-product--wrap
+                                                    .lanch-choise-button
+                                                        span Выбрать
+                                .section-menu-content--col.swiper-slide
+                                    .section-menu-content--item
+                                        .section-menu-content--favourite
+                                            +icon('like2')
+                                        a.section-menu-content--item__top(href="/")
+                                            .section-menu-content--img(style="background-image:url('/static/img/content/products/img12.png')")
+                                            .section-menu-content--item__info
+                                                .section-menu-content--name.mb-10 Соус Чесночный
+                                                .section-menu-content--desc.mb-20 Пикантный соус с нежным сливочно-чесночным вкусом.
+                                        .section-menu-content--item__bottom.basket-count-buttons--wrapper
+                                            .section-menu-content--order.basket-el-selector
+                                                .section-menu-content--price__wrap
+                                                    .section-menu-content--price__stock
+                                                    .section-menu-content--price 29 ₽ / #[span 1 шт.]
+                                                .lanch-choise-product--wrap
+                                                    .lanch-choise-button
+                                                        span Выбрать
+                                .section-menu-content--col.swiper-slide
+                                    .section-menu-content--item
+                                        .section-menu-content--favourite
+                                            +icon('like2')
+                                        a.section-menu-content--item__top(href="/")
+                                            .section-menu-content--img(style="background-image:url('/static/img/content/product-item/img1.png')")
+                                            .section-menu-content--item__info
+                                                .section-menu-content--name.mb-10 Хинкали из баранины
+                                                .section-menu-content--desc.mb-20 Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.
+                                        .section-menu-content--item__bottom.basket-count-buttons--wrapper
+                                            .section-menu-content--order.basket-el-selector
+                                                .section-menu-content--price__wrap
+                                                    .section-menu-content--price__stock
+                                                    .section-menu-content--price 65 ₽ / #[span 1 шт.]
+                                                .lanch-choise-product--wrap
+                                                    .lanch-choise-button
+                                                        span Выбрать
+                                .section-menu-content--col.swiper-slide
+                                    .section-menu-content--item
+                                        .section-menu-content--favourite
+                                            +icon('like2')
+                                        a.section-menu-content--item__top(href="/")
+                                            .section-menu-content--img(style="background-image:url('/static/img/content/product-item/img1.png')")
+                                            .section-menu-content--item__info
+                                                .section-menu-content--name.mb-10 Хинкали из баранины
+                                                .section-menu-content--desc.mb-20 Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.
+                                        .section-menu-content--item__bottom.basket-count-buttons--wrapper
+                                            .section-menu-content--order.basket-el-selector
+                                                .section-menu-content--price__wrap
+                                                    .section-menu-content--price__stock
+                                                    .section-menu-content--price 65 ₽ / #[span 1 шт.]
+                                                .lanch-choise-product--wrap
+                                                    .lanch-choise-button
+                                                        span Выбрать
+                                .section-menu-content--col.swiper-slide
+                                    .section-menu-content--item
+                                        .section-menu-content--favourite
+                                            +icon('like2')
+                                        a.section-menu-content--item__top(href="/")
+                                            .section-menu-content--img(style="background-image:url('/static/img/content/product-item/img1.png')")
+                                            .section-menu-content--item__info
+                                                .section-menu-content--name.mb-10 Хинкали из баранины
+                                                .section-menu-content--desc.mb-20 Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.
+                                        .section-menu-content--item__bottom.basket-count-buttons--wrapper
+                                            .section-menu-content--order.basket-el-selector
+                                                .section-menu-content--price__wrap
+                                                    .section-menu-content--price__stock
+                                                    .section-menu-content--price 65 ₽ / #[span 1 шт.]
+                                                .lanch-choise-product--wrap
+                                                    .lanch-choise-button
+                                                        span Выбрать
+
+                        .popup-arrow-notific
+                            .popup-swiper-button-prev
+                                +icon('arrow-left')
+                            .popup-swiper-button-next
+                                +icon('arrow-right')
+

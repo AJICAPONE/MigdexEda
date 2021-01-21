@@ -176,6 +176,21 @@ footer
 
 
 // .footer-basket
+.footer-lanch--fast
+  position fixed
+  display flex
+  align-items center
+  bottom 0
+  left 0
+  right 0
+  height 60px
+  background: #FFF
+  transform translateY(60px)
+  transition .3s ease
+  z-index 200
+
+.footer-lanch--fast.active
+  transform translateY(0)
 .footer-basket
   position fixed
   display flex
@@ -252,11 +267,14 @@ footer
   margin-right 10px
 .footer-basket-swiper
   position relative
-  padding-top: 45%;
-  top: -480px;
+  padding-top: 42%;
+  top: -473px;
   pointer-events none
+
+
 .footer-basket-slider--wrapper
   position relative
+
 .footer-swiper--arrows
   display flex
   justify-content space-between
@@ -373,6 +391,7 @@ footer
 .footer-basket-lanch__delete,.header-mini-basket__delete
   display flex
   cursor pointer
+  margin-right 50px
   .icon
     size(20px)
     fill #FF2525
@@ -399,7 +418,7 @@ footer
   font-family Ow500
   font-size 15px
   color color21
-  margin-right 35px
+  margin-right 23px
 .footer-basket-lanch__right__attr,.header-mini-basket__right__attr
   display flex
   align-items center
@@ -408,7 +427,7 @@ footer
   display flex
   justify-content center
   align-items center
-  right 50px
+  right 180px
   background: colorMain
   width 46px
   height 38px

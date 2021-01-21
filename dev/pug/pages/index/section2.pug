@@ -1,4 +1,4 @@
-section.section2.section-index-menu.p-60-0
+section.section2.section-index-menu.p-60-0#index-menu
     .container
         .section-title.mb-40 Меню
         .section-container
@@ -6,58 +6,38 @@ section.section2.section-index-menu.p-60-0
                 .col-xl-3.col-lg-3.col-md-12.col-sm-12.index-menu--sidebar.pl-0
                     .section-menu-sidebar--list
                         .section-menu-sidebar--item
-                            img.section-menu-sidebar--img(src="/static/img/content/products/img1.png")
+                            img(loading="lazy").section-menu-sidebar--img(src="/static/img/content/products/img1.png")
                             .section-menu-sidebar--name Готовые ланчи
                         .section-menu-sidebar--item
-                            img.section-menu-sidebar--img(src="/static/img/content/products/img2.png")
+                            img(loading="lazy").section-menu-sidebar--img(src="/static/img/content/products/img2.png")
                             .section-menu-sidebar--name Хинкали
                         .section-menu-sidebar--item
-                            img.section-menu-sidebar--img(src="/static/img/content/products/img3.png")
+                            img(loading="lazy").section-menu-sidebar--img(src="/static/img/content/products/img3.png")
                             .section-menu-sidebar--name Чебуреки
                         .section-menu-sidebar--item
-                            img.section-menu-sidebar--img(src="/static/img/content/products/img4.png")
+                            img(loading="lazy").section-menu-sidebar--img(src="/static/img/content/products/img4.png")
                             .section-menu-sidebar--name Манты
                         .section-menu-sidebar--item
-                            img.section-menu-sidebar--img(src="/static/img/content/products/img5.png")
+                            img(loading="lazy").section-menu-sidebar--img(src="/static/img/content/products/img5.png")
                             .section-menu-sidebar--name Хачапури
                         .section-menu-sidebar--item
-                            img.section-menu-sidebar--img(src="/static/img/content/products/img6.png")
+                            img(loading="lazy").section-menu-sidebar--img(src="/static/img/content/products/img6.png")
                             .section-menu-sidebar--name Самса
                         .section-menu-sidebar--item
-                            img.section-menu-sidebar--img(src="/static/img/content/products/img7.png")
+                            img(loading="lazy").section-menu-sidebar--img(src="/static/img/content/products/img7.png")
                             .section-menu-sidebar--name Пирог
                         .section-menu-sidebar--item
-                            img.section-menu-sidebar--img(src="/static/img/content/products/img8.png")
+                            img(loading="lazy").section-menu-sidebar--img(src="/static/img/content/products/img8.png")
                             .section-menu-sidebar--name Десерты
                         .section-menu-sidebar--item
-                            img.section-menu-sidebar--img(src="/static/img/content/products/img9.png")
+                            img(loading="lazy").section-menu-sidebar--img(src="/static/img/content/products/img9.png")
                             .section-menu-sidebar--name Закуски
                         .section-menu-sidebar--item
-                            img.section-menu-sidebar--img(src="/static/img/content/products/img10.png")
+                            img(loading="lazy").section-menu-sidebar--img(src="/static/img/content/products/img10.png")
                             .section-menu-sidebar--name Соусы
                         .section-menu-sidebar--item
-                            img.section-menu-sidebar--img(src="/static/img/content/products/img11.png")
+                            img(loading="lazy").section-menu-sidebar--img(src="/static/img/content/products/img11.png")
                             .section-menu-sidebar--name Напитки
-                .col-md-12.col-sm-12.index-menu-mobile--filter
-                    .catalog-sort-search
-                        input.catalog-sort-input(type="text" placeholder="Название или блюдо")
-                        button.catalog-sort-search--icon
-                            +icon('search')
-
-                    .catalog-sort--col__sort
-                        .catalog-sort-select__wrap
-                            .catalog-sort-select
-                                span.d-flex.align-items-center
-                                    span.catalog-sort-item--choise по популярности
-                                +icon('arrow-down')
-                            ul.catalog-sort-select--list
-                                li.catalog-sort-select--item по популярности1
-                                li.catalog-sort-select--item по популярности2
-                        .catalog-mobile-filter
-                            +icon('filter')
-                        .catalog-mobile-basket
-                            +icon('basket')
-                            span 3
                 .col-xl-9.col-lg-9.col-md-12.col-sm-12.index-menu--content.swiper-container.pr-0
                     .section-menu-content--list.row.swiper-wrapper
                         .col-xl-4.col-lg-4.col-md-4.col-sm-6.section-menu-content--col.swiper-slide
@@ -68,7 +48,7 @@ section.section2.section-index-menu.p-60-0
                                     .section-menu-content--name.text-center.mb-10 Создай свой готовый ланч
                                     .section-menu-content--desc.text-center.mb-20 Более 300 блюд и дополнений на ваш выбор!
                                     .section-menu-content--price.text-center.mb-25 от 350 ₽ / #[span 1 шт.]
-                                    .main-button-transparent Создать ланч
+                                    a.main-button-transparent(href="/lanch.html") Создать ланч
                         .col-xl-4.col-lg-4.col-md-4.col-sm-6.section-menu-content--col.swiper-slide
                             .section-menu-content--item
                                 .section-menu-content--favourite
@@ -78,8 +58,8 @@ section.section2.section-index-menu.p-60-0
                                     .section-menu-content--item__info
                                         .section-menu-content--name.mb-10 Хинкали из баранины
                                         .section-menu-content--desc.mb-20 Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.
-                                .section-menu-content--item__bottom
-                                    .section-menu-content--order
+                                .section-menu-content--item__bottom.basket-count-buttons--wrapper
+                                    .section-menu-content--order.basket-el-selector
                                         .section-menu-content--price__wrap
                                             .section-menu-content--price__stock
                                             .section-menu-content--price 65 ₽ / #[span 1 шт.]
@@ -90,8 +70,8 @@ section.section2.section-index-menu.p-60-0
                                                     +icon('basket')
                                                 .product-basket-product--count
                                                     .product-basket-product--minus -
-                                                    input.basket-product--input(type="text" value="1" min="1" readonly="readonly")
-                                                .product-basket-product--plus
+                                                    input.basket-product--input(type="text" value="1" min="1" )
+                                                    .product-basket-product--plus +
 
                         .col-xl-4.col-lg-4.col-md-4.col-sm-6.section-menu-content--col.swiper-slide
                             .section-menu-content--item
@@ -103,8 +83,8 @@ section.section2.section-index-menu.p-60-0
                                     .section-menu-content--item__info
                                         .section-menu-content--name.mb-10 Самса с бараниной
                                         .section-menu-content--desc.mb-20 Баранина, Лук, Кумин, Соль,Перец черный молотый,Мука,Вода, Масло.
-                                .section-menu-content--item__bottom
-                                    .section-menu-content--order
+                                .section-menu-content--item__bottom.basket-count-buttons--wrapper
+                                    .section-menu-content--order.basket-el-selector
                                         .section-menu-content--price__wrap
                                             .section-menu-content--price__stock 145 ₽ / 140 г.
                                             .section-menu-content--price 145 ₽ / #[span 140 г.]
@@ -115,8 +95,8 @@ section.section2.section-index-menu.p-60-0
                                                     +icon('basket')
                                                 .product-basket-product--count
                                                     .product-basket-product--minus -
-                                                    input.basket-product--input(type="text" value="1" min="1" readonly="readonly")
-                                                .product-basket-product--plus
+                                                    input.basket-product--input(type="text" value="1" min="1" )
+                                                    .product-basket-product--plus +
                         .col-xl-4.col-lg-4.col-md-4.col-sm-6.section-menu-content--col.swiper-slide
                             .section-menu-content--item
                                 .section-menu-content--favourite
@@ -126,8 +106,8 @@ section.section2.section-index-menu.p-60-0
                                     .section-menu-content--item__info
                                         .section-menu-content--name.mb-10 Хинкали из баранины
                                         .section-menu-content--desc.mb-20 Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.
-                                .section-menu-content--item__bottom
-                                    .section-menu-content--order
+                                .section-menu-content--item__bottom.basket-count-buttons--wrapper
+                                    .section-menu-content--order.basket-el-selector
                                         .section-menu-content--price__wrap
                                             .section-menu-content--price__stock
                                             .section-menu-content--price 65 ₽ / #[span 1 шт.]
@@ -138,8 +118,8 @@ section.section2.section-index-menu.p-60-0
                                                     +icon('basket')
                                                 .product-basket-product--count
                                                     .product-basket-product--minus -
-                                                    input.basket-product--input(type="text" value="1" min="1" readonly="readonly")
-                                                .product-basket-product--plus
+                                                    input.basket-product--input(type="text" value="1" min="1" )
+                                                    .product-basket-product--plus +
                         .col-xl-4.col-lg-4.col-md-4.col-sm-6.section-menu-content--col.swiper-slide
                             .section-menu-content--item
                                 .section-menu-content--favourite
@@ -149,8 +129,8 @@ section.section2.section-index-menu.p-60-0
                                     .section-menu-content--item__info
                                         .section-menu-content--name.mb-10 Хинкали из баранины
                                         .section-menu-content--desc.mb-20 Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.
-                                .section-menu-content--item__bottom
-                                    .section-menu-content--order
+                                .section-menu-content--item__bottom.basket-count-buttons--wrapper
+                                    .section-menu-content--order.basket-el-selector
                                         .section-menu-content--price__wrap
                                             .section-menu-content--price__stock
                                             .section-menu-content--price 65 ₽ / #[span 1 шт.]
@@ -161,8 +141,8 @@ section.section2.section-index-menu.p-60-0
                                                     +icon('basket')
                                                 .product-basket-product--count
                                                     .product-basket-product--minus -
-                                                    input.basket-product--input(type="text" value="1" min="1" readonly="readonly")
-                                                .product-basket-product--plus
+                                                    input.basket-product--input(type="text" value="1" min="1" )
+                                                    .product-basket-product--plus +
                         .col-xl-4.col-lg-4.col-md-4.col-sm-6.section-menu-content--col.swiper-slide
                             .section-menu-content--item
                                 .section-menu-content--favourite
@@ -172,8 +152,8 @@ section.section2.section-index-menu.p-60-0
                                     .section-menu-content--item__info
                                         .section-menu-content--name.mb-10 Самса с бараниной
                                         .section-menu-content--desc.mb-20 Баранина, Лук, Кумин, Соль,Перец черный молотый,Мука,Вода, Масло.
-                                .section-menu-content--item__bottom
-                                    .section-menu-content--order
+                                .section-menu-content--item__bottom.basket-count-buttons--wrapper
+                                    .section-menu-content--order.basket-el-selector
                                         .section-menu-content--price__wrap
                                             .section-menu-content--price__stock 145 ₽ / 140 г.
                                             .section-menu-content--price 145 ₽ / #[span 140 г.]
@@ -184,8 +164,8 @@ section.section2.section-index-menu.p-60-0
                                                     +icon('basket')
                                                 .product-basket-product--count
                                                     .product-basket-product--minus -
-                                                    input.basket-product--input(type="text" value="1" min="1" readonly="readonly")
-                                                .product-basket-product--plus
+                                                    input.basket-product--input(type="text" value="1" min="1" )
+                                                    .product-basket-product--plus +
                         .col-xl-4.col-lg-4.col-md-4.col-sm-6.section-menu-content--col.swiper-slide
                             .section-menu-content--item
                                 .section-menu-content--favourite
@@ -195,8 +175,8 @@ section.section2.section-index-menu.p-60-0
                                     .section-menu-content--item__info
                                         .section-menu-content--name.mb-10 Хинкали из баранины
                                         .section-menu-content--desc.mb-20 Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.
-                                .section-menu-content--item__bottom
-                                    .section-menu-content--order
+                                .section-menu-content--item__bottom.basket-count-buttons--wrapper
+                                    .section-menu-content--order.basket-el-selector
                                         .section-menu-content--price__wrap
                                             .section-menu-content--price__stock
                                             .section-menu-content--price 65 ₽ / #[span 1 шт.]
@@ -207,8 +187,8 @@ section.section2.section-index-menu.p-60-0
                                                     +icon('basket')
                                                 .product-basket-product--count
                                                     .product-basket-product--minus -
-                                                    input.basket-product--input(type="text" value="1" min="1" readonly="readonly")
-                                                .product-basket-product--plus
+                                                    input.basket-product--input(type="text" value="1" min="1" )
+                                                    .product-basket-product--plus +
                         .col-xl-4.col-lg-4.col-md-4.col-sm-6.section-menu-content--col.swiper-slide
                             .section-menu-content--item
                                 .section-menu-content--favourite
@@ -218,8 +198,8 @@ section.section2.section-index-menu.p-60-0
                                     .section-menu-content--item__info
                                         .section-menu-content--name.mb-10 Хинкали из баранины
                                         .section-menu-content--desc.mb-20 Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.
-                                .section-menu-content--item__bottom
-                                    .section-menu-content--order
+                                .section-menu-content--item__bottom.basket-count-buttons--wrapper
+                                    .section-menu-content--order.basket-el-selector
                                         .section-menu-content--price__wrap
                                             .section-menu-content--price__stock
                                             .section-menu-content--price 65 ₽ / #[span 1 шт.]
@@ -230,8 +210,8 @@ section.section2.section-index-menu.p-60-0
                                                     +icon('basket')
                                                 .product-basket-product--count
                                                     .product-basket-product--minus -
-                                                    input.basket-product--input(type="text" value="1" min="1" readonly="readonly")
-                                                .product-basket-product--plus
+                                                    input.basket-product--input(type="text" value="1" min="1" )
+                                                    .product-basket-product--plus +
                         .col-xl-4.col-lg-4.col-md-4.col-sm-6.section-menu-content--col.swiper-slide
                             .section-menu-content--item
                                 .section-menu-content--favourite
@@ -241,8 +221,8 @@ section.section2.section-index-menu.p-60-0
                                     .section-menu-content--item__info
                                         .section-menu-content--name.mb-10 Самса с бараниной
                                         .section-menu-content--desc.mb-20 Баранина, Лук, Кумин, Соль,Перец черный молотый,Мука,Вода, Масло.
-                                .section-menu-content--item__bottom
-                                    .section-menu-content--order
+                                .section-menu-content--item__bottom.basket-count-buttons--wrapper
+                                    .section-menu-content--order.basket-el-selector
                                         .section-menu-content--price__wrap
                                             .section-menu-content--price__stock 145 ₽ / 140 г.
                                             .section-menu-content--price 145 ₽ / #[span 140 г.]
@@ -253,8 +233,8 @@ section.section2.section-index-menu.p-60-0
                                                     +icon('basket')
                                                 .product-basket-product--count
                                                     .product-basket-product--minus -
-                                                    input.basket-product--input(type="text" value="1" min="1" readonly="readonly")
-                                                .product-basket-product--plus
+                                                    input.basket-product--input(type="text" value="1" min="1" )
+                                                    .product-basket-product--plus +
                         .col-xl-4.col-lg-4.col-md-4.col-sm-6.section-menu-content--col.swiper-slide
                             .section-menu-content--item
                                 .section-menu-content--favourite
@@ -264,8 +244,8 @@ section.section2.section-index-menu.p-60-0
                                     .section-menu-content--item__info
                                         .section-menu-content--name.mb-10 Хинкали из баранины
                                         .section-menu-content--desc.mb-20 Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.
-                                .section-menu-content--item__bottom
-                                    .section-menu-content--order
+                                .section-menu-content--item__bottom.basket-count-buttons--wrapper
+                                    .section-menu-content--order.basket-el-selector
                                         .section-menu-content--price__wrap
                                             .section-menu-content--price__stock
                                             .section-menu-content--price 65 ₽ / #[span 1 шт.]
@@ -276,8 +256,8 @@ section.section2.section-index-menu.p-60-0
                                                     +icon('basket')
                                                 .product-basket-product--count
                                                     .product-basket-product--minus -
-                                                    input.basket-product--input(type="text" value="1" min="1" readonly="readonly")
-                                                .product-basket-product--plus
+                                                    input.basket-product--input(type="text" value="1" min="1" )
+                                                    .product-basket-product--plus +
                         .col-xl-4.col-lg-4.col-md-4.col-sm-6.section-menu-content--col.swiper-slide
                             .section-menu-content--item
                                 .section-menu-content--favourite
@@ -287,8 +267,8 @@ section.section2.section-index-menu.p-60-0
                                     .section-menu-content--item__info
                                         .section-menu-content--name.mb-10 Хинкали из баранины
                                         .section-menu-content--desc.mb-20 Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.
-                                .section-menu-content--item__bottom
-                                    .section-menu-content--order
+                                .section-menu-content--item__bottom.basket-count-buttons--wrapper
+                                    .section-menu-content--order.basket-el-selector
                                         .section-menu-content--price__wrap
                                             .section-menu-content--price__stock
                                             .section-menu-content--price 65 ₽ / #[span 1 шт.]
@@ -299,8 +279,8 @@ section.section2.section-index-menu.p-60-0
                                                     +icon('basket')
                                                 .product-basket-product--count
                                                     .product-basket-product--minus -
-                                                    input.basket-product--input(type="text" value="1" min="1" readonly="readonly")
-                                                .product-basket-product--plus
+                                                    input.basket-product--input(type="text" value="1" min="1" )
+                                                    .product-basket-product--plus +
                         .col-xl-4.col-lg-4.col-md-4.col-sm-6.section-menu-content--col.swiper-slide
                             .section-menu-content--item
                                 .section-menu-content--favourite
@@ -310,8 +290,8 @@ section.section2.section-index-menu.p-60-0
                                     .section-menu-content--item__info
                                         .section-menu-content--name.mb-10 Самса с бараниной
                                         .section-menu-content--desc.mb-20 Баранина, Лук, Кумин, Соль,Перец черный молотый,Мука,Вода, Масло.
-                                .section-menu-content--item__bottom
-                                    .section-menu-content--order
+                                .section-menu-content--item__bottom.basket-count-buttons--wrapper
+                                    .section-menu-content--order.basket-el-selector
                                         .section-menu-content--price__wrap
                                             .section-menu-content--price__stock 145 ₽ / 140 г.
                                             .section-menu-content--price 145 ₽ / #[span 140 г.]
@@ -322,8 +302,8 @@ section.section2.section-index-menu.p-60-0
                                                     +icon('basket')
                                                 .product-basket-product--count
                                                     .product-basket-product--minus -
-                                                    input.basket-product--input(type="text" value="1" min="1" readonly="readonly")
-                                                .product-basket-product--plus
+                                                    input.basket-product--input(type="text" value="1" min="1" )
+                                                    .product-basket-product--plus +
                         .col-xl-4.col-lg-4.col-md-4.col-sm-6.section-menu-content--col.swiper-slide
                             .section-menu-content--item
                                 .section-menu-content--favourite
@@ -333,8 +313,8 @@ section.section2.section-index-menu.p-60-0
                                     .section-menu-content--item__info
                                         .section-menu-content--name.mb-10 Хинкали из баранины
                                         .section-menu-content--desc.mb-20 Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.
-                                .section-menu-content--item__bottom
-                                    .section-menu-content--order
+                                .section-menu-content--item__bottom.basket-count-buttons--wrapper
+                                    .section-menu-content--order.basket-el-selector
                                         .section-menu-content--price__wrap
                                             .section-menu-content--price__stock
                                             .section-menu-content--price 65 ₽ / #[span 1 шт.]
@@ -345,8 +325,8 @@ section.section2.section-index-menu.p-60-0
                                                     +icon('basket')
                                                 .product-basket-product--count
                                                     .product-basket-product--minus -
-                                                    input.basket-product--input(type="text" value="1" min="1" readonly="readonly")
-                                                .product-basket-product--plus
+                                                    input.basket-product--input(type="text" value="1" min="1" )
+                                                    .product-basket-product--plus +
                         .col-xl-4.col-lg-4.col-md-4.col-sm-6.section-menu-content--col.swiper-slide
                             .section-menu-content--item
                                 .section-menu-content--favourite
@@ -356,8 +336,8 @@ section.section2.section-index-menu.p-60-0
                                     .section-menu-content--item__info
                                         .section-menu-content--name.mb-10 Хинкали из баранины
                                         .section-menu-content--desc.mb-20 Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.
-                                .section-menu-content--item__bottom
-                                    .section-menu-content--order
+                                .section-menu-content--item__bottom.basket-count-buttons--wrapper
+                                    .section-menu-content--order.basket-el-selector
                                         .section-menu-content--price__wrap
                                             .section-menu-content--price__stock
                                             .section-menu-content--price 65 ₽ / #[span 1 шт.]
@@ -368,8 +348,8 @@ section.section2.section-index-menu.p-60-0
                                                     +icon('basket')
                                                 .product-basket-product--count
                                                     .product-basket-product--minus -
-                                                    input.basket-product--input(type="text" value="1" min="1" readonly="readonly")
-                                                .product-basket-product--plus
+                                                    input.basket-product--input(type="text" value="1" min="1" )
+                                                    .product-basket-product--plus +
                         .col-xl-4.col-lg-4.col-md-4.col-sm-6.section-menu-content--col.swiper-slide
                             .section-menu-content--item
                                 .section-menu-content--favourite
@@ -379,8 +359,8 @@ section.section2.section-index-menu.p-60-0
                                     .section-menu-content--item__info
                                         .section-menu-content--name.mb-10 Самса с бараниной
                                         .section-menu-content--desc.mb-20 Баранина, Лук, Кумин, Соль,Перец черный молотый,Мука,Вода, Масло.
-                                .section-menu-content--item__bottom
-                                    .section-menu-content--order
+                                .section-menu-content--item__bottom.basket-count-buttons--wrapper
+                                    .section-menu-content--order.basket-el-selector
                                         .section-menu-content--price__wrap
                                             .section-menu-content--price__stock 145 ₽ / 140 г.
                                             .section-menu-content--price 145 ₽ / #[span 140 г.]
@@ -391,6 +371,6 @@ section.section2.section-index-menu.p-60-0
                                                     +icon('basket')
                                                 .product-basket-product--count
                                                     .product-basket-product--minus -
-                                                    input.basket-product--input(type="text" value="1" min="1" readonly="readonly")
-                                                .product-basket-product--plus
-            .main-button.w-170.m-0-auto Еще блюда
+                                                    input.basket-product--input(type="text" value="1" min="1" )
+                                                    .product-basket-product--plus +
+            .main-button.w-170.m-0-auto.planwet-width-load Еще блюда

@@ -8,12 +8,6 @@ $(document).ready(function () {
             slidesPerView: 4,
             observer: true,
             observeParents: true,
-
-            // pagination: {
-            //     el: '.my-swiper-pagination',
-            //     //dynamicBullets: true,
-            //     clickable: true,
-            // },
             navigation: {
                 nextEl: $this.parents('.swiper-section').find('.js-swiper-arrows-next')[0],
                 prevEl: $this.parents('.swiper-section').find('.js-swiper-arrows-prev')[0],
@@ -26,29 +20,51 @@ $(document).ready(function () {
                 },
                 576: {
                     slidesPerView: 2,
-                    //loop:true,
                     centeredSlides: true,
                     spaceBetween: 30,
                     width: 540,
-
                 },
                 768: {
                     slidesPerView: 3,
-                    // // width: 990,
-                    // //loop:true,
-                    // centeredSlides: true,
-                    // // centeredSlides: true,
-                    // spaceBetween: 10,
-                    // width: 700,
-                    // freeMode: true,
-
-
                 },
                 992: {
                     slidesPerView: 4,
-                    // width: 990,
+                },
+            },
+        });
+    });
 
-
+    $('.lk-order-bottom--swiper').each(function (ndx) {
+        $(this).attr('id','lk-slider-swiper-'+ (ndx + 1));
+        var get_id = $(this).attr('id');
+        var $this = $(this);
+        var lk_swiper_sliders = new Swiper('#'+get_id, {
+            slidesPerView: 4,
+            observer: true,
+            observeParents: true,
+            navigation: {
+                nextEl: $this.parents('.lk-swiper-section').find('.lk-swiper-arrows-next')[0],
+                prevEl: $this.parents('.lk-swiper-section').find('.lk-swiper-arrows-prev')[0],
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 2,
+                    //width: 250,
+                    spaceBetween: 16,
+                },
+                576: {
+                    slidesPerView: 2,
+                    //centeredSlides: true,
+                    //spaceBetween: 30,
+                },
+                768: {
+                    slidesPerView: 4,
+                },
+                992: {
+                    slidesPerView: 3,
+                },
+                1199: {
+                    slidesPerView: 4,
                 },
             },
         });
@@ -64,25 +80,22 @@ $(document).ready(function () {
             observer: true,
             observeParents: true,
             width: 295,
-
-
-            //spaceBetween: 16,
             effect: 'fade',
-
             pagination: {
                 el: this.closest(".faq-content--item__info--wrap").querySelector(".faq-swiper-pagination"),
-                //dynamicBullets: true,
                 clickable: true,
+            },
+            navigation: {
+                nextEl: this.closest(".faq-content--item__info--wrap").querySelector('.faq-swiper-arrows-next'),
+                prevEl: this.closest(".faq-content--item__info--wrap").querySelector('.faq-swiper-arrows-prev'),
             },
             breakpoints: {
                 320: {
                     slidesPerView: 1,
-                    //width: 250,
                     spaceBetween: 16,
                 },
                 576: {
                     slidesPerView: 1,
-                    //loop:true,
                     centeredSlides: true,
                     spaceBetween: 30,
                     width: 540,
@@ -90,21 +103,9 @@ $(document).ready(function () {
                 },
                 768: {
                     slidesPerView: 1,
-                    // // width: 990,
-                    // //loop:true,
-                    // centeredSlides: true,
-                    // // centeredSlides: true,
-                    // spaceBetween: 10,
-                    // width: 700,
-                    // freeMode: true,
-
-
                 },
                 992: {
                     slidesPerView: 1,
-                    // width: 990,
-
-
                 },
             },
         });
@@ -113,101 +114,12 @@ $(document).ready(function () {
             slidesPerView: 1,
             observer: true,
             observeParents: true,
-            //width: 295,
-            //effect: 'fade',
-            // thumbs: {
-            //     swiper: swiper_sliders
-            // },
-
 
         });
-        // swiper_sliders.thumbs.swiper = galleryThumbs;
-        // galleryThumbs.thumbs.swiper = swiper_sliders;
-        //console.log(first_slide);
         galleryThumbs.controller.control = swiper_sliders;
         swiper_sliders.controller.control = galleryThumbs;
 
     });
-
-
-    // $('.faq-swiper-container-swipe').each(function (ndx) {
-    //     $(this).attr('id','faq-slider-'+ (ndx + 1));
-    //     var get_id = $(this).attr('id');
-    //     var $this = $(this);
-    //
-    //     $(function () {
-    //         var swiper_sliders = new Swiper('#'+get_id, {
-    //             slidesPerView: 1,
-    //             observer: true,
-    //             observeParents: true,
-    //             width: 295,
-    //             //spaceBetween: 16,
-    //             //effect: 'fade',
-    //
-    //             // pagination: {
-    //             //     el: $this.parents('.faq-content--item__info--wrap').find('.faq-swiper-pagination')[0],
-    //             //     //dynamicBullets: true,
-    //             //     clickable: true,
-    //             // },
-    //             // thumbs: {
-    //             //     swiper: galleryThumbs
-    //             // },
-    //             // navigation: {
-    //             //     nextEl: $this.parents('.swiper-section').find('.js-swiper-arrows-next')[0],
-    //             //     prevEl: $this.parents('.swiper-section').find('.js-swiper-arrows-prev')[0],
-    //             // },
-    //             breakpoints: {
-    //                 320: {
-    //                     slidesPerView: 1,
-    //                     width: 250,
-    //                     spaceBetween: 16,
-    //                 },
-    //                 576: {
-    //                     slidesPerView: 1,
-    //                     //loop:true,
-    //                     centeredSlides: true,
-    //                     spaceBetween: 30,
-    //                     width: 540,
-    //
-    //                 },
-    //                 768: {
-    //                     slidesPerView: 1,
-    //                     // // width: 990,
-    //                     // //loop:true,
-    //                     // centeredSlides: true,
-    //                     // // centeredSlides: true,
-    //                     // spaceBetween: 10,
-    //                     // width: 700,
-    //                     // freeMode: true,
-    //
-    //
-    //                 },
-    //                 992: {
-    //                     slidesPerView: 1,
-    //                     // width: 990,
-    //
-    //
-    //                 },
-    //             },
-    //         });
-    //         var galleryThumbs = new Swiper('#'+get_id, {
-    //             spaceBetween: 16,
-    //             slidesPerView: 1,
-    //             observer: true,
-    //             observeParents: true,
-    //             width: 295,
-    //             //effect: 'fade',
-    //
-    //
-    //         });
-    //         galleryThumbs.controller.control = swiper_sliders;
-    //         swiper_sliders.controller.control = galleryThumbs;
-    //     });
-    //
-    // });
-
-
-
 
     $('.swiper-lanch-container').each(function (ndx) {
         $(this).attr('id','slider-lanch-'+ (ndx + 1));
@@ -215,11 +127,40 @@ $(document).ready(function () {
         var $this = $(this);
         var swiper_lanch2 = new Swiper('#'+get_id, {
             slidesPerView: 3,
-            // pagination: {
-            //     el: '.my-swiper-pagination',
-            //     //dynamicBullets: true,
-            //     clickable: true,
-            // },
+            navigation: {
+                nextEl: $this.parents('.swiper-lanch-section').find('.js-lanch-swiper-arrows-next')[0],
+                prevEl: $this.parents('.swiper-lanch-section').find('.js-lanch-swiper-arrows-prev')[0],
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    width: 250,
+                    spaceBetween: 16,
+                },
+                576: {
+                    slidesPerView: 2,
+                    centeredSlides: true,
+                    spaceBetween: 30,
+                    width: 540,
+
+                },
+                768: {
+                    slidesPerView: 3,
+                },
+                992: {
+                    slidesPerView: 3,
+                },
+            },
+        });
+    });
+
+
+    $('.swiper-basket-complex-container').each(function (ndx) {
+        $(this).attr('id','slider-basket-c-'+ (ndx + 1));
+        var get_id = $(this).attr('id');
+        var $this = $(this);
+        var swiper_basket_c = new Swiper('#'+get_id, {
+            slidesPerView: 4,
             navigation: {
                 nextEl: $this.parents('.swiper-lanch-section').find('.js-lanch-swiper-arrows-next')[0],
                 prevEl: $this.parents('.swiper-lanch-section').find('.js-lanch-swiper-arrows-prev')[0],
@@ -240,21 +181,12 @@ $(document).ready(function () {
                 },
                 768: {
                     slidesPerView: 3,
-                    // // width: 990,
-                    // //loop:true,
-                    // centeredSlides: true,
-                    // // centeredSlides: true,
-                    // spaceBetween: 10,
-                    // width: 700,
-                    // freeMode: true,
-
-
                 },
                 992: {
+                    slidesPerView: 3,
+                },
+                1199: {
                     slidesPerView: 4,
-                    // width: 990,
-
-
                 },
             },
         });
@@ -263,56 +195,24 @@ $(document).ready(function () {
     var swiper = new Swiper('.js-main-slider', {
         slidesPerView: 1,
         loop: true,
-        // slidesPerColumn: 1,
         pagination: {
             el: '.my-swiper-pagination',
-            //dynamicBullets: true,
             clickable: true,
         },
-        // navigation: {
-        //     nextEl: '.my-swiper-button-next',
-        //     prevEl: '.my-swiper-button-prev',
-        // },
         breakpoints: {
             320: {
                 slidesPerView: 1,
-                // width: 990,
                 loop:true,
                 centeredSlides: true,
-                // centeredSlides: true,
-                // spaceBetween: 10,
-                // freeMode: true,
-
-
             },
             576: {
                 slidesPerView: 1,
-                // // width: 990,
-                // loop:true,
-                // centeredSlides: true,
-                // // centeredSlides: true,
-                // spaceBetween: 10,
-                // width: 500,
-                // freeMode: true,
-
-
             },
             768: {
                 slidesPerView: 1,
-                // // width: 990,
-                // loop:true,
-                // centeredSlides: true,
-                // // centeredSlides: true,
-                // spaceBetween: 10,
-                // width: 700,
-                // freeMode: true,
-
-
             },
             992: {
                 slidesPerView: 1,
-                // width: 990,
-
             },
         },
     });
@@ -323,12 +223,6 @@ $(document).ready(function () {
 
     var swiper_review = new Swiper('.review-tab', {
         slidesPerView: 3,
-        //loop: true,
-        // pagination: {
-        //     el: '.my-swiper-pagination',
-        //     //dynamicBullets: true,
-        //     clickable: true,
-        // },
         navigation: {
             nextEl: '.review-swiper-button-next',
             prevEl: '.review-swiper-button-prev',
@@ -337,34 +231,19 @@ $(document).ready(function () {
             320: {
                 slidesPerView: 1,
                 width: 300,
-                // // loop:true,
-                // centeredSlides: true,
-                // // centeredSlides: true,
                 spaceBetween: 16,
-                // // freeMode: true,
-
-
             },
             576: {
                 slidesPerView: 2,
                 width: 540,
-                // //loop:true,
                 centeredSlides: true,
-                // // centeredSlides: true,
                 spaceBetween: 30,
-                //width: 255,
-                // freeMode: true,
-
-
             },
             768: {
                 slidesPerView:2,
             },
             992: {
                 slidesPerView: 3,
-                // width: 990,
-
-
             },
         },
     });
@@ -375,11 +254,6 @@ $(document).ready(function () {
         loop: true,
         observer: true,
         observeParents: true,
-        // pagination: {
-        //     el: '.my-swiper-pagination',
-        //     //dynamicBullets: true,
-        //     clickable: true,
-        // },
         navigation: {
             nextEl: '.review-v-swiper-button-next',
             prevEl: '.review-v-swiper-button-prev',
@@ -387,39 +261,13 @@ $(document).ready(function () {
         breakpoints: {
             320: {
                 slidesPerView: 1,
-                //width: 320,
-                //centeredSlides: true,
                 spaceBetween: 16,
             },
             576: {
                 slidesPerView: 1,
-                // width: 990,
-                //loop:true,
-                //centeredSlides: true,
-                // centeredSlides: true,
-                // spaceBetween: 10,
-                // width: 500,
-                // freeMode: true,
-
-
             },
-            // 768: {
-            //     slidesPerView: 1,
-            //     // width: 990,
-            //     //loop:true,
-            //     centeredSlides: true,
-            //     // centeredSlides: true,
-            //     spaceBetween: 10,
-            //     width: 700,
-            //     freeMode: true,
-            //
-            //
-            // },
             992: {
                 slidesPerView: 2,
-                // width: 990,
-
-
             },
         },
     });
@@ -428,128 +276,100 @@ $(document).ready(function () {
         $(this).addClass('active').siblings().removeClass('active');
         $('.section-content-tabs .' + get_tab).addClass('active').siblings().removeClass('active');
         $('.review-swiper-arrows.'+ get_tab).addClass('active').siblings().removeClass('active');
-        //swiper_rs.update();
     });
     var swiper_basket = new Swiper('.footer-basket-swiper', {
         slidesPerView: 4,
         spaceBetween: 15,
-        // loop: true,
-        // pagination: {
-        //     el: '.my-swiper-pagination',
-        //     //dynamicBullets: true,
-        //     clickable: true,
-        // },
         navigation: {
             nextEl: '.footer-swiper-button-next',
             prevEl: '.footer-swiper-button-prev',
         },
         breakpoints: {
-            // 320: {
-            //     slidesPerView: 1,
-            //     // width: 990,
-            //     // loop:true,
-            //     centeredSlides: true,
-            //     // centeredSlides: true,
-            //     // spaceBetween: 10,
-            //     // freeMode: true,
-            //
-            //
-            // },
             576: {
                 slidesPerView: 2,
 
             },
             768: {
                 slidesPerView: 2,
-                // // width: 990,
-                // //loop:true,
-                // centeredSlides: true,
-                // // centeredSlides: true,
-                // spaceBetween: 10,
-                // width: 700,
-                // freeMode: true,
-
-
+                width: 540,
             },
             992: {
                 slidesPerView: 3,
-                // width: 990,
-
-
             },
-            1200: {
+            1199.6: {
                 slidesPerView: 4,
-                // width: 990,
-
-
             },
         },
     });
 
-    var swiper_notific = new Swiper('.popup-basket-notific', {
-        slidesPerView: 2,
-        // spaceBetween: 15,
+    var swiper_popup_categ = new Swiper('.popup-tabs--container', {
+        slidesPerView: 'auto',
+        //centeredSlides: true,
+        //freeMode: true,
         observer: true,
+
+        watchOverflow: true,
         observeParents: true,
-        // loop: true,
-        // pagination: {
-        //     el: '.my-swiper-pagination',
-        //     //dynamicBullets: true,
-        //     clickable: true,
-        // },
         navigation: {
-            nextEl: '.popup-swiper-button-next',
-            prevEl: '.popup-swiper-button-prev',
+            nextEl: '.popup-swiper-categ-next',
+            prevEl: '.popup-swiper-categ-prev',
         },
         breakpoints: {
-            320: {
-                slidesPerView: 1,
-                width: 250,
-                // loop:true,
-                //centeredSlides: true,
-                // centeredSlides: true,
-                spaceBetween: 16,
-                // freeMode: true,
-
-
-            },
             576: {
-                slidesPerView: 2,
-                spaceBetween: 16,
+
+                freeMode: true,
 
             },
-            // 768: {
-            //     slidesPerView: 1,
-            //     // width: 990,
-            //     //loop:true,
-            //     centeredSlides: true,
-            //     // centeredSlides: true,
-            //     spaceBetween: 10,
-            //     width: 700,
-            //     freeMode: true,
-            //
-            //
-            // },
-            // 992: {
-            //     slidesPerView: 4,
-            //     // width: 990,
-            //
-            //
-            // },
+
         },
     });
+
+    $('.popup-basket-notific').each(function (ndx) {
+        $(this).attr('id','popup-basket-slider-'+ (ndx + 1));
+        var get_id = $(this).attr('id');
+        var $this = $(this);
+        var swiper_notific = new Swiper('#'+get_id, {
+            slidesPerView: 1,
+            observer: true,
+            observeParents: true,
+            navigation: {
+                nextEl: $this.parents('.popup-tab--item').find('.popup-swiper-button-next')[0],
+                prevEl: $this.parents('.popup-tab--item').find('.popup-swiper-button-prev')[0],
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    width: 250,
+                    spaceBetween: 16,
+                },
+                576: {
+                    slidesPerView: 2,
+                    spaceBetween: 16,
+
+                },
+                768: {
+                    slidesPerView: 2,
+
+                },
+
+                992: {
+                    slidesPerView: 3,
+                    // width: 990,
+                },
+                1199.6: {
+                    slidesPerView: 4,
+                    // width: 990,
+                },
+            },
+        });
+    });
+
 
     var swiper_notific = new Swiper('.articles-mobile-sidebar--items', {
         slidesPerView: 4,
         // spaceBetween: 15,
         observer: true,
         observeParents: true,
-        // loop: true,
-        // pagination: {
-        //     el: '.my-swiper-pagination',
-        //     //dynamicBullets: true,
-        //     clickable: true,
-        // },
         navigation: {
             nextEl: '.popup-swiper-button-next',
             prevEl: '.popup-swiper-button-prev',
@@ -558,13 +378,7 @@ $(document).ready(function () {
             320: {
                 slidesPerView: 1,
                 width: 250,
-                // loop:true,
-                //centeredSlides: true,
-                // centeredSlides: true,
                 spaceBetween: 30,
-                // freeMode: true,
-
-
             },
             576: {
                 slidesPerView: 2,
@@ -577,12 +391,6 @@ $(document).ready(function () {
 
 
             },
-            // 992: {
-            //     slidesPerView: 4,
-            //     // width: 990,
-            //
-            //
-            // },
         },
     });
 
@@ -593,57 +401,11 @@ $(document).ready(function () {
         spaceBetween: 15,
         observer: true,
         observeParents: true,
-        // loop: true,
         pagination: {
             el: '.card-swiper-pagination',
-            //dynamicBullets: true,
             clickable: true,
         },
 
-        breakpoints: {
-            320: {
-                // slidesPerView: 1,
-                // // width: 990,
-                // // loop:true,
-                // centeredSlides: true,
-                // // centeredSlides: true,
-                // // spaceBetween: 10,
-                // // freeMode: true,
-
-
-            },
-            576: {
-                // slidesPerView: 1,
-                // // width: 990,
-                // //loop:true,
-                // centeredSlides: true,
-                // // centeredSlides: true,
-                // spaceBetween: 10,
-                // width: 500,
-                // freeMode: true,
-
-
-
-            },
-            // 768: {
-            //     slidesPerView: 1,
-            //     // width: 990,
-            //     //loop:true,
-            //     centeredSlides: true,
-            //     // centeredSlides: true,
-            //     spaceBetween: 10,
-            //     width: 700,
-            //     freeMode: true,
-            //
-            //
-            // },
-            // 992: {
-            //     slidesPerView: 4,
-            //     // width: 990,
-            //
-            //
-            // },
-        },
     });
 
     var swiper_card = new Swiper('.team-container', {
@@ -651,12 +413,6 @@ $(document).ready(function () {
         spaceBetween: 30,
         observer: true,
         observeParents: true,
-        // loop: true,
-        // pagination: {
-        //     el: '.my-swiper-pagination',
-        //     //dynamicBullets: true,
-        //     clickable: true,
-        // },
         navigation: {
             nextEl: '.team-swiper-button-next',
             prevEl: '.team-swiper-button-prev',
@@ -665,43 +421,18 @@ $(document).ready(function () {
             320: {
                 slidesPerView: 1,
                 width: 250,
-                // // loop:true,
-                // centeredSlides: true,
-                // // centeredSlides: true,
                 spaceBetween: 15,
-                // // freeMode: true,
 
 
             },
             576: {
                 slidesPerView: 2,
-                // // width: 990,
-                // //loop:true,
-                // centeredSlides: true,
-                // // centeredSlides: true,
-                // spaceBetween: 10,
-                // width: 500,
-                // freeMode: true,
-
-
             },
             768: {
                 slidesPerView: 3,
-                // // width: 990,
-                // //loop:true,
-                // centeredSlides: true,
-                // // centeredSlides: true,
-                // spaceBetween: 10,
-                // width: 700,
-                // freeMode: true,
-
-
             },
             992: {
-                slidesPerView: 3,
-                // width: 990,
-
-
+                slidesPerView: 4,
             },
         },
     });
@@ -712,12 +443,6 @@ $(document).ready(function () {
                 slidesPerView: 2,
                 observer: true,
                 observeParents: true,
-                // loop: true,
-                // pagination: {
-                //     el: '.my-swiper-pagination',
-                //     //dynamicBullets: true,
-                //     clickable: true,
-                // },
                 navigation: {
                     nextEl: '.team-swiper-button-next',
                     prevEl: '.team-swiper-button-prev',
@@ -726,17 +451,10 @@ $(document).ready(function () {
                     320: {
                         slidesPerView: 1,
                         width: 250,
-                        // // loop:true,
-                        //centeredSlides: true,
-                        // // centeredSlides: true,
                         spaceBetween: 16,
-                        // // freeMode: true,
-
-
                     },
                     576: {
                         slidesPerView: 2,
-                        //loop:true,
                         centeredSlides: true,
                         spaceBetween: 30,
                         width: 540,
@@ -772,29 +490,18 @@ $(document).ready(function () {
                 slidesPerView: 2,
                 observer: true,
                 observeParents: true,
-                // loop: true,
                 pagination: {
                     el: '.mobile-delivery-pagination',
-                    //dynamicBullets: true,
                     clickable: true,
                 },
                 breakpoints: {
                     320: {
                         slidesPerView: 1,
-                        // width: 250,
-                        // loop:true,
                         centeredSlides: true,
-                        // centeredSlides: true,
-                        // spaceBetween: 16,
-                        // freeMode: true,
-
-
                     },
                     576: {
                         slidesPerView: 1,
-                        //loop:true,
                         spaceBetween: 30,
-
                     },
                 },
             });
@@ -803,25 +510,15 @@ $(document).ready(function () {
                 slidesPerView: 2,
                 observer: true,
                 observeParents: true,
-                // loop: true,
-
                 breakpoints: {
                     320: {
                         slidesPerView: 1,
-                        width: 250,
-                        // loop:true,
-
-                        // centeredSlides: true,
+                        width: 240,
                         spaceBetween: 15,
-                        // freeMode: true,
-
-
                     },
                     576: {
                         slidesPerView: 1,
-                        //loop:true,
                         width: 382.5,
-                       // spaceBetween: 30,
 
                     },
                 },
@@ -846,31 +543,19 @@ $(document).ready(function () {
                     320: {
                         slidesPerView: 1,
                         width: 250,
-                        // loop:true,
-                        //centeredSlides: true,
-                        // centeredSlides: true,
                         spaceBetween: 30,
-                        // freeMode: true,
-
-
                     },
                     576: {
                         slidesPerView: 1,
                         spaceBetween: 30,
-                        width: 382.5,
-
+                        width: 405,
                     },
                     768: {
                         slidesPerView: 2,
                         spaceBetween: 0,
-
-
                     },
                     992: {
                         slidesPerView: 2,
-                        // width: 990,
-
-
                     },
                 },
             });

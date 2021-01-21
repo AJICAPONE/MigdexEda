@@ -1,151 +1,176 @@
 .section-lk-profile
     .lk-content--wrapper
-        .lk-inputs--title--wrap
+        .lk-inputs--title--wrap.lk-inputs--title--wrap__mobile
             .lk-inputs--title.lk-title-mobile-d Мои заказы
-            .lk-tab-title--wrap
+            .lk-tab-title--wrap.lk-tab-title--mobile
                 .lk-tab--item.tab-item.active(data-tab="lk-order-active") Активные заказы
                 .lk-tab--item.tab-item(data-tab="lk-order-history") История заказов
         .tab-content--wrap.lk-tabs-content
             .lk-tabs-content-tab.lk-order-active.active
                 .lk-order-list
-                    .lk-order-item
-                        .lk-order-top
-                            .lk-order-top--left
-                                .lk-order-title--wrap
-                                    .lk-order-title Заказ №0003
-                                    .lk-order-date от 20 октября 2020
+                    .lk-order-item--wrapper
+                        .lk-order-item.lk-swiper-section
+                            .lk-order-top
+                                .lk-order-top--left
+                                    .lk-order-title--wrap
+                                        .lk-order-title Заказ №0003
+                                        .lk-order-date от 20 октября 2020
+                                    .lk-order-status.o-status-send Доставляется
+                                .lk-order-top--right
+                                    .lk-order-right--wrap
+                                        .lk-order-price Сумма: #[span 632 ₽]
+                                        .lk-order-delivery-date Дата доставки: 20 октября 2020
+                            .lk-order-middle
+                                .lk-order-delivery-date Дата доставки: 20 октября 2020
                                 .lk-order-status.o-status-send Доставляется
-                            .lk-order-top--right
-                                .lk-order-right--wrap
-                                    .lk-order-price Сумма: #[span 632 ₽]
-                                    .lk-order-delivery-date Дата доставки: 20 октября 2020
 
-                        .lk-order-bottom
-                            .lk-order-products--list
-                                .col-xl-3.col-lg-3.col-md-3.col-sm-6.lk-order-products--item
-                                    .lk-order-products--img(style="background-image:url('static/img/content/products/img7.png')")
-                                    .lk-order-products--info
-                                        .lk-order-products--name Осетинские пироги
-                                        .lk-order-products--desc 3 шт.
-                                .col-xl-3.col-lg-3.col-md-3.col-sm-6.lk-order-products--item
-                                    .lk-order-products--img(style="background-image:url('static/img/content/products/img7.png')")
-                                    .lk-order-products--info
-                                        .lk-order-products--name Осетинские пироги
-                                        .lk-order-products--desc 3 шт.
-                                .col-xl-3.col-lg-3.col-md-3.col-sm-6.lk-order-products--item
-                                    .lk-order-products--img(style="background-image:url('static/img/content/products/img7.png')")
-                                    .lk-order-products--info
-                                        .lk-order-products--name Осетинские пироги
-                                        .lk-order-products--desc 3 шт.
-                                .col-xl-3.col-lg-3.col-md-3.col-sm-6.lk-order-products--item
-                                    .lk-order-products--img(style="background-image:url('static/img/content/products/img7.png')")
-                                    .lk-order-products--info
-                                        .lk-order-products--name Осетинские пироги
-                                        .lk-order-products--desc 3 шт.
-                                .col-xl-3.col-lg-3.col-md-3.col-sm-6.lk-order-products--item
-                                    .lk-order-products--img(style="background-image:url('static/img/content/products/img7.png')")
-                                    .lk-order-products--info
-                                        .lk-order-products--name Осетинские пироги
-                                        .lk-order-products--desc 3 шт.
-                                .col-xl-3.col-lg-3.col-md-3.col-sm-6.lk-order-products--item
-                                    .lk-order-products--img(style="background-image:url('static/img/content/products/img7.png')")
-                                    .lk-order-products--info
-                                        .lk-order-products--name Осетинские пироги
-                                        .lk-order-products--desc 3 шт.
-
+                            .lk-order-bottom.lk-order-bottom--swiper.swiper-container
+                                .lk-order-products--list.swiper-wrapper
+                                    a.col-xl-3.col-lg-4.col-md-3.col-sm-6.lk-order-products--item.swiper-slide(href="")
+                                        .lk-order-products--img(style="background-image:url('static/img/content/products/img7.png')")
+                                        .lk-order-products--info
+                                            .lk-order-products--name Осетинские пироги
+                                            .lk-order-products--desc 3 шт.
+                                    a.col-xl-3.col-lg-4.col-md-3.col-sm-6.lk-order-products--item.swiper-slide(href="")
+                                        .lk-order-products--img(style="background-image:url('static/img/content/products/img7.png')")
+                                        .lk-order-products--info
+                                            .lk-order-products--name Осетинские пироги
+                                            .lk-order-products--desc 3 шт.
+                                    a.col-xl-3.col-lg-4.col-md-3.col-sm-6.lk-order-products--item.swiper-slide(href="")
+                                        .lk-order-products--img(style="background-image:url('static/img/content/products/img7.png')")
+                                        .lk-order-products--info
+                                            .lk-order-products--name Осетинские пироги
+                                            .lk-order-products--desc 3 шт.
+                                    a.col-xl-3.col-lg-4.col-md-3.col-sm-6.lk-order-products--item.swiper-slide(href="")
+                                        .lk-order-products--img(style="background-image:url('static/img/content/products/img7.png')")
+                                        .lk-order-products--info
+                                            .lk-order-products--name Осетинские пироги
+                                            .lk-order-products--desc 3 шт.
+                                    a.col-xl-3.col-lg-4.col-md-3.col-sm-6.lk-order-products--item.swiper-slide(href="")
+                                        .lk-order-products--img(style="background-image:url('static/img/content/products/img7.png')")
+                                        .lk-order-products--info
+                                            .lk-order-products--name Осетинские пироги
+                                            .lk-order-products--desc 3 шт.
+                                    a.col-xl-3.col-lg-4.col-md-3.col-sm-6.lk-order-products--item.swiper-slide(href="")
+                                        .lk-order-products--img(style="background-image:url('static/img/content/products/img7.png')")
+                                        .lk-order-products--info
+                                            .lk-order-products--name Осетинские пироги
+                                            .lk-order-products--desc 3 шт.
+                                .lk-swiper-arrows
+                                    .lk-swiper-arrows-prev
+                                        +icon('arrow-left')
+                                    .lk-swiper-arrows-next
+                                        +icon('arrow-right')
 
             .lk-tabs-content-tab.lk-order-history
                 .lk-order-list
-                    .lk-order-item
-                        .lk-order-top
-                            .lk-order-top--left
-                                .lk-order-title--wrap
-                                    .lk-order-title Заказ №0003
-                                    .lk-order-date от 20 октября 2020
-                                .lk-order-buttons--wrapper
-                                    .lk-order-status.o-status-sended Доставлено
-                                    .lk-order-button.lk-order-button-retry Повторить заказ
-                            .lk-order-top--right
-                                .lk-order-right--wrap
-                                    .lk-order-price Сумма: #[span 632 ₽]
-                                    .lk-order-delivery-date Дата доставки: 20 октября 2020
-
-                        .lk-order-bottom
-                            .lk-order-products--list
-                                .col-xl-3.col-lg-3.col-md-3.col-sm-6.lk-order-products--item
-                                    .lk-order-products--img(style="background-image:url('static/img/content/products/img7.png')")
-                                    .lk-order-products--info
-                                        .lk-order-products--name Осетинские пироги
-                                        .lk-order-products--desc 3 шт.
-                                .col-xl-3.col-lg-3.col-md-3.col-sm-6.lk-order-products--item
-                                    .lk-order-products--img(style="background-image:url('static/img/content/products/img7.png')")
-                                    .lk-order-products--info
-                                        .lk-order-products--name Осетинские пироги
-                                        .lk-order-products--desc 3 шт.
-                                .col-xl-3.col-lg-3.col-md-3.col-sm-6.lk-order-products--item
-                                    .lk-order-products--img(style="background-image:url('static/img/content/products/img7.png')")
-                                    .lk-order-products--info
-                                        .lk-order-products--name Осетинские пироги
-                                        .lk-order-products--desc 3 шт.
-                                .col-xl-3.col-lg-3.col-md-3.col-sm-6.lk-order-products--item
-                                    .lk-order-products--img(style="background-image:url('static/img/content/products/img7.png')")
-                                    .lk-order-products--info
-                                        .lk-order-products--name Осетинские пироги
-                                        .lk-order-products--desc 3 шт.
-                                .col-xl-3.col-lg-3.col-md-3.col-sm-6.lk-order-products--item
-                                    .lk-order-products--img(style="background-image:url('static/img/content/products/img7.png')")
-                                    .lk-order-products--info
-                                        .lk-order-products--name Осетинские пироги
-                                        .lk-order-products--desc 3 шт.
-                                .col-xl-3.col-lg-3.col-md-3.col-sm-6.lk-order-products--item
-                                    .lk-order-products--img(style="background-image:url('static/img/content/products/img7.png')")
-                                    .lk-order-products--info
-                                        .lk-order-products--name Осетинские пироги
-                                        .lk-order-products--desc 3 шт.
-                    .lk-order-item
-                        .lk-order-top
-                            .lk-order-top--left
-                                .lk-order-title--wrap
-                                    .lk-order-title Заказ №0003
-                                    .lk-order-date от 20 октября 2020
-                                .lk-order-buttons--wrapper
-                                    .lk-order-status.o-status-cancel Отменен
-                                    .lk-order-button.lk-order-button-retry Повторить заказ
-                            .lk-order-top--right
-                                .lk-order-right--wrap
-                                    .lk-order-price Сумма: #[span 632 ₽]
-                                    .lk-order-delivery-date Дата доставки: 20 октября 2020
-
-                        .lk-order-bottom
-                            .lk-order-products--list
-                                .col-xl-3.col-lg-3.col-md-3.col-sm-6.lk-order-products--item
-                                    .lk-order-products--img(style="background-image:url('static/img/content/products/img7.png')")
-                                    .lk-order-products--info
-                                        .lk-order-products--name Осетинские пироги
-                                        .lk-order-products--desc 3 шт.
-                                .col-xl-3.col-lg-3.col-md-3.col-sm-6.lk-order-products--item
-                                    .lk-order-products--img(style="background-image:url('static/img/content/products/img7.png')")
-                                    .lk-order-products--info
-                                        .lk-order-products--name Осетинские пироги
-                                        .lk-order-products--desc 3 шт.
-                                .col-xl-3.col-lg-3.col-md-3.col-sm-6.lk-order-products--item
-                                    .lk-order-products--img(style="background-image:url('static/img/content/products/img7.png')")
-                                    .lk-order-products--info
-                                        .lk-order-products--name Осетинские пироги
-                                        .lk-order-products--desc 3 шт.
-                                .col-xl-3.col-lg-3.col-md-3.col-sm-6.lk-order-products--item
-                                    .lk-order-products--img(style="background-image:url('static/img/content/products/img7.png')")
-                                    .lk-order-products--info
-                                        .lk-order-products--name Осетинские пироги
-                                        .lk-order-products--desc 3 шт.
-                                .col-xl-3.col-lg-3.col-md-3.col-sm-6.lk-order-products--item
-                                    .lk-order-products--img(style="background-image:url('static/img/content/products/img7.png')")
-                                    .lk-order-products--info
-                                        .lk-order-products--name Осетинские пироги
-                                        .lk-order-products--desc 3 шт.
-                                .col-xl-3.col-lg-3.col-md-3.col-sm-6.lk-order-products--item
-                                    .lk-order-products--img(style="background-image:url('static/img/content/products/img7.png')")
-                                    .lk-order-products--info
-                                        .lk-order-products--name Осетинские пироги
-                                        .lk-order-products--desc 3 шт.
-
+                    .lk-order-item--wrapper
+                        .lk-order-item.lk-swiper-section
+                            .lk-order-top
+                                .lk-order-top--left
+                                    .lk-order-title--wrap
+                                        .lk-order-title Заказ №0003
+                                        .lk-order-date от 20 октября 2020
+                                    .lk-order-buttons--wrapper
+                                        .lk-order-status.o-status-sended Доставлено
+                                        .lk-order-button.lk-order-button-retry Повторить заказ
+                                .lk-order-top--right
+                                    .lk-order-right--wrap
+                                        .lk-order-price Сумма: #[span 632 ₽]
+                                        .lk-order-delivery-date Дата доставки: 20 октября 2020
+                            .lk-order-middle
+                                .lk-order-delivery-date Дата доставки: 20 октября 2020
+                                .lk-order-status.o-status-sended Доставлено
+                            .lk-order-bottom.lk-order-bottom--swiper.swiper-container
+                                .lk-order-products--list.swiper-wrapper
+                                    a.col-xl-3.col-lg-4.col-md-3.col-sm-6.lk-order-products--item.swiper-slide(href="")
+                                        .lk-order-products--img(style="background-image:url('static/img/content/products/img7.png')")
+                                        .lk-order-products--info
+                                            .lk-order-products--name Осетинские пироги
+                                            .lk-order-products--desc 3 шт.
+                                    a.col-xl-3.col-lg-4.col-md-3.col-sm-6.lk-order-products--item.swiper-slide(href="")
+                                        .lk-order-products--img(style="background-image:url('static/img/content/products/img7.png')")
+                                        .lk-order-products--info
+                                            .lk-order-products--name Осетинские пироги
+                                            .lk-order-products--desc 3 шт.
+                                    a.col-xl-3.col-lg-4.col-md-3.col-sm-6.lk-order-products--item.swiper-slide(href="")
+                                        .lk-order-products--img(style="background-image:url('static/img/content/products/img7.png')")
+                                        .lk-order-products--info
+                                            .lk-order-products--name Осетинские пироги
+                                            .lk-order-products--desc 3 шт.
+                                    a.col-xl-3.col-lg-4.col-md-3.col-sm-6.lk-order-products--item.swiper-slide(href="")
+                                        .lk-order-products--img(style="background-image:url('static/img/content/products/img7.png')")
+                                        .lk-order-products--info
+                                            .lk-order-products--name Осетинские пироги
+                                            .lk-order-products--desc 3 шт.
+                                    a.col-xl-3.col-lg-4.col-md-3.col-sm-6.lk-order-products--item.swiper-slide(href="")
+                                        .lk-order-products--img(style="background-image:url('static/img/content/products/img7.png')")
+                                        .lk-order-products--info
+                                            .lk-order-products--name Осетинские пироги
+                                            .lk-order-products--desc 3 шт.
+                                    a.col-xl-3.col-lg-4.col-md-3.col-sm-6.lk-order-products--item.swiper-slide(href="")
+                                        .lk-order-products--img(style="background-image:url('static/img/content/products/img7.png')")
+                                        .lk-order-products--info
+                                            .lk-order-products--name Осетинские пироги
+                                            .lk-order-products--desc 3 шт.
+                                .lk-swiper-arrows
+                                    .lk-swiper-arrows-prev
+                                        +icon('arrow-left')
+                                    .lk-swiper-arrows-next
+                                        +icon('arrow-right')
+                        .lk-order-button.lk-order-button-retry.lk-order-button-retry--tablet Повторить заказ
+                    .lk-order-item--wrapper
+                        .lk-order-item.lk-swiper-section
+                            .lk-order-top
+                                .lk-order-top--left
+                                    .lk-order-title--wrap
+                                        .lk-order-title Заказ №0003
+                                        .lk-order-date от 20 октября 2020
+                                    .lk-order-buttons--wrapper
+                                        .lk-order-status.o-status-cancel Отменен
+                                        .lk-order-button.lk-order-button-retry Повторить заказ
+                                .lk-order-top--right
+                                    .lk-order-right--wrap
+                                        .lk-order-price Сумма: #[span 632 ₽]
+                                        .lk-order-delivery-date Дата доставки: 20 октября 2020
+                            .lk-order-middle
+                                .lk-order-delivery-date Дата доставки: 20 октября 2020
+                                .lk-order-status.o-status-cancel Отменен
+                            .lk-order-bottom.lk-order-bottom--swiper.swiper-container
+                                .lk-order-products--list.swiper-wrapper
+                                    a.col-xl-3.col-lg-4.col-md-3.col-sm-6.lk-order-products--item.swiper-slide(href="")
+                                        .lk-order-products--img(style="background-image:url('static/img/content/products/img7.png')")
+                                        .lk-order-products--info
+                                            .lk-order-products--name Осетинские пироги
+                                            .lk-order-products--desc 3 шт.
+                                    a.col-xl-3.col-lg-4.col-md-3.col-sm-6.lk-order-products--item.swiper-slide(href="")
+                                        .lk-order-products--img(style="background-image:url('static/img/content/products/img7.png')")
+                                        .lk-order-products--info
+                                            .lk-order-products--name Осетинские пироги
+                                            .lk-order-products--desc 3 шт.
+                                    a.col-xl-3.col-lg-4.col-md-3.col-sm-6.lk-order-products--item.swiper-slide(href="")
+                                        .lk-order-products--img(style="background-image:url('static/img/content/products/img7.png')")
+                                        .lk-order-products--info
+                                            .lk-order-products--name Осетинские пироги
+                                            .lk-order-products--desc 3 шт.
+                                    a.col-xl-3.col-lg-4.col-md-3.col-sm-6.lk-order-products--item.swiper-slide(href="")
+                                        .lk-order-products--img(style="background-image:url('static/img/content/products/img7.png')")
+                                        .lk-order-products--info
+                                            .lk-order-products--name Осетинские пироги
+                                            .lk-order-products--desc 3 шт.
+                                    a.col-xl-3.col-lg-4.col-md-3.col-sm-6.lk-order-products--item.swiper-slide(href="")
+                                        .lk-order-products--img(style="background-image:url('static/img/content/products/img7.png')")
+                                        .lk-order-products--info
+                                            .lk-order-products--name Осетинские пироги
+                                            .lk-order-products--desc 3 шт.
+                                    a.col-xl-3.col-lg-4.col-md-3.col-sm-6.lk-order-products--item.swiper-slide(href="")
+                                        .lk-order-products--img(style="background-image:url('static/img/content/products/img7.png')")
+                                        .lk-order-products--info
+                                            .lk-order-products--name Осетинские пироги
+                                            .lk-order-products--desc 3 шт.
+                                .lk-swiper-arrows
+                                    .lk-swiper-arrows-prev
+                                        +icon('arrow-left')
+                                    .lk-swiper-arrows-next
+                                        +icon('arrow-right')
+                        .lk-order-button.lk-order-button-retry.lk-order-button-retry--tablet Повторить заказ

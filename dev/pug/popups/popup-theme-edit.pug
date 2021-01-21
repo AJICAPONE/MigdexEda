@@ -17,7 +17,7 @@
                         .header-mini-basket__right
                             .basket-product--count
                                 .basket-product--minus -
-                                input.basket-product--input(type="text" value="1" min="1" readonly="readonly")
+                                input.basket-product--input(type="text" value="1" min="1" )
                                 .basket-product--plus +
                             .header-mini-basket__right__attr
                                 .header-mini-basket__price 325 ₽
@@ -30,7 +30,7 @@
                         .header-mini-basket__right
                             .basket-product--count
                                 .basket-product--minus -
-                                input.basket-product--input(type="text" value="1" min="1" readonly="readonly")
+                                input.basket-product--input(type="text" value="1" min="1" )
                                 .basket-product--plus +
                             .header-mini-basket__right__attr
                                 .header-mini-basket__price 58 ₽
@@ -43,14 +43,16 @@
                         .header-mini-basket__right
                             .basket-product--count
                                 .basket-product--minus -
-                                input.basket-product--input(type="text" value="1" min="1" readonly="readonly")
+                                input.basket-product--input(type="text" value="1" min="1" )
                                 .basket-product--plus +
                             .header-mini-basket__right__attr
                                 .header-mini-basket__price 58 ₽
                                 .header-mini-basket__delete
                                     +icon('delete')
+                    .lk-add-position(data-toggle="modal" data-target="#popup-lk-rebuild" data-dismiss="modal") Добавить позицию
+
 
 
             .popup-theme-edit--buttons
-                button.main-button.w-230(type="submit") Добавить
-                .main-button-transparent.w-230(data-dismiss="modal" data-toggle="modal" data-target="#popup-theme-settings") Настроить автопокупку
+                button.main-button.w-230(type="submit") Сохранить
+                a.main-button-transparent.w-230(href="/lk-setting.html") Настроить автопокупку

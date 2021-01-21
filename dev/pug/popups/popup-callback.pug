@@ -1,0 +1,19 @@
+#popup-callback.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true')
+    form.modal-dialog.modal-dialog-centered(role='document')
+        .modal-content.popup-content
+            .popup-header.modal-header.pb-0
+                .popup-header--close__wrap
+                    .popup-header--close(data-dismiss="modal")
+                        +icon('close2')
+                .popup-header--title Заказать обратный звонок
+
+            .popup-body.modal-body.p-40-70
+                .popup-input--wrapper
+                    label ФИО:
+                    input.popup-input(type="text")
+                .popup-input--wrapper
+                    label Телефон:
+                    input.popup-input(type="text" data-mask="+7 (000) 000 00 00")
+
+            .popup-footer.modal-footer
+                .main-button.w-230.m-0-auto.mb-30(data-dismiss="modal" data-toggle="modal" data-target="#popup-call-sub") Оставить заявку

@@ -1,0 +1,69 @@
+.section-lk-profile
+    .lk-content--wrapper
+        .lk-inputs--title.lk-title-mobile-d Адрес
+        form.order-out-form
+            .main-inputs--wrapper
+                .main-input--wrap.w-48
+                    label Фамилия
+                    input.main-input(type="text" required)
+                .main-input--wrap.w-48
+                    label Имя
+                    input.main-input(type="text" required)
+                .main-input--wrap.w-48
+                    label Телефон
+                    input.main-input(type="tel" data-mask="+7 (000) 000 00 00" required)
+                .main-input--wrap.w-48
+                    label E-Mail
+                    input.main-input(type="email" required)
+                .main-input--wrap.w-100.mb-30.lk-input-wrap.input-wrap-address
+                    label Адрес
+                    .lk-input-input
+                        .main-input
+                        .lk-input-arrow
+                            +icon('arrow-down')
+                        .lk-input--list
+                            .lk-input--item Мужской
+                            .lk-input--item Женский
+                input.main-input.w-48_5.mb-20(type="text" placeholder="Ближайшая станция метро")
+                input.main-input.w-48_5.mb-20(type="text" placeholder="Улица")
+                input.main-input.w-31_3.mb-20(type="text" placeholder="Дом")
+                input.main-input.w-31_3.mb-20(type="text" placeholder="Подъезд")
+                input.main-input.w-31_3.mb-20(type="text" placeholder="Этаж")
+                input.main-input.w-48_5.mb-20(type="text" placeholder="Квартира/Офис")
+                input.main-input.w-48_5.mb-20(type="text" placeholder="Код домофона")
+            .main-input--wrap.w-100.mb-30
+                label Комментарий к заказу
+                textarea.main-textarea(cols="5" rows="4" placeholder="Например, номер домофона...")
+            .order-out-block
+                .section-title--wrap.justify-content-between
+                    .section-title.mb-20 Доставка
+
+                .order-time-block
+                    .order-tab-content.order-time.active
+                        .order-data-time
+                            .order-input--wrap
+                                label Дата
+                                .order-input-block
+                                    input.order-input.order-date(type="text" data-mask="00.00.0000")
+                                    .order-input--icon
+                                        +icon('calendar')
+                            .order-input--wrap
+                                label Время
+                                .order-input-block
+                                    input.order-input(type="time" data-mask="00:00")
+                                    .order-input--icon.time-icon
+                                        +icon('clock2')
+            .order-out-block
+                .section-title--wrap.justify-content-between
+                    .section-title.mb-20 Оплата
+                .order-tabs
+                    .order-tab.active
+                        .order-tab-dot
+                        .order-tab-name Наличными курьеру
+                    .order-tab
+                        .order-tab-dot
+                        .order-tab-name Оплата онлайн
+                    .order-tab
+                        .order-tab-dot
+                        .order-tab-name Яндекс.Деньги
+            .main-button.w-200 Сохранить

@@ -4,7 +4,7 @@ header
             .header-container
                 .header-logo
                     +icon('logo')
-                ul.header-nav--menu
+                .header-nav--menu
                     a.header-nav--menu__item(href="/") О нас
                     a.header-nav--menu__item(href="/") Меню
                     a.header-nav--menu__item(href="/") Доставка и оплата
@@ -13,11 +13,11 @@ header
 
                 .header-phone--attr
                     a.header-phone--link(href="tel:89991234567") 8 (999) 123 45 67
-                    .header-callback Обратный звонок
+                    .header-callback(data-toggle="modal" data-target="#popup-callback" data-custom-modal="#custom-mobile-callback") Обратный звонок
                 .header-attr
                     .header-attr--profile(data-toggle="modal" data-target="#popup-auth")
                         +icon('user')
-                    .header-attr--favourite
+                    a.header-attr--favourite(href="/")
                         +icon('like')
                         .header-attr--favourite__count 1
                     .header-attr--basket__wrap
@@ -43,7 +43,7 @@ header
                                 .main-button-transparent.max-content Заказать
                                 .basket-product--count
                                     .basket-product--minus -
-                                    input.basket-product--input(type="text" value="1" min="1" readonly="readonly")
+                                    input.basket-product--input(type="text" value="1" min="1" )
                                     .basket-product--plus +
                         .card-content-added-one-click.main-button-transparent(data-toggle="modal" data-target="#popup-one-click") Купить в 1 клик
     .header-mobile-search
@@ -56,17 +56,18 @@ header
             +icon2('fill-menu')
     .footer-mobile-card-lanch-fixed
         .footer-mobile-card-lanch--one__click(data-custom-modal="#custom-mobile-one-click") Купить в 1 клик
-        .foorder-added-and-search--wrap
-            .product-basket-added--card
-                .button-product-basket--count
-                .button-basket--product--v2__wrap
-                    .button-basket--v2
-                        +icon('basket')
-                    .product-basket-product--count
-                        .product-basket-product--minus -
-                        input.basket-product--input(type="text" value="1" min="1" readonly="readonly")
-                    .product-basket-product--plus
-            .mobile-lanch-search--button
-                +icon('search')
+        .basket-count-buttons--wrapper
+            .foorder-added-and-search--wrap.basket-el-selector
+                .product-basket-added--card
+                    .button-product-basket--count
+                    .button-basket--product--v2__wrap
+                        .button-basket--v2
+                            +icon('basket')
+                        .product-basket-product--count
+                            .product-basket-product--minus -
+                            input.basket-product--input(type="text" value="1" min="1" )
+                            .product-basket-product--plus +
+                .mobile-lanch-search--button
+                    +icon('search')
 
 

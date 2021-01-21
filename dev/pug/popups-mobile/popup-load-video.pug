@@ -1,0 +1,23 @@
+form.popup-mobile-added#custom-mobile-load-video
+    .popup-header.modal-header.pb-0
+        .popup-mobile-line--close
+        .popup-header--title.mbm-15 Загрузка видеоотзыва
+    .popup-body.modal-body.m-0-16
+        a.popup-load-you-file.popup-load-you-file--video
+            .popup-load-you-zone.popup-load-you-file--zone
+            input.popup-load-you-input#popup-load-you-input2(type="file")
+            .popup-load-you-info
+                .popup-load-you-title Загрузить файл
+                .popup-load-you-desc (нажмите или перетащите файл сюда)
+                .popup-progress-load
+                    +icon('refresh')
+                    span Загрузка
+                .review-tab-video-reviews__icon.pp-reviews__icon
+                    +icon2('play-rev')
+        .popup-load-you-file--progress Прогресс загрузки
+            span#mod-vid-progress-number2 0
+                span %
+        progress.popup-load-you-file--progress-v#mod-vid-progress2(max="100" value="0")
+
+    .popup-footer.modal-footer
+        button.main-button.w-230.m-0-auto.popup-file--video--button(type="submit" disabled) Оставить заявку

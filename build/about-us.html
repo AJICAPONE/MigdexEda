@@ -7,8 +7,21 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="">
     <link rel="stylesheet" type="text/css" href="static/css/main.css">
+    <link rel="preload" href="static/fonts/Oswald-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="static/fonts/Oswald-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="static/fonts/Oswald-Light.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="static/fonts/Oswald-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="static/fonts/Oswald-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="static/fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="static/fonts/Roboto-Light.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="static/fonts/Roboto-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="static/fonts/Roboto-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="static/fonts/Roboto-Black.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="static/fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="static/fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"><!--[if lt IE 9]>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;amp;apikey=&lt;20aeb402-4ba8-455f-840e-0fc6221b2a16&gt;" type="text/javascript"></script><![endif]-->
   </head>
   <body class="other-page about-us-page">
     <div class="wrapper">
@@ -21,22 +34,20 @@
                   <use xlink:href="static/img/svg/symbol/sprite.svg#logo"></use>
                 </svg>
               </div>
-              <ul class="header-nav--menu"><a class="header-nav--menu__item" href="/">О нас</a><a class="header-nav--menu__item" href="/">Меню</a><a class="header-nav--menu__item" href="/">Доставка и оплата</a><a class="header-nav--menu__item" href="/">Акции</a><a class="header-nav--menu__item" href="/">Контакты</a></ul>
+              <div class="header-nav--menu"><a class="header-nav--menu__item" href="/">О нас</a><a class="header-nav--menu__item" href="/">Меню</a><a class="header-nav--menu__item" href="/">Доставка и оплата</a><a class="header-nav--menu__item" href="/">Акции</a><a class="header-nav--menu__item" href="/">Контакты</a></div>
               <div class="header-phone--attr"><a class="header-phone--link" href="tel:89991234567">8 (999) 123 45 67</a>
-                <div class="header-callback">Обратный звонок</div>
+                <div class="header-callback" data-toggle="modal" data-target="#popup-callback" data-custom-modal="#custom-mobile-callback">Обратный звонок</div>
               </div>
               <div class="header-attr">
                 <div class="header-attr--profile" data-toggle="modal" data-target="#popup-auth">
                   <svg class="icon icon-user ">
                     <use xlink:href="static/img/svg/symbol/sprite.svg#user"></use>
                   </svg>
-                </div>
-                <div class="header-attr--favourite">
+                </div><a class="header-attr--favourite" href="/">
                   <svg class="icon icon-like ">
                     <use xlink:href="static/img/svg/symbol/sprite.svg#like"></use>
                   </svg>
-                  <div class="header-attr--favourite__count">1</div>
-                </div>
+                  <div class="header-attr--favourite__count">1</div></a>
                 <div class="header-attr--basket__wrap">
                   <div class="header-attr--basket">
                     <svg class="icon icon-basket ">
@@ -55,7 +66,7 @@
                           <div class="header-mini-basket__right">
                             <div class="basket-product--count">
                               <div class="basket-product--minus">-</div>
-                              <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
+                              <input class="basket-product--input" type="text" value="1" min="1">
                               <div class="basket-product--plus">+</div>
                             </div>
                             <div class="header-mini-basket__right__attr">
@@ -76,7 +87,7 @@
                           <div class="header-mini-basket__right">
                             <div class="basket-product--count">
                               <div class="basket-product--minus">-</div>
-                              <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
+                              <input class="basket-product--input" type="text" value="1" min="1">
                               <div class="basket-product--plus">+</div>
                             </div>
                             <div class="header-mini-basket__right__attr">
@@ -92,7 +103,9 @@
                       </div>
                     </div>
                     <div class="header-mini-basket__over">
-                      <div class="header-mini-basket__over--title">Общая стоимость:</div>
+                      <div class="header-mini-basket__over--wrap">
+                        <div class="header-mini-basket__over--title mr-100">Общая стоимость:</div><a class="header-mini-basket__over--title color-main" href="/basket.html">Перейти в корзину</a>
+                      </div>
                       <div class="header-mini-basket__over--price">383 ₽</div>
                     </div>
                   </div>
@@ -127,7 +140,7 @@
                       <div class="main-button-transparent max-content">Заказать</div>
                       <div class="basket-product--count">
                         <div class="basket-product--minus">-</div>
-                        <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
+                        <input class="basket-product--input" type="text" value="1" min="1">
                         <div class="basket-product--plus">+</div>
                       </div>
                     </div>
@@ -156,26 +169,28 @@
         </div>
         <div class="footer-mobile-card-lanch-fixed">
           <div class="footer-mobile-card-lanch--one__click" data-custom-modal="#custom-mobile-one-click">Купить в 1 клик</div>
-          <div class="foorder-added-and-search--wrap">
-            <div class="product-basket-added--card">
-              <div class="button-product-basket--count"></div>
-              <div class="button-basket--product--v2__wrap">
-                <div class="button-basket--v2">
-                  <svg class="icon icon-basket ">
-                    <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
-                  </svg>
+          <div class="basket-count-buttons--wrapper">
+            <div class="foorder-added-and-search--wrap basket-el-selector">
+              <div class="product-basket-added--card">
+                <div class="button-product-basket--count"></div>
+                <div class="button-basket--product--v2__wrap">
+                  <div class="button-basket--v2">
+                    <svg class="icon icon-basket ">
+                      <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
+                    </svg>
+                  </div>
+                  <div class="product-basket-product--count">
+                    <div class="product-basket-product--minus">-</div>
+                    <input class="basket-product--input" type="text" value="1" min="1">
+                    <div class="product-basket-product--plus">+</div>
+                  </div>
                 </div>
-                <div class="product-basket-product--count">
-                  <div class="product-basket-product--minus">-</div>
-                  <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
-                </div>
-                <div class="product-basket-product--plus"></div>
               </div>
-            </div>
-            <div class="mobile-lanch-search--button">
-              <svg class="icon icon-search ">
-                <use xlink:href="static/img/svg/symbol/sprite.svg#search"></use>
-              </svg>
+              <div class="mobile-lanch-search--button">
+                <svg class="icon icon-search ">
+                  <use xlink:href="static/img/svg/symbol/sprite.svg#search"></use>
+                </svg>
+              </div>
             </div>
           </div>
         </div>
@@ -328,28 +343,29 @@
               </div></a></ul>
         </div>
       </div>
+      <div class="close-mobile--popups"></div>
       <div class="content">
         <section class="breadcrumb">
           <div class="container">
-            <ul class="breadcrumb-list"><a class="breadcrumb-item" href="/">Главная</a><a class="breadcrumb-item" href="/">Меню</a><a class="breadcrumb-item" href="/">Хинкали</a></ul>
+            <div class="breadcrumb-list"><a class="breadcrumb-item" href="/">Главная</a><a class="breadcrumb-item" href="/">Меню</a><a class="breadcrumb-item" href="/">Хинкали</a></div>
           </div>
         </section>
-        <section class="section1 section-about-us">
+        <section class="section1 section-about-us pb-112">
           <div class="container">
             <div class="section-title text-left mb-70">О нас</div>
             <div class="section-container">
               <div class="about-us-list">
                 <div class="about-us-list--item">
-                  <div class="why-us--left"><img class="why-us--img" src="/static/img/general/why1.png"></div>
+                  <div class="why-us--left"><img class="why-us--img" loading="lazy" src="/static/img/general/why1.png"></div>
                   <div class="why-us--right">
                     <div class="section-title--wrap justify-content-between align-items-end mb-25">
                       <div class="section-title text-left mb-0">“Название”</div>
                     </div>
-                    <p class="why-us--desc"><a href="/">“Название компании”</a> — quis adipiscing ut lacus. Congue laoreet ut commodo ac. Felis venenatis, nulla cursus sed aliquet et id. Pretium porta tempus sit eget nisl. Nunc arcu, dolor, venenatis euismod mauris enim. Sagittis, viverra aliquam leo nunc, pellentesque mauris. Tellus dui tempus malesuada venenatis nulla sed maecenas sapien. Donec quisque felis neque duis ornare cursus dolor. Nibh fringilla facilisis viverra vulputate et ac nullam ut pellentesque. Ipsum vulputate duis aliquam et non erat. Commodo, sit amet arcu, auctor</p>
+                    <p class="why-us--desc"><a href="/">“Название компании”</a> quis adipiscing ut lacus. Congue laoreet ut commodo ac. Felis venenatis, nulla cursus sed aliquet et id. Pretium porta tempus sit eget nisl. Nunc arcu, dolor, venenatis euismod mauris enim. Sagittis, viverra aliquam leo nunc, pellentesque mauris. Tellus dui tempus malesuada venenatis nulla sed maecenas sapien. Donec quisque felis neque duis ornare cursus dolor. Nibh fringilla facilisis viverra vulputate et ac nullam ut pellentesque. Ipsum vulputate duis aliquam et non erat. Commodo, sit amet arcu, auctor pellentesque arcu, purus. Scelerisque pharetra quis blandit condimentum ultrices mauris, odio. Bibendum quam lectus ipsum arcu enim. Iaculis amet potenti faucibus hac posuere.</p>
                   </div>
                 </div>
                 <div class="about-us-list--item">
-                  <div class="why-us--left"><img class="why-us--img" src="/static/img/general/why2.png"></div>
+                  <div class="why-us--left"><img class="why-us--img" loading="lazy" src="/static/img/general/why2.png"></div>
                   <div class="why-us--right">
                     <div class="section-title--wrap justify-content-between align-items-end mb-25"></div>
                     <p class="why-us--desc">Eu duis pulvinar elementum ac bibendum vitae et tellus vitae. Non non pulvinar nunc vitae, blandit velit, mauris at aenean. Vel urna scelerisque urna velit at sagittis, magna proin ultrices. Condimentum sed tristique in commodo. Convallis elementum, vitae ornare porttitor porttitor ultrices porttitor eu pretium. Sit magna neque id amet ligula. Risus suscipit id felis aenean mauris proin diam morbi aliquet. Eget massa imperdiet senectus lacus.<br><br>Varius in massa gravida in euismod mauris, nec, orci. Amet ullamcorper ac mattis amet. Amet, porta sit iaculis pretium molestie. Morbi bibendum nisl egestas in sollicitudin et urna adipiscing.</p>
@@ -383,7 +399,7 @@
                       </svg>
                     </div>
                     <div class="about-why-us--title">Лучшие повара</div>
-                    <div class="about-why-us--text">Tellus dictumst interdum vel, tortor diam viverra. Adipiscing nulla ut vitae arcu, turpis vitae. Enim.</div>
+                    <div class="about-why-us--text">At consequat elit posuere commodo in ac diam nunc eros. Tortor velit nulla non porttitor eu rutrum amet.</div>
                   </div>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-9 about-why-us--col swiper-slide">
@@ -394,7 +410,7 @@
                       </svg>
                     </div>
                     <div class="about-why-us--title">Широкий выбор блюд</div>
-                    <div class="about-why-us--text">Porta neque morbi commodo mauris, quisque id cras aliquet facilisi.</div>
+                    <div class="about-why-us--text">Sapien, scelerisque quam ornare eu, sed vulputate bibendum. Adipiscing nunc proin aliquet praesent pulvinar.</div>
                   </div>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-9 about-why-us--col swiper-slide">
@@ -405,7 +421,7 @@
                       </svg>
                     </div>
                     <div class="about-why-us--title">Приятные цены</div>
-                    <div class="about-why-us--text">Porta neque morbi commodo mauris, quisque id cras aliquet facilisi.</div>
+                    <div class="about-why-us--text">Eget sed tellus mi ultricies urna. Et justo, mattis donec morbi quis. Lorem neque in rhoncus ridiculus.</div>
                   </div>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-9 about-why-us--col swiper-slide">
@@ -416,7 +432,7 @@
                       </svg>
                     </div>
                     <div class="about-why-us--title">Быстрая доствка</div>
-                    <div class="about-why-us--text">Porta neque morbi commodo mauris, quisque id cras aliquet facilisi.</div>
+                    <div class="about-why-us--text">Blandit dapibus ac hendrerit nisl odio aenean. Aliquet nascetur fermentum volutpat tristique. Tristique odio.</div>
                   </div>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-9 about-why-us--col swiper-slide">
@@ -427,7 +443,7 @@
                       </svg>
                     </div>
                     <div class="about-why-us--title">Удобная система оплаты</div>
-                    <div class="about-why-us--text">Porta neque morbi commodo mauris, quisque id cras aliquet facilisi.</div>
+                    <div class="about-why-us--text">Ac commodo vel eu mattis. Scelerisque tincidunt eget mi etiam ipsum aliquam. Amet est lorem.</div>
                   </div>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-9 about-why-us--col swiper-slide">
@@ -438,7 +454,7 @@
                       </svg>
                     </div>
                     <div class="about-why-us--title">Сертификаты качества</div>
-                    <div class="about-why-us--text">Porta neque morbi commodo mauris, quisque id cras aliquet facilisi.</div>
+                    <div class="about-why-us--text">Sem velit sed pellentesque morbi netus ultrices. Aliquet sit ipsum diam gravida id ultricies.</div>
                   </div>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-9 about-why-us--col swiper-slide">
@@ -449,7 +465,7 @@
                       </svg>
                     </div>
                     <div class="about-why-us--title">Ежедневная доставка</div>
-                    <div class="about-why-us--text">Porta neque morbi commodo mauris, quisque id cras aliquet facilisi.</div>
+                    <div class="about-why-us--text">Sem velit sed pellentesque morbi netus ultrices. Aliquet sit ipsum diam gravida id ultricies.</div>
                   </div>
                 </div>
               </div>
@@ -526,7 +542,7 @@
         </section>
         <section class="section4 section-team p-60-0">
           <div class="container">
-            <div class="have-question col-xl-10 col-lg-12 col-md-12 col-sm-12">
+            <div class="have-question">
               <div class="have-question--left" style="background-image:url('static/img/general/call.png');">
                 <div class="have-question--title">Остались вопросы?</div>
                 <div class="have-question--desc">Оставьте заявку, мы свяжемся с вами в течении 30 минут!</div>
@@ -570,7 +586,7 @@
             </div>
             <div class="dots-relative">
               <div class="section-container mobile-delivery-icon--slider swiper-container">
-                <div class="section-container-delivery d-flex flex-wrap swiper-wrapper">
+                <div class="section-container-delivery d-flex swiper-wrapper">
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 section-delivery--item swiper-slide">
                     <div class="section-delivery--icon">
                       <svg class="icon icon-fill-stage1 ">
@@ -601,7 +617,7 @@
             </div>
           </div>
         </section>
-        <section class="section9 section-delivery-map p-40-0">
+        <section class="section9 section-delivery-map p-40-0 pt-0">
           <div class="container">
             <div class="section-container">
               <div class="section-container-delivery--map d-flex flex-wrap">
@@ -635,7 +651,7 @@
                   </div>
                 </div>
                 <div class="col-xl-7 col-lg-7 col-md-6 col-sm-12 delivery-map--right p-0">
-                  <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac913f5f05d1a4fb0054e0c06a86ef1d58352a7395aed0c163a0e3b6978073b16&amp;amp;width=100%&amp;amp;height=100%&amp;amp;lang=ru_RU&amp;amp;scroll=true"></script>
+                  <div id="map"></div>
                 </div>
               </div>
             </div>
@@ -671,7 +687,7 @@
                                 <div class="footer-basket-lanch__right">
                                   <div class="basket-product--count">
                                     <div class="basket-product--minus">-</div>
-                                    <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
+                                    <input class="basket-product--input" type="text" value="1" min="1">
                                     <div class="basket-product--plus">+</div>
                                   </div>
                                   <div class="footer-basket-lanch__right__attr">
@@ -692,7 +708,7 @@
                                 <div class="footer-basket-lanch__right">
                                   <div class="basket-product--count">
                                     <div class="basket-product--minus">-</div>
-                                    <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
+                                    <input class="basket-product--input" type="text" value="1" min="1">
                                     <div class="basket-product--plus">+</div>
                                   </div>
                                   <div class="footer-basket-lanch__right__attr">
@@ -713,7 +729,7 @@
                                 <div class="footer-basket-lanch__right">
                                   <div class="basket-product--count">
                                     <div class="basket-product--minus">-</div>
-                                    <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
+                                    <input class="basket-product--input" type="text" value="1" min="1">
                                     <div class="basket-product--plus">+</div>
                                   </div>
                                   <div class="footer-basket-lanch__right__attr">
@@ -734,7 +750,7 @@
                                 <div class="footer-basket-lanch__right">
                                   <div class="basket-product--count">
                                     <div class="basket-product--minus">-</div>
-                                    <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
+                                    <input class="basket-product--input" type="text" value="1" min="1">
                                     <div class="basket-product--plus">+</div>
                                   </div>
                                   <div class="footer-basket-lanch__right__attr">
@@ -754,7 +770,7 @@
                       <div class="footer-basket-slider--right__bottom">
                         <div class="basket-product--count">
                           <div class="basket-product--minus">-</div>
-                          <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
+                          <input class="basket-product--input" type="text" value="1" min="1">
                           <div class="basket-product--plus">+</div>
                         </div>
                       </div>
@@ -774,7 +790,7 @@
                       <div class="footer-basket-slider--right__bottom">
                         <div class="basket-product--count">
                           <div class="basket-product--minus">-</div>
-                          <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
+                          <input class="basket-product--input" type="text" value="1" min="1">
                           <div class="basket-product--plus">+</div>
                         </div>
                       </div>
@@ -794,7 +810,7 @@
                       <div class="footer-basket-slider--right__bottom">
                         <div class="basket-product--count">
                           <div class="basket-product--minus">-</div>
-                          <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
+                          <input class="basket-product--input" type="text" value="1" min="1">
                           <div class="basket-product--plus">+</div>
                         </div>
                       </div>
@@ -814,7 +830,7 @@
                       <div class="footer-basket-slider--right__bottom">
                         <div class="basket-product--count">
                           <div class="basket-product--minus">-</div>
-                          <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
+                          <input class="basket-product--input" type="text" value="1" min="1">
                           <div class="basket-product--plus">+</div>
                         </div>
                       </div>
@@ -845,7 +861,7 @@
                                 <div class="footer-basket-lanch__right">
                                   <div class="basket-product--count">
                                     <div class="basket-product--minus">-</div>
-                                    <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
+                                    <input class="basket-product--input" type="text" value="1" min="1">
                                     <div class="basket-product--plus">+</div>
                                   </div>
                                   <div class="footer-basket-lanch__right__attr">
@@ -866,7 +882,7 @@
                                 <div class="footer-basket-lanch__right">
                                   <div class="basket-product--count">
                                     <div class="basket-product--minus">-</div>
-                                    <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
+                                    <input class="basket-product--input" type="text" value="1" min="1">
                                     <div class="basket-product--plus">+</div>
                                   </div>
                                   <div class="footer-basket-lanch__right__attr">
@@ -887,7 +903,7 @@
                                 <div class="footer-basket-lanch__right">
                                   <div class="basket-product--count">
                                     <div class="basket-product--minus">-</div>
-                                    <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
+                                    <input class="basket-product--input" type="text" value="1" min="1">
                                     <div class="basket-product--plus">+</div>
                                   </div>
                                   <div class="footer-basket-lanch__right__attr">
@@ -908,7 +924,7 @@
                                 <div class="footer-basket-lanch__right">
                                   <div class="basket-product--count">
                                     <div class="basket-product--minus">-</div>
-                                    <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
+                                    <input class="basket-product--input" type="text" value="1" min="1">
                                     <div class="basket-product--plus">+</div>
                                   </div>
                                   <div class="footer-basket-lanch__right__attr">
@@ -928,7 +944,7 @@
                       <div class="footer-basket-slider--right__bottom">
                         <div class="basket-product--count">
                           <div class="basket-product--minus">-</div>
-                          <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
+                          <input class="basket-product--input" type="text" value="1" min="1">
                           <div class="basket-product--plus">+</div>
                         </div>
                       </div>
@@ -948,7 +964,7 @@
                       <div class="footer-basket-slider--right__bottom">
                         <div class="basket-product--count">
                           <div class="basket-product--minus">-</div>
-                          <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
+                          <input class="basket-product--input" type="text" value="1" min="1">
                           <div class="basket-product--plus">+</div>
                         </div>
                       </div>
@@ -974,6 +990,22 @@
                 </svg>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-lanch--fast">
+        <div class="container">
+          <div class="footer-lanch--fast__flex">
+            <div class="button-basket--product__wrap">
+              <div class="main-button-transparent max-content bg-color-orange">Заказать ~ 537 ₽</div>
+              <div class="basket-product--count footer-lanch--count">
+                <div class="basket-product--minus">-</div>
+                <input class="basket-product--input" type="text" value="1" min="1">
+                <div class="basket-product--plus">+</div>
+              </div>
+            </div>
+            <div class="card-content-added-one-click main-button-transparent" data-toggle="modal" data-target="#popup-one-click">Купить в 1 клик</div>
+            <div class="card-content-added-one-click main-button-transparent">Создать шаблон</div>
           </div>
         </div>
       </div>
@@ -1003,23 +1035,23 @@
           <div class="container">
             <div class="footer-middle--list">
               <div class="footer-middle--title">Кухни</div>
-              <ul class="footer-middle--item"><a class="footer-middle--link" href="/">Кавказская кухня</a><a class="footer-middle--link" href="/">Азиатская кухня</a><a class="footer-middle--link" href="/">Азиатская кухня</a><a class="footer-middle--link" href="/">Русская кухня</a></ul>
+              <div class="footer-middle--item"><a class="footer-middle--link" href="/">Кавказская кухня</a><a class="footer-middle--link" href="/">Азиатская кухня</a><a class="footer-middle--link" href="/">Азиатская кухня</a><a class="footer-middle--link" href="/">Русская кухня</a></div>
             </div>
             <div class="footer-middle--list">
               <div class="footer-middle--title">Блюда</div>
-              <ul class="footer-middle--item"><a class="footer-middle--link" href="/">Хинкали</a><a class="footer-middle--link" href="/">Чебуреки</a><a class="footer-middle--link" href="/">Манты</a><a class="footer-middle--link" href="/">Все меню</a></ul>
+              <div class="footer-middle--item"><a class="footer-middle--link" href="/">Хинкали</a><a class="footer-middle--link" href="/">Чебуреки</a><a class="footer-middle--link" href="/">Манты</a><a class="footer-middle--link" href="/">Все меню</a></div>
             </div>
             <div class="footer-middle--list">
               <div class="footer-middle--title">Информация</div>
-              <ul class="footer-middle--item"><a class="footer-middle--link" href="/">Доставка</a><a class="footer-middle--link" href="/">Оплата</a><a class="footer-middle--link" href="/">О нас</a><a class="footer-middle--link" href="/">Контакты</a></ul>
+              <div class="footer-middle--item"><a class="footer-middle--link" href="/">Доставка</a><a class="footer-middle--link" href="/">Оплата</a><a class="footer-middle--link" href="/">О нас</a><a class="footer-middle--link" href="/">Контакты</a></div>
             </div>
             <div class="footer-middle--list">
               <div class="footer-middle--title">Контакты</div>
-              <ul class="footer-middle--item"><a class="footer-middle--link" href="/">Реквизиты</a><a class="footer-middle--link" href="/">Сертификаты</a><a class="footer-middle--link" href="/">Спаравки проверок</a><a class="footer-middle--link" href="/">Правовая информация</a></ul>
+              <div class="footer-middle--item"><a class="footer-middle--link" href="/">Реквизиты</a><a class="footer-middle--link" href="/">Сертификаты</a><a class="footer-middle--link" href="/">Спаравки проверок</a><a class="footer-middle--link" href="/">Правовая информация</a></div>
             </div>
             <div class="footer-middle--list__contact">
               <div class="footer-middle--callback__tel"><a class="footer-middle--phone" href="tel:89991234567">8 (999) 123 45 67</a>
-                <div class="footer-middle--callback">Обратный звонок</div>
+                <div class="footer-middle--callback" data-toggle="modal" data-target="#popup-callback">Обратный звонок</div>
               </div>
               <div class="footer-middle--email__time"><a class="footer-middle--email" href="mailto:Info@name.com">Info@name.com</a>
                 <div class="footer-middle--time">Ежедневно с 08:00 по 20:00</div>
@@ -1035,7 +1067,7 @@
                     </svg>
                   </div>
                 </div>
-                <ul class="footer-middle--item"><a class="footer-middle--link" href="/">Кавказская кухня</a><a class="footer-middle--link" href="/">Азиатская кухня</a><a class="footer-middle--link" href="/">Азиатская кухня</a><a class="footer-middle--link" href="/">Русская кухня</a></ul>
+                <div class="footer-middle--item"><a class="footer-middle--link" href="/">Кавказская кухня</a><a class="footer-middle--link" href="/">Азиатская кухня</a><a class="footer-middle--link" href="/">Азиатская кухня</a><a class="footer-middle--link" href="/">Русская кухня</a></div>
               </div>
               <div class="footer-middle--list">
                 <div class="footer-middle--title--wrap">
@@ -1046,7 +1078,7 @@
                     </svg>
                   </div>
                 </div>
-                <ul class="footer-middle--item"><a class="footer-middle--link" href="/">Хинкали</a><a class="footer-middle--link" href="/">Чебуреки</a><a class="footer-middle--link" href="/">Манты</a><a class="footer-middle--link" href="/">Все меню</a></ul>
+                <div class="footer-middle--item"><a class="footer-middle--link" href="/">Хинкали</a><a class="footer-middle--link" href="/">Чебуреки</a><a class="footer-middle--link" href="/">Манты</a><a class="footer-middle--link" href="/">Все меню</a></div>
               </div>
               <div class="footer-middle--list">
                 <div class="footer-middle--title--wrap">
@@ -1057,7 +1089,7 @@
                     </svg>
                   </div>
                 </div>
-                <ul class="footer-middle--item"><a class="footer-middle--link" href="/">Доставка</a><a class="footer-middle--link" href="/">Оплата</a><a class="footer-middle--link" href="/">О нас</a><a class="footer-middle--link" href="/">Контакты</a></ul>
+                <div class="footer-middle--item"><a class="footer-middle--link" href="/">Доставка</a><a class="footer-middle--link" href="/">Оплата</a><a class="footer-middle--link" href="/">О нас</a><a class="footer-middle--link" href="/">Контакты</a></div>
               </div>
               <div class="footer-middle--list">
                 <div class="footer-middle--title--wrap">
@@ -1068,7 +1100,7 @@
                     </svg>
                   </div>
                 </div>
-                <ul class="footer-middle--item"><a class="footer-middle--link" href="/">Реквизиты</a><a class="footer-middle--link" href="/">Сертификаты</a><a class="footer-middle--link" href="/">Спаравки проверок</a><a class="footer-middle--link" href="/">Правовая информация</a></ul>
+                <div class="footer-middle--item"><a class="footer-middle--link" href="/">Реквизиты</a><a class="footer-middle--link" href="/">Сертификаты</a><a class="footer-middle--link" href="/">Спаравки проверок</a><a class="footer-middle--link" href="/">Правовая информация</a></div>
               </div>
             </div>
           </div>
@@ -1090,15 +1122,6 @@
                 </svg></a></div>
           </div>
         </div>
-        <!--.footer-mobile-card-b--fixed-->
-        <!--    .mobile-mini-basket-count--wrap-->
-        <!--        .mobile-mini-bakset-added--button-->
-        <!--            +icon('basket')-->
-        <!--        .basket-product--count-->
-        <!--            .basket-product--minus --->
-        <!--            input.basket-product--input(type="text" value="1" min="1" readonly="readonly")-->
-        <!--            .basket-product--plus +-->
-        <!--    .card-content-added-one-click.main-button-transparent(data-custom-modal="#custom-mobile-one-click") Купить в 1 клик-->
         <div class="mobile-lanch-list--show main-button-transparent" data-custom-modal="#custom-mobile-lanch-basket">
           <svg class="icon icon-lanch-list ">
             <use xlink:href="static/img/svg/symbol/sprite.svg#lanch-list"></use>
@@ -1123,17 +1146,17 @@
             <div class="mobile-lanch-search--content">
               <div class="mobile-lanch-search--list--wrap">
                 <div class="mobile-lanch-search--title">История</div>
-                <ul class="mobile-lanch-search--list"><a class="mobile-lanch-search--item" href="/">Хинкали</a><a class="mobile-lanch-search--item" href="/">Самса с телятиной</a><a class="mobile-lanch-search--item" href="/">Cоус Чесночный</a></ul>
+                <div class="mobile-lanch-search--list"><a class="mobile-lanch-search--item" href="/">Хинкали</a><a class="mobile-lanch-search--item" href="/">Самса с телятиной</a><a class="mobile-lanch-search--item" href="/">Cоус Чесночный</a></div>
               </div>
               <div class="mobile-lanch-search--list--wrap">
                 <div class="mobile-lanch-search--title">Популярные</div>
-                <ul class="mobile-lanch-search--list"><a class="mobile-lanch-search--item" href="/">Хинкали</a><a class="mobile-lanch-search--item" href="/">Самса с телятиной</a><a class="mobile-lanch-search--item" href="/">Cоус Чесночный</a><a class="mobile-lanch-search--item" href="/">Капучино</a></ul>
+                <div class="mobile-lanch-search--list"><a class="mobile-lanch-search--item" href="/">Хинкали</a><a class="mobile-lanch-search--item" href="/">Самса с телятиной</a><a class="mobile-lanch-search--item" href="/">Cоус Чесночный</a><a class="mobile-lanch-search--item" href="/">Капучино</a></div>
               </div>
             </div>
           </div>
         </div>
         <div class="footer-mobile-menu--fixed">
-          <ul class="footer-mobile-menu--list"><a class="footer-mobile-menu--item" href="">
+          <div class="footer-mobile-menu--list"><a class="footer-mobile-menu--item" href="">
               <div class="footer-mobile-menu--icon">
                 <svg class="icon icon-home ">
                   <use xlink:href="static/img/svg/symbol/sprite.svg#home"></use>
@@ -1163,144 +1186,10 @@
                 </svg><span>3</span>
               </div>
             </div>
-          </ul>
+          </div>
         </div>
       </footer>
       <div class="popups">
-        <div class="modal fade" id="popup-added-basket" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered mw-630" role="document">
-            <div class="modal-content popup-content">
-              <div class="popup-header modal-header pb-0">
-                <div class="popup-header--close__wrap">
-                  <div class="popup-header--close" data-dismiss="modal">
-                    <svg class="icon icon-close2 ">
-                      <use xlink:href="static/img/svg/symbol/sprite.svg#close2"></use>
-                    </svg>
-                  </div>
-                </div>
-                <div class="popup-header--title">Блюдо добавлено в Ваш заказ!</div>
-                <div class="popup-header--desc">С этим блюдом часто заказывают:</div>
-              </div>
-              <div class="popup-body modal-body">
-                <div class="popup-basket-notific swiper-container">
-                  <div class="swiper-wrapper">
-                    <div class="section-menu-content--col swiper-slide">
-                      <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/">
-                          <div class="section-menu-content--img" style="background-image:url('/static/img/content/products/img10.png');"></div>
-                          <div class="section-menu-content--item__info">
-                            <div class="section-menu-content--name mb-10">Соус Томатный</div>
-                            <div class="section-menu-content--desc mb-20">Пикантный соус с нежным томатным вкусом и чесноком.</div>
-                          </div></a>
-                        <div class="section-menu-content--item__bottom">
-                          <div class="section-menu-content--order">
-                            <div class="section-menu-content--price__wrap">
-                              <div class="section-menu-content--price__stock"></div>
-                              <div class="section-menu-content--price">29 ₽ / <span>1 шт.</span></div>
-                            </div>
-                            <div class="product-basket-added--card">
-                              <div class="button-product-basket--count"></div>
-                              <div class="button-basket--product--v2__wrap">
-                                <div class="button-basket--v2">
-                                  <svg class="icon icon-basket ">
-                                    <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
-                                  </svg>
-                                </div>
-                                <div class="product-basket-product--count">
-                                  <div class="product-basket-product--minus">-</div>
-                                  <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
-                                </div>
-                                <div class="product-basket-product--plus"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="section-menu-content--col swiper-slide">
-                      <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/">
-                          <div class="section-menu-content--img" style="background-image:url('/static/img/content/products/img12.png');"></div>
-                          <div class="section-menu-content--item__info">
-                            <div class="section-menu-content--name mb-10">Соус Чесночный</div>
-                            <div class="section-menu-content--desc mb-20">Пикантный соус с нежным сливочно-чесночным вкусом.</div>
-                          </div></a>
-                        <div class="section-menu-content--item__bottom">
-                          <div class="section-menu-content--order">
-                            <div class="section-menu-content--price__wrap">
-                              <div class="section-menu-content--price__stock"></div>
-                              <div class="section-menu-content--price">29 ₽ / <span>1 шт.</span></div>
-                            </div>
-                            <div class="product-basket-added--card">
-                              <div class="button-product-basket--count"></div>
-                              <div class="button-basket--product--v2__wrap">
-                                <div class="button-basket--v2">
-                                  <svg class="icon icon-basket ">
-                                    <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
-                                  </svg>
-                                </div>
-                                <div class="product-basket-product--count">
-                                  <div class="product-basket-product--minus">-</div>
-                                  <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
-                                </div>
-                                <div class="product-basket-product--plus"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="section-menu-content--col swiper-slide">
-                      <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/">
-                          <div class="section-menu-content--img" style="background-image:url('/static/img/content/product-item/img1.png');"></div>
-                          <div class="section-menu-content--item__info">
-                            <div class="section-menu-content--name mb-10">Хинкали из баранины</div>
-                            <div class="section-menu-content--desc mb-20">Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.</div>
-                          </div></a>
-                        <div class="section-menu-content--item__bottom">
-                          <div class="section-menu-content--order">
-                            <div class="section-menu-content--price__wrap">
-                              <div class="section-menu-content--price__stock"></div>
-                              <div class="section-menu-content--price">65 ₽ / <span>1 шт.</span></div>
-                            </div>
-                            <div class="product-basket-added--card">
-                              <div class="button-product-basket--count"></div>
-                              <div class="button-basket--product--v2__wrap">
-                                <div class="button-basket--v2">
-                                  <svg class="icon icon-basket ">
-                                    <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
-                                  </svg>
-                                </div>
-                                <div class="product-basket-product--count">
-                                  <div class="product-basket-product--minus">-</div>
-                                  <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
-                                </div>
-                                <div class="product-basket-product--plus"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="popup-arrow-notific">
-                  <div class="popup-swiper-button-prev">
-                    <svg class="icon icon-arrow-left ">
-                      <use xlink:href="static/img/svg/symbol/sprite.svg#arrow-left"></use>
-                    </svg>
-                  </div>
-                  <div class="popup-swiper-button-next">
-                    <svg class="icon icon-arrow-right ">
-                      <use xlink:href="static/img/svg/symbol/sprite.svg#arrow-right"></use>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <!--.popup-footer.modal-footer-->
-              <!--    button.btn.btn-secondary(type='button' data-dismiss='modal') Close-->
-              <!--    button.btn.btn-primary(type='button') Save changes-->
-            </div>
-          </div>
-        </div>
         <div class="modal fade" id="popup-auth" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
           <form class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content popup-content">
@@ -1336,7 +1225,7 @@
             <div class="modal-content popup-content">
               <div class="popup-header modal-header pb-0">
                 <div class="popup-header--close__wrap">
-                  <div class="popup-header--close" data-dismiss="modal">
+                  <div class="popup-header--close popup-close-modal2" data-dismiss="modal">
                     <svg class="icon icon-close2 ">
                       <use xlink:href="static/img/svg/symbol/sprite.svg#close2"></use>
                     </svg>
@@ -1350,6 +1239,10 @@
                   <input class="popup-input" type="text">
                 </div>
                 <div class="popup-input--wrapper">
+                  <label>Телефон:</label>
+                  <input class="popup-input" type="text" data-mask="+7 (000) 000 00 00">
+                </div>
+                <div class="popup-input--wrapper">
                   <label>Email:</label>
                   <input class="popup-input" type="email">
                 </div>
@@ -1357,19 +1250,64 @@
                   <label>Пароль:</label>
                   <input class="popup-input" type="password">
                 </div>
-                <div class="popup-input--wrapper">
-                  <label>Повторите пароль:</label>
-                  <input class="popup-input" type="password">
-                </div>
               </div>
               <div class="popup-footer modal-footer">
-                <button class="main-button w-170 m-0-auto mb-30" type="submit">Создать аккаунт</button>
+                <button class="main-button w-170 m-0-auto mb-30" data-dismiss="modal" data-toggle="modal" data-target="#popup-code">Создать аккаунт</button>
                 <div class="popup-not-reg">Уже есть аккаунта?<span data-dismiss="modal" data-toggle="modal" data-target="#popup-auth">Войдите!</span></div>
+                <div class="popup-login--social">
+                  <div class="popup-login--title">Или войдите через социальные сети:</div>
+                  <div class="popup-login--list">
+                    <div class="popup-login--item">
+                      <svg class="icon icon-social-fb ">
+                        <use xlink:href="static/img/svg/symbol/sprite.svg#social-fb"></use>
+                      </svg>
+                    </div>
+                    <div class="popup-login--item">
+                      <svg class="icon icon-social-vk ">
+                        <use xlink:href="static/img/svg/symbol/sprite.svg#social-vk"></use>
+                      </svg>
+                    </div>
+                    <div class="popup-login--item">
+                      <svg class="icon icon-social-google ">
+                        <use xlink:href="static/img/svg/symbol/sprite.svg#social-google"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </form>
         </div>
-        <div class="modal fade" id="popup-one-click" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal fade" id="popup-code" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <form class="modal-dialog modal-dialog-centered mw-430" role="document">
+            <div class="modal-content popup-content">
+              <div class="popup-header modal-header pb-0">
+                <div class="popup-header--close__wrap">
+                  <div class="popup-header--close popup-close-modal2" data-dismiss="modal">
+                    <svg class="icon icon-close2 ">
+                      <use xlink:href="static/img/svg/symbol/sprite.svg#close2"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="popup-header--title mb-10">Код подтвердения</div>
+                <div class="popup-header--desc d-flex flex-column align-items-center">На номер 8 (999) 123 45 67 был выслан код.<span>Введите код ниже:</span></div>
+              </div>
+              <div class="popup-body modal-body p-40-70">
+                <div class="popop-code--wrap code-auth--wrap">
+                  <input class="popup-input code-auth" type="text" name="digit" data-mask="0" placeholder="_">
+                  <input class="popup-input code-auth" type="text" name="digit" data-mask="0" placeholder="_">
+                  <input class="popup-input code-auth" type="text" name="digit" data-mask="0" placeholder="_">
+                  <input class="popup-input code-auth" type="text" name="digit" data-mask="0" placeholder="_">
+                </div>
+              </div>
+              <div class="popup-footer modal-footer pt-0">
+                <div class="popup-send--again">Отправить повторно</div>
+                <button class="main-button w-230 m-0-auto mb-30" type="submit">Подтвердить</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal fade" id="popup-callback" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
           <form class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content popup-content">
               <div class="popup-header modal-header pb-0">
@@ -1380,138 +1318,23 @@
                     </svg>
                   </div>
                 </div>
-                <div class="popup-header--title">Купить в 1 клик!</div>
-                <div class="popup-header--desc">Наш менеджер перезвонит Вам, чтобы уточнить заказ</div>
+                <div class="popup-header--title">Заказать обратный звонок</div>
               </div>
               <div class="popup-body modal-body p-40-70">
                 <div class="popup-input--wrapper">
-                  <label>Контактное лицо:</label>
+                  <label>ФИО:</label>
                   <input class="popup-input" type="text">
                 </div>
                 <div class="popup-input--wrapper">
                   <label>Телефон:</label>
-                  <input class="popup-input" type="tel" data-mask="+7 (000) 000 00 00">
-                </div>
-                <div class="popup-input--wrapper">
-                  <label>Комментарий к заказу:</label>
-                  <textarea class="popup-textarea" cols="5" rows="4"></textarea>
+                  <input class="popup-input" type="text" data-mask="+7 (000) 000 00 00">
                 </div>
               </div>
               <div class="popup-footer modal-footer">
-                <button class="main-button w-230 m-0-auto mb-30" type="submit">Отправить</button>
+                <div class="main-button w-230 m-0-auto mb-30" data-dismiss="modal" data-toggle="modal" data-target="#popup-call-sub">Оставить заявку</div>
               </div>
             </div>
           </form>
-        </div>
-        <div class="modal fade" id="popup-garnir" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered mw-630" role="document">
-            <div class="modal-content popup-content">
-              <div class="popup-header modal-header pb-0">
-                <div class="popup-header--close__wrap">
-                  <div class="popup-header--close" data-dismiss="modal">
-                    <svg class="icon icon-close2 ">
-                      <use xlink:href="static/img/svg/symbol/sprite.svg#close2"></use>
-                    </svg>
-                  </div>
-                </div>
-                <div class="popup-header--title">Добавьте гарнир к блюду</div>
-                <div class="popup-header--desc">С этим блюдом часто заказывают:</div>
-              </div>
-              <div class="popup-body modal-body">
-                <div class="popup-basket-notific swiper-container">
-                  <div class="swiper-wrapper">
-                    <div class="section-menu-content--col swiper-slide">
-                      <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/">
-                          <div class="section-menu-content--img" style="background-image:url('/static/img/content/products/img10.png');"></div>
-                          <div class="section-menu-content--item__info">
-                            <div class="section-menu-content--name mb-10">Соус Томатный</div>
-                            <div class="section-menu-content--desc mb-20">Пикантный соус с нежным томатным вкусом и чесноком.</div>
-                          </div></a>
-                        <div class="section-menu-content--item__bottom">
-                          <div class="section-menu-content--order">
-                            <div class="section-menu-content--price__wrap">
-                              <div class="section-menu-content--price__stock"></div>
-                              <div class="section-menu-content--price">29 ₽ / <span>1 шт.</span></div>
-                            </div>
-                            <div class="button-basket--product__wrap">
-                              <div class="main-button-transparent max-content button-basket--product">Добавить</div>
-                              <div class="basket-product--count">
-                                <div class="basket-product--minus">-</div>
-                                <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
-                                <div class="basket-product--plus">+</div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="section-menu-content--col swiper-slide">
-                      <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/">
-                          <div class="section-menu-content--img" style="background-image:url('/static/img/content/products/img12.png');"></div>
-                          <div class="section-menu-content--item__info">
-                            <div class="section-menu-content--name mb-10">Соус Чесночный</div>
-                            <div class="section-menu-content--desc mb-20">Пикантный соус с нежным сливочно-чесночным вкусом.</div>
-                          </div></a>
-                        <div class="section-menu-content--item__bottom">
-                          <div class="section-menu-content--order">
-                            <div class="section-menu-content--price__wrap">
-                              <div class="section-menu-content--price__stock"></div>
-                              <div class="section-menu-content--price">29 ₽ / <span>1 шт.</span></div>
-                            </div>
-                            <div class="button-basket--product__wrap">
-                              <div class="main-button-transparent max-content button-basket--product">Добавить</div>
-                              <div class="basket-product--count">
-                                <div class="basket-product--minus">-</div>
-                                <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
-                                <div class="basket-product--plus">+</div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="section-menu-content--col swiper-slide">
-                      <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/">
-                          <div class="section-menu-content--img" style="background-image:url('/static/img/content/product-item/img1.png');"></div>
-                          <div class="section-menu-content--item__info">
-                            <div class="section-menu-content--name mb-10">Хинкали из баранины</div>
-                            <div class="section-menu-content--desc mb-20">Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.</div>
-                          </div></a>
-                        <div class="section-menu-content--item__bottom">
-                          <div class="section-menu-content--order">
-                            <div class="section-menu-content--price__wrap">
-                              <div class="section-menu-content--price__stock"></div>
-                              <div class="section-menu-content--price">65 ₽ / <span>1 шт.</span></div>
-                            </div>
-                            <div class="button-basket--product__wrap">
-                              <div class="main-button-transparent max-content button-basket--product">Добавить</div>
-                              <div class="basket-product--count">
-                                <div class="basket-product--minus">-</div>
-                                <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
-                                <div class="basket-product--plus">+</div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="popup-arrow-notific">
-                  <div class="popup-swiper-button-prev">
-                    <svg class="icon icon-arrow-left ">
-                      <use xlink:href="static/img/svg/symbol/sprite.svg#arrow-left"></use>
-                    </svg>
-                  </div>
-                  <div class="popup-swiper-button-next">
-                    <svg class="icon icon-arrow-right ">
-                      <use xlink:href="static/img/svg/symbol/sprite.svg#arrow-right"></use>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
         <div class="modal fade" id="popup-add-review" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
           <form class="modal-dialog modal-dialog-centered" role="document">
@@ -1544,412 +1367,8 @@
             </div>
           </form>
         </div>
-        <div class="modal fade" id="popup-add-adress" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <form class="modal-dialog modal-dialog-centered mw-630" role="document">
-            <div class="modal-content popup-content">
-              <div class="popup-header modal-header pb-0">
-                <div class="popup-header--close__wrap">
-                  <div class="popup-header--close" data-dismiss="modal">
-                    <svg class="icon icon-close2 ">
-                      <use xlink:href="static/img/svg/symbol/sprite.svg#close2"></use>
-                    </svg>
-                  </div>
-                </div>
-                <div class="popup-header--title">Добавить адрес</div>
-              </div>
-              <div class="popup-body modal-body p-5">
-                <div class="popup-input--wrapper">
-                  <label>Адрес</label>
-                  <input class="popup-input" type="text">
-                </div>
-                <div class="popup-lk-wrapper">
-                  <input class="popup-input w-48" type="text" placeholder="Улица">
-                  <input class="popup-input w-48" type="text" placeholder="Дом">
-                  <input class="popup-input" type="text" placeholder="Подъезд">
-                  <input class="popup-input" type="text" placeholder="Этаж">
-                  <input class="popup-input" type="text" placeholder="Квартира/Офис">
-                </div>
-              </div>
-              <div class="popup-footer modal-footer">
-                <button class="main-button w-230 m-0-auto mb-30" type="submit">Добавить</button>
-              </div>
-            </div>
-          </form>
-        </div>
-        <div class="modal fade" id="popup-theme-edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <form class="modal-dialog modal-dialog-centered mw-630" role="document">
-            <div class="modal-content popup-content">
-              <div class="popup-header modal-header pb-0">
-                <div class="popup-header--close__wrap">
-                  <div class="popup-header--close" data-dismiss="modal">
-                    <svg class="icon icon-close2 ">
-                      <use xlink:href="static/img/svg/symbol/sprite.svg#close2"></use>
-                    </svg>
-                  </div>
-                </div>
-                <div class="popup-header--title">Бизнес ланч 1</div>
-              </div>
-              <div class="popup-body modal-body">
-                <div class="popup-input--wrapper popop-theme-edit--name">
-                  <input class="popup-input" type="text" placeholder="Изменить название шаблона">
-                </div>
-                <div class="popup-theme-edit--product">
-                  <div class="header-mini-basket__item">
-                    <div class="header-mini-basket__left">
-                      <div class="header-mini-basket__img" style="background-image:url('/static/img/content/product-item/img1.png');"></div>
-                      <div class="header-mini-basket__title">Хинкали из баранины</div>
-                    </div>
-                    <div class="header-mini-basket__right">
-                      <div class="basket-product--count">
-                        <div class="basket-product--minus">-</div>
-                        <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
-                        <div class="basket-product--plus">+</div>
-                      </div>
-                      <div class="header-mini-basket__right__attr">
-                        <div class="header-mini-basket__price">325 ₽</div>
-                        <div class="header-mini-basket__delete">
-                          <svg class="icon icon-delete ">
-                            <use xlink:href="static/img/svg/symbol/sprite.svg#delete"></use>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="header-mini-basket__item">
-                    <div class="header-mini-basket__left">
-                      <div class="header-mini-basket__img" style="background-image:url('/static/img/content/products/img12.png');"></div>
-                      <div class="header-mini-basket__title">Соус чесночный</div>
-                    </div>
-                    <div class="header-mini-basket__right">
-                      <div class="basket-product--count">
-                        <div class="basket-product--minus">-</div>
-                        <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
-                        <div class="basket-product--plus">+</div>
-                      </div>
-                      <div class="header-mini-basket__right__attr">
-                        <div class="header-mini-basket__price">58 ₽</div>
-                        <div class="header-mini-basket__delete">
-                          <svg class="icon icon-delete ">
-                            <use xlink:href="static/img/svg/symbol/sprite.svg#delete"></use>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="header-mini-basket__item">
-                    <div class="header-mini-basket__left">
-                      <div class="header-mini-basket__img" style="background-image:url('/static/img/content/products/img12.png');"></div>
-                      <div class="header-mini-basket__title">Соус чесночный</div>
-                    </div>
-                    <div class="header-mini-basket__right">
-                      <div class="basket-product--count">
-                        <div class="basket-product--minus">-</div>
-                        <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
-                        <div class="basket-product--plus">+</div>
-                      </div>
-                      <div class="header-mini-basket__right__attr">
-                        <div class="header-mini-basket__price">58 ₽</div>
-                        <div class="header-mini-basket__delete">
-                          <svg class="icon icon-delete ">
-                            <use xlink:href="static/img/svg/symbol/sprite.svg#delete"></use>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="popup-theme-edit--buttons">
-                <button class="main-button w-230" type="submit">Добавить</button>
-                <div class="main-button-transparent w-230" data-dismiss="modal" data-toggle="modal" data-target="#popup-theme-settings">Настроить автопокупку</div>
-              </div>
-            </div>
-          </form>
-        </div>
-        <div class="modal fade" id="popup-theme-settings" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <form class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content popup-content">
-              <div class="popup-header modal-header pb-0">
-                <div class="popup-header--close__wrap">
-                  <div class="popup-header--close" data-dismiss="modal">
-                    <svg class="icon icon-close2 ">
-                      <use xlink:href="static/img/svg/symbol/sprite.svg#close2"></use>
-                    </svg>
-                  </div>
-                </div>
-                <div class="popup-header--title">Настроить автопокупку</div>
-              </div>
-              <div class="popup-body modal-body p-40-70">
-                <div class="popup-input--wrapper">
-                  <label>К какому времени привезти Ваш заказ?</label>
-                  <div class="order-input-block">
-                    <input class="order-input" type="text" data-mask="00:00" placeholder="Например: 12:00">
-                    <div class="order-input--icon">
-                      <svg class="icon icon-clock2 ">
-                        <use xlink:href="static/img/svg/symbol/sprite.svg#clock2"></use>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-                <div class="popup-input--wrapper">
-                  <label>На какой день недели Вам нужен заказ?</label>
-                  <div class="order-input-block">
-                    <input class="order-input order-date" type="text">
-                    <div class="order-input--icon">
-                      <svg class="icon icon-calendar ">
-                        <use xlink:href="static/img/svg/symbol/sprite.svg#calendar"></use>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-                <div class="order-checkbox-everyday">
-                  <div class="order-checkbox-everyday--check"></div>
-                  <input type="checkbox"><span>Включить автопродление</span>
-                </div>
-              </div>
-              <div class="popup-footer modal-footer">
-                <button class="main-button w-230 m-0-auto mb-30" type="submit">Сохранить</button>
-              </div>
-            </div>
-          </form>
-        </div>
-        <div class="modal fade" id="popup-remove-card" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered mw-630" role="document">
-            <div class="modal-content popup-content">
-              <div class="popup-header modal-header pb-0">
-                <div class="popup-header--close__wrap">
-                  <div class="popup-header--close" data-dismiss="modal">
-                    <svg class="icon icon-close2 ">
-                      <use xlink:href="static/img/svg/symbol/sprite.svg#close2"></use>
-                    </svg>
-                  </div>
-                </div>
-                <div class="popup-header--title">Замените соус на свой вкус</div>
-                <div class="popup-header--desc">С этим блюдом часто заказывают:</div>
-              </div>
-              <div class="popup-body modal-body">
-                <div class="popup-basket-notific swiper-container">
-                  <div class="swiper-wrapper">
-                    <div class="section-menu-content--col swiper-slide">
-                      <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/">
-                          <div class="section-menu-content--img" style="background-image:url('/static/img/content/products/img10.png');"></div>
-                          <div class="section-menu-content--item__info">
-                            <div class="section-menu-content--name mb-10">Соус Томатный</div>
-                            <div class="section-menu-content--desc mb-20">Пикантный соус с нежным томатным вкусом и чесноком.</div>
-                          </div></a>
-                        <div class="section-menu-content--item__bottom">
-                          <div class="section-menu-content--order">
-                            <div class="section-menu-content--price__wrap">
-                              <div class="section-menu-content--price__stock"></div>
-                              <div class="section-menu-content--price">29 ₽ / <span>1 шт.</span></div>
-                            </div>
-                            <div class="button-basket--product__wrap">
-                              <div class="main-button-transparent max-content popup-remove-card--button">Выбрать</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="section-menu-content--col swiper-slide">
-                      <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/">
-                          <div class="section-menu-content--img" style="background-image:url('/static/img/content/products/img12.png');"></div>
-                          <div class="section-menu-content--item__info">
-                            <div class="section-menu-content--name mb-10">Соус Чесночный</div>
-                            <div class="section-menu-content--desc mb-20">Пикантный соус с нежным сливочно-чесночным вкусом.</div>
-                          </div></a>
-                        <div class="section-menu-content--item__bottom">
-                          <div class="section-menu-content--order">
-                            <div class="section-menu-content--price__wrap">
-                              <div class="section-menu-content--price__stock"></div>
-                              <div class="section-menu-content--price">29 ₽ / <span>1 шт.</span></div>
-                            </div>
-                            <div class="button-basket--product__wrap">
-                              <div class="main-button-transparent max-content popup-remove-card--button">Выбрать</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="section-menu-content--col swiper-slide">
-                      <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/">
-                          <div class="section-menu-content--img" style="background-image:url('/static/img/content/product-item/img1.png');"></div>
-                          <div class="section-menu-content--item__info">
-                            <div class="section-menu-content--name mb-10">Хинкали из баранины</div>
-                            <div class="section-menu-content--desc mb-20">Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.</div>
-                          </div></a>
-                        <div class="section-menu-content--item__bottom">
-                          <div class="section-menu-content--order">
-                            <div class="section-menu-content--price__wrap">
-                              <div class="section-menu-content--price__stock"></div>
-                              <div class="section-menu-content--price">65 ₽ / <span>1 шт.</span></div>
-                            </div>
-                            <div class="button-basket--product__wrap">
-                              <div class="main-button-transparent max-content popup-remove-card--button">Выбрать</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="popup-arrow-notific">
-                  <div class="popup-swiper-button-prev">
-                    <svg class="icon icon-arrow-left ">
-                      <use xlink:href="static/img/svg/symbol/sprite.svg#arrow-left"></use>
-                    </svg>
-                  </div>
-                  <div class="popup-swiper-button-next">
-                    <svg class="icon icon-arrow-right ">
-                      <use xlink:href="static/img/svg/symbol/sprite.svg#arrow-right"></use>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="modal fade" id="popup-add-question" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <form class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content popup-content">
-              <div class="popup-header modal-header pb-0">
-                <div class="popup-header--close__wrap">
-                  <div class="popup-header--close" data-dismiss="modal">
-                    <svg class="icon icon-close2 ">
-                      <use xlink:href="static/img/svg/symbol/sprite.svg#close2"></use>
-                    </svg>
-                  </div>
-                </div>
-                <div class="popup-header--title">Остались вопросы?</div>
-                <div class="popup-header--desc text-center">Заполните заявку, наши специалисты ответят на все Ваши вопросы!</div>
-              </div>
-              <div class="popup-body modal-body p-40-70">
-                <div class="popup-input--wrapper">
-                  <label>ФИО:</label>
-                  <input class="popup-input" type="text">
-                </div>
-                <div class="popup-input--wrapper">
-                  <label>Email:</label>
-                  <input class="popup-input" type="email">
-                </div>
-                <div class="popup-input--wrapper">
-                  <label>Вопрос:</label>
-                  <textarea class="popup-textarea" cols="5" rows="3"></textarea>
-                </div>
-              </div>
-              <div class="popup-footer modal-footer">
-                <button class="main-button w-230 m-0-auto mb-30" type="submit">Отправить</button>
-              </div>
-            </div>
-          </form>
-        </div>
       </div>
       <div class="popups-mobile">
-        <div class="popup-mobile-added" id="custom-popup-mobile-basket">
-          <div class="popup-header modal-header pb-0">
-            <div class="popup-mobile-line--close"></div>
-            <div class="popup-header--title">Блюдо добавлено в Ваш заказ!</div>
-            <div class="popup-header--desc">С этим блюдом часто заказывают:</div>
-          </div>
-          <div class="popup-body modal-body">
-            <div class="popup-basket-notific swiper-container">
-              <div class="swiper-wrapper">
-                <div class="section-menu-content--col swiper-slide">
-                  <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/"><img class="section-menu-content--img__mobile" src="/static/img/content/products/img10.png">
-                      <div class="section-menu-content--item__info">
-                        <div class="section-menu-content--name mb-10">Соус Томатный</div>
-                        <div class="section-menu-content--desc mb-20">Пикантный соус с нежным томатным вкусом и чесноком.</div>
-                      </div></a>
-                    <div class="section-menu-content--item__bottom">
-                      <div class="section-menu-content--order">
-                        <div class="section-menu-content--price__wrap">
-                          <div class="section-menu-content--price__stock"></div>
-                          <div class="section-menu-content--price">29 ₽ / <span>1 шт.</span></div>
-                        </div>
-                        <div class="product-basket-added--card">
-                          <div class="button-product-basket--count"></div>
-                          <div class="button-basket--product--v2__wrap">
-                            <div class="button-basket--v2">
-                              <svg class="icon icon-basket ">
-                                <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
-                              </svg>
-                            </div>
-                            <div class="product-basket-product--count">
-                              <div class="product-basket-product--minus">-</div>
-                              <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
-                            </div>
-                            <div class="product-basket-product--plus"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="section-menu-content--col swiper-slide">
-                  <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/"><img class="section-menu-content--img__mobile" src="/static/img/content/products/img12.png">
-                      <div class="section-menu-content--item__info">
-                        <div class="section-menu-content--name mb-10">Соус Чесночный</div>
-                        <div class="section-menu-content--desc mb-20">Пикантный соус с нежным сливочно-чесночным вкусом.</div>
-                      </div></a>
-                    <div class="section-menu-content--item__bottom">
-                      <div class="section-menu-content--order">
-                        <div class="section-menu-content--price__wrap">
-                          <div class="section-menu-content--price__stock"></div>
-                          <div class="section-menu-content--price">29 ₽ / <span>1 шт.</span></div>
-                        </div>
-                        <div class="product-basket-added--card">
-                          <div class="button-product-basket--count"></div>
-                          <div class="button-basket--product--v2__wrap">
-                            <div class="button-basket--v2">
-                              <svg class="icon icon-basket ">
-                                <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
-                              </svg>
-                            </div>
-                            <div class="product-basket-product--count">
-                              <div class="product-basket-product--minus">-</div>
-                              <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
-                            </div>
-                            <div class="product-basket-product--plus"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="section-menu-content--col swiper-slide">
-                  <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/"><img class="section-menu-content--img__mobile" src="/static/img/content/products/img12.png">
-                      <div class="section-menu-content--item__info">
-                        <div class="section-menu-content--name mb-10">Хинкали из баранины</div>
-                        <div class="section-menu-content--desc mb-20">Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.</div>
-                      </div></a>
-                    <div class="section-menu-content--item__bottom">
-                      <div class="section-menu-content--order">
-                        <div class="section-menu-content--price__wrap">
-                          <div class="section-menu-content--price__stock"></div>
-                          <div class="section-menu-content--price">65 ₽ / <span>1 шт.</span></div>
-                        </div>
-                        <div class="product-basket-added--card">
-                          <div class="button-product-basket--count"></div>
-                          <div class="button-basket--product--v2__wrap">
-                            <div class="button-basket--v2">
-                              <svg class="icon icon-basket ">
-                                <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
-                              </svg>
-                            </div>
-                            <div class="product-basket-product--count">
-                              <div class="product-basket-product--minus">-</div>
-                              <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
-                            </div>
-                            <div class="product-basket-product--plus"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
         <form class="popup-mobile-added" id="custom-mobile-auth">
           <div class="popup-header modal-header pb-0">
             <div class="popup-mobile-line--close"></div>
@@ -1970,7 +1389,7 @@
             <div class="popup-not-reg">Еще нет аккаунта?<span data-custom-dismiss="modal" data-custom-modal="#custom-mobile-reg">Зарегистрируйтесь!</span></div>
           </div>
         </form>
-        <form class="popup-mobile-added" id="custom-mobile-reg">
+        <div class="popup-mobile-added" id="custom-mobile-reg">
           <div class="popup-header modal-header pb-0">
             <div class="popup-mobile-line--close"></div>
             <div class="popup-header--title mbm-15">Создайте аккаунт</div>
@@ -1981,6 +1400,10 @@
               <input class="popup-input" type="text" placeholder="ФИО">
             </div>
             <div class="popup-input--wrapper">
+              <label>Телефон:</label>
+              <input class="popup-input" type="text" data-mask="+7 (000) 000 00 00" placeholder="Телефон">
+            </div>
+            <div class="popup-input--wrapper">
               <label>Email:</label>
               <input class="popup-input" type="email" placeholder="Email">
             </div>
@@ -1988,14 +1411,68 @@
               <label>Пароль:</label>
               <input class="popup-input" type="password" placeholder="Пароль">
             </div>
+          </div>
+          <div class="popup-footer modal-footer">
+            <button class="main-button w-170 m-0-auto mb-30" data-custom-dismiss="modal" data-custom-modal="#custom-mobile-code">Создать аккаунт</button>
+            <div class="popup-not-reg">Уже есть аккаунта?<span data-custom-dismiss="modal" data-custom-modal="#custom-mobile-auth">Войдите!</span></div>
+            <div class="popup-login--social">
+              <div class="popup-login--title">Или войдите через социальные сети:</div>
+              <div class="popup-login--list">
+                <div class="popup-login--item">
+                  <svg class="icon icon-social-fb ">
+                    <use xlink:href="static/img/svg/symbol/sprite.svg#social-fb"></use>
+                  </svg>
+                </div>
+                <div class="popup-login--item">
+                  <svg class="icon icon-social-vk ">
+                    <use xlink:href="static/img/svg/symbol/sprite.svg#social-vk"></use>
+                  </svg>
+                </div>
+                <div class="popup-login--item">
+                  <svg class="icon icon-social-google ">
+                    <use xlink:href="static/img/svg/symbol/sprite.svg#social-google"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <form class="popup-mobile-added" id="custom-mobile-code">
+          <div class="popup-header modal-header pb-0">
+            <div class="popup-mobile-line--close"></div>
+            <div class="popup-header--title mb-10">Код подтвердения</div>
+            <div class="popup-header--desc--mobile--wrap">
+              <div class="popup-header--desc--mobile">На номер <span>8 (999) 123 45 67</span> был выслан код. Введите код ниже:</div>
+            </div>
+          </div>
+          <div class="popup-body modal-body p-40-70">
+            <div class="popop-code--wrap code-auth--wrap">
+              <input class="popup-input code-auth" type="text" name="digit" data-mask="0" placeholder="_">
+              <input class="popup-input code-auth" type="text" name="digit" data-mask="0" placeholder="_">
+              <input class="popup-input code-auth" type="text" name="digit" data-mask="0" placeholder="_">
+              <input class="popup-input code-auth" type="text" name="digit" data-mask="0" placeholder="_">
+            </div>
+          </div>
+          <div class="popup-footer modal-footer pt-0">
+            <div class="popup-send--again">Отправить повторно</div>
+            <button class="main-button w-230 m-0-auto mb-30" type="submit">Подтвердить</button>
+          </div>
+        </form>
+        <form class="popup-mobile-added" id="custom-mobile-callback">
+          <div class="popup-header modal-header pb-0">
+            <div class="popup-mobile-line--close"></div>
+            <div class="popup-header--title mbm-15">Заказать обратный звонок</div>
+          </div>
+          <div class="popup-body modal-body p-40-70">
             <div class="popup-input--wrapper">
-              <label>Повторите пароль:</label>
-              <input class="popup-input" type="password" placeholder="Повторите пароль">
+              <input class="popup-input" type="email" placeholder="ФИО">
+            </div>
+            <div class="popup-input--wrapper">
+              <input class="popup-input" type="text" data-mask="+7 (000) 000 00 00" placeholder="Телефон">
             </div>
           </div>
           <div class="popup-footer modal-footer">
-            <button class="main-button w-170 m-0-auto mb-30" type="submit">Создать аккаунт</button>
-            <div class="popup-not-reg">Уже есть аккаунта?<span data-custom-dismiss="modal" data-custom-modal="#custom-mobile-auth">Войдите!</span></div>
+            <button class="main-button w-170 m-0-auto mb-30" type="submit">Оставить заявку</button>
           </div>
         </form>
         <form class="popup-mobile-added" id="custom-mobile-mini-basket">
@@ -2010,7 +1487,7 @@
                   <div class="mobile-mini-basket--name">Хинкали из баранины</div>
                   <div class="basket-product--count">
                     <div class="basket-product--minus">-</div>
-                    <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
+                    <input class="basket-product--input" type="text" value="1" min="1">
                     <div class="basket-product--plus">+</div>
                   </div>
                 </div>
@@ -2020,7 +1497,7 @@
                   <div class="mobile-mini-basket--name">Хинкали из баранины</div>
                   <div class="basket-product--count">
                     <div class="basket-product--minus">-</div>
-                    <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
+                    <input class="basket-product--input" type="text" value="1" min="1">
                     <div class="basket-product--plus">+</div>
                   </div>
                 </div>
@@ -2030,7 +1507,7 @@
                   <div class="mobile-mini-basket--name">Хинкали из баранины</div>
                   <div class="basket-product--count">
                     <div class="basket-product--minus">-</div>
-                    <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
+                    <input class="basket-product--input" type="text" value="1" min="1">
                     <div class="basket-product--plus">+</div>
                   </div>
                 </div>
@@ -2046,366 +1523,13 @@
               </div>
               <div class="basket-product--count">
                 <div class="basket-product--minus">-</div>
-                <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
+                <input class="basket-product--input" type="text" value="1" min="1">
                 <div class="basket-product--plus">+</div>
               </div>
             </div>
-            <div class="card-content-added-one-click main-button-transparent">Купить в 1 клик</div>
+            <div class="card-content-added-one-click main-button-transparent" data-custom-dismiss="modal" data-custom-modal="#custom-mobile-one-click">Купить в 1 клик</div>
           </div>
         </form>
-        <div class="popup-mobile-added" id="custom-mobile-sort">
-          <div class="popup-header modal-header pb-0">
-            <div class="popup-mobile-line--close"></div>
-          </div>
-          <div class="popup-body modal-body">
-            <div class="popup-mobile-sort--list">
-              <div class="popup-mobile-sort--item">По алфавиту</div>
-              <div class="popup-mobile-sort--item">По популярности</div>
-              <div class="popup-mobile-sort--item">По рейтингу</div>
-              <div class="popup-mobile-sort--item">Сначала дорогие</div>
-              <div class="popup-mobile-sort--item">Сначала дешевые</div>
-              <div class="popup-mobile-sort--item">По размеру скидки</div>
-            </div>
-          </div>
-        </div>
-        <div class="popup-mobile-added" id="custom-mobile-cat-list">
-          <div class="popup-header modal-header pb-0">
-            <div class="popup-mobile-line--close"></div>
-          </div>
-          <div class="popup-mobile-title">Хинкали</div>
-          <div class="popup-body modal-body">
-            <div class="popup-mobile-cat--list">
-              <div class="popup-mobile-cat--item">Хинкали калакури</div>
-              <div class="popup-mobile-cat--item">Хинкали мтиулури</div>
-              <div class="popup-mobile-cat--item">Хинкали казбегури</div>
-              <div class="popup-mobile-cat--item">Хинкали кахури</div>
-            </div>
-          </div>
-        </div>
-        <div class="popup-mobile-added" id="custom-mobile-filter">
-          <div class="popup-header modal-header pb-0">
-            <div class="popup-mobile-line--close"></div>
-          </div>
-          <div class="popup-mobile-title">Фильтр</div>
-          <div class="popup-body modal-body">
-            <div class="popup-mobile-eat--list">
-              <div class="popup-mobile-eat--item"><span>Хинкали</span>
-                <svg class="icon icon-close ">
-                  <use xlink:href="static/img/svg/symbol/sprite.svg#close"></use>
-                </svg>
-              </div>
-              <div class="popup-mobile-eat--item"><span>Самса</span>
-                <svg class="icon icon-close ">
-                  <use xlink:href="static/img/svg/symbol/sprite.svg#close"></use>
-                </svg>
-              </div>
-              <div class="popup-mobile-eat--item"><span>Халяль</span>
-                <svg class="icon icon-close ">
-                  <use xlink:href="static/img/svg/symbol/sprite.svg#close"></use>
-                </svg>
-              </div>
-              <div class="popup-mobile-eat--item"><span>Хинкали</span>
-                <svg class="icon icon-close ">
-                  <use xlink:href="static/img/svg/symbol/sprite.svg#close"></use>
-                </svg>
-              </div>
-              <div class="popup-mobile-eat--item"><span>Самса</span>
-                <svg class="icon icon-close ">
-                  <use xlink:href="static/img/svg/symbol/sprite.svg#close"></use>
-                </svg>
-              </div>
-              <div class="popup-mobile-eat--item"><span>Халяль</span>
-                <svg class="icon icon-close ">
-                  <use xlink:href="static/img/svg/symbol/sprite.svg#close"></use>
-                </svg>
-              </div>
-            </div>
-            <div class="popup-mobile-cat--list">
-              <div class="popup-mobile-filter--item" data-custom-dismiss="modal" data-custom-modal="#custom-mobile-filter-kuhnya"><span>Кухня</span>
-                <svg class="icon icon-arrow-right ">
-                  <use xlink:href="static/img/svg/symbol/sprite.svg#arrow-right"></use>
-                </svg>
-              </div>
-              <div class="popup-mobile-filter--item" data-custom-dismiss="modal" data-custom-modal="#custom-mobile-filter-type"><span>Тип блюда</span>
-                <svg class="icon icon-arrow-right ">
-                  <use xlink:href="static/img/svg/symbol/sprite.svg#arrow-right"></use>
-                </svg>
-              </div>
-              <div class="popup-mobile-filter--item" data-custom-dismiss="modal" data-custom-modal="#custom-mobile-filter-type"><span>Тип приготовления</span>
-                <svg class="icon icon-arrow-right ">
-                  <use xlink:href="static/img/svg/symbol/sprite.svg#arrow-right"></use>
-                </svg>
-              </div>
-              <div class="popup-mobile-filter--item" data-custom-dismiss="modal" data-custom-modal="#custom-mobile-filter-type"><span>Акция</span>
-                <svg class="icon icon-arrow-right ">
-                  <use xlink:href="static/img/svg/symbol/sprite.svg#arrow-right"></use>
-                </svg>
-              </div>
-              <div class="popup-mobile-filter--item" data-custom-dismiss="modal" data-custom-modal="#custom-mobile-filter-price"><span>Цена</span>
-                <svg class="icon icon-arrow-right ">
-                  <use xlink:href="static/img/svg/symbol/sprite.svg#arrow-right"></use>
-                </svg>
-              </div>
-            </div>
-            <div class="popup-reset-filter">Сбросить фильтр</div>
-          </div>
-        </div>
-        <div class="popup-mobile-added" id="custom-mobile-filter-kuhnya">
-          <div class="popup-header--v2">
-            <div class="popup-header-go-back" data-custom-dismiss="modal" data-custom-modal="#custom-mobile-filter">
-              <svg class="icon icon-left-arrow ">
-                <use xlink:href="static/img/svg/symbol/sprite.svg#left-arrow"></use>
-              </svg>
-            </div>
-            <div class="popup-mobile-title">Кухня</div>
-          </div>
-          <div class="popup-body modal-body">
-            <div class="popup-mobile-cat--list popup-mobile-checkbox--list">
-              <div class="popup-mobile-filter--item popup-mobile-check--item__wrap"><span>Грузинская (12)</span>
-                <div class="popup-mobile-check--item">
-                  <svg class="icon icon-check ">
-                    <use xlink:href="static/img/svg/symbol/sprite.svg#check"></use>
-                  </svg>
-                </div>
-              </div>
-              <div class="popup-mobile-filter--item popup-mobile-check--item__wrap"><span>Осетинская (8)</span>
-                <div class="popup-mobile-check--item">
-                  <svg class="icon icon-check ">
-                    <use xlink:href="static/img/svg/symbol/sprite.svg#check"></use>
-                  </svg>
-                </div>
-              </div>
-              <div class="popup-mobile-filter--item popup-mobile-check--item__wrap"><span>Узбекская (24)</span>
-                <div class="popup-mobile-check--item">
-                  <svg class="icon icon-check ">
-                    <use xlink:href="static/img/svg/symbol/sprite.svg#check"></use>
-                  </svg>
-                </div>
-              </div>
-              <div class="popup-mobile-filter--item popup-mobile-check--item__wrap"><span>Татарская (20)</span>
-                <div class="popup-mobile-check--item">
-                  <svg class="icon icon-check ">
-                    <use xlink:href="static/img/svg/symbol/sprite.svg#check"></use>
-                  </svg>
-                </div>
-              </div>
-              <div class="popup-mobile-filter--item popup-mobile-check--item__wrap"><span>Среднеазиатская (37)</span>
-                <div class="popup-mobile-check--item">
-                  <svg class="icon icon-check ">
-                    <use xlink:href="static/img/svg/symbol/sprite.svg#check"></use>
-                  </svg>
-                </div>
-              </div>
-              <div class="popup-mobile-filter--item popup-mobile-check--item__wrap"><span>Любая (101)</span>
-                <div class="popup-mobile-check--item">
-                  <svg class="icon icon-check ">
-                    <use xlink:href="static/img/svg/symbol/sprite.svg#check"></use>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="popup-mobile-added" id="custom-mobile-filter-type">
-          <div class="popup-header--v2">
-            <div class="popup-header-go-back" data-custom-dismiss="modal" data-custom-modal="#custom-mobile-filter">
-              <svg class="icon icon-left-arrow ">
-                <use xlink:href="static/img/svg/symbol/sprite.svg#left-arrow"></use>
-              </svg>
-            </div>
-            <div class="popup-mobile-title">Тип блюда</div>
-          </div>
-          <div class="popup-body modal-body">
-            <div class="popup-mobile-cat--list popup-mobile-checkbox--list">
-              <div class="popup-mobile-filter--item popup-mobile-check--item__wrap"><span>Грузинская (12)</span>
-                <div class="popup-mobile-check--item">
-                  <svg class="icon icon-check ">
-                    <use xlink:href="static/img/svg/symbol/sprite.svg#check"></use>
-                  </svg>
-                </div>
-              </div>
-              <div class="popup-mobile-filter--item popup-mobile-check--item__wrap"><span>Осетинская (8)</span>
-                <div class="popup-mobile-check--item">
-                  <svg class="icon icon-check ">
-                    <use xlink:href="static/img/svg/symbol/sprite.svg#check"></use>
-                  </svg>
-                </div>
-              </div>
-              <div class="popup-mobile-filter--item popup-mobile-check--item__wrap"><span>Узбекская (24)</span>
-                <div class="popup-mobile-check--item">
-                  <svg class="icon icon-check ">
-                    <use xlink:href="static/img/svg/symbol/sprite.svg#check"></use>
-                  </svg>
-                </div>
-              </div>
-              <div class="popup-mobile-filter--item popup-mobile-check--item__wrap"><span>Татарская (20)</span>
-                <div class="popup-mobile-check--item">
-                  <svg class="icon icon-check ">
-                    <use xlink:href="static/img/svg/symbol/sprite.svg#check"></use>
-                  </svg>
-                </div>
-              </div>
-              <div class="popup-mobile-filter--item popup-mobile-check--item__wrap"><span>Среднеазиатская (37)</span>
-                <div class="popup-mobile-check--item">
-                  <svg class="icon icon-check ">
-                    <use xlink:href="static/img/svg/symbol/sprite.svg#check"></use>
-                  </svg>
-                </div>
-              </div>
-              <div class="popup-mobile-filter--item popup-mobile-check--item__wrap"><span>Любая (101)</span>
-                <div class="popup-mobile-check--item">
-                  <svg class="icon icon-check ">
-                    <use xlink:href="static/img/svg/symbol/sprite.svg#check"></use>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="popup-mobile-added" id="custom-mobile-filter-price">
-          <div class="popup-header--v2">
-            <div class="popup-header-go-back" data-custom-dismiss="modal" data-custom-modal="#custom-mobile-filter">
-              <svg class="icon icon-left-arrow ">
-                <use xlink:href="static/img/svg/symbol/sprite.svg#left-arrow"></use>
-              </svg>
-            </div>
-            <div class="popup-mobile-title">Цена</div>
-          </div>
-          <div class="popup-body modal-body">
-            <div class="popup-mobile--price">
-              <div class="filter-price--wrap">
-                <div class="filter--price--inputs">
-                  <input class="sliders-filters input-teamlight" id="hidden1" name="1" type="text" data-index="0" placeholder="от">
-                  <input class="sliders-filters input-teamlight" id="hidden2" name="2" type="text" data-index="1" placeholder="до">
-                </div>
-                <div class="filter--price-js" id="filter-slider"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="popup-mobile-added" id="custom-mobile-attention">
-          <div class="popup-header modal-header pb-0">
-            <div class="popup-mobile-line--close"></div>
-            <div class="popup-header--title mbm-15">Войдите в аккаунт</div>
-            <div class="popup-svg-icon">
-              <svg class="icon icon-fill-closed ">
-                <use xlink:href="static/img/svg2/symbol/sprite2.svg#fill-closed"></use>
-              </svg>
-            </div>
-            <div class="popup-header--title--v2">“Название”</div>
-            <div class="popup-header--desc--v2">Уважаемый клиент, сейчас мы не работаем, но вы можете оставить свой заказ и мы выполним его в рабочее время!</div>
-            <div class="popup-header--desc--v2">ЧАСЫ РАБОТЫ: 10:30 – 22:30</div>
-          </div>
-          <div class="popup-body modal-body">
-            <div class="main-button w-230 m-0-auto mb-4" data-custom-close="modal">Показать дальше</div>
-          </div>
-        </div>
-        <form class="popup-mobile-added" id="custom-mobile-one-click">
-          <div class="popup-header modal-header pb-0">
-            <div class="popup-mobile-line--close"></div>
-            <div class="popup-header--title mbm-15">Купить в 1 клик!</div>
-            <div class="popup-header--desc text-center mbm-15">Наш менеджер перезвонит Вам, чтобы уточнить заказ</div>
-          </div>
-          <div class="popup-body modal-body p-40-70">
-            <div class="popup-input--wrapper">
-              <input class="popup-input" type="text" placeholder="ФИО">
-            </div>
-            <div class="popup-input--wrapper">
-              <input class="popup-input" type="email" placeholder="Email">
-            </div>
-            <div class="popup-input--wrapper">
-              <input class="popup-input" type="text" placeholder="Комментарий к заказу:">
-            </div>
-          </div>
-          <div class="popup-footer modal-footer">
-            <button class="main-button w-230 m-0-auto mb-30" type="submit">Отправить</button>
-          </div>
-        </form>
-        <div class="popup-mobile-added" id="custom-popup-mobile-garnir">
-          <div class="popup-header modal-header pb-0">
-            <div class="popup-mobile-line--close"></div>
-            <div class="popup-header--title">Добавьте гарнир к блюду</div>
-            <div class="popup-header--desc">С этим блюдом часто заказывают:</div>
-          </div>
-          <div class="popup-body modal-body">
-            <div class="popup-basket-notific swiper-container">
-              <div class="swiper-wrapper">
-                <div class="section-menu-content--col swiper-slide">
-                  <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/"><img class="section-menu-content--img__mobile" src="/static/img/content/products/img10.png">
-                      <div class="section-menu-content--item__info">
-                        <div class="section-menu-content--name mb-10">Соус Томатный</div>
-                        <div class="section-menu-content--desc mb-20">Пикантный соус с нежным томатным вкусом и чесноком.</div>
-                      </div></a>
-                    <div class="section-menu-content--item__bottom">
-                      <div class="section-menu-content--order">
-                        <div class="section-menu-content--price__wrap">
-                          <div class="section-menu-content--price__stock"></div>
-                          <div class="section-menu-content--price">29 ₽ / <span>1 шт.</span></div>
-                        </div>
-                        <div class="button-basket--product__wrap">
-                          <div class="main-button-transparent max-content button-basket--product">Добавить</div>
-                          <div class="basket-product--count">
-                            <div class="basket-product--minus">-</div>
-                            <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
-                            <div class="basket-product--plus">+</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="section-menu-content--col swiper-slide">
-                  <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/"><img class="section-menu-content--img__mobile" src="/static/img/content/products/img12.png">
-                      <div class="section-menu-content--item__info">
-                        <div class="section-menu-content--name mb-10">Соус Чесночный</div>
-                        <div class="section-menu-content--desc mb-20">Пикантный соус с нежным сливочно-чесночным вкусом.</div>
-                      </div></a>
-                    <div class="section-menu-content--item__bottom">
-                      <div class="section-menu-content--order">
-                        <div class="section-menu-content--price__wrap">
-                          <div class="section-menu-content--price__stock"></div>
-                          <div class="section-menu-content--price">29 ₽ / <span>1 шт.</span></div>
-                        </div>
-                        <div class="button-basket--product__wrap">
-                          <div class="main-button-transparent max-content button-basket--product">Добавить</div>
-                          <div class="basket-product--count">
-                            <div class="basket-product--minus">-</div>
-                            <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
-                            <div class="basket-product--plus">+</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="section-menu-content--col swiper-slide">
-                  <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/"><img class="section-menu-content--img__mobile" src="/static/img/content/products/img10.png">
-                      <div class="section-menu-content--item__info">
-                        <div class="section-menu-content--name mb-10">Хинкали из баранины</div>
-                        <div class="section-menu-content--desc mb-20">Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.</div>
-                      </div></a>
-                    <div class="section-menu-content--item__bottom">
-                      <div class="section-menu-content--order">
-                        <div class="section-menu-content--price__wrap">
-                          <div class="section-menu-content--price__stock"></div>
-                          <div class="section-menu-content--price">65 ₽ / <span>1 шт.</span></div>
-                        </div>
-                        <div class="button-basket--product__wrap">
-                          <div class="main-button-transparent max-content button-basket--product">Добавить</div>
-                          <div class="basket-product--count">
-                            <div class="basket-product--minus">-</div>
-                            <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
-                            <div class="basket-product--plus">+</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
         <form class="popup-mobile-added" id="custom-mobile-lanch-basket">
           <div class="popup-header modal-header pb-0">
             <div class="popup-mobile-line--close"></div>
@@ -2421,13 +1545,13 @@
                   <div class="mobile-mini-basket--info">
                     <div class="mobile-mini-basket--name">Бизнес ланч</div>
                     <div class="mobile-lanch-basket--comp">
-                      <svg class="icon icon-lanch ">
-                        <use xlink:href="static/img/svg/symbol/sprite.svg#lanch"></use>
+                      <svg class="icon icon-arrow-down ">
+                        <use xlink:href="static/img/svg/symbol/sprite.svg#arrow-down"></use>
                       </svg>
                     </div>
                     <div class="basket-product--count">
                       <div class="basket-product--minus">-</div>
-                      <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
+                      <input class="basket-product--input" type="text" value="1" min="1">
                       <div class="basket-product--plus">+</div>
                     </div>
                   </div>
@@ -2438,7 +1562,7 @@
                       <div class="mobile-mini-basket--name">Хинкали из баранины</div>
                       <div class="basket-product--count">
                         <div class="basket-product--minus">-</div>
-                        <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
+                        <input class="basket-product--input" type="text" value="1" min="1">
                         <div class="basket-product--plus">+</div>
                       </div>
                       <div class="mobile-lanch-basket--comp--delete">
@@ -2453,7 +1577,7 @@
                       <div class="mobile-mini-basket--name">Хинкали из баранины</div>
                       <div class="basket-product--count">
                         <div class="basket-product--minus">-</div>
-                        <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
+                        <input class="basket-product--input" type="text" value="1" min="1">
                         <div class="basket-product--plus">+</div>
                       </div>
                       <div class="mobile-lanch-basket--comp--delete">
@@ -2470,7 +1594,7 @@
                   <div class="mobile-mini-basket--name">Хинкали из баранины</div>
                   <div class="basket-product--count">
                     <div class="basket-product--minus">-</div>
-                    <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
+                    <input class="basket-product--input" type="text" value="1" min="1">
                     <div class="basket-product--plus">+</div>
                   </div>
                 </div>
@@ -2480,7 +1604,7 @@
                   <div class="mobile-mini-basket--name">Хинкали из баранины</div>
                   <div class="basket-product--count">
                     <div class="basket-product--minus">-</div>
-                    <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
+                    <input class="basket-product--input" type="text" value="1" min="1">
                     <div class="basket-product--plus">+</div>
                   </div>
                 </div>
@@ -2490,7 +1614,7 @@
                   <div class="mobile-mini-basket--name">Хинкали из баранины</div>
                   <div class="basket-product--count">
                     <div class="basket-product--minus">-</div>
-                    <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
+                    <input class="basket-product--input" type="text" value="1" min="1">
                     <div class="basket-product--plus">+</div>
                   </div>
                 </div>
@@ -2506,195 +1630,13 @@
               </div>
               <div class="basket-product--count">
                 <div class="basket-product--minus">-</div>
-                <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
+                <input class="basket-product--input" type="text" value="1" min="1">
                 <div class="basket-product--plus">+</div>
               </div>
             </div>
-            <div class="card-content-added-one-click main-button-transparent">Купить в 1 клик</div>
+            <div class="card-content-added-one-click main-button-transparent" data-custom-dismiss="modal" data-custom-modal="#custom-mobile-one-click">Купить в 1 клик</div>
           </div>
         </form>
-        <form class="popup-mobile-added" id="custom-mobile-lk-adress">
-          <div class="popup-header modal-header pb-0">
-            <div class="popup-mobile-line--close"></div>
-            <div class="popup-header--title mbm-15">Добавить адрес</div>
-          </div>
-          <div class="popup-body modal-body p-3">
-            <div class="popup-input--wrapper">
-              <input class="popup-input" type="text" placeholder="Адрес">
-            </div>
-            <div class="popup-lk-wrapper">
-              <input class="popup-input w-48" type="text" placeholder="Улица">
-              <input class="popup-input w-48" type="text" placeholder="Дом">
-              <input class="popup-input" type="text" placeholder="Подъезд">
-              <input class="popup-input" type="text" placeholder="Этаж">
-              <input class="popup-input" type="text" placeholder="Квартира/Офис">
-            </div>
-          </div>
-          <div class="popup-footer modal-footer">
-            <button class="main-button w-230 m-0-auto mb-30" type="submit">Добавить</button>
-          </div>
-        </form>
-        <form class="popup-mobile-added" id="custom-popup-mobile-lanch-edit">
-          <div class="popup-header modal-header pb-0">
-            <div class="popup-mobile-line--close"></div>
-            <div class="popup-header--title mbm-15 color-21">Бизнес ланч 1</div>
-          </div>
-          <div class="popup-body modal-body">
-            <div class="popup-input--wrapper popop-theme-edit--name">
-              <input class="popup-input" type="text" placeholder="Изменить название шаблона">
-            </div>
-            <div class="mobile-mini-basket--list mobile-theme-list--wrap">
-              <div class="mobile-mini-basket--item">
-                <div class="mobile-theme-list--top"><a class="mobile-mini-basket--img" style="background-image:url('/static/img/content/product-item/img1.png');" href="/"></a>
-                  <div class="mobile-mini-basket--name">Хинкали из баранины</div>
-                </div>
-                <div class="mobile-mini-basket--info mobile-theme-list--bottom">
-                  <div class="basket-product--count">
-                    <div class="basket-product--minus">-</div>
-                    <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
-                    <div class="basket-product--plus">+</div>
-                  </div>
-                  <div class="mobile-theme-price">325 ₽</div>
-                </div>
-              </div>
-              <div class="mobile-mini-basket--item">
-                <div class="mobile-theme-list--top"><a class="mobile-mini-basket--img" style="background-image:url('/static/img/content/product-item/img1.png');" href="/"></a>
-                  <div class="mobile-mini-basket--name">Хинкали из баранины</div>
-                </div>
-                <div class="mobile-mini-basket--info mobile-theme-list--bottom">
-                  <div class="basket-product--count">
-                    <div class="basket-product--minus">-</div>
-                    <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
-                    <div class="basket-product--plus">+</div>
-                  </div>
-                  <div class="mobile-theme-price">325 ₽</div>
-                </div>
-              </div>
-              <div class="mobile-mini-basket--item">
-                <div class="mobile-theme-list--top"><a class="mobile-mini-basket--img" style="background-image:url('/static/img/content/product-item/img1.png');" href="/"></a>
-                  <div class="mobile-mini-basket--name">Хинкали из баранины</div>
-                </div>
-                <div class="mobile-mini-basket--info mobile-theme-list--bottom">
-                  <div class="basket-product--count">
-                    <div class="basket-product--minus">-</div>
-                    <input class="basket-product--input" type="text" value="1" min="1" readonly="readonly">
-                    <div class="basket-product--plus">+</div>
-                  </div>
-                  <div class="mobile-theme-price">325 ₽</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="popup-mini-b--footer popup-theme-buttons--footer">
-            <button class="main-button w-230" type="submit">Сохранить</button>
-            <div class="main-button-transparent w-230" data-custom-dismiss="modal" data-custom-modal="#custom-popup-mobile-lanch-sett">Автопокупка</div>
-          </div>
-        </form>
-        <form class="popup-mobile-added" id="custom-popup-mobile-lanch-sett">
-          <div class="popup-header modal-header pb-0">
-            <div class="popup-mobile-line--close"></div>
-            <div class="popup-header--title mbm-15 color-21">Настроить автопокупку</div>
-          </div>
-          <div class="popup-body modal-body p-3">
-            <div class="popup-input--wrapper">
-              <div class="order-input-block">
-                <input class="order-input" type="text" data-mask="00:00" placeholder="К какому времени привезти?">
-                <div class="order-input--icon">
-                  <svg class="icon icon-clock2 ">
-                    <use xlink:href="static/img/svg/symbol/sprite.svg#clock2"></use>
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div class="popup-input--wrapper">
-              <div class="order-input-block">
-                <input class="order-input order-date" type="text" placeholder="На какой день недели?">
-                <div class="order-input--icon">
-                  <svg class="icon icon-calendar ">
-                    <use xlink:href="static/img/svg/symbol/sprite.svg#calendar"></use>
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div class="order-checkbox-everyday">
-              <div class="order-checkbox-everyday--check"></div>
-              <input type="checkbox"><span>Включить автопродление</span>
-            </div>
-          </div>
-          <div class="popup-footer modal-footer p-0-16">
-            <button class="main-button m-0-auto mb-30" type="submit">Сохранить</button>
-          </div>
-        </form>
-        <div class="popup-mobile-added" id="custom-popup-mobile-card-update">
-          <div class="popup-header modal-header pb-0">
-            <div class="popup-mobile-line--close"></div>
-            <div class="popup-header--title">Замените соус на свой вкус</div>
-            <div class="popup-header--desc">С этим блюдом часто заказывают:</div>
-          </div>
-          <div class="popup-body modal-body">
-            <div class="popup-basket-notific swiper-container">
-              <div class="swiper-wrapper">
-                <div class="section-menu-content--col swiper-slide">
-                  <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/"><img class="section-menu-content--img__mobile" src="/static/img/content/products/img10.png">
-                      <div class="section-menu-content--item__info">
-                        <div class="section-menu-content--name mb-10">Соус Томатный</div>
-                        <div class="section-menu-content--desc mb-20">Пикантный соус с нежным томатным вкусом и чесноком.</div>
-                      </div></a>
-                    <div class="section-menu-content--item__bottom">
-                      <div class="section-menu-content--order">
-                        <div class="section-menu-content--price__wrap">
-                          <div class="section-menu-content--price__stock"></div>
-                          <div class="section-menu-content--price">29 ₽ / <span>1 шт.</span></div>
-                        </div>
-                        <div class="button-basket--product__wrap">
-                          <div class="main-button-transparent max-content">Выбрать</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="section-menu-content--col swiper-slide">
-                  <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/"><img class="section-menu-content--img__mobile" src="/static/img/content/products/img12.png">
-                      <div class="section-menu-content--item__info">
-                        <div class="section-menu-content--name mb-10">Соус Чесночный</div>
-                        <div class="section-menu-content--desc mb-20">Пикантный соус с нежным сливочно-чесночным вкусом.</div>
-                      </div></a>
-                    <div class="section-menu-content--item__bottom">
-                      <div class="section-menu-content--order">
-                        <div class="section-menu-content--price__wrap">
-                          <div class="section-menu-content--price__stock"></div>
-                          <div class="section-menu-content--price">29 ₽ / <span>1 шт.</span></div>
-                        </div>
-                        <div class="button-basket--product__wrap">
-                          <div class="main-button-transparent max-content">Выбрать</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="section-menu-content--col swiper-slide">
-                  <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/"><img class="section-menu-content--img__mobile" src="/static/img/content/products/img12.png">
-                      <div class="section-menu-content--item__info">
-                        <div class="section-menu-content--name mb-10">Хинкали из баранины</div>
-                        <div class="section-menu-content--desc mb-20">Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.</div>
-                      </div></a>
-                    <div class="section-menu-content--item__bottom">
-                      <div class="section-menu-content--order">
-                        <div class="section-menu-content--price__wrap">
-                          <div class="section-menu-content--price__stock"></div>
-                          <div class="section-menu-content--price">65 ₽ / <span>1 шт.</span></div>
-                        </div>
-                        <div class="button-basket--product__wrap">
-                          <div class="main-button-transparent max-content">Выбрать</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
         <form class="popup-mobile-added" id="custom-popup-mobile-add-review">
           <div class="popup-header modal-header pb-0">
             <div class="popup-mobile-line--close"></div>
@@ -2715,27 +1657,6 @@
             <button class="main-button w-230 m-0-auto mb-30" type="submit">Отправить</button>
           </div>
         </form>
-        <form class="popup-mobile-added" id="custom-popup-mobile-add-question">
-          <div class="popup-header modal-header pb-0">
-            <div class="popup-mobile-line--close"></div>
-            <div class="popup-header--title">Остались вопросы?</div>
-            <div class="popup-header--desc">Заполните заявку, наши специалисты ответят на все Ваши вопросы!</div>
-          </div>
-          <div class="popup-body modal-body p-4 pb-0">
-            <div class="popup-input--wrapper">
-              <input class="popup-input" type="text" placeholder="ФИО:">
-            </div>
-            <div class="popup-input--wrapper">
-              <input class="popup-input" type="email" placeholder="Email:">
-            </div>
-            <div class="popup-input--wrapper">
-              <textarea class="popup-textarea" cols="5" rows="3" placeholder="Ваш отзыв:"></textarea>
-            </div>
-          </div>
-          <div class="popup-footer modal-footer">
-            <button class="main-button w-230 m-0-auto mb-30" type="submit">Отправить</button>
-          </div>
-        </form>
       </div>
     </div>
     <script src="static/js/jquery.min.js"></script>
@@ -2745,6 +1666,63 @@
     <script src="static/js/jquery.hoverIntent.min.js"></script>
     <script src="static/js/jquery.simplePagination.js"></script>
     <script src="static/js/datepicker.ru-RU.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="static/js/jquery-ui.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script>
+      ymaps.ready(function () {
+      	var myMap = new ymaps.Map('map', {
+      				center: [55.751574, 37.573856],
+      				zoom: 9
+      			}, {
+      				searchControlProvider: 'yandex#search'
+      			}),
+      
+      			// Создаём макет содержимого.
+      			MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+      					'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+      			),
+      
+      			myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+      				hintContent: 'Собственный значок метки',
+      				balloonContent: 'Это красивая метка'
+      			}, {
+      				// Опции.
+      				// Необходимо указать данный тип макета.
+      				iconLayout: 'default#image',
+      				// Своё изображение иконки метки.
+      				iconImageHref: 'static/img/general/map.png',
+      				// Размеры метки.
+      				iconImageSize: [33, 33],
+      				// Смещение левого верхнего угла иконки относительно
+      				// её "ножки" (точки привязки).
+      				iconImageOffset: [-5, -38]
+      			}),
+      
+      			myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
+      				//hintContent: 'Собственный значок метки с контентом',
+      				//balloonContent: 'А эта — новогодняя',
+      				iconContent: '12'
+      			}, {
+      				// Опции.
+      				// Необходимо указать данный тип макета.
+      				iconLayout: 'default#imageWithContent',
+      				// Своё изображение иконки метки.
+      				iconImageHref: 'images/ball.png',
+      				// Размеры метки.
+      				iconImageSize: [48, 48],
+      				// Смещение левого верхнего угла иконки относительно
+      				// её "ножки" (точки привязки).
+      				iconImageOffset: [-24, -24],
+      				// Смещение слоя с содержимым относительно слоя с картинкой.
+      				iconContentOffset: [15, 15],
+      				// Макет содержимого.
+      				iconContentLayout: MyIconContentLayout
+      			});
+      
+      	myMap.geoObjects
+      			.add(myPlacemark);
+      
+      });
+    </script>
   </body>
 </html>

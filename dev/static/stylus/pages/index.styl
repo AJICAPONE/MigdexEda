@@ -61,6 +61,8 @@
   left: -135px;
   .icon
     size(119px,58px)
+  .icon-planwet-arrow
+    display none
 
 .my-swiper-pagination,.mobile-delivery-pagination,.card-swiper-pagination
   position absolute
@@ -187,15 +189,27 @@
 .mb-10
   margin-bottom 10px
 .section-menu-content--desc
-  font-family Rb300
-  font-size 12px
+  font-family Rb400
+  font-size 13px
   color rgba(33,33,33,0.6)
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -ms-line-clamp: 3;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  display: -webkit-box;
+  display: box;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
 .mb-20
   margin-bottom 20px !important
 .section-menu-content--price
   font-family Ow500
   font-size 17px
   color color21
+  white-space nowrap
   span
     font-size 13px
 .mb-25
@@ -256,7 +270,7 @@
   font-family Rb400
   font-size 14px
   color #A6A6A6
-  width 25px
+  width 30px
   border none
   text-align center
 .basket-product--minus,.basket-product--plus
@@ -299,7 +313,7 @@
   display flex
   align-items center
 
-.popular-swiper-button-prev,.popular-swiper-button-next,.review-swiper-button-prev,.review-swiper-button-next,.review-v-swiper-button-next,.review-v-swiper-button-prev,.recommend-swiper-button-next,.recommend-swiper-button-prev,.watched-swiper-button-next,.watched-swiper-button-prev,.migdex-swiper-arrow-prev,.migdex-swiper-arrow-next
+.popular-swiper-button-prev,.popular-swiper-button-next,.review-swiper-button-prev,.review-swiper-button-next,.review-v-swiper-button-next,.review-v-swiper-button-prev,.recommend-swiper-button-next,.recommend-swiper-button-prev,.watched-swiper-button-next,.watched-swiper-button-prev,.migdex-swiper-arrow-prev,.migdex-swiper-arrow-next,.lk-swiper-arrows-next,.lk-swiper-arrows-prev,.faq-swiper-arrows-next,.faq-swiper-arrows-prev
   display flex
   justify-content center
   align-items center
@@ -314,12 +328,27 @@
   &:active
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.05);
 
-.popular-swiper-button-prev.swiper-button-disabled,.popular-swiper-button-next.swiper-button-disabled,.review-swiper-button-prev.swiper-button-disabled,.review-swiper-button-next.swiper-button-disabled,.review-v-swiper-button-next.swiper-button-disabled,.review-v-swiper-button-prev.swiper-button-disabled,.recommend-swiper-button-next.swiper-button-disabled,.recommend-swiper-button-prev.swiper-button-disabled,.watched-swiper-button-next.swiper-button-disabled,.watched-swiper-button-prev.swiper-button-disabled,.migdex-swiper-arrow-prev.swiper-button-disabled,.migdex-swiper-arrow-next.swiper-button-disabled
+.popular-swiper-button-prev.swiper-button-disabled,.popular-swiper-button-next.swiper-button-disabled,.review-swiper-button-prev.swiper-button-disabled,.review-swiper-button-next.swiper-button-disabled,.review-v-swiper-button-next.swiper-button-disabled,.review-v-swiper-button-prev.swiper-button-disabled,.recommend-swiper-button-next.swiper-button-disabled,.recommend-swiper-button-prev.swiper-button-disabled,.watched-swiper-button-next.swiper-button-disabled,.watched-swiper-button-prev.swiper-button-disabled,.migdex-swiper-arrow-prev.swiper-button-disabled,.migdex-swiper-arrow-next.swiper-button-disabled,.lk-swiper-arrows-next.swiper-button-disabled,.lk-swiper-arrows-prev.swiper-button-disabled,.faq-swiper-arrows-next.swiper-button-disabled,.faq-swiper-arrows-prev.swiper-button-disabled
   background-color #F2F2F2
   box-shadow none
   .icon
     fill rgba(33, 33, 33, 0.5);
-.popular-swiper-button-prev,.review-swiper-button-prev,.review-v-swiper-button-prev,.recommend-swiper-button-prev,.watched-swiper-button-prev,.migdex-swiper-arrow-prev
+.lk-swiper-arrows-next,.lk-swiper-arrows-prev
+  pointer-events auto
+  background-color #fff
+  size(36px)
+  .icon
+    size(10px)
+.lk-swiper-arrows
+  absolute-center()
+  display flex
+  justify-content space-between
+  align-items center
+  width 100%
+  padding 0 20px
+  z-index 2
+  pointer-events none
+.popular-swiper-button-prev,.review-swiper-button-prev,.review-v-swiper-button-prev,.recommend-swiper-button-prev,.watched-swiper-button-prev,.migdex-swiper-arrow-prev,.lk-swiper-arrows-prev
   margin-right 15px
 .section-full-baner
   position relative
@@ -410,7 +439,10 @@
   align-items center
   flex-direction column
 .section-baner-stock--img
-  width 200px
+  width 165px
+  object-fit: cover;
+  height: 85px;
+  object-position: bottom;
 .m-60-0
   margin 60px 0
 .section-baner-title
@@ -426,23 +458,28 @@
 .section-full-left__img
   position absolute
   left 0
-  transform translateX(-35%)
-  bottom -40px
-  background-size contain
-  background-position bottom
-  background-repeat no-repeat
-  height 450px
-  width 62vh
-
+  transform: translateX(-30%);
+  bottom: -40px;
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 412px;
+  width: 74vh;
+.section-full-baner
+  display flex
+  flex-direction column
+  height 510px
+  justify-content center
+  overflow hidden
 .section-full-right__img
-  position absolute
-  right -15vh
-  bottom -100px
-  background-size contain
-  background-position bottom
-  background-repeat no-repeat
-  height 375px
-  width 62vh
+  position: absolute;
+  right: -20vh;
+  bottom: -118px;
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 375px;
+  width: 67vh;
 .why-us--img
   width 100%
 .section-title--link
@@ -453,7 +490,7 @@
   font-family Rb300
   font-size 15px
   color #A6A6A6
-  line-height 1.7
+  line-height 1.9
   a
     font-family Rb700
     color colorMain
@@ -575,11 +612,35 @@
   color color21
   margin-bottom 5px
   transition all linear .2s
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -ms-line-clamp: 2;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  display: -webkit-box;
+  display: box;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+.mobile-delivery-icon--slider
+  margin-bottom 15px
 .articles-content-desc
-  font-family Rb300
-  font-size 13px
+  font-family Rb400
+  font-size 14px
   color rgba(33,33,33,0.4)
   margin-bottom 10px
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -ms-line-clamp: 2;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  display: -webkit-box;
+  display: box;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
 .articles-content-bottom
   display flex
   align-items center
@@ -698,6 +759,7 @@
   font-size 13px
   color rgba(33,33,33,0.5)
   margin-bottom 10px
+  width 260px
 .delivery-map--pay__type
   display flex
   align-items center
@@ -741,9 +803,9 @@
   position absolute
   right 10px
   top 10px
-  z-index 2
+  z-index 1
   cursor pointer
-  opacity 0
+  opacity 1
   transition .3s ease
   .icon
     size(28px,24px)
@@ -947,6 +1009,7 @@
   margin-right 15px
   cursor pointer
   transition .2s ease
+  margin-bottom 15px
 
 .catalog-menu-tab.active
   font-family Rb700
@@ -1120,6 +1183,7 @@
   display flex
   align-items center
   justify-content space-between
+  margin-bottom 20px
 .card-content-filling--dot
   display flex
   justify-content center
@@ -1224,10 +1288,10 @@
   border-radius 10px
 .lanch-construct-tabs
   margin 20px 0
-.lanch-choise-product--wrap
+.lanch-choise-product--wrap,.lanch-choise-product--wrap2
   position relative
-.lanch-choise-product--wrap.active-lanch
-  .lanch-choise-button
+.lanch-choise-product--wrap.active-lanch,.lanch-choise-product--wrap2.active-lanch
+  .lanch-choise-button,.lanch-choise-button2
     background-color colorMain
     span
       color #fff
@@ -1235,7 +1299,7 @@
       font-family Ow400
 
 
-.lanch-choise-button
+.lanch-choise-button,.lanch-choise-button2
   display flex
   align-items center
   justify-content center
@@ -1256,7 +1320,7 @@
     box-shadow: 0px 10px 15px -6px rgba(255, 101, 29, 0.3);
     span
       color #fff
-.lanch-delete-product
+.lanch-delete-product,.lanch-delete-product2
   position absolute
   display flex
   justify-content center
@@ -1356,15 +1420,44 @@
   display flex
 .basket-content
   .header-mini-basket__item
+    position relative
+    background-color #fff
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.06);
     border-radius: 10px;
     border-bottom 0
     margin-bottom 30px
     padding 20px
+    z-index 2
   .header-mini-basket__left
-    width 75%
+    width 60%
+.basket-item-depth--list
+  position relative
+  display none
+  margin-top -48px
+  background-color #F9F9F9
+  padding 0 20px
+  border-radius: 10px;
+  transition: 0.2s ease;
+.basket-wrapper .basket-content-mini-basket__item
+  margin-bottom 30px
+.basket-item-depth--item
+  display flex
+  justify-content space-between
+  align-items center
+  padding 20px 0
+  border-bottom 1px solid rgba(0,0,0,0.1)
+  &:first-child
+    padding-top 32px
+  &:last-child
+    border-bottom 0
+  .header-mini-basket__right
+    width max-content
+  .header-mini-basket__delete
+    margin-right 0
+  .basket-product--count
+    margin-right 60px
 .basket-out-deliver--price
-  margin-top 30px
+  margin-top 20px
 .basket-free-delivery
   display flex
   align-items center
@@ -1738,6 +1831,16 @@
     padding 0 15px
     &:nth-child(-n+2)
       width 50%
+      .articles-content-item
+        &:before
+          content ''
+          border-radius 15px
+          position absolute
+          right 0
+          left 0
+          top 0
+          bottom 0
+          background: linear-gradient(180deg, rgba(33, 33, 33, 0) 0%, rgba(33, 33, 33, 0.4) 100%), linear-gradient(0deg, rgba(33, 33, 33, 0.15), rgba(33, 33, 33, 0.15));
       .articles-content-desc
         display none
       .articles-content-link
@@ -1760,7 +1863,10 @@
         position absolute
         bottom 20px
         left 20px
+        right 20px
         color #fff
+
+
       .articles-content-img
         min-height 380px
         max-height 380px
@@ -1802,11 +1908,14 @@
   color color21
   margin-bottom 20px
 .article-text
-  font-family Rb300
-  font-size 14px
+  font-family Rb400
+  font-size 16px
   color #A6A6A6
   margin-bottom 30px
-  line-height 1.7
+  line-height 1.8
+.article-receipt--video__text
+  .article-text
+    margin-bottom 0
 .article-content--info
   margin-bottom 60px
 .articles-sticky--block
@@ -1816,7 +1925,7 @@
   padding-bottom 70px
   padding-left 15px
   display inline-block
-  height: calc(100vh - 150px);
+  height: calc(100vh - 90px);
   overflow-y: auto;
   &::-webkit-scrollbar
     width 0
@@ -1863,13 +1972,15 @@
   color color21
   margin-bottom 3px
 .article-comments--item__date
-  font-family Rb300
-  font-size 14px
+  font-family Rb400
+  font-size 16px
   color #A6A6A6
   margin-bottom 15px
+.article-sidebar
+  margin-top -30px
 .article-comments--item__comment
-  font-family Rb300
-  font-size 14px
+  font-family Rb400
+  font-size 16px
   color rgba(33,33,33,0.4)
   padding-bottom 10px
   border-bottom 1px solid rgba(33,33,33,0.1)
@@ -1899,6 +2010,7 @@
       transform rotate(180deg)
 .article-receipt--video
   display flex
+  align-items center
 .article-video--icon
   display flex
   justify-content center
@@ -1994,16 +2106,18 @@
   align-items center
   margin-bottom 40px
 .section-reviews--page
+  margin-bottom 30px
   .review-card-review--col
     margin-bottom 30px
     &:last-child
       margin-bottom 0
+
 .reviews-page-list--video
   display: grid;
   width 100%
   grid-gap 30px
-  margin-bottom 30px
-  grid-template "g1 g1 g1 g1 g1 g2 g2 g3 g3" "g1 g1 g1 g1 g1 g2 g2 g3 g3" "g4 g4 g4 g5 g5 g5 g6 g6 g6" "g4 g4 g4 g5 g5 g5 g6 g6 g6" "g7 g7 g7 g7 g8 g8 g8 g8 g8" "g7 g7 g7 g7 g8 g8 g8 g8 g8"
+  margin-bottom 60px
+  grid-template "g1 g1 g1 g1 g1 g1 g2 g2 g2 g3 g3 g3" "g1 g1 g1 g1 g1 g1 g2 g2 g2 g3 g3 g3" "g4 g4 g4 g4 g5 g5 g5 g5 g6 g6 g6 g6" "g4 g4 g4 g4 g5 g5 g5 g5 g6 g6 g6 g6" "g7 g7 g7 g7 g7 g7 g8 g8 g8 g8 g8 g8" "g7 g7 g7 g7 g7 g7 g8 g8 g8 g8 g8 g8"
   padding 0 15px
   .g4,.g5,.g6
     min-height 300px
@@ -2025,11 +2139,13 @@
   .why-us--img
     padding 20px 60px
     height 100%
+    max-height 308px
+    object-fit contain
 .about-why-us--item
   position relative
   display flex
   flex-direction column
-  justify-content space-between
+  //justify-content flex-end
   padding 20px
   background-color #fff
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.06);
@@ -2038,17 +2154,22 @@
   overflow hidden
 .about-why-us--col
   display flex
+  height auto
 .about-why-us--title
+  display flex
+  align-items center
   font-family Ow500
   font-size 16px
   color color21
-  margin-bottom 45px
+  //margin-bottom 45px
   padding-left 75px
+  height 55px
 .about-why-us--text
   font-family Rb400
   font-size 13px
   line-height 1.7
   color rgba(33,33,33,0.4)
+  padding-top 20px
 .about-why-us--icon
   position absolute
   padding-top 7px
@@ -2102,6 +2223,7 @@
   padding 0
   background-color #F9F9F9
   border-radius 15px
+  width 87.72%
 .have-question--right
   padding 40px 30px
   .main-input,.main-textarea
@@ -2139,11 +2261,11 @@
   flex-direction column
 .have-question--tel__title
   font-family Rb700
-  font-size 15px
+  font-size 14px
   color #fff
 .have-question--tel__link
   font-family Rb700
-  font-size 28px
+  font-size 24px
   color #fff
 .have-question--tel
   position absolute
@@ -2279,7 +2401,12 @@
   will-change transform
   &:last-child
     margin-bottom 0
-
+.lk-adress-item--cont
+  display flex
+  flex-direction column
+  align-items center
+  width 100%
+  position relative
 .lk-adress-top
   display flex
   align-items center
@@ -2414,20 +2541,20 @@
   size(100px)
 .lk-order-products--name
   font-family Ow400
-  font-size 15px
+  font-size 16px
   color color21
   margin-bottom 10px
   text-align center
 .lk-order-products--desc
   font-family Rb400
-  font-size 13px
+  font-size 14px
   color rgba(33,33,33,0.6)
   text-align center
 .lk-order-products--list
   display flex
-  flex-wrap wrap
   padding 20px
   padding-bottom 5px
+  padding-left 0
 .lk-order-products--wrap
   display flex
 .lk-order-button
@@ -2754,7 +2881,7 @@
   right 0
   bottom 0
   z-index 200
-  transform translateY(150vh)
+  transform translateY(240vh)
   will-change transform
   transition .4s ease
   .popup-input
@@ -2764,7 +2891,7 @@
 .popup-mobile-added.active
   transform translateY(0vh)
 .header-transform-hidden
-  transform translateY(-20vh)
+  transform translateY(-30vh)
 .content.mobile-popup-bg
   &:after
     content ''
@@ -3024,6 +3151,7 @@
   border-radius 23px
   padding 15px 25px
   margin-right 15px
+  cursor pointer
 .section-recom-m
   display none
 .favourites-load-more
@@ -3113,7 +3241,7 @@
 .lk-adress-item--wrap
   position relative
   width 48%
-  margin-bottom 30px
+  margin-bottom 64px
   display flex
   align-items center
 .lk-adress-item--delete__mobile
@@ -3129,10 +3257,15 @@
     margin-right 24px
 .index-page
   .why-us--left
-    width 35%
+    width 42%
     height 100%
+    .why-us--img
+      width: 100%;
+      object-fit: contain;
+      max-height: 310px;
+      padding 25px
   .why-us--right
-    width 60%
+    width 56%
 .tablet-menu-sandwich,.tel-menu-sandwich
   position fixed
   display none
@@ -3345,6 +3478,7 @@
   font-size 17px
   color colorMain
   text-align center
+  white-space nowrap
 .contact-map
   position relative
   .container
@@ -3403,7 +3537,7 @@
   justify-content center
   align-items center
   .icon
-    size(168px)
+    size(196px,159px)
 .faq-question--title
   font-family Ow500
   font-size 20px
@@ -3644,12 +3778,12 @@
   align-items center
   justify-content space-between
   position relative
-  width 110px
+  width 140px
   right 0
   border 1px solid #EEEEEE
   border-radius 18.5px
   height 37px
-  padding-right 45px
+  padding-right 42px
   padding-left 5px
   user-select: none;
 
@@ -3664,8 +3798,8 @@
     display flex
     height 37px
     transition all linear .3s
-    transform translateX(100px)
-.product-basket-product--minus
+    transform translateX(130px)
+.product-basket-product--minus,.product-basket-product--plus
   display flex
   justify-content center
   background-color #f9f9f9
@@ -3674,14 +3808,7 @@
   min-width 27px
   color #a6a6a6
   cursor pointer
-.product-basket-product--plus
-  position: absolute;
-  right: 0;
-  width: 37px;
-  height: 37px;
-  z-index: 0;
-  border-radius: 50%;
-  cursor pointer
+  font-family Ow400
 
 .button-product-basket--count
   position absolute
@@ -3701,6 +3828,8 @@
   opacity 0
   transition all linear .4s
 
+.button-product-basket--count.active
+  opacity 1
 .product-basket-count
   .button-basket--v2
     z-index 3
@@ -3717,6 +3846,11 @@
     opacity 0
 .product-basket-added--card
   position relative
+.basket-count-buttons--wrapper.active
+
+  .product-basket-product--count
+    transform translateX(0)
+
 .lk-mobile-catalog--list
   display flex
   flex-direction column
@@ -3733,7 +3867,7 @@
   display flex
   align-items center
 .lk-mobile-catalog--item__img
-  width 72
+  width 72px
   height 64px
   margin-right 16px
   border-radius 10px
@@ -3776,8 +3910,683 @@
   overflow-y: auto;
   height: calc(100vh - 90px);
   padding-top: 20px;
+  width: 300px;
+  padding-right: 22.5px;
+  padding-left: 22.5px;
+  margin-left: -22.5px
   &::-webkit-scrollbar
     width 0
 .header-card-name-and-price
   display flex
   align-items center
+.popup-body .header-mini-basket__delete .icon
+  fill #fff
+.lk-order-bottom--swiper
+  padding 0 30px
+.faq-content--item.active
+  .faq-content--item__right .icon
+    fill #FF651D
+.faq-content-info--right--swiper
+  padding-top 40px
+.faq-swiper-device--desc .faq-swiper-pagination
+  display none
+.faq-swiper-arrows
+  absolute-center()
+  width 100%
+  z-index 2
+  display flex
+  justify-content space-between
+  align-items center
+  top 43%
+.faq-swiper-arrows-prev,.faq-swiper-arrows-next
+  background-color #fff
+.faq-swiper-arrows-prev.swiper-button-disabled,.faq-swiper-arrows-next.swiper-button-disabled
+  background-color #fff
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.05);
+.mb-60
+  margin-bottom 60px
+.section8.section-delivery
+  .section-title
+    margin-bottom 0
+.team-about-item-slide
+  height auto
+.section-delivery-map
+  padding-bottom 70px
+.footer-top-bottom__img
+  right 30px
+.pb-112
+  padding-bottom 112px
+.recept-other-flex--wrap
+  margin 0 -15px
+.article-recept-img--main
+  max-height: 310px;
+  object-fit: contain;
+  padding 0
+.article-recept-comp--item .why-us--left
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+.article-recept-comp--item
+  padding 40px 0
+.favourite-links.active
+  color #FE651D
+.input-wrap-address
+  margin-top 20px
+
+.order-input[type="time"]
+  padding-right 13px
+.time-icon
+  background-color #F9F9F9
+  z-index 2
+.modal-open-2
+  overflow hidden
+.modal-open-2 .modal
+  overflow-x: hidden;
+  overflow-y: auto;
+.other-page .review-button-tab.active
+  font-family Ow500
+  font-size 15px
+  color #fff
+.other-page .review-button-tab
+  font-size 14px
+  font-family Ow400
+  color color21
+.other-page .card-review-top--wrap .review-button-tab
+  font-family Rb400
+#map
+  height 100%
+  width 100%
+.card-cart-added--text-2
+  display none
+.popup-body-bold--text
+  font-family Rb900
+  font-size 24px
+  color #fff
+  line-height 1.5
+  width 280px
+  padding 25px 0
+  text-align center
+.popup-body-bold--text2
+  font-family Rb900
+  font-size 24px
+  color #fff
+  line-height 1.5
+  padding 25px 0
+  text-align center
+.popup-body-bold--wrap
+  display flex
+  flex-direction column
+  align-items center
+  width 300px
+  .popup-body-bold--text:nth-child(2)
+    padding-top 0
+    width 100%
+  .popup-body-bold--text:nth-child(1)
+    padding-bottom 0
+    width 100%
+.popup-body-bold--desc
+  font-family Rb400
+  font-size 18px
+  color #fff
+  padding-bottom 25px
+  text-align center
+.popup-basket-notific .section-menu-content--favourite
+  .icon
+    stroke: #fff
+.popup-basket-notific .section-menu-content--favourite.added-favourite
+  .icon
+    stroke colorMain
+.popup-tab--item
+  display none
+.popup-tab--item.active
+  display block
+.popup-tabs--container
+  width 87%
+  padding 10px 0
+  //.swiper-wrapper
+  //  display flex
+  //  justify-content center
+  //  align-items center
+.popup-tabs--item
+  width max-content
+  padding 15px 25px
+  margin-right 15px
+  background-color transparent
+  border 1.7px solid #EEEEEE
+  color #fff
+  margin-bottom 0
+.popup-tabs--item.active
+  border 1.7px solid colorMain
+.popup-swiper-categ--wrap
+  display flex
+  justify-content space-between
+  align-items center
+  absolute-center()
+  width 100%
+  padding 0 30px
+  z-index 2
+  pointer-events none
+.popup-swiper-categ-prev,.popup-swiper-categ-next
+  display flex
+  justify-content center
+  align-items center
+  size(46px)
+  border 1.7px solid #EEEEEE
+  border-radius 10px
+  pointer-events auto
+  cursor pointer
+  outline none
+  .icon
+    size(11px)
+    fill #fff
+.popup-tabs--container--wrap
+  position relative
+.popup-swiper-categ-prev.swiper-button-disabled,.popup-swiper-categ-next.swiper-button-disabled
+  opacity 0.3
+  .icon
+    opacity 0.3
+.mw-container
+  max-width 1170px
+.mw-430
+  max-width: 430px;
+.popup-login--list
+  display flex
+  align-items center
+  justify-content center
+.popup-login--item
+  display flex
+  justify-content center
+  align-items center
+  size(40px)
+  background-color colorMain
+  border-radius 10px
+  margin-right 30px
+  cursor pointer
+  transition all linear .2s
+  .icon
+    size(24px)
+    fill #fff
+  &:last-child
+    margin-right 0
+  &:hover
+    box-shadow: 0px 0px 20px rgba(253, 191, 90, 0.2);
+.popup-login--title
+  font-family Rb500
+  font-size 15px
+  color #fff
+  text-align center
+  margin-bottom 15px
+.popup-login--social
+  margin-bottom 20px
+.popop-code--wrap
+  display flex
+  align-items center
+  .popup-input
+
+    font-family Rb400
+    font-size 14px
+    color #fff
+    background-color rgba(255,255,255,0.3)
+    border-radius: 5px;
+    size(50px)
+    margin-right 30px
+    border none
+    text-align center
+    &::placeholder
+      color #fff
+    &:last-child
+      margin-right 0
+.popup-send--again
+  font-family Rb700
+  font-size 15px
+  color colorMain
+  text-align center
+  margin-bottom 30px
+  cursor pointer
+.lanch-choise-product--wrap.active-lanch .lanch-choise-button span
+  pointer-events none
+.section-menu-content--recommend
+  position absolute
+  display flex
+  align-items center
+  justify-content center
+  left 10px
+  top 7px
+  background-color #fff
+  color colorMain
+  font-family Ow400
+  font-size 14px
+  height 30px
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.06);
+  border-radius: 10px 5px;
+  padding 2px 25px
+.popup-complex--item
+  display flex
+  justify-content space-between
+  align-items center
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 10px;
+  padding 20px
+  margin-bottom 20px
+  &:last-child
+    margin-bottom 0
+.popup-complex--item__info
+  display flex
+  flex-direction column
+.popup-complex--item__title
+  font-family Ow600
+  font-size 18px
+  color #fff
+  margin-bottom 10px
+.popup-complex--item__desc
+  font-family Rb400
+  font-size 14px
+  color rgba(255,255,255,0.6)
+.card-content-complex--button
+  display flex
+  justify-content center
+  align-items center
+  background-color #F2F2F2
+  border-radius 21.5px;
+  font-family Ow400
+  font-size 14px
+  color color21
+  width 100%
+  height 43px
+  cursor pointer
+.popup-complex--list
+  overflow-y auto
+  height calc(100vh - 362px)
+  padding 30px
+  &::-webkit-scrollbar
+    width 0
+.popup-complex--button
+  display flex
+  justify-content center
+  align-items center
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #FFFFFF;
+  border-radius: 25px
+  height 43px
+  font-family Ow600
+  font-size 14px
+  color #fff
+  width 146px
+  cursor pointer
+.popup-complex--button.active
+  background-color colorMain
+  border: 2px solid colorMain
+.basket-item-depth--arrow
+  display flex
+  justify-content center
+  align-items center
+  cursor pointer
+  .icon
+    size(14px)
+    fill colorMain
+.basket-item-depth--arrow.active
+  .icon
+    transform rotate(180deg)
+.header-mini-basket__img
+  border-radius 10px
+.lk-phone-submited
+  display flex
+  align-items center
+  margin-top 11px
+  .icon
+    size(19px)
+    fill #A0D468
+    margin-right 10px
+  span
+    font-family Ow600
+    font-size 14px
+    color #A0D468
+.mw-570
+  max-width 570px
+.popup-load-you-file--video
+  width: 370px;
+  height: 250px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+.popup-load-you-file
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+  border: 2px dashed #e4e4e4;
+  align-items: center;
+  border-radius: 10px;
+.popup-load-you-zone
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+.popup-load-you-file--zone
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+.popup-load-you-file--zone:before
+  content: '';
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(255,255,255,0.4)
+  z-index: 2;
+  display: block;
+  opacity: 0.6;
+  width: 100%;
+  height: 100%;
+  border-radius 10px
+.popup-load-you-input
+  line-height: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  opacity: 0;
+.popup-load-you-info
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+.popup-load-you-file--progress
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+.popup-load-you-file--progress-v
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 25px;
+  max-width: 370px;
+  width: 100%;
+  margin: 0 auto;
+.add-video-review
+  height 50px
+.popup-progress-load
+  display none
+  align-items center
+  absolute-center()
+
+  .icon
+    size(24px)
+    fill colorMain
+    margin-right 15px
+  span
+    font-family Rb500
+    font-size 20px
+    color #fff
+.review-tab-video-reviews__icon
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  absolute-center()
+  width: 70px;
+  height: 70px;
+  background-color: colorMain
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px rgba(255, 101, 29,0.3);
+  cursor: pointer;
+  transition: 0.3s ease;
+  .icon
+    size(18px)
+
+.pp-reviews__icon
+  display none
+.popup-load-you-title
+  font-family Rb700
+  font-size 18px
+.popup-load-you-desc
+  font-family Rb500
+  font-size 14px
+.popup-load-you-file--progress
+  font-family Rb500
+  font-size 14px
+  color #fff
+#mod-vid-progress-number,#mod-vid-progress-number2
+  font-family Rb700
+  margin-left 4px
+progress::-webkit-progress-value
+  background-color colorMain !important
+progress::-moz-progress-bar
+  background-color colorMain !important
+.popup-file--video--button:disabled
+  background-color #fff
+  color rgba(33,33,33,0.3)
+  border 1px solid #fff
+  box-shadow: 0px 10px 15px -6px rgba(255,255,255,0.3);
+.opacity-show::before
+  display none
+.m-0-16
+  margin 0 16px
+.product-lanch-card--rebuild
+  display flex
+  align-items center
+  justify-content center
+  background-color #F2F2F2
+  border-radius 21.5px
+  font-family Ow300
+  font-size 14px
+  color color21
+  transition all linear .2s
+  cursor pointer
+  width 120px
+  height 37px
+.product-lanch-card--rebuild.active
+  background-color colorMain
+  color #fff
+  box-shadow: 0px 10px 15px -6px rgba(255, 101, 29, 0.3);
+.lk-add-position
+  display flex
+  justify-content center
+  align-items center
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 5px
+  border: 1.5px dashed rgba(255, 255, 255, 0.7);
+  font-family Ow400
+  font-size 16px
+  color #fff
+  height 60px
+  width 100%
+  cursor pointer
+.datepicker-panel ul li
+  font-family Rb400
+  font-size 12px
+.lk-adress-deafalt--button
+  display flex
+  align-items center
+  cursor pointer
+  absolute-center()
+  top 100%
+  transform: translate(-50%, 100%);
+  span
+    font-family Rb500
+    font-size 14px
+    color rgba(33,33,33,0.6)
+  .icon
+    display none
+    size(19px)
+    fill #FF651D
+    margin-right 10px
+  &:before
+    content ''
+    position relative
+    size(19px)
+    border 2px solid rgba(33,33,33,0.4)
+    border-radius 50%
+    margin-right 10px
+.lk-adress-deafalt--button.active
+  .icon
+    display flex
+  &:before
+    display none
+  span
+    color #FF651D
+.theme-sett-time
+  background-color rgba(255,255,255,0.3)
+.lk-content
+  padding-right 0
+.lk-setting--theme-bg
+  background-color #fff !important
+.blog-page
+  .section-blog .articles-content-col:nth-child(-n+2)
+    .articles-content-img
+      margin-bottom 0
+.card-cart-added--col-d
+  .card-cart-added--basket
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.06);
+    padding 30px
+    .main-button
+      font-size 14px
+.fw-900
+  font-family Rb900
+.footer-basket-slider--item.swiper-slide-active + .swiper-slide + .swiper-slide + .swiper-slide
+  border-right: 0px solid #fff;
+.header-mini-basket__over--wrap
+  display flex
+  align-items center
+
+.mr-100
+  margin-right 100px
+.swiper-button-lock
+  display none
+.popup-tabs--container .swiper-wrapper
+  width max-content
+.lk-order-middle
+  display none
+.header-m-back
+  outline none
+.review-card-review--showmore
+  display block
+  font-size 14px
+  font-family Rb400
+  color colorMain
+  cursor pointer
+.recept-other-flex
+  .articles-content-desc
+    -ms-line-clamp: 3;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+.lanch-components--bottom
+  .basket-product--count
+    width 140px
+.footer-lanch--fast__flex
+  display flex
+.footer-lanch--fast
+  display none
+.w-150
+  width 150px
+.h-37
+  height 37px
+  font-family Rb500
+  font-size 13px
+.mb-15
+  margin-bottom 15px
+.datepicker-panel ul li
+  font-family Os400
+  font-size 13px
+  color color21
+.datepicker-panel>ul[data-view=week]>li
+  font-family Os600
+  font-size 13px
+  color color21
+  size(33px)
+  display flex
+  justify-content center
+  align-items center
+.datepicker-panel>ul>li
+  display flex
+  justify-content center
+  align-items center
+  size(33px)
+.datepicker-top-left:before, .datepicker-top-right:before,.datepicker-top-left:after, .datepicker-top-right:after
+  display none
+
+.datepicker-panel>ul[data-view="week"]
+  padding 5px 0
+.picked-day-migdex
+  color #FF651D !important
+.datepicker-panel>ul>li[data-view="day"],[data-view="day prev"],[data-view="day next"]
+  display flex
+  justify-content center
+  align-items center
+.datepicker-panel>ul>li[data-view="month current"], .datepicker-panel>ul>li[data-view="year current"], .datepicker-panel>ul>li[data-view="years current"]
+  font-family Ow500
+  font-size 14px
+  color #fff
+  background-color #FF651D
+  height 47px
+  display flex
+  align-items center
+  justify-content center
+.datepicker-dropdown
+  border none
+  box-shadow: 0px 0px 25px -11px rgba(0, 0, 0, 0.15);
+  border-radius 5px
+.datepicker-panel>ul>li[data-view="month next"], .datepicker-panel>ul>li[data-view="month prev"], .datepicker-panel>ul>li[data-view="year next"], .datepicker-panel>ul>li[data-view="year prev"], .datepicker-panel>ul>li[data-view="years next"], .datepicker-panel>ul>li[data-view="years prev"], .datepicker-panel>ul>li[data-view=next]
+  background-color #FF651D
+.datepicker-panel>ul>li[data-view="month prev"]
+  border-radius 5px 0 0 0
+  height 47px
+  width 40px
+  display flex
+  justify-content center
+  align-items center
+  font-size 26px
+  color #fff
+  padding-bottom 6px
+.datepicker-panel>ul>li.disabled[data-view="month prev"], .datepicker-panel>ul>li.disabled[data-view="month prev"]:hover
+  background-color #FF651D
+.datepicker-panel>ul>li[data-view="month next"]
+  border-radius 0 5px 0 0
+  height 47px
+  width 40px
+  display flex
+  justify-content center
+  align-items center
+  font-size 26px
+  color #fff
+  padding-bottom 6px
+.datepicker-panel>ul
+  width 110%
+.review-card--show__more
+  display none
+
+.review-card-review__bottom
+  display: -webkit-box;
+  display: box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  word-wrap: break-word;
+  color: rgba(33,33,33,.6);
+  -o-text-overflow: ellipsis;
+  -ms-line-clamp: 3;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  transition .3s ease
+.review-card-review__bottom.active
+  line-clamp:99;
+  -webkit-line-clamp: 99
+  transition all linear .2s
+.order-out--mobile
+  display none
+.w-65_7
+  width 65.7%
+.w-32_3
+  width 32.3%
+.popup-mobile-added .popup-input
+  color color21
+.close-mobile--popups
+  display none

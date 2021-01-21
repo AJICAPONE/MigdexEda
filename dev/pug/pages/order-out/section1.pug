@@ -5,7 +5,32 @@ section.section1.section-order-out
         .order-wrapper
             .col-xl-8.col-lg-8.col-md-12.col-sm-12.basket-content.pl-0
                 form.order-out-form
-                    .main-inputs--wrapper
+                    .main-inputs--wrapper.order-out--mobile
+                        .main-input--wrap
+                            label ФИО
+                            input.main-input(type="text" required)
+
+                        .main-input--wrap
+                            label Контакты
+                            input.main-input.mb-2(type="tel" data-mask="+7 (000) 000 00 00" required placeholder="Телефон")
+                            input.main-input(type="email" required placeholder="Email")
+                        .main-input--wrap.w-100.mb-30.lk-input-wrap.input-wrap-address
+                            label Адрес
+                            .lk-input-input
+                                .main-input Адрес
+                                .lk-input-arrow
+                                    +icon('arrow-down')
+                                .lk-input--list
+                                    .lk-input--item Мужской
+                                    .lk-input--item Женский
+                        input.main-input.w-100.mb-2(type="text" placeholder="Ближайшая станция метро")
+                        input.main-input.w-65_7.mb-2(type="text" placeholder="Улица")
+                        input.main-input.w-32_3.mb-2(type="text" placeholder="Подъезд")
+                        input.main-input.w-32_3.mb-2(type="text" placeholder="Этаж")
+                        input.main-input.w-32_3.mb-2(type="text" placeholder="Квартира")
+                        input.main-input.w-32_3.mb-2(type="text" placeholder="Домофон")
+                        input.main-input.w-100(type="text" required placeholder="Комментарий")
+                    .main-inputs--wrapper.order-out--desc
                         .main-input--wrap.w-48
                             label Фамилия
                             input.main-input(type="text" required)
@@ -18,9 +43,15 @@ section.section1.section-order-out
                         .main-input--wrap.w-48
                             label E-Mail
                             input.main-input(type="email" required)
-                        .main-input--wrap.w-100.mb-30
+                        .main-input--wrap.w-100.mb-30.lk-input-wrap.input-wrap-address
                             label Адрес
-                            input.main-input(type="text")
+                            .lk-input-input
+                                .main-input
+                                .lk-input-arrow
+                                    +icon('arrow-down')
+                                .lk-input--list
+                                    .lk-input--item Мужской
+                                    .lk-input--item Женский
                         input.main-input.w-48_5.mb-20(type="text" placeholder="Ближайшая станция метро")
                         input.main-input.w-48_5.mb-20(type="text" placeholder="Улица")
                         input.main-input.w-31_3.mb-20(type="text" placeholder="Дом")
@@ -28,7 +59,7 @@ section.section1.section-order-out
                         input.main-input.w-31_3.mb-20(type="text" placeholder="Этаж")
                         input.main-input.w-48_5.mb-20(type="text" placeholder="Квартира/Офис")
                         input.main-input.w-48_5.mb-20(type="text" placeholder="Код домофона")
-                    .main-input--wrap.w-100.mb-30
+                    .main-input--wrap.w-100.mb-30.order-out--desc
                         label Комментарий к заказу
                         textarea.main-textarea(cols="5" rows="4" placeholder="Например, номер домофона...")
                     .order-out-block
@@ -50,14 +81,14 @@ section.section1.section-order-out
                                     .order-input--wrap
                                         label Дата
                                         .order-input-block
-                                            input.order-input.order-date(type="text")
+                                            input.order-input.order-date(type="text" data-mask="00.00.0000")
                                             .order-input--icon
                                                 +icon('calendar')
                                     .order-input--wrap
                                         label Время
                                         .order-input-block
-                                            input.order-input(type="text" data-mask="00:00")
-                                            .order-input--icon
+                                            input.order-input(type="time" data-mask="00:00")
+                                            .order-input--icon.time-icon
                                                 +icon('clock2')
                                 .order-checkbox-everyday
                                     .order-checkbox-everyday--check

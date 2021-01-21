@@ -1,0 +1,16 @@
+form.popup-mobile-added#custom-mobile-code
+    .popup-header.modal-header.pb-0
+        .popup-mobile-line--close
+        .popup-header--title.mb-10 Код подтвердения
+        .popup-header--desc--mobile--wrap
+            .popup-header--desc--mobile На номер #[span 8 (999) 123 45 67] был выслан код. Введите код ниже:
+    .popup-body.modal-body.p-40-70
+        .popop-code--wrap.code-auth--wrap
+            input.popup-input.code-auth(type="text" name="digit" data-mask="0" placeholder="_")
+            input.popup-input.code-auth(type="text" name="digit" data-mask="0" placeholder="_")
+            input.popup-input.code-auth(type="text" name="digit" data-mask="0" placeholder="_")
+            input.popup-input.code-auth(type="text" name="digit" data-mask="0" placeholder="_")
+
+    .popup-footer.modal-footer.pt-0
+        .popup-send--again Отправить повторно
+        button.main-button.w-230.m-0-auto.mb-30(type="submit") Подтвердить

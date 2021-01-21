@@ -45,7 +45,7 @@ block content
                                     .main-button-transparent.max-content Заказать
                                     .basket-product--count
                                         .basket-product--minus -
-                                        input.basket-product--input(type="text" value="1" min="1" readonly="readonly")
+                                        input.basket-product--input(type="text" value="1" min="1" )
                                         .basket-product--plus +
                     .lanch-components--buttons
                         .card-content-added-one-click.main-button-transparent(data-toggle="modal" data-target="#popup-one-click") Купить в 1 клик
@@ -60,3 +60,11 @@ block content
                         br
                         | | In id urna, faucibus est et, facilisis consectetur cursus aliquam. Eu quis magna adipiscing augue. Porta netus congue porta dui nunc, est ligula mauris at. Sapien urna, proin duis malesuada at porttitor id. Suscipit suspendisse amet amet, scelerisque ullamcorper. Placerat viverra sociis tellus dignissim purus proin fermentum tellus. Proin sollicitudin dolor bibendum a. Arcu cras egestas quis ultrices vitae viverra ultrices. Sed sit euismod id pellentesque quis. Sed erat vel mauris, porttitor. Tortor tempus, posuere cras nibh. Vel at fringilla et pellentesque tincidunt hac elit pulvinar. Bibendum sed ipsum consequat ut. Amet laoreet arcu sagittis dolor bibendum sed adipiscing. Aliquet netus velit fermentum nibh adipiscing et convallis. In consequat eu ultricies diam tincidunt sit pretium. Dictum eget fermentum lacus at ac sem cras laoreet pellentesque. Sit eget quis ante amet, aliquet euismod.
 
+    .popups
+        include ../popups/popup-added-basket
+        include ../popups/popup-one-click
+        include ../popups/popup-garnir
+    .popups-mobile
+        include ../popups-mobile/popup-basket-added
+        include ../popups-mobile/popup-one-click
+        include ../popups-mobile/popup-garnir

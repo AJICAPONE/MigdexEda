@@ -11,7 +11,7 @@ section.section1.section-article
                             a.article-hash--item(href="/") #Акции
                         .article-date 12.10.2020
                     .article-img--wrap
-                        img.article-img(src="static/img/content/articles/img4.png")
+                        img(loading="lazy").article-img(src="static/img/content/articles/img4.png")
                         .section-title--article Акция! 6 хинкали бесплатно!
                         .article-date 12.10.2020
                     .article-hash-date--wrap.article-hash--mobile
@@ -80,56 +80,65 @@ section.section1.section-article
                                 .article-comments--item__name Лев Лукин
                                 .article-comments--item__date 11 Июня, 2020 | 12:42
                                 .article-comments--item__comment Turpis metus purus blandit semper. Lectus pellentesque maecenas enim pharetra eget. Imperdiet quis vehicula semper eget. Ullamcorper et id vitae vel, venenatis, elit, ullamcorper. Nunc, in eget diam neque diam nisl ut aliquet. Vestibulum orci pellentesque ligula aenean enim ullamcorper.
+                                .article-comments--item__show--more
                                 .article-comments--item__depth
                                     span Комментарии (2)
                                     .article-comments--item__arrow
                                         +icon('arrow-down')
                                 .article-comments--item__depth2
-                                    textarea.articles-textarea.mb-30(cols="5" rows="3" placeholder="Ваш комментарий...")
+                                    textarea.articles-textarea.mb-15(cols="5" rows="3" placeholder="Ваш комментарий...")
+                                    .main-button.w-150.h-37.mb-30 Отправить
                                     .article-comments--list__depth2
                                         .article-comments--item
                                             .article-comments--item__name Гость
                                             .article-comments--item__date 11 Июня, 2020 | 12:42
                                             .article-comments--item__comment Turpis metus purus blandit semper. Lectus pellentesque maecenas enim pharetra eget. Imperdiet quis vehicula semper eget.
+                                            .article-comments--item__show--more
                                         .article-comments--item
                                             .article-comments--item__name Лев Лукин
                                             .article-comments--item__date 11 Июня, 2020 | 12:42
                                             .article-comments--item__comment Turpis metus purus blandit semper. Lectus pellentesque maecenas enim pharetra eget.
-
+                                            .article-comments--item__show--more
                             .article-comments--item
                                 .article-comments--item__name Гость
                                 .article-comments--item__date 11 Июня, 2020 | 12:42
                                 .article-comments--item__comment Turpis metus purus blandit semper. Lectus pellentesque maecenas enim pharetra eget. Imperdiet quis vehicula semper eget.
+                                .article-comments--item__show--more
                                 .article-comments--item__depth
                                     span Комментарии (3)
                                     .article-comments--item__arrow
                                         +icon('arrow-down')
                                 .article-comments--item__depth2
-                                    textarea.articles-textarea.mb-30(cols="5" rows="3" placeholder="Ваш комментарий...")
+                                    textarea.articles-textarea.mb-15(cols="5" rows="3" placeholder="Ваш комментарий...")
+                                    .main-button.w-150.h-37.mb-30 Отправить
                                     .article-comments--list__depth2
                                         .article-comments--item
                                             .article-comments--item__name Гость
                                             .article-comments--item__date 11 Июня, 2020 | 12:42
                                             .article-comments--item__comment Turpis metus purus blandit semper. Lectus pellentesque maecenas enim pharetra eget. Imperdiet quis vehicula semper eget.
+                                            .article-comments--item__show--more
+                                        .article-comments--item
+                                            .article-comments--item__name Лев Лукин
+                                            .article-comments--item__date  11 Июня, 2020 | 12:42
+                                            .article-comments--item__comment Turpis metus purus blandit semper. Lectus pellentesque maecenas enim pharetra eget.
+                                            .article-comments--item__show--more
                                         .article-comments--item
                                             .article-comments--item__name Лев Лукин
                                             .article-comments--item__date 11 Июня, 2020 | 12:42
                                             .article-comments--item__comment Turpis metus purus blandit semper. Lectus pellentesque maecenas enim pharetra eget.
-                                        .article-comments--item
-                                            .article-comments--item__name Лев Лукин
-                                            .article-comments--item__date 11 Июня, 2020 | 12:42
-                                            .article-comments--item__comment Turpis metus purus blandit semper. Lectus pellentesque maecenas enim pharetra eget.
+                                            .article-comments--item__show--more
                             .article-comments--item
                                 .article-comments--item__name Гость
                                 .article-comments--item__date 11 Июня, 2020 | 12:42
                                 .article-comments--item__comment Turpis metus purus blandit semper. Lectus pellentesque maecenas enim pharetra eget. Imperdiet quis vehicula semper eget.
+                                .article-comments--item__show--more
                                 .article-comments--item__depth
                                     span Комментировать
                                     .article-comments--item__arrow
                                         +icon('arrow-down')
                                 .article-comments--item__depth2
-                                    textarea.articles-textarea.mb-30(cols="5" rows="3" placeholder="Ваш комментарий...")
-
+                                    textarea.articles-textarea.mb-15(cols="5" rows="3" placeholder="Ваш комментарий...")
+                                    .main-button.w-150.h-37.mb-30 Отправить
 
             .col-xl-4.col-lg-4.col-md-12.col-sm-12.article-sidebar.p-0
                 .articles-sticky--block
