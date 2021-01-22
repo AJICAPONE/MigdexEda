@@ -639,6 +639,7 @@ $(document).ready(function () {
                 $('body').addClass('overflow-hidden');
                 $('.content').addClass('mobile-popup-bg');
                 $('.close-mobile--popups').addClass('active');
+
             });
             $('[data-custom-dismiss="modal"]').click(function () {
                $(this).parents('.popup-mobile-added').removeClass('active');
@@ -1004,6 +1005,11 @@ $(document).ready(function () {
         }
         $('.article-comments--item__show--more').click(function () {
             $(this).prev('.article-comments--item__comment').toggleClass('active');
+            if($(this).prev('.article-comments--item__comment').hasClass('active')){
+                $('.review-card-review--showmore').text('Скрыть');
+            }else {
+                $('.review-card-review--showmore').text('Читать полностью');
+            }
         });
     });
 
@@ -1031,6 +1037,7 @@ $(document).ready(function () {
 
     $('.popup-mobile-sort--item').click(function () {
        var get_text = $(this).text();
+       $(this).addClass('active').siblings().removeClass('active');
        $('.catalog-sort-block--mobile--left span').text(get_text);
     });
 
@@ -1040,6 +1047,16 @@ $(document).ready(function () {
         setTimeout(function () {
             $('.deleted-item').remove();
         },700)
+    });
+
+    $(window).scroll(function () {
+       var get_height = $(window).scrollTop();
+       if(get_height >= 3700){
+           $('.mobile-lanch-list--show').addClass('transform');
+       } else{
+           $('.mobile-lanch-list--show').removeClass('transform');
+       }
+       console.log(get_h2,get_height);
     });
 
 

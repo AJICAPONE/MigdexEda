@@ -2001,7 +2001,7 @@
     size(12px)
     fill colorMain
 .article-comments--list__depth2
-  padding-left 100px
+  padding-left 30px
 .article-comments--item__depth2
   display none
 .article-comments--item__depth.active
@@ -2238,6 +2238,8 @@
   background-position center
   border-radius: 15px;
 .have-question--title
+  position relative
+  z-index 2
   font-family Ow600
   font-size 22px
   color color21
@@ -2249,7 +2251,11 @@
   color #a6a6a6
   margin-bottom 30px
   text-align center
+  position relative
+  z-index 2
 .have-question--tel
+  position relative
+  z-index 2
   display flex
   align-items center
 .have-question--tel__icon
@@ -4466,7 +4472,7 @@ progress::-moz-progress-bar
 .header-m-back
   outline none
 .review-card-review--showmore
-  display block
+  display none
   font-size 14px
   font-family Rb400
   color colorMain
@@ -4590,3 +4596,18 @@ progress::-moz-progress-bar
   color color21
 .close-mobile--popups
   display none
+.article-page .articles-content-desc
+  -ms-line-clamp: 3;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+.have-question--left
+  position relative
+  &:after
+    content ''
+    background-color rgba(33, 33, 33, 0.4)
+    position absolute
+    right 0
+    left 0
+    bottom 0
+    top 0
+    border-radius 15px

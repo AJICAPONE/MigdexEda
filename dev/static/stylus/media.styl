@@ -331,7 +331,7 @@
     padding 0 10px
     margin 0 -10px
   .article-comments--list__depth2
-    padding-left 60px
+    padding-left 30px
   .article-recept-comp--item .why-us--left
     align-items center
   .have-question
@@ -469,7 +469,7 @@
     background-size cover
     background-position right
   .section-baner-stock--img
-    width 140px
+    width 166px
   .section-full-right__img
     right: -28vh;
     bottom -37px
@@ -886,7 +886,16 @@
       width 160px
     .footer-lanch--fast__flex .button-basket--product__wrap
       flex-flow row-reverse
-
+@media screen and (max-width: 880px)
+  .section-full-right__img
+    right -20vh
+@media screen and (max-width: 840px)
+  .section-full-right__img
+    bottom: -10px
+    height: 264px;
+    right -15vh
+  .section-full-left__img
+    transform translateX(-25%)
 @media screen and (max-width: 767.5px)
   .footer-basket-lanch__img,.header-mini-basket__img
     min-width 60px
@@ -1919,10 +1928,10 @@
     font-size 12px
     color color21
     height 38px
-    padding 15px 20px
+    padding 15px 8px
     border-radius 21.5px
     width 100%
-    margin-right 16px
+    margin-right 5px
     transition .3s ease
   .foorder-added-and-search--wrap
     display flex
@@ -2025,7 +2034,8 @@
     display block
   .card-content-mobile--tabs__item
     width 48%
-
+  .review-card-review--showmore
+    display block
 @media screen and (max-width: 575.5px)
   .lk-order-top
     flex-direction row
@@ -2829,6 +2839,9 @@
       background-color #fff
     .card-content-added-one-click
       background-color #fff
+  .popup-mini-b--footer
+    .card-content-added-one-click
+      padding 10px 23px
   .contact-map--block
     position relative
     left auto
@@ -3031,3 +3044,37 @@
     transition .4s ease
   .basket-content-mini-basket__item.deleted-item
     transform translateX(-100vw)
+  #custom-mobile-cat-list
+    .popup-mobile-cat--list
+      height calc(100vh - 132px)
+  #custom-mobile-mini-basket
+    .mobile-mini-basket--list
+      height calc(100vh - 132px)
+  #custom-mobile-filter
+    .popup-mobile-cat--list
+      height calc(100vh - 232px)
+  #custom-mobile-filter-kuhnya,#custom-mobile-filter-type,#custom-mobile-filter-price
+    .popup-mobile-cat--list
+      height calc(100vh - 110px)
+    .popup-mobile--price
+      height calc(100vh - 132px)
+  .popup-mobile-sort--item.active
+    color colorMain
+  .mobile-lanch-list--show.transform
+    transform translateY(-70px)
+  .lk-tab-title--mobile .review-button-tab
+    margin-right 0
+  .article-img--wrap
+    &:before
+      content ''
+      position absolute
+      bottom 0
+      right 0
+      left 0
+      height 70px
+      background: rgb(0,0,0);
+      background: linear-gradient(0deg, rgba(0,0,0,0.8494748241093313) 0%, rgba(0,0,0,0.0) 100%);
+  .article-recept-comp--item .article-recept--title:before
+    line-height 1
+  .why-us--img
+    padding 0 40px

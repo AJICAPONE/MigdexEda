@@ -874,11 +874,11 @@
             <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 footer-top-middle">
               <form class="footer-top-input--wrap">
                 <input class="footer-sub" type="email" placeholder="Email...">
-                <button class="footer-top-sub" type="submit">
+                <div class="footer-top-sub" data-toggle="modal" data-target="#popup-call-sub" data-custom-modal="#custom-mobile-call-sub">
                   <svg class="icon icon-send ">
                     <use xlink:href="static/img/svg/symbol/sprite.svg#send"></use>
                   </svg>
-                </button>
+                </div>
               </form>
             </div>
             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 footer-top-bottom">
@@ -1222,6 +1222,61 @@
             </div>
           </form>
         </div>
+        <div class="modal fade" id="popup-call-sub" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content popup-content">
+              <div class="popup-header modal-header pb-0">
+                <div class="popup-svg-icon">
+                  <svg class="icon icon-fill-subscribe ">
+                    <use xlink:href="static/img/svg2/symbol/sprite2.svg#fill-subscribe"></use>
+                  </svg>
+                </div>
+                <div class="popup-body-bold--text">Вы успешно подписаны на наши новостную расссылку</div>
+              </div>
+              <div class="popup-body modal-body">
+                <div class="main-button w-170 m-0-auto mb-30 popup-close-modal2" data-dismiss="modal">Ок</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="popup-call-sub2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content popup-content">
+              <div class="popup-header modal-header pb-0">
+                <div class="popup-svg-icon">
+                  <svg class="icon icon-fill-subscribe ">
+                    <use xlink:href="static/img/svg2/symbol/sprite2.svg#fill-subscribe"></use>
+                  </svg>
+                </div>
+                <div class="popup-body-bold--wrap">
+                  <div class="popup-body-bold--text">Вы уже подписаны на нас.</div>
+                  <div class="popup-body-bold--text">Спасибо!</div>
+                </div>
+              </div>
+              <div class="popup-body modal-body">
+                <div class="main-button w-170 m-0-auto mb-30 popup-close-modal2" data-dismiss="modal">Ок</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="popup-call-error" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content popup-content">
+              <div class="popup-header modal-header pb-0">
+                <div class="popup-svg-icon">
+                  <svg class="icon icon-fill-error ">
+                    <use xlink:href="static/img/svg2/symbol/sprite2.svg#fill-error"></use>
+                  </svg>
+                </div>
+                <div class="popup-body-bold--text2">Упс! Произошла ошибка!</div>
+                <div class="popup-body-bold--desc">Проверьте email адрес и опробуйте еще раз</div>
+              </div>
+              <div class="popup-body modal-body">
+                <div class="main-button w-170 m-0-auto mb-30 popup-close-modal2" data-dismiss="modal">Ок</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="popups-mobile">
         <form class="popup-mobile-added" id="custom-mobile-auth">
@@ -1328,6 +1383,52 @@
           </div>
           <div class="popup-footer modal-footer">
             <button class="main-button w-170 m-0-auto mb-30" type="submit">Оставить заявку</button>
+          </div>
+        </form>
+        <form class="popup-mobile-added" id="custom-mobile-call-sub">
+          <div class="popup-header modal-header pb-0">
+            <div class="popup-mobile-line--close"></div>
+            <div class="popup-svg-icon">
+              <svg class="icon icon-fill-subscribe ">
+                <use xlink:href="static/img/svg2/symbol/sprite2.svg#fill-subscribe"></use>
+              </svg>
+            </div>
+            <div class="popup-body-bold--text">Вы успешно подписаны на наши новостную расссылку</div>
+          </div>
+          <div class="popup-body modal-body">
+            <div class="main-button w-270 m-0-auto mb-30 popup-close-modal2" data-custom-close="modal">Ок</div>
+          </div>
+        </form>
+        <form class="popup-mobile-added" id="custom-mobile-call-sub2">
+          <div class="popup-header modal-header pb-0">
+            <div class="popup-mobile-line--close"></div>
+            <div class="popup-svg-icon">
+              <svg class="icon icon-fill-subscribe ">
+                <use xlink:href="static/img/svg2/symbol/sprite2.svg#fill-subscribe"></use>
+              </svg>
+            </div>
+            <div class="popup-body-bold--wrap">
+              <div class="popup-body-bold--text">Вы уже подписаны на нас.</div>
+              <div class="popup-body-bold--text">Спасибо!</div>
+            </div>
+          </div>
+          <div class="popup-body modal-body">
+            <div class="main-button w-270 m-0-auto mb-30 popup-close-modal2" data-custom-close="modal">Ок</div>
+          </div>
+        </form>
+        <form class="popup-mobile-added" id="custom-mobile-call-error">
+          <div class="popup-header modal-header pb-0">
+            <div class="popup-mobile-line--close"></div>
+            <div class="popup-svg-icon">
+              <svg class="icon icon-fill-error ">
+                <use xlink:href="static/img/svg2/symbol/sprite2.svg#fill-error"></use>
+              </svg>
+            </div>
+            <div class="popup-body-bold--text2">Упс! Произошла ошибка!</div>
+            <div class="popup-body-bold--desc">Проверьте email адрес и опробуйте еще раз</div>
+          </div>
+          <div class="popup-body modal-body">
+            <div class="main-button w-270 m-0-auto mb-30 popup-close-modal2" data-custom-close="modal">Ок</div>
           </div>
         </form>
         <form class="popup-mobile-added" id="custom-mobile-mini-basket">
