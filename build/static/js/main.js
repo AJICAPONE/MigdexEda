@@ -33,7 +33,6 @@ $(document).ready(function () {
     $(".yakor").click( function (event) {
         event.preventDefault();
         var header_h = $('header').height();
-        console.log(header_h);
         var id  = $(this).attr('data-yakor'),
             top = $(id).offset().top - header_h;
         $('body,html').animate({scrollTop: top}, 1000);
@@ -1056,7 +1055,7 @@ $(document).ready(function () {
        } else{
            $('.mobile-lanch-list--show').removeClass('transform');
        }
-       console.log(get_h2,get_height);
+
     });
 
 
