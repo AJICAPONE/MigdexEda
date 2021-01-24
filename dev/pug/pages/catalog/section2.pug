@@ -24,11 +24,11 @@ section.section2.section-popular.swiper-section.p-60-0.pb-0
                                 .section-menu-content--order.basket-el-selector
                                     .section-menu-content--price__wrap
                                         .section-menu-content--price__stock 145 ₽ / 140 г.
-                                        .section-menu-content--price 145 ₽ / #[span 140 г.]
+                                        .section-menu-content--price #[.product-content--price_item(data-price-item="145") 145] ₽ / #[span 140 г.]
                                     .product-basket-added--card
                                             .button-product-basket--count
                                             .button-basket--product--v2__wrap
-                                                .button-basket--v2
+                                                .button-basket--v2(data-toggle="modal" data-target="#popup-added-basket" data-custom-modal="#custom-popup-mobile-basket")
                                                     +icon('basket')
                                                 .product-basket-product--count
                                                     .product-basket-product--minus -
@@ -48,11 +48,35 @@ section.section2.section-popular.swiper-section.p-60-0.pb-0
                                 .section-menu-content--order.basket-el-selector
                                     .section-menu-content--price__wrap
                                         .section-menu-content--price__stock 145 ₽ / 140 г.
-                                        .section-menu-content--price 145 ₽ / #[span 140 г.]
+                                        .section-menu-content--price #[.product-content--price_item(data-price-item="145") 145] ₽ / #[span 140 г.]
+                                    .product-basket-added--card
+                                        .button-product-basket--count
+                                        .button-basket--product--v2__wrap
+                                            .button-basket--v2(data-toggle="modal" data-target="#popup-added-basket" data-custom-modal="#custom-popup-mobile-basket")
+                                                +icon('basket')
+                                            .product-basket-product--count
+                                                .product-basket-product--minus -
+                                                input.basket-product--input(type="text" value="1" min="1" )
+                                                .product-basket-product--plus +
+                    .col-xl-3.col-lg-3.col-md-4.col-sm-6.section-menu-content--col.swiper-slide
+                        .section-menu-content--item
+                            .section-menu-content--favourite
+                                +icon('like2')
+                            a.section-menu-content--item__top(href="/")
+                                .section-menu-content--stock 10%
+                                .section-menu-content--img(style="background-image:url('/static/img/content/product-item/img2.png')")
+                                .section-menu-content--item__info
+                                    .section-menu-content--name.mb-10 Самса с бараниной
+                                    .section-menu-content--desc.mb-20 Баранина, Лук, Кумин, Соль,Перец черный молотый,Мука,Вода, Масло.
+                            .section-menu-content--item__bottom.basket-count-buttons--wrapper
+                                .section-menu-content--order.basket-el-selector
+                                    .section-menu-content--price__wrap
+                                        .section-menu-content--price__stock 145 ₽ / 140 г.
+                                        .section-menu-content--price #[.product-content--price_item(data-price-item="145") 145] ₽ / #[span 140 г.]
                                     .product-basket-added--card
                                             .button-product-basket--count
                                             .button-basket--product--v2__wrap
-                                                .button-basket--v2
+                                                .button-basket--v2(data-toggle="modal" data-target="#popup-added-basket" data-custom-modal="#custom-popup-mobile-basket")
                                                     +icon('basket')
                                                 .product-basket-product--count
                                                     .product-basket-product--minus -
@@ -72,11 +96,11 @@ section.section2.section-popular.swiper-section.p-60-0.pb-0
                                 .section-menu-content--order.basket-el-selector
                                     .section-menu-content--price__wrap
                                         .section-menu-content--price__stock 145 ₽ / 140 г.
-                                        .section-menu-content--price 145 ₽ / #[span 140 г.]
+                                        .section-menu-content--price #[.product-content--price_item(data-price-item="145") 145] ₽ / #[span 140 г.]
                                     .product-basket-added--card
                                             .button-product-basket--count
                                             .button-basket--product--v2__wrap
-                                                .button-basket--v2
+                                                .button-basket--v2(data-toggle="modal" data-target="#popup-added-basket" data-custom-modal="#custom-popup-mobile-basket")
                                                     +icon('basket')
                                                 .product-basket-product--count
                                                     .product-basket-product--minus -
@@ -96,35 +120,11 @@ section.section2.section-popular.swiper-section.p-60-0.pb-0
                                 .section-menu-content--order.basket-el-selector
                                     .section-menu-content--price__wrap
                                         .section-menu-content--price__stock 145 ₽ / 140 г.
-                                        .section-menu-content--price 145 ₽ / #[span 140 г.]
+                                        .section-menu-content--price #[.product-content--price_item(data-price-item="145") 145] ₽ / #[span 140 г.]
                                     .product-basket-added--card
                                             .button-product-basket--count
                                             .button-basket--product--v2__wrap
-                                                .button-basket--v2
-                                                    +icon('basket')
-                                                .product-basket-product--count
-                                                    .product-basket-product--minus -
-                                                    input.basket-product--input(type="text" value="1" min="1" )
-                                                    .product-basket-product--plus +
-                    .col-xl-3.col-lg-3.col-md-4.col-sm-6.section-menu-content--col.swiper-slide
-                        .section-menu-content--item
-                            .section-menu-content--favourite
-                                +icon('like2')
-                            a.section-menu-content--item__top(href="/")
-                                .section-menu-content--stock 10%
-                                .section-menu-content--img(style="background-image:url('/static/img/content/product-item/img2.png')")
-                                .section-menu-content--item__info
-                                    .section-menu-content--name.mb-10 Самса с бараниной
-                                    .section-menu-content--desc.mb-20 Баранина, Лук, Кумин, Соль,Перец черный молотый,Мука,Вода, Масло.
-                            .section-menu-content--item__bottom.basket-count-buttons--wrapper
-                                .section-menu-content--order.basket-el-selector
-                                    .section-menu-content--price__wrap
-                                        .section-menu-content--price__stock 145 ₽ / 140 г.
-                                        .section-menu-content--price 145 ₽ / #[span 140 г.]
-                                    .product-basket-added--card
-                                            .button-product-basket--count
-                                            .button-basket--product--v2__wrap
-                                                .button-basket--v2
+                                                .button-basket--v2(data-toggle="modal" data-target="#popup-added-basket" data-custom-modal="#custom-popup-mobile-basket")
                                                     +icon('basket')
                                                 .product-basket-product--count
                                                     .product-basket-product--minus -

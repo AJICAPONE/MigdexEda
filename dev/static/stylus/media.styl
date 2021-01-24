@@ -217,6 +217,13 @@
   .lanch-components--bottom .basket-product--count
     width 120px
 @media screen and (max-width: 991.5px)
+  .tablet-tel--exit
+    position fixed
+    right 0
+    left 0
+    bottom 0
+    top 0
+
   .section-menu-sidebar--list
     width 100%
     margin-left 0
@@ -1865,7 +1872,7 @@
   .faq-swiper-device--mobile .faq-swiper-slide
     padding-right 396px
   .product-basket-added--card
-    position absolute
+    position relative
     width 100%
   .product-basket-product--count
     background-color #fff
@@ -1874,7 +1881,7 @@
     .basket-product--input
       width 100%
   .button-basket--product--v2__wrap .product-basket-product--count
-    transform translateX(100%)
+    transform translateX(0)
     height 40px
   .product-card-basket--active .section-menu-content--price__wrap
     opacity 0
@@ -1977,26 +1984,28 @@
   .article-comments--item__comment
     font-size 14px
   .article-comments--item__comment
-    display: -webkit-box;
-    display box
-    padding-bottom 0
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -ms-text-overflow: ellipsis;
-    word-wrap: break-word;
-    color: rgba(33,33,33,.6);
-    -o-text-overflow: ellipsis;
-    -ms-line-clamp: 5;
-    -webkit-line-clamp: 5;
-    line-clamp: 5;
-    -webkit-box-orient: vertical;
-    box-orient: vertical;
-    transition .3s ease
+    span
+      display: -webkit-box;
+      display box
+      padding-bottom 0
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -ms-text-overflow: ellipsis;
+      word-wrap: break-word;
+      color: rgba(33,33,33,.6);
+      -o-text-overflow: ellipsis;
+      -ms-line-clamp: 5;
+      -webkit-line-clamp: 5;
+      line-clamp: 5;
+      -webkit-box-orient: vertical;
+      box-orient: vertical;
+      transition .3s ease
   .article-comments--item__comment.active
-    line-clamp:99;
-    -webkit-line-clamp: 99
-  .article-comments--item__show--more .review-card-review--showmore
-    margin-bottom 15px
+    span
+      line-clamp:99;
+      -webkit-line-clamp: 99
+  .article-comments--item__comment .review-card-review--showmore
+    padding-top 10px
   .pay-yandex .pay-card--price
     width 100%
   .pay-card--input__back
@@ -2034,8 +2043,29 @@
     display block
   .card-content-mobile--tabs__item
     width 48%
-  .review-card-review--showmore
+  .review-card-review--showmore,.review-card-review--showmore2
     display block
+  .basket-el-selector
+    flex-direction column
+    .section-menu-content--price__wrap
+      margin auto auto auto 0
+      margin-bottom 15px
+  .foorder-added-and-search--wrap
+    flex-direction row
+  .lanch-choise-button,.lanch-choise-product--wrap
+    width 100%
+  .popup-header--title
+    text-align center
+  .catalog-page
+    .basket-el-selector
+      flex-direction row
+    .section-menu-content--price__wrap
+      margin-bottom 0
+    .popup-basket-notific
+      .basket-el-selector
+        flex-direction column
+      .section-menu-content--price__wrap
+        margin-bottom 15px
 @media screen and (max-width: 575.5px)
   .lk-order-top
     flex-direction row
@@ -3064,7 +3094,8 @@
     transform translateY(-70px)
   .lk-tab-title--mobile .review-button-tab
     margin-right 0
-  .article-img--wrap
+  .article-img--wrap,.article-receipt--video__img
+    position relative
     &:before
       content ''
       position absolute
@@ -3078,3 +3109,5 @@
     line-height 1
   .why-us--img
     padding 0 40px
+  .swiper-basket-complex-container
+    padding-left 15px

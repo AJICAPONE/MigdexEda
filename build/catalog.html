@@ -21,7 +21,7 @@
     <link rel="preload" href="static/fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;amp;apikey=&lt;20aeb402-4ba8-455f-840e-0fc6221b2a16&gt;" type="text/javascript"></script><![endif]-->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;amp;apikey=&lt;5ff43003-e2a2-4431-8031-44e816cd9630&gt;" type="text/javascript"></script><![endif]-->
   </head>
   <body class="catalog-page other-page">
     <div class="wrapper">
@@ -174,7 +174,7 @@
               <div class="product-basket-added--card">
                 <div class="button-product-basket--count"></div>
                 <div class="button-basket--product--v2__wrap">
-                  <div class="button-basket--v2">
+                  <div class="button-basket--v2" data-toggle="modal" data-target="#popup-added-basket" data-custom-modal="#custom-popup-mobile-basket">
                     <svg class="icon icon-basket ">
                       <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
                     </svg>
@@ -561,20 +561,23 @@
                             <div class="section-menu-content--order basket-el-selector">
                               <div class="section-menu-content--price__wrap">
                                 <div class="section-menu-content--price__stock"></div>
-                                <div class="section-menu-content--price">65 ₽ / <span>1 шт.</span></div>
-                              </div>
-                              <div class="product-basket-added--card"></div>
-                              <div class="button-product-basket--count"></div>
-                              <div class="button-basket--product--v2__wrap">
-                                <div class="button-basket--v2">
-                                  <svg class="icon icon-basket ">
-                                    <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
-                                  </svg>
+                                <div class="section-menu-content--price">
+                                  <div class="product-content--price_item" data-price-item="65">65</div> ₽ / <span>1 шт.</span>
                                 </div>
-                                <div class="product-basket-product--count">
-                                  <div class="product-basket-product--minus">-</div>
-                                  <input class="basket-product--input" type="text" value="1" min="1">
-                                  <div class="product-basket-product--plus">+</div>
+                              </div>
+                              <div class="product-basket-added--card">
+                                <div class="button-product-basket--count"></div>
+                                <div class="button-basket--product--v2__wrap">
+                                  <div class="button-basket--v2" data-toggle="modal" data-target="#popup-added-basket" data-custom-modal="#custom-popup-mobile-basket">
+                                    <svg class="icon icon-basket ">
+                                      <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
+                                    </svg>
+                                  </div>
+                                  <div class="product-basket-product--count">
+                                    <div class="product-basket-product--minus">-</div>
+                                    <input class="basket-product--input" type="text" value="1" min="1">
+                                    <div class="product-basket-product--plus">+</div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -598,56 +601,23 @@
                             <div class="section-menu-content--order basket-el-selector">
                               <div class="section-menu-content--price__wrap">
                                 <div class="section-menu-content--price__stock">145 ₽ / 140 г.</div>
-                                <div class="section-menu-content--price">145 ₽ / <span>140 г.</span></div>
-                              </div>
-                              <div class="product-basket-added--card"></div>
-                              <div class="button-product-basket--count"></div>
-                              <div class="button-basket--product--v2__wrap">
-                                <div class="button-basket--v2">
-                                  <svg class="icon icon-basket ">
-                                    <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
-                                  </svg>
-                                </div>
-                                <div class="product-basket-product--count">
-                                  <div class="product-basket-product--minus">-</div>
-                                  <input class="basket-product--input" type="text" value="1" min="1">
-                                  <div class="product-basket-product--plus">+</div>
+                                <div class="section-menu-content--price">
+                                  <div class="product-content--price_item" data-price-item="145">145</div> ₽ / <span>140 г.</span>
                                 </div>
                               </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 section-menu-content--col">
-                        <div class="section-menu-content--item">
-                          <div class="section-menu-content--favourite">
-                            <svg class="icon icon-like2 ">
-                              <use xlink:href="static/img/svg/symbol/sprite.svg#like2"></use>
-                            </svg>
-                          </div><a class="section-menu-content--item__top" href="/">
-                            <div class="section-menu-content--img" style="background-image:url('/static/img/content/product-item/img1.png');"></div>
-                            <div class="section-menu-content--item__info">
-                              <div class="section-menu-content--name mb-10">Хинкали из баранины</div>
-                              <div class="section-menu-content--desc mb-20">Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.</div>
-                            </div></a>
-                          <div class="section-menu-content--item__bottom basket-count-buttons--wrapper">
-                            <div class="section-menu-content--order basket-el-selector">
-                              <div class="section-menu-content--price__wrap">
-                                <div class="section-menu-content--price__stock"></div>
-                                <div class="section-menu-content--price">65 ₽ / <span>1 шт.</span></div>
-                              </div>
-                              <div class="product-basket-added--card"></div>
-                              <div class="button-product-basket--count"></div>
-                              <div class="button-basket--product--v2__wrap">
-                                <div class="button-basket--v2">
-                                  <svg class="icon icon-basket ">
-                                    <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
-                                  </svg>
-                                </div>
-                                <div class="product-basket-product--count">
-                                  <div class="product-basket-product--minus">-</div>
-                                  <input class="basket-product--input" type="text" value="1" min="1">
-                                  <div class="product-basket-product--plus">+</div>
+                              <div class="product-basket-added--card">
+                                <div class="button-product-basket--count"></div>
+                                <div class="button-basket--product--v2__wrap">
+                                  <div class="button-basket--v2" data-toggle="modal" data-target="#popup-added-basket" data-custom-modal="#custom-popup-mobile-basket">
+                                    <svg class="icon icon-basket ">
+                                      <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
+                                    </svg>
+                                  </div>
+                                  <div class="product-basket-product--count">
+                                    <div class="product-basket-product--minus">-</div>
+                                    <input class="basket-product--input" type="text" value="1" min="1">
+                                    <div class="product-basket-product--plus">+</div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -670,20 +640,62 @@
                             <div class="section-menu-content--order basket-el-selector">
                               <div class="section-menu-content--price__wrap">
                                 <div class="section-menu-content--price__stock"></div>
-                                <div class="section-menu-content--price">65 ₽ / <span>1 шт.</span></div>
-                              </div>
-                              <div class="product-basket-added--card"></div>
-                              <div class="button-product-basket--count"></div>
-                              <div class="button-basket--product--v2__wrap">
-                                <div class="button-basket--v2">
-                                  <svg class="icon icon-basket ">
-                                    <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
-                                  </svg>
+                                <div class="section-menu-content--price">
+                                  <div class="product-content--price_item" data-price-item="65">65</div> ₽ / <span>1 шт.</span>
                                 </div>
-                                <div class="product-basket-product--count">
-                                  <div class="product-basket-product--minus">-</div>
-                                  <input class="basket-product--input" type="text" value="1" min="1">
-                                  <div class="product-basket-product--plus">+</div>
+                              </div>
+                              <div class="product-basket-added--card">
+                                <div class="button-product-basket--count"></div>
+                                <div class="button-basket--product--v2__wrap">
+                                  <div class="button-basket--v2" data-toggle="modal" data-target="#popup-added-basket" data-custom-modal="#custom-popup-mobile-basket">
+                                    <svg class="icon icon-basket ">
+                                      <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
+                                    </svg>
+                                  </div>
+                                  <div class="product-basket-product--count">
+                                    <div class="product-basket-product--minus">-</div>
+                                    <input class="basket-product--input" type="text" value="1" min="1">
+                                    <div class="product-basket-product--plus">+</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 section-menu-content--col">
+                        <div class="section-menu-content--item">
+                          <div class="section-menu-content--favourite">
+                            <svg class="icon icon-like2 ">
+                              <use xlink:href="static/img/svg/symbol/sprite.svg#like2"></use>
+                            </svg>
+                          </div><a class="section-menu-content--item__top" href="/">
+                            <div class="section-menu-content--img" style="background-image:url('/static/img/content/product-item/img1.png');"></div>
+                            <div class="section-menu-content--item__info">
+                              <div class="section-menu-content--name mb-10">Хинкали из баранины</div>
+                              <div class="section-menu-content--desc mb-20">Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.</div>
+                            </div></a>
+                          <div class="section-menu-content--item__bottom basket-count-buttons--wrapper">
+                            <div class="section-menu-content--order basket-el-selector">
+                              <div class="section-menu-content--price__wrap">
+                                <div class="section-menu-content--price__stock"></div>
+                                <div class="section-menu-content--price">
+                                  <div class="product-content--price_item" data-price-item="65">65</div> ₽ / <span>1 шт.</span>
+                                </div>
+                              </div>
+                              <div class="product-basket-added--card">
+                                <div class="button-product-basket--count"></div>
+                                <div class="button-basket--product--v2__wrap">
+                                  <div class="button-basket--v2" data-toggle="modal" data-target="#popup-added-basket" data-custom-modal="#custom-popup-mobile-basket">
+                                    <svg class="icon icon-basket ">
+                                      <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
+                                    </svg>
+                                  </div>
+                                  <div class="product-basket-product--count">
+                                    <div class="product-basket-product--minus">-</div>
+                                    <input class="basket-product--input" type="text" value="1" min="1">
+                                    <div class="product-basket-product--plus">+</div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -706,56 +718,23 @@
                             <div class="section-menu-content--order basket-el-selector">
                               <div class="section-menu-content--price__wrap">
                                 <div class="section-menu-content--price__stock">145 ₽ / 140 г.</div>
-                                <div class="section-menu-content--price">145 ₽ / <span>140 г.</span></div>
-                              </div>
-                              <div class="product-basket-added--card"></div>
-                              <div class="button-product-basket--count"></div>
-                              <div class="button-basket--product--v2__wrap">
-                                <div class="button-basket--v2">
-                                  <svg class="icon icon-basket ">
-                                    <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
-                                  </svg>
-                                </div>
-                                <div class="product-basket-product--count">
-                                  <div class="product-basket-product--minus">-</div>
-                                  <input class="basket-product--input" type="text" value="1" min="1">
-                                  <div class="product-basket-product--plus">+</div>
+                                <div class="section-menu-content--price">
+                                  <div class="product-content--price_item" data-price-item="145">145</div> ₽ / <span>140 г.</span>
                                 </div>
                               </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 section-menu-content--col">
-                        <div class="section-menu-content--item">
-                          <div class="section-menu-content--favourite">
-                            <svg class="icon icon-like2 ">
-                              <use xlink:href="static/img/svg/symbol/sprite.svg#like2"></use>
-                            </svg>
-                          </div><a class="section-menu-content--item__top" href="/">
-                            <div class="section-menu-content--img" style="background-image:url('/static/img/content/product-item/img1.png');"></div>
-                            <div class="section-menu-content--item__info">
-                              <div class="section-menu-content--name mb-10">Хинкали из баранины</div>
-                              <div class="section-menu-content--desc mb-20">Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.</div>
-                            </div></a>
-                          <div class="section-menu-content--item__bottom basket-count-buttons--wrapper">
-                            <div class="section-menu-content--order basket-el-selector">
-                              <div class="section-menu-content--price__wrap">
-                                <div class="section-menu-content--price__stock"></div>
-                                <div class="section-menu-content--price">65 ₽ / <span>1 шт.</span></div>
-                              </div>
-                              <div class="product-basket-added--card"></div>
-                              <div class="button-product-basket--count"></div>
-                              <div class="button-basket--product--v2__wrap">
-                                <div class="button-basket--v2">
-                                  <svg class="icon icon-basket ">
-                                    <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
-                                  </svg>
-                                </div>
-                                <div class="product-basket-product--count">
-                                  <div class="product-basket-product--minus">-</div>
-                                  <input class="basket-product--input" type="text" value="1" min="1">
-                                  <div class="product-basket-product--plus">+</div>
+                              <div class="product-basket-added--card">
+                                <div class="button-product-basket--count"></div>
+                                <div class="button-basket--product--v2__wrap">
+                                  <div class="button-basket--v2" data-toggle="modal" data-target="#popup-added-basket" data-custom-modal="#custom-popup-mobile-basket">
+                                    <svg class="icon icon-basket ">
+                                      <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
+                                    </svg>
+                                  </div>
+                                  <div class="product-basket-product--count">
+                                    <div class="product-basket-product--minus">-</div>
+                                    <input class="basket-product--input" type="text" value="1" min="1">
+                                    <div class="product-basket-product--plus">+</div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -778,20 +757,62 @@
                             <div class="section-menu-content--order basket-el-selector">
                               <div class="section-menu-content--price__wrap">
                                 <div class="section-menu-content--price__stock"></div>
-                                <div class="section-menu-content--price">65 ₽ / <span>1 шт.</span></div>
-                              </div>
-                              <div class="product-basket-added--card"></div>
-                              <div class="button-product-basket--count"></div>
-                              <div class="button-basket--product--v2__wrap">
-                                <div class="button-basket--v2">
-                                  <svg class="icon icon-basket ">
-                                    <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
-                                  </svg>
+                                <div class="section-menu-content--price">
+                                  <div class="product-content--price_item" data-price-item="65">65</div> ₽ / <span>1 шт.</span>
                                 </div>
-                                <div class="product-basket-product--count">
-                                  <div class="product-basket-product--minus">-</div>
-                                  <input class="basket-product--input" type="text" value="1" min="1">
-                                  <div class="product-basket-product--plus">+</div>
+                              </div>
+                              <div class="product-basket-added--card">
+                                <div class="button-product-basket--count"></div>
+                                <div class="button-basket--product--v2__wrap">
+                                  <div class="button-basket--v2" data-toggle="modal" data-target="#popup-added-basket" data-custom-modal="#custom-popup-mobile-basket">
+                                    <svg class="icon icon-basket ">
+                                      <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
+                                    </svg>
+                                  </div>
+                                  <div class="product-basket-product--count">
+                                    <div class="product-basket-product--minus">-</div>
+                                    <input class="basket-product--input" type="text" value="1" min="1">
+                                    <div class="product-basket-product--plus">+</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 section-menu-content--col">
+                        <div class="section-menu-content--item">
+                          <div class="section-menu-content--favourite">
+                            <svg class="icon icon-like2 ">
+                              <use xlink:href="static/img/svg/symbol/sprite.svg#like2"></use>
+                            </svg>
+                          </div><a class="section-menu-content--item__top" href="/">
+                            <div class="section-menu-content--img" style="background-image:url('/static/img/content/product-item/img1.png');"></div>
+                            <div class="section-menu-content--item__info">
+                              <div class="section-menu-content--name mb-10">Хинкали из баранины</div>
+                              <div class="section-menu-content--desc mb-20">Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.</div>
+                            </div></a>
+                          <div class="section-menu-content--item__bottom basket-count-buttons--wrapper">
+                            <div class="section-menu-content--order basket-el-selector">
+                              <div class="section-menu-content--price__wrap">
+                                <div class="section-menu-content--price__stock"></div>
+                                <div class="section-menu-content--price">
+                                  <div class="product-content--price_item" data-price-item="65">65</div> ₽ / <span>1 шт.</span>
+                                </div>
+                              </div>
+                              <div class="product-basket-added--card">
+                                <div class="button-product-basket--count"></div>
+                                <div class="button-basket--product--v2__wrap">
+                                  <div class="button-basket--v2" data-toggle="modal" data-target="#popup-added-basket" data-custom-modal="#custom-popup-mobile-basket">
+                                    <svg class="icon icon-basket ">
+                                      <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
+                                    </svg>
+                                  </div>
+                                  <div class="product-basket-product--count">
+                                    <div class="product-basket-product--minus">-</div>
+                                    <input class="basket-product--input" type="text" value="1" min="1">
+                                    <div class="product-basket-product--plus">+</div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -814,56 +835,23 @@
                             <div class="section-menu-content--order basket-el-selector">
                               <div class="section-menu-content--price__wrap">
                                 <div class="section-menu-content--price__stock">145 ₽ / 140 г.</div>
-                                <div class="section-menu-content--price">145 ₽ / <span>140 г.</span></div>
-                              </div>
-                              <div class="product-basket-added--card"></div>
-                              <div class="button-product-basket--count"></div>
-                              <div class="button-basket--product--v2__wrap">
-                                <div class="button-basket--v2">
-                                  <svg class="icon icon-basket ">
-                                    <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
-                                  </svg>
-                                </div>
-                                <div class="product-basket-product--count">
-                                  <div class="product-basket-product--minus">-</div>
-                                  <input class="basket-product--input" type="text" value="1" min="1">
-                                  <div class="product-basket-product--plus">+</div>
+                                <div class="section-menu-content--price">
+                                  <div class="product-content--price_item" data-price-item="145">145</div> ₽ / <span>140 г.</span>
                                 </div>
                               </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 section-menu-content--col">
-                        <div class="section-menu-content--item">
-                          <div class="section-menu-content--favourite">
-                            <svg class="icon icon-like2 ">
-                              <use xlink:href="static/img/svg/symbol/sprite.svg#like2"></use>
-                            </svg>
-                          </div><a class="section-menu-content--item__top" href="/">
-                            <div class="section-menu-content--img" style="background-image:url('/static/img/content/product-item/img1.png');"></div>
-                            <div class="section-menu-content--item__info">
-                              <div class="section-menu-content--name mb-10">Хинкали из баранины</div>
-                              <div class="section-menu-content--desc mb-20">Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.</div>
-                            </div></a>
-                          <div class="section-menu-content--item__bottom basket-count-buttons--wrapper">
-                            <div class="section-menu-content--order basket-el-selector">
-                              <div class="section-menu-content--price__wrap">
-                                <div class="section-menu-content--price__stock"></div>
-                                <div class="section-menu-content--price">65 ₽ / <span>1 шт.</span></div>
-                              </div>
-                              <div class="product-basket-added--card"></div>
-                              <div class="button-product-basket--count"></div>
-                              <div class="button-basket--product--v2__wrap">
-                                <div class="button-basket--v2">
-                                  <svg class="icon icon-basket ">
-                                    <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
-                                  </svg>
-                                </div>
-                                <div class="product-basket-product--count">
-                                  <div class="product-basket-product--minus">-</div>
-                                  <input class="basket-product--input" type="text" value="1" min="1">
-                                  <div class="product-basket-product--plus">+</div>
+                              <div class="product-basket-added--card">
+                                <div class="button-product-basket--count"></div>
+                                <div class="button-basket--product--v2__wrap">
+                                  <div class="button-basket--v2" data-toggle="modal" data-target="#popup-added-basket" data-custom-modal="#custom-popup-mobile-basket">
+                                    <svg class="icon icon-basket ">
+                                      <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
+                                    </svg>
+                                  </div>
+                                  <div class="product-basket-product--count">
+                                    <div class="product-basket-product--minus">-</div>
+                                    <input class="basket-product--input" type="text" value="1" min="1">
+                                    <div class="product-basket-product--plus">+</div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -886,20 +874,62 @@
                             <div class="section-menu-content--order basket-el-selector">
                               <div class="section-menu-content--price__wrap">
                                 <div class="section-menu-content--price__stock"></div>
-                                <div class="section-menu-content--price">65 ₽ / <span>1 шт.</span></div>
-                              </div>
-                              <div class="product-basket-added--card"></div>
-                              <div class="button-product-basket--count"></div>
-                              <div class="button-basket--product--v2__wrap">
-                                <div class="button-basket--v2">
-                                  <svg class="icon icon-basket ">
-                                    <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
-                                  </svg>
+                                <div class="section-menu-content--price">
+                                  <div class="product-content--price_item" data-price-item="65">65</div> ₽ / <span>1 шт.</span>
                                 </div>
-                                <div class="product-basket-product--count">
-                                  <div class="product-basket-product--minus">-</div>
-                                  <input class="basket-product--input" type="text" value="1" min="1">
-                                  <div class="product-basket-product--plus">+</div>
+                              </div>
+                              <div class="product-basket-added--card">
+                                <div class="button-product-basket--count"></div>
+                                <div class="button-basket--product--v2__wrap">
+                                  <div class="button-basket--v2" data-toggle="modal" data-target="#popup-added-basket" data-custom-modal="#custom-popup-mobile-basket">
+                                    <svg class="icon icon-basket ">
+                                      <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
+                                    </svg>
+                                  </div>
+                                  <div class="product-basket-product--count">
+                                    <div class="product-basket-product--minus">-</div>
+                                    <input class="basket-product--input" type="text" value="1" min="1">
+                                    <div class="product-basket-product--plus">+</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 section-menu-content--col">
+                        <div class="section-menu-content--item">
+                          <div class="section-menu-content--favourite">
+                            <svg class="icon icon-like2 ">
+                              <use xlink:href="static/img/svg/symbol/sprite.svg#like2"></use>
+                            </svg>
+                          </div><a class="section-menu-content--item__top" href="/">
+                            <div class="section-menu-content--img" style="background-image:url('/static/img/content/product-item/img1.png');"></div>
+                            <div class="section-menu-content--item__info">
+                              <div class="section-menu-content--name mb-10">Хинкали из баранины</div>
+                              <div class="section-menu-content--desc mb-20">Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.</div>
+                            </div></a>
+                          <div class="section-menu-content--item__bottom basket-count-buttons--wrapper">
+                            <div class="section-menu-content--order basket-el-selector">
+                              <div class="section-menu-content--price__wrap">
+                                <div class="section-menu-content--price__stock"></div>
+                                <div class="section-menu-content--price">
+                                  <div class="product-content--price_item" data-price-item="65">65</div> ₽ / <span>1 шт.</span>
+                                </div>
+                              </div>
+                              <div class="product-basket-added--card">
+                                <div class="button-product-basket--count"></div>
+                                <div class="button-basket--product--v2__wrap">
+                                  <div class="button-basket--v2" data-toggle="modal" data-target="#popup-added-basket" data-custom-modal="#custom-popup-mobile-basket">
+                                    <svg class="icon icon-basket ">
+                                      <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
+                                    </svg>
+                                  </div>
+                                  <div class="product-basket-product--count">
+                                    <div class="product-basket-product--minus">-</div>
+                                    <input class="basket-product--input" type="text" value="1" min="1">
+                                    <div class="product-basket-product--plus">+</div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -922,56 +952,23 @@
                             <div class="section-menu-content--order basket-el-selector">
                               <div class="section-menu-content--price__wrap">
                                 <div class="section-menu-content--price__stock">145 ₽ / 140 г.</div>
-                                <div class="section-menu-content--price">145 ₽ / <span>140 г.</span></div>
-                              </div>
-                              <div class="product-basket-added--card"></div>
-                              <div class="button-product-basket--count"></div>
-                              <div class="button-basket--product--v2__wrap">
-                                <div class="button-basket--v2">
-                                  <svg class="icon icon-basket ">
-                                    <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
-                                  </svg>
-                                </div>
-                                <div class="product-basket-product--count">
-                                  <div class="product-basket-product--minus">-</div>
-                                  <input class="basket-product--input" type="text" value="1" min="1">
-                                  <div class="product-basket-product--plus">+</div>
+                                <div class="section-menu-content--price">
+                                  <div class="product-content--price_item" data-price-item="145">145</div> ₽ / <span>140 г.</span>
                                 </div>
                               </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 section-menu-content--col">
-                        <div class="section-menu-content--item">
-                          <div class="section-menu-content--favourite">
-                            <svg class="icon icon-like2 ">
-                              <use xlink:href="static/img/svg/symbol/sprite.svg#like2"></use>
-                            </svg>
-                          </div><a class="section-menu-content--item__top" href="/">
-                            <div class="section-menu-content--img" style="background-image:url('/static/img/content/product-item/img1.png');"></div>
-                            <div class="section-menu-content--item__info">
-                              <div class="section-menu-content--name mb-10">Хинкали из баранины</div>
-                              <div class="section-menu-content--desc mb-20">Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.</div>
-                            </div></a>
-                          <div class="section-menu-content--item__bottom basket-count-buttons--wrapper">
-                            <div class="section-menu-content--order basket-el-selector">
-                              <div class="section-menu-content--price__wrap">
-                                <div class="section-menu-content--price__stock"></div>
-                                <div class="section-menu-content--price">65 ₽ / <span>1 шт.</span></div>
-                              </div>
-                              <div class="product-basket-added--card"></div>
-                              <div class="button-product-basket--count"></div>
-                              <div class="button-basket--product--v2__wrap">
-                                <div class="button-basket--v2">
-                                  <svg class="icon icon-basket ">
-                                    <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
-                                  </svg>
-                                </div>
-                                <div class="product-basket-product--count">
-                                  <div class="product-basket-product--minus">-</div>
-                                  <input class="basket-product--input" type="text" value="1" min="1">
-                                  <div class="product-basket-product--plus">+</div>
+                              <div class="product-basket-added--card">
+                                <div class="button-product-basket--count"></div>
+                                <div class="button-basket--product--v2__wrap">
+                                  <div class="button-basket--v2" data-toggle="modal" data-target="#popup-added-basket" data-custom-modal="#custom-popup-mobile-basket">
+                                    <svg class="icon icon-basket ">
+                                      <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
+                                    </svg>
+                                  </div>
+                                  <div class="product-basket-product--count">
+                                    <div class="product-basket-product--minus">-</div>
+                                    <input class="basket-product--input" type="text" value="1" min="1">
+                                    <div class="product-basket-product--plus">+</div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -994,20 +991,62 @@
                             <div class="section-menu-content--order basket-el-selector">
                               <div class="section-menu-content--price__wrap">
                                 <div class="section-menu-content--price__stock"></div>
-                                <div class="section-menu-content--price">65 ₽ / <span>1 шт.</span></div>
-                              </div>
-                              <div class="product-basket-added--card"></div>
-                              <div class="button-product-basket--count"></div>
-                              <div class="button-basket--product--v2__wrap">
-                                <div class="button-basket--v2">
-                                  <svg class="icon icon-basket ">
-                                    <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
-                                  </svg>
+                                <div class="section-menu-content--price">
+                                  <div class="product-content--price_item" data-price-item="65">65</div> ₽ / <span>1 шт.</span>
                                 </div>
-                                <div class="product-basket-product--count">
-                                  <div class="product-basket-product--minus">-</div>
-                                  <input class="basket-product--input" type="text" value="1" min="1">
-                                  <div class="product-basket-product--plus">+</div>
+                              </div>
+                              <div class="product-basket-added--card">
+                                <div class="button-product-basket--count"></div>
+                                <div class="button-basket--product--v2__wrap">
+                                  <div class="button-basket--v2" data-toggle="modal" data-target="#popup-added-basket" data-custom-modal="#custom-popup-mobile-basket">
+                                    <svg class="icon icon-basket ">
+                                      <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
+                                    </svg>
+                                  </div>
+                                  <div class="product-basket-product--count">
+                                    <div class="product-basket-product--minus">-</div>
+                                    <input class="basket-product--input" type="text" value="1" min="1">
+                                    <div class="product-basket-product--plus">+</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 section-menu-content--col">
+                        <div class="section-menu-content--item">
+                          <div class="section-menu-content--favourite">
+                            <svg class="icon icon-like2 ">
+                              <use xlink:href="static/img/svg/symbol/sprite.svg#like2"></use>
+                            </svg>
+                          </div><a class="section-menu-content--item__top" href="/">
+                            <div class="section-menu-content--img" style="background-image:url('/static/img/content/product-item/img1.png');"></div>
+                            <div class="section-menu-content--item__info">
+                              <div class="section-menu-content--name mb-10">Хинкали из баранины</div>
+                              <div class="section-menu-content--desc mb-20">Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.</div>
+                            </div></a>
+                          <div class="section-menu-content--item__bottom basket-count-buttons--wrapper">
+                            <div class="section-menu-content--order basket-el-selector">
+                              <div class="section-menu-content--price__wrap">
+                                <div class="section-menu-content--price__stock"></div>
+                                <div class="section-menu-content--price">
+                                  <div class="product-content--price_item" data-price-item="65">65</div> ₽ / <span>1 шт.</span>
+                                </div>
+                              </div>
+                              <div class="product-basket-added--card">
+                                <div class="button-product-basket--count"></div>
+                                <div class="button-basket--product--v2__wrap">
+                                  <div class="button-basket--v2" data-toggle="modal" data-target="#popup-added-basket" data-custom-modal="#custom-popup-mobile-basket">
+                                    <svg class="icon icon-basket ">
+                                      <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
+                                    </svg>
+                                  </div>
+                                  <div class="product-basket-product--count">
+                                    <div class="product-basket-product--minus">-</div>
+                                    <input class="basket-product--input" type="text" value="1" min="1">
+                                    <div class="product-basket-product--plus">+</div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -1030,20 +1069,23 @@
                             <div class="section-menu-content--order basket-el-selector">
                               <div class="section-menu-content--price__wrap">
                                 <div class="section-menu-content--price__stock">145 ₽ / 140 г.</div>
-                                <div class="section-menu-content--price">145 ₽ / <span>140 г.</span></div>
-                              </div>
-                              <div class="product-basket-added--card"></div>
-                              <div class="button-product-basket--count"></div>
-                              <div class="button-basket--product--v2__wrap">
-                                <div class="button-basket--v2">
-                                  <svg class="icon icon-basket ">
-                                    <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
-                                  </svg>
+                                <div class="section-menu-content--price">
+                                  <div class="product-content--price_item" data-price-item="145">145</div> ₽ / <span>140 г.</span>
                                 </div>
-                                <div class="product-basket-product--count">
-                                  <div class="product-basket-product--minus">-</div>
-                                  <input class="basket-product--input" type="text" value="1" min="1">
-                                  <div class="product-basket-product--plus">+</div>
+                              </div>
+                              <div class="product-basket-added--card">
+                                <div class="button-product-basket--count"></div>
+                                <div class="button-basket--product--v2__wrap">
+                                  <div class="button-basket--v2" data-toggle="modal" data-target="#popup-added-basket" data-custom-modal="#custom-popup-mobile-basket">
+                                    <svg class="icon icon-basket ">
+                                      <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
+                                    </svg>
+                                  </div>
+                                  <div class="product-basket-product--count">
+                                    <div class="product-basket-product--minus">-</div>
+                                    <input class="basket-product--input" type="text" value="1" min="1">
+                                    <div class="product-basket-product--plus">+</div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -1098,12 +1140,14 @@
                         <div class="section-menu-content--order basket-el-selector">
                           <div class="section-menu-content--price__wrap">
                             <div class="section-menu-content--price__stock">145 ₽ / 140 г.</div>
-                            <div class="section-menu-content--price">145 ₽ / <span>140 г.</span></div>
+                            <div class="section-menu-content--price">
+                              <div class="product-content--price_item" data-price-item="145">145</div> ₽ / <span>140 г.</span>
+                            </div>
                           </div>
                           <div class="product-basket-added--card">
                             <div class="button-product-basket--count"></div>
                             <div class="button-basket--product--v2__wrap">
-                              <div class="button-basket--v2">
+                              <div class="button-basket--v2" data-toggle="modal" data-target="#popup-added-basket" data-custom-modal="#custom-popup-mobile-basket">
                                 <svg class="icon icon-basket ">
                                   <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
                                 </svg>
@@ -1136,12 +1180,14 @@
                         <div class="section-menu-content--order basket-el-selector">
                           <div class="section-menu-content--price__wrap">
                             <div class="section-menu-content--price__stock">145 ₽ / 140 г.</div>
-                            <div class="section-menu-content--price">145 ₽ / <span>140 г.</span></div>
+                            <div class="section-menu-content--price">
+                              <div class="product-content--price_item" data-price-item="145">145</div> ₽ / <span>140 г.</span>
+                            </div>
                           </div>
                           <div class="product-basket-added--card">
                             <div class="button-product-basket--count"></div>
                             <div class="button-basket--product--v2__wrap">
-                              <div class="button-basket--v2">
+                              <div class="button-basket--v2" data-toggle="modal" data-target="#popup-added-basket" data-custom-modal="#custom-popup-mobile-basket">
                                 <svg class="icon icon-basket ">
                                   <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
                                 </svg>
@@ -1174,12 +1220,14 @@
                         <div class="section-menu-content--order basket-el-selector">
                           <div class="section-menu-content--price__wrap">
                             <div class="section-menu-content--price__stock">145 ₽ / 140 г.</div>
-                            <div class="section-menu-content--price">145 ₽ / <span>140 г.</span></div>
+                            <div class="section-menu-content--price">
+                              <div class="product-content--price_item" data-price-item="145">145</div> ₽ / <span>140 г.</span>
+                            </div>
                           </div>
                           <div class="product-basket-added--card">
                             <div class="button-product-basket--count"></div>
                             <div class="button-basket--product--v2__wrap">
-                              <div class="button-basket--v2">
+                              <div class="button-basket--v2" data-toggle="modal" data-target="#popup-added-basket" data-custom-modal="#custom-popup-mobile-basket">
                                 <svg class="icon icon-basket ">
                                   <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
                                 </svg>
@@ -1212,12 +1260,14 @@
                         <div class="section-menu-content--order basket-el-selector">
                           <div class="section-menu-content--price__wrap">
                             <div class="section-menu-content--price__stock">145 ₽ / 140 г.</div>
-                            <div class="section-menu-content--price">145 ₽ / <span>140 г.</span></div>
+                            <div class="section-menu-content--price">
+                              <div class="product-content--price_item" data-price-item="145">145</div> ₽ / <span>140 г.</span>
+                            </div>
                           </div>
                           <div class="product-basket-added--card">
                             <div class="button-product-basket--count"></div>
                             <div class="button-basket--product--v2__wrap">
-                              <div class="button-basket--v2">
+                              <div class="button-basket--v2" data-toggle="modal" data-target="#popup-added-basket" data-custom-modal="#custom-popup-mobile-basket">
                                 <svg class="icon icon-basket ">
                                   <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
                                 </svg>
@@ -1250,12 +1300,14 @@
                         <div class="section-menu-content--order basket-el-selector">
                           <div class="section-menu-content--price__wrap">
                             <div class="section-menu-content--price__stock">145 ₽ / 140 г.</div>
-                            <div class="section-menu-content--price">145 ₽ / <span>140 г.</span></div>
+                            <div class="section-menu-content--price">
+                              <div class="product-content--price_item" data-price-item="145">145</div> ₽ / <span>140 г.</span>
+                            </div>
                           </div>
                           <div class="product-basket-added--card">
                             <div class="button-product-basket--count"></div>
                             <div class="button-basket--product--v2__wrap">
-                              <div class="button-basket--v2">
+                              <div class="button-basket--v2" data-toggle="modal" data-target="#popup-added-basket" data-custom-modal="#custom-popup-mobile-basket">
                                 <svg class="icon icon-basket ">
                                   <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
                                 </svg>
@@ -1313,12 +1365,14 @@
                         <div class="section-menu-content--order basket-el-selector">
                           <div class="section-menu-content--price__wrap">
                             <div class="section-menu-content--price__stock">145 ₽ / 140 г.</div>
-                            <div class="section-menu-content--price">145 ₽ / <span>140 г.</span></div>
+                            <div class="section-menu-content--price">
+                              <div class="product-content--price_item" data-price-item="145">145</div> ₽ / <span>140 г.</span>
+                            </div>
                           </div>
                           <div class="product-basket-added--card">
                             <div class="button-product-basket--count"></div>
                             <div class="button-basket--product--v2__wrap">
-                              <div class="button-basket--v2">
+                              <div class="button-basket--v2" data-toggle="modal" data-target="#popup-added-basket" data-custom-modal="#custom-popup-mobile-basket">
                                 <svg class="icon icon-basket ">
                                   <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
                                 </svg>
@@ -1351,12 +1405,14 @@
                         <div class="section-menu-content--order basket-el-selector">
                           <div class="section-menu-content--price__wrap">
                             <div class="section-menu-content--price__stock">145 ₽ / 140 г.</div>
-                            <div class="section-menu-content--price">145 ₽ / <span>140 г.</span></div>
+                            <div class="section-menu-content--price">
+                              <div class="product-content--price_item" data-price-item="145">145</div> ₽ / <span>140 г.</span>
+                            </div>
                           </div>
                           <div class="product-basket-added--card">
                             <div class="button-product-basket--count"></div>
                             <div class="button-basket--product--v2__wrap">
-                              <div class="button-basket--v2">
+                              <div class="button-basket--v2" data-toggle="modal" data-target="#popup-added-basket" data-custom-modal="#custom-popup-mobile-basket">
                                 <svg class="icon icon-basket ">
                                   <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
                                 </svg>
@@ -1389,12 +1445,14 @@
                         <div class="section-menu-content--order basket-el-selector">
                           <div class="section-menu-content--price__wrap">
                             <div class="section-menu-content--price__stock">145 ₽ / 140 г.</div>
-                            <div class="section-menu-content--price">145 ₽ / <span>140 г.</span></div>
+                            <div class="section-menu-content--price">
+                              <div class="product-content--price_item" data-price-item="145">145</div> ₽ / <span>140 г.</span>
+                            </div>
                           </div>
                           <div class="product-basket-added--card">
                             <div class="button-product-basket--count"></div>
                             <div class="button-basket--product--v2__wrap">
-                              <div class="button-basket--v2">
+                              <div class="button-basket--v2" data-toggle="modal" data-target="#popup-added-basket" data-custom-modal="#custom-popup-mobile-basket">
                                 <svg class="icon icon-basket ">
                                   <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
                                 </svg>
@@ -1427,12 +1485,14 @@
                         <div class="section-menu-content--order basket-el-selector">
                           <div class="section-menu-content--price__wrap">
                             <div class="section-menu-content--price__stock">145 ₽ / 140 г.</div>
-                            <div class="section-menu-content--price">145 ₽ / <span>140 г.</span></div>
+                            <div class="section-menu-content--price">
+                              <div class="product-content--price_item" data-price-item="145">145</div> ₽ / <span>140 г.</span>
+                            </div>
                           </div>
                           <div class="product-basket-added--card">
                             <div class="button-product-basket--count"></div>
                             <div class="button-basket--product--v2__wrap">
-                              <div class="button-basket--v2">
+                              <div class="button-basket--v2" data-toggle="modal" data-target="#popup-added-basket" data-custom-modal="#custom-popup-mobile-basket">
                                 <svg class="icon icon-basket ">
                                   <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
                                 </svg>
@@ -1465,12 +1525,14 @@
                         <div class="section-menu-content--order basket-el-selector">
                           <div class="section-menu-content--price__wrap">
                             <div class="section-menu-content--price__stock">145 ₽ / 140 г.</div>
-                            <div class="section-menu-content--price">145 ₽ / <span>140 г.</span></div>
+                            <div class="section-menu-content--price">
+                              <div class="product-content--price_item" data-price-item="145">145</div> ₽ / <span>140 г.</span>
+                            </div>
                           </div>
                           <div class="product-basket-added--card">
                             <div class="button-product-basket--count"></div>
                             <div class="button-basket--product--v2__wrap">
-                              <div class="button-basket--v2">
+                              <div class="button-basket--v2" data-toggle="modal" data-target="#popup-added-basket" data-custom-modal="#custom-popup-mobile-basket">
                                 <svg class="icon icon-basket ">
                                   <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
                                 </svg>
@@ -1528,12 +1590,14 @@
                         <div class="section-menu-content--order basket-el-selector">
                           <div class="section-menu-content--price__wrap">
                             <div class="section-menu-content--price__stock">145 ₽ / 140 г.</div>
-                            <div class="section-menu-content--price">145 ₽ / <span>140 г.</span></div>
+                            <div class="section-menu-content--price">
+                              <div class="product-content--price_item" data-price-item="145">145</div> ₽ / <span>140 г.</span>
+                            </div>
                           </div>
                           <div class="product-basket-added--card">
                             <div class="button-product-basket--count"></div>
                             <div class="button-basket--product--v2__wrap">
-                              <div class="button-basket--v2">
+                              <div class="button-basket--v2" data-toggle="modal" data-target="#popup-added-basket" data-custom-modal="#custom-popup-mobile-basket">
                                 <svg class="icon icon-basket ">
                                   <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
                                 </svg>
@@ -1566,12 +1630,14 @@
                         <div class="section-menu-content--order basket-el-selector">
                           <div class="section-menu-content--price__wrap">
                             <div class="section-menu-content--price__stock">145 ₽ / 140 г.</div>
-                            <div class="section-menu-content--price">145 ₽ / <span>140 г.</span></div>
+                            <div class="section-menu-content--price">
+                              <div class="product-content--price_item" data-price-item="145">145</div> ₽ / <span>140 г.</span>
+                            </div>
                           </div>
                           <div class="product-basket-added--card">
                             <div class="button-product-basket--count"></div>
                             <div class="button-basket--product--v2__wrap">
-                              <div class="button-basket--v2">
+                              <div class="button-basket--v2" data-toggle="modal" data-target="#popup-added-basket" data-custom-modal="#custom-popup-mobile-basket">
                                 <svg class="icon icon-basket ">
                                   <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
                                 </svg>
@@ -1710,7 +1776,9 @@
                                 <div class="section-menu-content--order basket-el-selector">
                                   <div class="section-menu-content--price__wrap">
                                     <div class="section-menu-content--price__stock"></div>
-                                    <div class="section-menu-content--price">65 ₽ / <span>1 шт.</span></div>
+                                    <div class="section-menu-content--price">
+                                      <div class="product-content--price_item" data-price-item="65">65</div> ₽ / <span>1 шт.</span>
+                                    </div>
                                   </div>
                                   <div class="lanch-choise-product--wrap">
                                     <div class="lanch-choise-button"><span>Выбрать</span></div>
@@ -1735,7 +1803,9 @@
                                 <div class="section-menu-content--order basket-el-selector">
                                   <div class="section-menu-content--price__wrap">
                                     <div class="section-menu-content--price__stock"></div>
-                                    <div class="section-menu-content--price">65 ₽ / <span>1 шт.</span></div>
+                                    <div class="section-menu-content--price">
+                                      <div class="product-content--price_item" data-price-item="65">65</div> ₽ / <span>1 шт.</span>
+                                    </div>
                                   </div>
                                   <div class="lanch-choise-product--wrap">
                                     <div class="lanch-choise-button"><span>Выбрать</span></div>
@@ -1760,7 +1830,9 @@
                                 <div class="section-menu-content--order basket-el-selector">
                                   <div class="section-menu-content--price__wrap">
                                     <div class="section-menu-content--price__stock"></div>
-                                    <div class="section-menu-content--price">65 ₽ / <span>1 шт.</span></div>
+                                    <div class="section-menu-content--price">
+                                      <div class="product-content--price_item" data-price-item="65">65</div> ₽ / <span>1 шт.</span>
+                                    </div>
                                   </div>
                                   <div class="lanch-choise-product--wrap">
                                     <div class="lanch-choise-button"><span>Выбрать</span></div>
@@ -1853,7 +1925,9 @@
                                 <div class="section-menu-content--order basket-el-selector">
                                   <div class="section-menu-content--price__wrap">
                                     <div class="section-menu-content--price__stock"></div>
-                                    <div class="section-menu-content--price">65 ₽ / <span>1 шт.</span></div>
+                                    <div class="section-menu-content--price">
+                                      <div class="product-content--price_item" data-price-item="65">65</div> ₽ / <span>1 шт.</span>
+                                    </div>
                                   </div>
                                   <div class="lanch-choise-product--wrap">
                                     <div class="lanch-choise-button"><span>Выбрать</span></div>
@@ -1878,7 +1952,9 @@
                                 <div class="section-menu-content--order basket-el-selector">
                                   <div class="section-menu-content--price__wrap">
                                     <div class="section-menu-content--price__stock"></div>
-                                    <div class="section-menu-content--price">65 ₽ / <span>1 шт.</span></div>
+                                    <div class="section-menu-content--price">
+                                      <div class="product-content--price_item" data-price-item="65">65</div> ₽ / <span>1 шт.</span>
+                                    </div>
                                   </div>
                                   <div class="lanch-choise-product--wrap">
                                     <div class="lanch-choise-button"><span>Выбрать</span></div>
@@ -1903,7 +1979,9 @@
                                 <div class="section-menu-content--order basket-el-selector">
                                   <div class="section-menu-content--price__wrap">
                                     <div class="section-menu-content--price__stock"></div>
-                                    <div class="section-menu-content--price">65 ₽ / <span>1 шт.</span></div>
+                                    <div class="section-menu-content--price">
+                                      <div class="product-content--price_item" data-price-item="65">65</div> ₽ / <span>1 шт.</span>
+                                    </div>
                                   </div>
                                   <div class="lanch-choise-product--wrap">
                                     <div class="lanch-choise-button"><span>Выбрать</span></div>
@@ -1996,7 +2074,9 @@
                                 <div class="section-menu-content--order basket-el-selector">
                                   <div class="section-menu-content--price__wrap">
                                     <div class="section-menu-content--price__stock"></div>
-                                    <div class="section-menu-content--price">65 ₽ / <span>1 шт.</span></div>
+                                    <div class="section-menu-content--price">
+                                      <div class="product-content--price_item" data-price-item="65">65</div> ₽ / <span>1 шт.</span>
+                                    </div>
                                   </div>
                                   <div class="lanch-choise-product--wrap">
                                     <div class="lanch-choise-button"><span>Выбрать</span></div>
@@ -2021,7 +2101,9 @@
                                 <div class="section-menu-content--order basket-el-selector">
                                   <div class="section-menu-content--price__wrap">
                                     <div class="section-menu-content--price__stock"></div>
-                                    <div class="section-menu-content--price">65 ₽ / <span>1 шт.</span></div>
+                                    <div class="section-menu-content--price">
+                                      <div class="product-content--price_item" data-price-item="65">65</div> ₽ / <span>1 шт.</span>
+                                    </div>
                                   </div>
                                   <div class="lanch-choise-product--wrap">
                                     <div class="lanch-choise-button"><span>Выбрать</span></div>
@@ -2046,7 +2128,9 @@
                                 <div class="section-menu-content--order basket-el-selector">
                                   <div class="section-menu-content--price__wrap">
                                     <div class="section-menu-content--price__stock"></div>
-                                    <div class="section-menu-content--price">65 ₽ / <span>1 шт.</span></div>
+                                    <div class="section-menu-content--price">
+                                      <div class="product-content--price_item" data-price-item="65">65</div> ₽ / <span>1 шт.</span>
+                                    </div>
                                   </div>
                                   <div class="lanch-choise-product--wrap">
                                     <div class="lanch-choise-button"><span>Выбрать</span></div>
@@ -2139,7 +2223,9 @@
                                 <div class="section-menu-content--order basket-el-selector">
                                   <div class="section-menu-content--price__wrap">
                                     <div class="section-menu-content--price__stock"></div>
-                                    <div class="section-menu-content--price">65 ₽ / <span>1 шт.</span></div>
+                                    <div class="section-menu-content--price">
+                                      <div class="product-content--price_item" data-price-item="65">65</div> ₽ / <span>1 шт.</span>
+                                    </div>
                                   </div>
                                   <div class="lanch-choise-product--wrap">
                                     <div class="lanch-choise-button"><span>Выбрать</span></div>
@@ -2164,7 +2250,9 @@
                                 <div class="section-menu-content--order basket-el-selector">
                                   <div class="section-menu-content--price__wrap">
                                     <div class="section-menu-content--price__stock"></div>
-                                    <div class="section-menu-content--price">65 ₽ / <span>1 шт.</span></div>
+                                    <div class="section-menu-content--price">
+                                      <div class="product-content--price_item" data-price-item="65">65</div> ₽ / <span>1 шт.</span>
+                                    </div>
                                   </div>
                                   <div class="lanch-choise-product--wrap">
                                     <div class="lanch-choise-button"><span>Выбрать</span></div>
@@ -2189,7 +2277,9 @@
                                 <div class="section-menu-content--order basket-el-selector">
                                   <div class="section-menu-content--price__wrap">
                                     <div class="section-menu-content--price__stock"></div>
-                                    <div class="section-menu-content--price">65 ₽ / <span>1 шт.</span></div>
+                                    <div class="section-menu-content--price">
+                                      <div class="product-content--price_item" data-price-item="65">65</div> ₽ / <span>1 шт.</span>
+                                    </div>
                                   </div>
                                   <div class="lanch-choise-product--wrap">
                                     <div class="lanch-choise-button"><span>Выбрать</span></div>
@@ -2289,7 +2379,9 @@
                             <div class="section-menu-content--order basket-el-selector">
                               <div class="section-menu-content--price__wrap">
                                 <div class="section-menu-content--price__stock"></div>
-                                <div class="section-menu-content--price">65 ₽ / <span>1 шт.</span></div>
+                                <div class="section-menu-content--price">
+                                  <div class="product-content--price_item" data-price-item="65">65</div> ₽ / <span>1 шт.</span>
+                                </div>
                               </div>
                               <div class="lanch-choise-product--wrap">
                                 <div class="lanch-choise-button"><span>Выбрать</span></div>
@@ -2352,7 +2444,9 @@
                             <div class="section-menu-content--order basket-el-selector">
                               <div class="section-menu-content--price__wrap">
                                 <div class="section-menu-content--price__stock"></div>
-                                <div class="section-menu-content--price">65 ₽ / <span>1 шт.</span></div>
+                                <div class="section-menu-content--price">
+                                  <div class="product-content--price_item" data-price-item="65">65</div> ₽ / <span>1 шт.</span>
+                                </div>
                               </div>
                               <div class="lanch-choise-product--wrap">
                                 <div class="lanch-choise-button"><span>Выбрать</span></div>
@@ -2415,7 +2509,9 @@
                             <div class="section-menu-content--order basket-el-selector">
                               <div class="section-menu-content--price__wrap">
                                 <div class="section-menu-content--price__stock"></div>
-                                <div class="section-menu-content--price">65 ₽ / <span>1 шт.</span></div>
+                                <div class="section-menu-content--price">
+                                  <div class="product-content--price_item" data-price-item="65">65</div> ₽ / <span>1 шт.</span>
+                                </div>
                               </div>
                               <div class="lanch-choise-product--wrap">
                                 <div class="lanch-choise-button"><span>Выбрать</span></div>
@@ -2478,7 +2574,9 @@
                             <div class="section-menu-content--order basket-el-selector">
                               <div class="section-menu-content--price__wrap">
                                 <div class="section-menu-content--price__stock"></div>
-                                <div class="section-menu-content--price">65 ₽ / <span>1 шт.</span></div>
+                                <div class="section-menu-content--price">
+                                  <div class="product-content--price_item" data-price-item="65">65</div> ₽ / <span>1 шт.</span>
+                                </div>
                               </div>
                               <div class="lanch-choise-product--wrap">
                                 <div class="lanch-choise-button"><span>Выбрать</span></div>
@@ -2522,74 +2620,7 @@
               </div>
             </div>
           </div>
-          <div class="popup-mobile-added" id="custom-mobile-filter">
-            <div class="popup-header modal-header pb-0">
-              <div class="popup-mobile-line--close"></div>
-            </div>
-            <div class="popup-mobile-title">Фильтр</div>
-            <div class="popup-body modal-body">
-              <div class="popup-mobile-eat--list">
-                <div class="popup-mobile-eat--item"><span>Хинкали</span>
-                  <svg class="icon icon-close ">
-                    <use xlink:href="static/img/svg/symbol/sprite.svg#close"></use>
-                  </svg>
-                </div>
-                <div class="popup-mobile-eat--item"><span>Самса</span>
-                  <svg class="icon icon-close ">
-                    <use xlink:href="static/img/svg/symbol/sprite.svg#close"></use>
-                  </svg>
-                </div>
-                <div class="popup-mobile-eat--item"><span>Халяль</span>
-                  <svg class="icon icon-close ">
-                    <use xlink:href="static/img/svg/symbol/sprite.svg#close"></use>
-                  </svg>
-                </div>
-                <div class="popup-mobile-eat--item"><span>Хинкали</span>
-                  <svg class="icon icon-close ">
-                    <use xlink:href="static/img/svg/symbol/sprite.svg#close"></use>
-                  </svg>
-                </div>
-                <div class="popup-mobile-eat--item"><span>Самса</span>
-                  <svg class="icon icon-close ">
-                    <use xlink:href="static/img/svg/symbol/sprite.svg#close"></use>
-                  </svg>
-                </div>
-                <div class="popup-mobile-eat--item"><span>Халяль</span>
-                  <svg class="icon icon-close ">
-                    <use xlink:href="static/img/svg/symbol/sprite.svg#close"></use>
-                  </svg>
-                </div>
-              </div>
-              <div class="popup-mobile-cat--list">
-                <div class="popup-mobile-filter--item" data-custom-dismiss="modal" data-custom-modal="#custom-mobile-filter-kuhnya"><span>Кухня</span>
-                  <svg class="icon icon-arrow-right ">
-                    <use xlink:href="static/img/svg/symbol/sprite.svg#arrow-right"></use>
-                  </svg>
-                </div>
-                <div class="popup-mobile-filter--item" data-custom-dismiss="modal" data-custom-modal="#custom-mobile-filter-type"><span>Тип блюда</span>
-                  <svg class="icon icon-arrow-right ">
-                    <use xlink:href="static/img/svg/symbol/sprite.svg#arrow-right"></use>
-                  </svg>
-                </div>
-                <div class="popup-mobile-filter--item" data-custom-dismiss="modal" data-custom-modal="#custom-mobile-filter-type"><span>Тип приготовления</span>
-                  <svg class="icon icon-arrow-right ">
-                    <use xlink:href="static/img/svg/symbol/sprite.svg#arrow-right"></use>
-                  </svg>
-                </div>
-                <div class="popup-mobile-filter--item" data-custom-dismiss="modal" data-custom-modal="#custom-mobile-filter-type"><span>Акция</span>
-                  <svg class="icon icon-arrow-right ">
-                    <use xlink:href="static/img/svg/symbol/sprite.svg#arrow-right"></use>
-                  </svg>
-                </div>
-                <div class="popup-mobile-filter--item" data-custom-dismiss="modal" data-custom-modal="#custom-mobile-filter-price"><span>Цена</span>
-                  <svg class="icon icon-arrow-right ">
-                    <use xlink:href="static/img/svg/symbol/sprite.svg#arrow-right"></use>
-                  </svg>
-                </div>
-              </div>
-              <div class="popup-reset-filter">Сбросить фильтр</div>
-            </div>
-          </div>
+          <!--include ../popups-mobile/popup-filter-->
           <div class="popup-mobile-added" id="custom-mobile-filter-kuhnya">
             <div class="popup-header--v2">
               <div class="popup-header-go-back" data-custom-dismiss="modal" data-custom-modal="#custom-mobile-filter">
@@ -3825,6 +3856,74 @@
             <button class="main-button w-230 m-0-auto mb-30" type="submit">Отправить</button>
           </div>
         </form>
+        <div class="popup-mobile-added" id="custom-mobile-filter">
+          <div class="popup-header modal-header pb-0">
+            <div class="popup-mobile-line--close"></div>
+          </div>
+          <div class="popup-mobile-title">Фильтр</div>
+          <div class="popup-body modal-body">
+            <div class="popup-mobile-eat--list">
+              <div class="popup-mobile-eat--item"><span>Хинкали</span>
+                <svg class="icon icon-close ">
+                  <use xlink:href="static/img/svg/symbol/sprite.svg#close"></use>
+                </svg>
+              </div>
+              <div class="popup-mobile-eat--item"><span>Самса</span>
+                <svg class="icon icon-close ">
+                  <use xlink:href="static/img/svg/symbol/sprite.svg#close"></use>
+                </svg>
+              </div>
+              <div class="popup-mobile-eat--item"><span>Халяль</span>
+                <svg class="icon icon-close ">
+                  <use xlink:href="static/img/svg/symbol/sprite.svg#close"></use>
+                </svg>
+              </div>
+              <div class="popup-mobile-eat--item"><span>Хинкали</span>
+                <svg class="icon icon-close ">
+                  <use xlink:href="static/img/svg/symbol/sprite.svg#close"></use>
+                </svg>
+              </div>
+              <div class="popup-mobile-eat--item"><span>Самса</span>
+                <svg class="icon icon-close ">
+                  <use xlink:href="static/img/svg/symbol/sprite.svg#close"></use>
+                </svg>
+              </div>
+              <div class="popup-mobile-eat--item"><span>Халяль</span>
+                <svg class="icon icon-close ">
+                  <use xlink:href="static/img/svg/symbol/sprite.svg#close"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="popup-mobile-cat--list">
+              <div class="popup-mobile-filter--item" data-custom-dismiss="modal" data-custom-modal="#custom-mobile-filter-kuhnya"><span>Кухня</span>
+                <svg class="icon icon-arrow-right ">
+                  <use xlink:href="static/img/svg/symbol/sprite.svg#arrow-right"></use>
+                </svg>
+              </div>
+              <div class="popup-mobile-filter--item" data-custom-dismiss="modal" data-custom-modal="#custom-mobile-filter-type"><span>Тип блюда</span>
+                <svg class="icon icon-arrow-right ">
+                  <use xlink:href="static/img/svg/symbol/sprite.svg#arrow-right"></use>
+                </svg>
+              </div>
+              <div class="popup-mobile-filter--item" data-custom-dismiss="modal" data-custom-modal="#custom-mobile-filter-type"><span>Тип приготовления</span>
+                <svg class="icon icon-arrow-right ">
+                  <use xlink:href="static/img/svg/symbol/sprite.svg#arrow-right"></use>
+                </svg>
+              </div>
+              <div class="popup-mobile-filter--item" data-custom-dismiss="modal" data-custom-modal="#custom-mobile-filter-type"><span>Акция</span>
+                <svg class="icon icon-arrow-right ">
+                  <use xlink:href="static/img/svg/symbol/sprite.svg#arrow-right"></use>
+                </svg>
+              </div>
+              <div class="popup-mobile-filter--item" data-custom-dismiss="modal" data-custom-modal="#custom-mobile-filter-price"><span>Цена</span>
+                <svg class="icon icon-arrow-right ">
+                  <use xlink:href="static/img/svg/symbol/sprite.svg#arrow-right"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="popup-reset-filter">Сбросить фильтр</div>
+          </div>
+        </div>
       </div>
     </div>
     <script src="static/js/jquery.min.js"></script>

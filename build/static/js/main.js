@@ -131,6 +131,7 @@ $(document).ready(function () {
 
     $('.basket-product--plus').click(function () {
         $(this).prev().val(+$(this).prev().val() + 1);
+
     });
     $('.basket-product--minus').click(function () {
         if ($(this).next().val() > 1) {
@@ -138,15 +139,24 @@ $(document).ready(function () {
 
         }
     });
-    $('.product-basket-product--plus').click(function () {
+    $('.product-basket-product--plus').on('click',function () {
         $(this).prev().val(+$(this).prev().val() + 1);
+        var get_price = $(this).parents('.product-basket-added--card').prev('.section-menu-content--price__wrap').find('.product-content--price_item').text();
+        var get_price_attr = $(this).parents('.product-basket-added--card').prev('.section-menu-content--price__wrap').find('.product-content--price_item').attr('data-price-item');
+        $(this).parents('.product-basket-added--card').prev('.section-menu-content--price__wrap').find('.product-content--price_item').text(parseInt(get_price) + parseInt(get_price_attr));
+
     });
     $('.product-basket-product--minus').click(function () {
         if ($(this).next().val() > 1) {
             if ($(this).next().val() > 1) $(this).next().val(+$(this).next().val() - 1);
-
+            var get_price = $(this).parents('.product-basket-added--card').prev('.section-menu-content--price__wrap').find('.product-content--price_item').text();
+            var get_price_attr = $(this).parents('.product-basket-added--card').prev('.section-menu-content--price__wrap').find('.product-content--price_item').attr('data-price-item');
+            $(this).parents('.product-basket-added--card').prev('.section-menu-content--price__wrap').find('.product-content--price_item').text(parseInt(get_price) - parseInt(get_price_attr));
         }
+
     });
+
+
 
     $('.basket-product--input').each(function () {
         $(this).change(function () {
@@ -177,85 +187,88 @@ $(document).ready(function () {
 
 
 
-    class Cart {
-        constructor(el) {
-            this.count = 3500;
-            this.parent = el;
-            this.el = el.querySelector(".basket-el-selector");
-            this.btn = el.querySelector(".button-basket--v2");
-            this.input = el.querySelector(".basket-product--input");
-            this.notification = el.querySelector(".button-product-basket--count");
-            this.time;
-            this.onChange = this.onChange.bind(this);
-            this.addEventHandlers();
-
-        }
-
-        addEventHandlers() {
-            this.el.addEventListener("click", this.onChange);
-            this.el.addEventListener("mousemove", this.onChange);
-            this.el.addEventListener("keydown", this.onChange);
-        }
-
-        onChange(e) {
-            clearTimeout(this.time);
-            this.time = setTimeout(this.timer.bind(this.parent), this.count);
-
-            if (e.type != "mousemove" && this.btn.contains(e.target)) {
-                if (this.parent.classList.contains("active")) {
-                    this.parent.classList.remove("active");
-                    this.input.value == 0 ? this.notification.innerHTML = "" : this.notification.innerHTML = this.input.value;
-                    clearTimeout(this.time);
-                } else {
-                    this.parent.classList.add("active");
-
-
-                }
-
-            }
-
-
-        }
-
-        timer(e) {
-            //this.classList.remove("active");
-            let isMove = false;
-            if(!this.classList.contains("active")){
-                isMove = true;
-            }
-            this.classList.remove("active");
-            let input = this.querySelector(".basket-product--input");
-            let notification = this.querySelector(".button-product-basket--count");
-            let isShow = false;
-
-            //let ss = this.classList.contains("active");
-            //console.log(ss);
-
-
-
-            input.value == 0 ? notification.innerHTML = "" : notification.innerHTML = input.value;
-            if(notification.innerHTML >= 1 && !isMove){
-                notification.classList.add('active');
-                if (!this.isShow){
-                    $('#popup-added-basket').modal('show');
-                    $('#custom-popup-mobile-basket').addClass('active');
-                    $('header').addClass('header-transform-hidden');
-                    $('body').addClass('overflow-hidden');
-                    $('.content').addClass('mobile-popup-bg');
-                    $('.close-mobile--popups').addClass('active');
-                    this.isShow = true;
-
-                }
-
-
-            }
-
-
-        }
-
-    }
-    for (let cart of document.querySelectorAll(".basket-count-buttons--wrapper")) new Cart(cart);
-
+    // class Cart {
+    //     constructor(el) {
+    //         this.count = 3500;
+    //         this.parent = el;
+    //         this.el = el.querySelector(".basket-el-selector");
+    //         this.btn = el.querySelector(".button-basket--v2");
+    //         this.input = el.querySelector(".basket-product--input");
+    //         this.notification = el.querySelector(".button-product-basket--count");
+    //         this.time;
+    //         this.onChange = this.onChange.bind(this);
+    //         this.addEventHandlers();
+    //
+    //     }
+    //
+    //     addEventHandlers() {
+    //         this.el.addEventListener("click", this.onChange);
+    //         this.el.addEventListener("mousemove", this.onChange);
+    //         this.el.addEventListener("keydown", this.onChange);
+    //     }
+    //
+    //     onChange(e) {
+    //         clearTimeout(this.time);
+    //         this.time = setTimeout(this.timer.bind(this.parent), this.count);
+    //
+    //         if (e.type != "mousemove" && this.btn.contains(e.target)) {
+    //             if (this.parent.classList.contains("active")) {
+    //                 this.parent.classList.remove("active");
+    //                 this.input.value == 0 ? this.notification.innerHTML = "" : this.notification.innerHTML = this.input.value;
+    //                 clearTimeout(this.time);
+    //             } else {
+    //                 this.parent.classList.add("active");
+    //
+    //
+    //             }
+    //
+    //         }
+    //
+    //
+    //     }
+    //
+    //     timer(e) {
+    //         //this.classList.remove("active");
+    //         let isMove = false;
+    //         if(!this.classList.contains("active")){
+    //             isMove = true;
+    //         }
+    //         this.classList.remove("active");
+    //         let input = this.querySelector(".basket-product--input");
+    //         let notification = this.querySelector(".button-product-basket--count");
+    //         let isShow = false;
+    //
+    //         //let ss = this.classList.contains("active");
+    //         //console.log(ss);
+    //
+    //
+    //
+    //         input.value == 0 ? notification.innerHTML = "" : notification.innerHTML = input.value;
+    //         if(notification.innerHTML >= 1 && !isMove){
+    //             notification.classList.add('active');
+    //             if (!this.isShow){
+    //                 $('#popup-added-basket').modal('show');
+    //                 $('#custom-popup-mobile-basket').addClass('active');
+    //                 $('header').addClass('header-transform-hidden');
+    //                 $('body').addClass('overflow-hidden');
+    //                 $('.content').addClass('mobile-popup-bg');
+    //                 $('.close-mobile--popups').addClass('active');
+    //                 this.isShow = true;
+    //
+    //             }
+    //
+    //
+    //         }
+    //
+    //
+    //     }
+    //
+    // }
+    // for (let cart of document.querySelectorAll(".basket-count-buttons--wrapper")) new Cart(cart);
+    $('.product-basket-added--card .button-basket--v2').click(function () {
+        var get_count = $(this).next().children('.basket-product--input').val();
+        $(this).parents('.product-basket-added--card').children('.button-product-basket--count').text(get_count).addClass('active');
+    });
     $('.modal-backdrop,.popup-header--close').click(function () {
         $('header').removeClass('header-transform-hidden');
         $('body').removeClass('overflow-hidden');
@@ -284,7 +297,7 @@ $(document).ready(function () {
     $(function () {
         $(".rate-yo").rateYo({
             "ratedFill": "#FF651D",
-
+            "normalFill": "#E6E9ED",
             "starWidth": "25px",
             "spacing": "8px",
             "starSvg": '<svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><path d="M12.8656 3.97214L12.6457 3.31195C12.3401 2.39514 11.3336 2.02456 10.529 2.34121L10.5006 2.25726C10.2818 1.60012 9.69265 1.17578 9 1.17578C8.30735 1.17578 7.7182 1.60012 7.49932 2.25726L7.47098 2.34121C7.21659 2.24182 6.93232 2.20681 6.64752 2.25005C5.63832 2.40006 5.43371 3.07548 5.13436 3.97214C2.10009 5.37495 0 8.24444 0 11.0238C0 14.5478 3.55405 16.8246 9 16.8246C14.4459 16.8246 18 14.5478 18 11.0238C18 8.24444 15.8999 5.37495 12.8656 3.97214ZM7.2283 6.12325L6.17361 7.17794C5.9676 7.38395 5.63393 7.38395 5.42791 7.17794C5.22193 6.97196 5.22193 6.63822 5.42791 6.43224L6.4826 5.37755C6.68858 5.17157 7.02232 5.17157 7.2283 5.37755C7.43428 5.58353 7.43432 5.91723 7.2283 6.12325ZM9.52734 6.80507C9.52734 7.09655 9.29148 7.33241 9 7.33241C8.70852 7.33241 8.47266 7.09655 8.47266 6.80507V5.75038C8.47266 5.4589 8.70852 5.22304 9 5.22304C9.29148 5.22304 9.52734 5.4589 9.52734 5.75038V6.80507ZM12.5721 7.17794C12.366 7.38395 12.0324 7.38395 11.8264 7.17794L10.7717 6.12325C10.5657 5.91727 10.5657 5.58353 10.7717 5.37755C10.9776 5.17157 11.3114 5.17157 11.5174 5.37755L12.5721 6.43224C12.7781 6.63822 12.7781 6.97192 12.5721 7.17794Z"/></svg>',
@@ -301,6 +314,7 @@ $(document).ready(function () {
             {
                 rating: rating, //rating
                 "ratedFill": "#FF651D",
+                "normalFill": "#E6E9ED",
                 "starWidth": "18px",
                 "spacing": "7px",
                 "starSvg": '<svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><path d="M12.8656 3.97214L12.6457 3.31195C12.3401 2.39514 11.3336 2.02456 10.529 2.34121L10.5006 2.25726C10.2818 1.60012 9.69265 1.17578 9 1.17578C8.30735 1.17578 7.7182 1.60012 7.49932 2.25726L7.47098 2.34121C7.21659 2.24182 6.93232 2.20681 6.64752 2.25005C5.63832 2.40006 5.43371 3.07548 5.13436 3.97214C2.10009 5.37495 0 8.24444 0 11.0238C0 14.5478 3.55405 16.8246 9 16.8246C14.4459 16.8246 18 14.5478 18 11.0238C18 8.24444 15.8999 5.37495 12.8656 3.97214ZM7.2283 6.12325L6.17361 7.17794C5.9676 7.38395 5.63393 7.38395 5.42791 7.17794C5.22193 6.97196 5.22193 6.63822 5.42791 6.43224L6.4826 5.37755C6.68858 5.17157 7.02232 5.17157 7.2283 5.37755C7.43428 5.58353 7.43432 5.91723 7.2283 6.12325ZM9.52734 6.80507C9.52734 7.09655 9.29148 7.33241 9 7.33241C8.70852 7.33241 8.47266 7.09655 8.47266 6.80507V5.75038C8.47266 5.4589 8.70852 5.22304 9 5.22304C9.29148 5.22304 9.52734 5.4589 9.52734 5.75038V6.80507ZM12.5721 7.17794C12.366 7.38395 12.0324 7.38395 11.8264 7.17794L10.7717 6.12325C10.5657 5.91727 10.5657 5.58353 10.7717 5.37755C10.9776 5.17157 11.3114 5.17157 11.5174 5.37755L12.5721 6.43224C12.7781 6.63822 12.7781 6.97192 12.5721 7.17794Z"/></svg>',
@@ -615,7 +629,7 @@ $(document).ready(function () {
 
 
 
-    $('.tablet-menu-sandwich,.tel-menu-sandwich,.content').swipeDetector({swipeThreshold: 25}).on("swipeLeft.sd", function (event) {
+    $('.tablet-menu-sandwich,.tel-menu-sandwich').swipeDetector({swipeThreshold: 25}).on("swipeLeft.sd", function (event) {
         if (event.type === "swipeLeft") {
             $(this).removeClass('active')
             $('body').removeClass('overflow-hidden');
@@ -627,6 +641,8 @@ $(document).ready(function () {
         $('body').removeClass('overflow-hidden');
         $('.content').removeClass('tablet-bg');
     });
+
+
 
     var mobile_modal = function() {
         if ($(window).width() <= 768) {
@@ -992,22 +1008,22 @@ $(document).ready(function () {
         });
     });
     $(function () {
-        var get_text = document.querySelectorAll('.article-comments--item__comment');
+        var get_text = document.querySelectorAll('.article-comments--item__comment span');
 
         for (let item of get_text ){
             let get_count = item.innerText.length;
             if (get_count >= 200){
-                $(item).next().append('<div class="review-card-review--showmore">Читать полностью</div>');
+                $(item).parent('.article-comments--item__comment').append('<div class="review-card-review--showmore">Читать полностью</div>');
 
             }
 
         }
-        $('.article-comments--item__show--more').click(function () {
-            $(this).prev('.article-comments--item__comment').toggleClass('active');
-            if($(this).prev('.article-comments--item__comment').hasClass('active')){
-                $('.review-card-review--showmore').text('Скрыть');
+        $('.review-card-review--showmore').click(function () {
+            $(this).parent('.article-comments--item__comment').toggleClass('active');
+            if($(this).parent('.article-comments--item__comment').hasClass('active')){
+                $('.article-comments--item__comment .review-card-review--showmore').text('Скрыть');
             }else {
-                $('.review-card-review--showmore').text('Читать полностью');
+                $('.article-comments--item__comment .review-card-review--showmore').text('Читать полностью');
             }
         });
     });
@@ -1018,18 +1034,18 @@ $(document).ready(function () {
         for (let item of get_text ){
             let get_count = item.innerText.length;
             if (get_count >= 300){
-                $(item).parents('.section-recommend').find('.section-container').append('<div class="review-card-review--showmore">Подробнее</div>');
+                $(item).parents('.section-recommend').find('.section-container').append('<div class="review-card-review--showmore2">Подробнее</div>');
 
 
             }
 
         }
-        $('.review-card-review--showmore').click(function () {
+        $('.review-card-review--showmore2').click(function () {
             $(this).prev('.catalog-desc-p').toggleClass('active');
             if($('.catalog-desc-p').hasClass('active')){
-                $('.review-card-review--showmore').text('Скрыть');
+                $('.review-card-review--showmore2').text('Скрыть');
             }else {
-                $('.review-card-review--showmore').text('Подробнее');
+                $('.review-card-review--showmore2').text('Подробнее');
             }
         });
     });
