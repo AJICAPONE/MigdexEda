@@ -12,8 +12,13 @@ section.section1.section-order-out
 
                         .main-input--wrap
                             label Контакты
-                            input.main-input.mb-2(type="tel" data-mask="+7 (000) 000 00 00" required placeholder="Телефон")
-                            input.main-input(type="email" required placeholder="Email")
+                            input.main-input.mb-2.required-info--show(type="tel" data-mask="+7 (000) 000 00 00" required placeholder="Телефон")
+                            .required-input--info
+                                .required-input--submit(data-custom-modal="#custom-mobile-code--order") Подтвердить
+                                .required-input--retry(data-custom-modal="#custom-mobile-code--submit") Отправить повторно
+                            input.main-input.required-info--show.mb-2(type="email" required placeholder="Email")
+                            .required-input--info
+                                .required-input--submit(data-custom-modal="#custom-mobile-code--order") Подтвердить Email
                         .main-input--wrap.w-100.mb-30.lk-input-wrap.input-wrap-address
                             label Адрес
                             .lk-input-input
@@ -39,10 +44,16 @@ section.section1.section-order-out
                             input.main-input(type="text" required)
                         .main-input--wrap.w-48
                             label Телефон
-                            input.main-input(type="tel" data-mask="+7 (000) 000 00 00" required)
+                            input.main-input.required-info--show(type="tel" data-mask="+7 (000) 000 00 00" required)
+                            .required-input--info
+                                .required-input--submit(data-toggle="modal" data-target="#popup-code-order") Подтвердить
+                                .required-input--retry(data-toggle="modal" data-target="#popup-code-submit") Отправить повторно
                         .main-input--wrap.w-48
                             label E-Mail
-                            input.main-input(type="email" required)
+                            input.main-input.required-info--show(type="email" required)
+                            .required-input--info
+                                .required-input--submit(data-toggle="modal" data-target="#popup-code-order") Подтвердить электронную почту
+                                //.required-input--retry Отправить повторно
                         .main-input--wrap.w-100.mb-30.lk-input-wrap.input-wrap-address
                             label Адрес
                             .lk-input-input
@@ -66,13 +77,15 @@ section.section1.section-order-out
                         .section-title--wrap.justify-content-between
                             .section-title.mb-20 Доставка
                         .order-tabs
-                            .order-tab.w-270.active(data-order-tab="order-fast")
+                            .order-tab.active(data-order-tab="order-fast")
                                 .order-tab-dot
                                 .order-tab-name Как можно быстрее
-                            .order-tab.w-270(data-order-tab="order-time")
+                            .order-tab(data-order-tab="order-time")
                                 .order-tab-dot
                                 .order-tab-name К определенному времени
-
+                            .order-tab(data-order-tab="order-to-time")
+                                .order-tab-dot
+                                .order-tab-name Переодическая
                         .order-time-block
                             .order-tab-content.order-fast.active
 
@@ -90,10 +103,81 @@ section.section1.section-order-out
                                             input.order-input(type="time" data-mask="00:00")
                                             .order-input--icon.time-icon
                                                 +icon('clock2')
-                                .order-checkbox-everyday
-                                    .order-checkbox-everyday--check
-                                    input(type="checkbox")
-                                    span Ежедневная доставка
+
+                            .order-tab-content.order-to-time
+                                .order-day--wrap__list
+                                    .order-day--wrap
+                                        .order-day--check__item
+                                            .order-day--check__wrap
+                                                .order-day--check
+                                                    +icon('check')
+                                                .order-day--name Понедельник
+                                            .order-input--wrap
+                                                .order-input-block
+                                                    input.order-input(type="time" data-mask="00:00")
+                                                    .order-input--icon.time-icon
+                                                        +icon('clock2')
+                                        .order-day--check__item
+                                            .order-day--check__wrap
+                                                .order-day--check
+                                                    +icon('check')
+                                                .order-day--name Вторник
+                                            .order-input--wrap
+                                                .order-input-block
+                                                    input.order-input(type="time" data-mask="00:00")
+                                                    .order-input--icon.time-icon
+                                                        +icon('clock2')
+                                        .order-day--check__item
+                                            .order-day--check__wrap
+                                                .order-day--check
+                                                    +icon('check')
+                                                .order-day--name Среда
+                                            .order-input--wrap
+                                                .order-input-block
+                                                    input.order-input(type="time" data-mask="00:00")
+                                                    .order-input--icon.time-icon
+                                                        +icon('clock2')
+                                        .order-day--check__item
+                                            .order-day--check__wrap
+                                                .order-day--check
+                                                    +icon('check')
+                                                .order-day--name Четверг
+                                            .order-input--wrap
+                                                .order-input-block
+                                                    input.order-input(type="time" data-mask="00:00")
+                                                    .order-input--icon.time-icon
+                                                        +icon('clock2')
+                                        .order-day--check__item
+                                            .order-day--check__wrap
+                                                .order-day--check
+                                                    +icon('check')
+                                                .order-day--name Пятница
+                                            .order-input--wrap
+                                                .order-input-block
+                                                    input.order-input(type="time" data-mask="00:00")
+                                                    .order-input--icon.time-icon
+                                                        +icon('clock2')
+                                    .order-day--wrap
+                                        .order-day--check__item
+                                            .order-day--check__wrap
+                                                .order-day--check
+                                                    +icon('check')
+                                                .order-day--name.color-red Суббота
+                                            .order-input--wrap
+                                                .order-input-block
+                                                    input.order-input(type="time" data-mask="00:00")
+                                                    .order-input--icon.time-icon
+                                                        +icon('clock2')
+                                        .order-day--check__item
+                                            .order-day--check__wrap
+                                                .order-day--check
+                                                    +icon('check')
+                                                .order-day--name.color-red Воскресенье
+                                            .order-input--wrap
+                                                .order-input-block
+                                                    input.order-input(type="time" data-mask="00:00")
+                                                    .order-input--icon.time-icon
+                                                        +icon('clock2')
                     .order-out-block
                         .section-title--wrap.justify-content-between
                             .section-title.mb-20 Оплата
@@ -148,4 +232,4 @@ section.section1.section-order-out
                             .lanch-components--out--wrap
                                 .lanch-components--out Итого:
                                 .lanch-components--out__price 537 ₽
-                            .main-button Оформить заказ
+                            button.main-button(type="submit") Оформить заказ

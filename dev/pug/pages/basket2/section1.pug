@@ -13,7 +13,7 @@ section.section1.section-basket
                         .header-mini-basket__right
                             .basket-product--count
                                 .basket-product--minus -
-                                input.basket-product--input(type="text" value="1" min="1"  readonly)
+                                input.basket-product--input(type="text" value="1" data-min="1"  readonly)
                                 .basket-product--plus +
                             .header-mini-basket__right__attr
                                 .header-mini-basket__price 58 ₽
@@ -21,7 +21,10 @@ section.section1.section-basket
                                     +icon('delete')
                 .basket-promo
                     .basket-promo--wrap
-                        input.basket-promo-input(type="text" placeholder="Введите промокод")
+                        .basket-promo--info
+                            input.basket-promo-input(type="text" placeholder="Введите промокод")
+                            .basket-promo--item__name.promo-error Промокод wintr20 не найден
+
                         button.basket-promo-submit(type="submit") Применить
                     .create-theme Создать шаблон
             .col-xl-4.col-lg-4.col-md-6.col-sm-12.basket-out.pr-0

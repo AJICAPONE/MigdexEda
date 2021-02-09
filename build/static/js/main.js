@@ -32,6 +32,7 @@ $(document).ready(function () {
 
     $(".yakor").click( function (event) {
         event.preventDefault();
+        event.preventDefault();
         var header_h = $('header').height();
         var id  = $(this).attr('data-yakor'),
             top = $(id).offset().top - header_h;
@@ -93,10 +94,10 @@ $(document).ready(function () {
 
         if ($(window).scrollTop() > 90) {
             $('header').addClass('header-fix');
-            $('.footer-mobile-card-lanch-fixed').addClass('active');
+            $('.footer-mobile-card-lanch-fixed,.footer-planwet--order').addClass('active');
         } else {
             $('header').removeClass('header-fix');
-            $('.footer-mobile-card-lanch-fixed').removeClass('active');
+            $('.footer-mobile-card-lanch-fixed,.footer-planwet--order').removeClass('active');
         }
     }
 
@@ -818,45 +819,6 @@ $(document).ready(function () {
         $(this).toggleClass('active');
     });
 
-    // Фильтр цена
-    $(function () {
-        $('#filter-slider').slider({
-            animate: true,
-            range: true,
-            min: 300,
-            max: 1000000,
-            values: [ 300, 1000000 ],
-            slide: function(event, ui) {
-
-                $('.ui-slider-handle:eq(0) .price-range-min').html(ui.values[ 0 ]);
-                $('.ui-slider-handle:eq(1) .price-range-max').html(ui.values[ 1 ]);
-                $('.price-range-both').html('<i>' + ui.values[ 0 ] + ' - </i>' + ui.values[ 1 ] );
-                // $('#filter-dot-slide1').val(ui.values[0]);
-                // $('#filter-dot-slide2').val(ui.values[1]);
-                $('#hidden1').val(ui.values[0]);
-                $('#hidden2').val(ui.values[1]);
-
-
-            },
-        });
-
-        $("input.sliders-filters").change(function() {
-            var $this = $(this);
-            $("#filter-slider").slider("values", $this.data("index"), $this.val());
-        });
-
-        var min = $("#filter-slider").slider( "option", "min" );
-        var max = $("#filter-slider").slider( "option", "max" );
-        $(".min-values").text(min);
-        $(".max-values").text(max);
-
-        $('#price-reset').click(function () {
-            $('#hidden1').val('');
-            $('#hidden2').val('');
-        });
-
-    });
-    $( ".ui-slider-handle" ).draggable({ axis: "x" });
 
     $('.mobile-lanch-basket--comp').click(function () {
        $(this).toggleClass('active');
@@ -1108,6 +1070,13 @@ $(document).ready(function () {
        }
 
     });
+    $('.required-info--show').on('change',function () {
+       $(this).next().addClass('active');
+    });
+    $('.order-day--check__wrap').click(function () {
+       $(this).toggleClass('checked');
+    });
+
 
 
 

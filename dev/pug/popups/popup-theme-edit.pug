@@ -1,5 +1,5 @@
-#popup-theme-edit.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true')
-    form.modal-dialog.modal-dialog-centered.mw-630(role='document')
+#popup-theme-edit.modal.fade(tabindex='-1' role='dialog' aria-hidden='true')
+    form.modal-dialog.modal-dialog-centered.mw-630
         .modal-content.popup-content
             .popup-header.modal-header.pb-0
                 .popup-header--close__wrap
@@ -17,7 +17,7 @@
                         .header-mini-basket__right
                             .basket-product--count
                                 .basket-product--minus -
-                                input.basket-product--input(type="text" value="1" min="1"  readonly)
+                                input.basket-product--input(type="text" value="1" data-min="1"  readonly)
                                 .basket-product--plus +
                             .header-mini-basket__right__attr
                                 .header-mini-basket__price 325 ₽
@@ -30,7 +30,7 @@
                         .header-mini-basket__right
                             .basket-product--count
                                 .basket-product--minus -
-                                input.basket-product--input(type="text" value="1" min="1"  readonly)
+                                input.basket-product--input(type="text" value="1" data-min="1"  readonly)
                                 .basket-product--plus +
                             .header-mini-basket__right__attr
                                 .header-mini-basket__price 58 ₽
@@ -43,7 +43,7 @@
                         .header-mini-basket__right
                             .basket-product--count
                                 .basket-product--minus -
-                                input.basket-product--input(type="text" value="1" min="1"  readonly)
+                                input.basket-product--input(type="text" value="1" data-min="1"  readonly)
                                 .basket-product--plus +
                             .header-mini-basket__right__attr
                                 .header-mini-basket__price 58 ₽

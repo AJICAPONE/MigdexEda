@@ -1,5 +1,5 @@
-#popup-one-click.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true')
-    form.modal-dialog.modal-dialog-centered(role='document')
+#popup-one-click.modal.fade(tabindex='-1' role='dialog' aria-hidden='true')
+    form.modal-dialog.modal-dialog-centered
         .modal-content.popup-content
             .popup-header.modal-header.pb-0
                 .popup-header--close__wrap
@@ -15,6 +15,9 @@
                 .popup-input--wrapper
                     label Телефон:
                     input.popup-input(type="tel" data-mask="+7 (000) 000 00 00")
+                .popup-input--wrapper
+                    label Адрес
+                    input.popup-input(type="text")
                 .popup-input--wrapper
                     label Комментарий к заказу:
                     textarea.popup-textarea(cols="5" rows="4")

@@ -1,0 +1,109 @@
+include ../mixins
+block variables
+
+doctype html
+html(lang="ru-RU")
+    head
+        meta(charset="utf-8")
+        title #{title}
+        meta(http-equiv='X-UA-Compatible', content="IE = edge")
+        meta(name="viewport" content="width=device-width,initial-scale=1")
+        meta(name="keywords" content="")
+        link(rel="stylesheet" type='text/css' href="static/css/main.css")
+        link(rel="preload" href="static/fonts/Oswald-Medium.woff2" as="font" type="font/woff2" crossorigin)
+        link(rel="preload" href="static/fonts/Oswald-SemiBold.woff2" as="font" type="font/woff2" crossorigin)
+        link(rel="preload" href="static/fonts/Oswald-Light.woff2" as="font" type="font/woff2" crossorigin)
+        link(rel="preload" href="static/fonts/Oswald-Regular.woff2" as="font" type="font/woff2" crossorigin)
+        link(rel="preload" href="static/fonts/Oswald-Bold.woff2" as="font" type="font/woff2" crossorigin)
+        link(rel="preload" href="static/fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin)
+        link(rel="preload" href="static/fonts/Roboto-Light.woff2" as="font" type="font/woff2" crossorigin)
+        link(rel="preload" href="static/fonts/Roboto-Medium.woff2" as="font" type="font/woff2" crossorigin)
+        link(rel="preload" href="static/fonts/Roboto-Bold.woff2" as="font" type="font/woff2" crossorigin)
+        link(rel="preload" href="static/fonts/Roboto-Black.woff2" as="font" type="font/woff2" crossorigin)
+        link(rel="preload" href="static/fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin)
+        link(rel="preload" href="static/fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin)
+        link(rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css")
+    body(class=pageClass)
+        .wrapper
+            include ../modules/header
+            include ../modules/planwet-fixed
+            .close-mobile--popups
+            .content
+                block content
+            include ../modules/footer-basket
+            include ../modules/footer
+
+            .popups
+                include ../popups/popup-auth
+                include ../popups/popup-reg
+                include ../popups/popup-code
+                include ../popups/popup-callback
+                include ../popups/popup-add-review
+                include ../popups/popup-call-sub
+                include ../popups/popup-call-sub2
+                include ../popups/popup-call-error
+            .popups-mobile
+                include ../popups-mobile/popup-auth
+                include ../popups-mobile/popup-reg
+                include ../popups-mobile/popup-code
+                include ../popups-mobile/popup-callback
+                include ../popups-mobile/popup-call-sub
+                include ../popups-mobile/popup-call-sub2
+                include ../popups-mobile/popup-call-error
+                include ../popups-mobile/popup-mini-basket
+                include ../popups-mobile/popup-lanch-order
+                include ../popups-mobile/popup-add-review
+                include ../popups-mobile/popup-filter
+
+        script(src="static/js/jquery.min.js")
+        script(src="static/js/libs.min.js")
+        script(src="static/js/main.js")
+        script(src="static/js/sliders.js")
+        script(src="static/js/jquery.hoverIntent.min.js")
+        script(src="static/js/jquery.simplePagination.js")
+        script(src="static/js/jquery-ui.js")
+        script(src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js")
+        script(src="static/js/jquery.animateNumber.js")
+        script.
+            $(document).ready(function () {
+                // Фильтр цена
+                $(function () {
+                    $('#filter-slider').slider({
+                        animate: true,
+                        range: true,
+                        min: 300,
+                        max: 1000000,
+                        values: [300, 1000000],
+                        slide: function (event, ui) {
+
+                            $('.ui-slider-handle:eq(0) .price-range-min').html(ui.values[0]);
+                            $('.ui-slider-handle:eq(1) .price-range-max').html(ui.values[1]);
+                            $('.price-range-both').html('<i>' + ui.values[0] + ' - </i>' + ui.values[1]);
+                            // $('#filter-dot-slide1').val(ui.values[0]);
+                            // $('#filter-dot-slide2').val(ui.values[1]);
+                            $('#hidden1').val(ui.values[0]);
+                            $('#hidden2').val(ui.values[1]);
+
+
+                        },
+                    });
+
+                    $("input.sliders-filters").change(function () {
+                        var $this = $(this);
+                        $("#filter-slider").slider("values", $this.data("index"), $this.val());
+                    });
+
+                    var min = $("#filter-slider").slider("option", "min");
+                    var max = $("#filter-slider").slider("option", "max");
+                    $(".min-values").text(min);
+                    $(".max-values").text(max);
+
+                    $('#price-reset').click(function () {
+                        $('#hidden1').val('');
+                        $('#hidden2').val('');
+                    });
+
+                });
+                $(".ui-slider-handle").draggable({axis: "x"});
+            });
+        block script

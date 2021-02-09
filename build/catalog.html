@@ -20,8 +20,6 @@
     <link rel="preload" href="static/fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="static/fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=&lt;5ff43003-e2a2-4431-8031-44e816cd9630&gt;&amp;lang=ru_RU"></script>
   </head>
   <body class="catalog-page other-page">
     <div class="wrapper">
@@ -66,7 +64,7 @@
                           <div class="header-mini-basket__right">
                             <div class="basket-product--count">
                               <div class="basket-product--minus">-</div>
-                              <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                              <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                               <div class="basket-product--plus">+</div>
                             </div>
                             <div class="header-mini-basket__right__attr">
@@ -87,7 +85,7 @@
                           <div class="header-mini-basket__right">
                             <div class="basket-product--count">
                               <div class="basket-product--minus">-</div>
-                              <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                              <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                               <div class="basket-product--plus">+</div>
                             </div>
                             <div class="header-mini-basket__right__attr">
@@ -140,7 +138,7 @@
                       <div class="main-button-transparent max-content">Заказать</div>
                       <div class="basket-product--count">
                         <div class="basket-product--minus">-</div>
-                        <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                        <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                         <div class="basket-product--plus">+</div>
                       </div>
                     </div>
@@ -181,7 +179,7 @@
                   </div>
                   <div class="product-basket-product--count">
                     <div class="product-basket-product--minus">-</div>
-                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                     <div class="product-basket-product--plus">+</div>
                   </div>
                 </div>
@@ -193,6 +191,10 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="footer-planwet--order footer-planwet--order--mob">
+          <div class="footer-planwet--order__price">Итого: 632 ₽</div>
+          <div class="footer-planwet--order__button">Оформить заказ</div>
         </div>
       </header>
       <div class="tablet-menu-sandwich">
@@ -212,41 +214,53 @@
               <div class="nav-sidebar-menu--item--wrap">
                 <div class="nav-sidebar-menu--item--title">Личный кабинет</div>
               </div>
-              <ul class="nav-sidebar-menu--list--depth2"><a class="nav-sidebar-menu--item--depth2" href="/">Личные данные</a><a class="nav-sidebar-menu--item--depth2" href="/">Адреса</a><a class="nav-sidebar-menu--item--depth2" href="/">Мои заказы</a><a class="nav-sidebar-menu--item--depth2" href="/">Подписка</a><a class="nav-sidebar-menu--item--depth2" href="/">Шаблоны</a></ul>
-            </li><a class="nav-sidebar-menu--item" href="/">
-              <div class="nav-sidebar-menu--item--wrap">
-                <div class="nav-sidebar-menu--item--title">О нас</div>
-              </div></a>
+              <ul class="nav-sidebar-menu--list--depth2">
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Личные данные</a></li>
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Адреса</a></li>
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Мои заказы</a></li>
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Подписка</a></li>
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Шаблоны</a></li>
+              </ul>
+            </li>
+            <li class="nav-sidebar-menu--item"><a href="/">
+                <div class="nav-sidebar-menu--item--wrap">
+                  <div class="nav-sidebar-menu--item--title">О нас</div>
+                </div></a></li>
             <li class="nav-sidebar-menu--item">
               <div class="nav-sidebar-menu--item--wrap">
                 <div class="nav-sidebar-menu--item--title">Меню</div>
               </div>
-              <ul class="nav-sidebar-menu--list--depth2"><a class="nav-sidebar-menu--item--depth2 nav-sidebar-menu--depth2--link" href="/">
-                  <div class="nav-sidebar-menu--item--depth2--icon">
-                    <svg class="icon icon-hinkal ">
-                      <use xlink:href="static/img/svg/symbol/sprite.svg#hinkal"></use>
-                    </svg>
-                  </div><span>Хинкали</span></a><a class="nav-sidebar-menu--item--depth2 nav-sidebar-menu--depth2--link" href="/">
-                  <div class="nav-sidebar-menu--item--depth2--icon">
-                    <svg class="icon icon-chebur ">
-                      <use xlink:href="static/img/svg/symbol/sprite.svg#chebur"></use>
-                    </svg>
-                  </div><span>Чебуреки</span></a><a class="nav-sidebar-menu--item--depth2 nav-sidebar-menu--depth2--link" href="/">
-                  <div class="nav-sidebar-menu--item--depth2--icon">
-                    <svg class="icon icon-manti ">
-                      <use xlink:href="static/img/svg/symbol/sprite.svg#manti"></use>
-                    </svg>
-                  </div><span>Манты</span></a><a class="nav-sidebar-menu--item--depth2 nav-sidebar-menu--depth2--link" href="/">
-                  <div class="nav-sidebar-menu--item--depth2--icon">
-                    <svg class="icon icon-hacha ">
-                      <use xlink:href="static/img/svg/symbol/sprite.svg#hacha"></use>
-                    </svg>
-                  </div><span>Хачапури</span></a><a class="nav-sidebar-menu--item--depth2 nav-sidebar-menu--depth2--link" href="/">
-                  <div class="nav-sidebar-menu--item--depth2--icon">
-                    <svg class="icon icon-samsa ">
-                      <use xlink:href="static/img/svg/symbol/sprite.svg#samsa"></use>
-                    </svg>
-                  </div><span>Самса</span></a>
+              <ul class="nav-sidebar-menu--list--depth2">
+                <li class="nav-sidebar-menu--item--depth2 nav-sidebar-menu--depth2--link"><a href="/">
+                    <div class="nav-sidebar-menu--item--depth2--icon">
+                      <svg class="icon icon-hinkal ">
+                        <use xlink:href="static/img/svg/symbol/sprite.svg#hinkal"></use>
+                      </svg>
+                    </div><span>Хинкали</span></a></li>
+                <li class="nav-sidebar-menu--item--depth2 nav-sidebar-menu--depth2--link"><a href="/">
+                    <div class="nav-sidebar-menu--item--depth2--icon">
+                      <svg class="icon icon-chebur ">
+                        <use xlink:href="static/img/svg/symbol/sprite.svg#chebur"></use>
+                      </svg>
+                    </div><span>Чебуреки</span></a></li>
+                <li class="nav-sidebar-menu--item--depth2 nav-sidebar-menu--depth2--link"><a href="/">
+                    <div class="nav-sidebar-menu--item--depth2--icon">
+                      <svg class="icon icon-manti ">
+                        <use xlink:href="static/img/svg/symbol/sprite.svg#manti"></use>
+                      </svg>
+                    </div><span>Манты</span></a></li>
+                <li class="nav-sidebar-menu--item--depth2 nav-sidebar-menu--depth2--link"><a href="/">
+                    <div class="nav-sidebar-menu--item--depth2--icon">
+                      <svg class="icon icon-hacha ">
+                        <use xlink:href="static/img/svg/symbol/sprite.svg#hacha"></use>
+                      </svg>
+                    </div><span>Хачапури</span></a></li>
+                <li class="nav-sidebar-menu--item--depth2 nav-sidebar-menu--depth2--link"><a href="/">
+                    <div class="nav-sidebar-menu--item--depth2--icon">
+                      <svg class="icon icon-samsa ">
+                        <use xlink:href="static/img/svg/symbol/sprite.svg#samsa"></use>
+                      </svg>
+                    </div><span>Самса</span></a></li>
                 <li class="nav-sidebar-menu--item--depth2">
                   <div class="nav-sidebar-menu--item--depth2--wrap">
                     <div class="nav-sidebar-menu--item--depth2--icon">
@@ -255,62 +269,110 @@
                       </svg>
                     </div><span>Пирог</span>
                   </div>
-                  <ul class="nav-sidebar-menu--list--depth3"><a class="nav-sidebar-menu--item--depth3" href="/">Осетинские пироги</a><a class="nav-sidebar-menu--item--depth3" href="/">Сванский кубдари</a><a class="nav-sidebar-menu--item--depth3" href="/">Хачапури на сковороде</a><a class="nav-sidebar-menu--item--depth3" href="/">Чепалгаш с картофелем</a><a class="nav-sidebar-menu--item--depth3" href="/">Хадурджин с фасолью</a></ul>
-                </li><a class="nav-sidebar-menu--item--depth2 nav-sidebar-menu--depth2--link" href="/">
-                  <div class="nav-sidebar-menu--item--depth2--icon">
-                    <svg class="icon icon-desert ">
-                      <use xlink:href="static/img/svg/symbol/sprite.svg#desert"></use>
-                    </svg>
-                  </div><span>Десерты</span></a><a class="nav-sidebar-menu--item--depth2 nav-sidebar-menu--depth2--link" href="/">
-                  <div class="nav-sidebar-menu--item--depth2--icon">
-                    <svg class="icon icon-zakus ">
-                      <use xlink:href="static/img/svg/symbol/sprite.svg#zakus"></use>
-                    </svg>
-                  </div><span>Закуски</span></a><a class="nav-sidebar-menu--item--depth2 nav-sidebar-menu--depth2--link" href="/">
-                  <div class="nav-sidebar-menu--item--depth2--icon">
-                    <svg class="icon icon-drinks ">
-                      <use xlink:href="static/img/svg/symbol/sprite.svg#drinks"></use>
-                    </svg>
-                  </div><span>Напитки</span></a>
+                  <ul class="nav-sidebar-menu--list--depth3">
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Осетинские пироги</a></li>
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Сванский кубдари</a></li>
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Хачапури на сковороде</a></li>
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Чепалгаш с картофелем</a></li>
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Хадурджин с фасолью</a></li>
+                  </ul>
+                </li>
+                <li class="nav-sidebar-menu--item--depth2 nav-sidebar-menu--depth2--link"><a href="/">
+                    <div class="nav-sidebar-menu--item--depth2--icon">
+                      <svg class="icon icon-desert ">
+                        <use xlink:href="static/img/svg/symbol/sprite.svg#desert"></use>
+                      </svg>
+                    </div><span>Десерты</span></a></li>
+                <li class="nav-sidebar-menu--item--depth2 nav-sidebar-menu--depth2--link"><a href="/">
+                    <div class="nav-sidebar-menu--item--depth2--icon">
+                      <svg class="icon icon-zakus ">
+                        <use xlink:href="static/img/svg/symbol/sprite.svg#zakus"></use>
+                      </svg>
+                    </div><span>Закуски</span></a></li>
+                <li class="nav-sidebar-menu--item--depth2 nav-sidebar-menu--depth2--link"><a href="/">
+                    <div class="nav-sidebar-menu--item--depth2--icon">
+                      <svg class="icon icon-drinks ">
+                        <use xlink:href="static/img/svg/symbol/sprite.svg#drinks"></use>
+                      </svg>
+                    </div><span>Напитки</span></a></li>
               </ul>
             </li>
             <li class="nav-sidebar-menu--item">
               <div class="nav-sidebar-menu--item--wrap">
                 <div class="nav-sidebar-menu--item--title">Доставка и оплата</div>
               </div>
-              <ul class="nav-sidebar-menu--list--depth2"><a class="nav-sidebar-menu--item--depth2" href="/">Рабочий стол</a><a class="nav-sidebar-menu--item--depth2" href="/">Обращения</a><a class="nav-sidebar-menu--item--depth2" href="/">Графики</a>
+              <ul class="nav-sidebar-menu--list--depth2">
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Рабочий стол</a></li>
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Обращения</a></li>
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Графики</a></li>
                 <li class="nav-sidebar-menu--item--depth2">
                   <div class="nav-sidebar-menu--item--depth2--wrap">
                     <div class="nav-sidebar-menu--item--title2">3</div>
                   </div>
-                  <ul class="nav-sidebar-menu--list--depth3"><a class="nav-sidebar-menu--item--depth3" href="/">Категории</a><a class="nav-sidebar-menu--item--depth3" href="/">Критичность</a><a class="nav-sidebar-menu--item--depth3" href="/">Статусы</a><a class="nav-sidebar-menu--item--depth3" href="/">Оценки ответов</a><a class="nav-sidebar-menu--item--depth3" href="/">Сложность</a><a class="nav-sidebar-menu--item--depth3" href="/">Быстрые ответы</a></ul>
-                </li><a class="nav-sidebar-menu--item--depth2" href="/">Уровни поддержки</a><a class="nav-sidebar-menu--item--depth2" href="/">Расписание</a><a class="nav-sidebar-menu--item--depth2" href="/">Группы</a>
+                  <ul class="nav-sidebar-menu--list--depth3">
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Категории</a></li>
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Критичность</a></li>
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Статусы</a></li>
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Оценки ответов</a></li>
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Сложность</a></li>
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Быстрые ответы</a></li>
+                  </ul>
+                </li>
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Уровни поддержки</a></li>
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Расписание</a></li>
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Группы</a></li>
               </ul>
             </li>
             <li class="nav-sidebar-menu--item">
               <div class="nav-sidebar-menu--item--wrap">
                 <div class="nav-sidebar-menu--item--title">Акции</div>
               </div>
-              <ul class="nav-sidebar-menu--list--depth2"><a class="nav-sidebar-menu--item--depth2" href="/">Рабочий стол</a><a class="nav-sidebar-menu--item--depth2" href="/">Обращения</a><a class="nav-sidebar-menu--item--depth2" href="/">Графики</a>
+              <ul class="nav-sidebar-menu--list--depth2">
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Рабочий стол</a></li>
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Обращения</a></li>
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Графики</a></li>
                 <li class="nav-sidebar-menu--item--depth2">
                   <div class="nav-sidebar-menu--item--depth2--wrap">
                     <div class="nav-sidebar-menu--item--title2">3</div>
                   </div>
-                  <ul class="nav-sidebar-menu--list--depth3"><a class="nav-sidebar-menu--item--depth3" href="/">Категории</a><a class="nav-sidebar-menu--item--depth3" href="/">Критичность</a><a class="nav-sidebar-menu--item--depth3" href="/">Статусы</a><a class="nav-sidebar-menu--item--depth3" href="/">Оценки ответов</a><a class="nav-sidebar-menu--item--depth3" href="/">Сложность</a><a class="nav-sidebar-menu--item--depth3" href="/">Быстрые ответы</a></ul>
-                </li><a class="nav-sidebar-menu--item--depth2" href="/">Уровни поддержки</a><a class="nav-sidebar-menu--item--depth2" href="/">Расписание</a><a class="nav-sidebar-menu--item--depth2" href="/">Группы</a>
+                  <ul class="nav-sidebar-menu--list--depth3">
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Категории</a></li>
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Критичность</a></li>
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Статусы</a></li>
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Оценки ответов</a></li>
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Сложность</a></li>
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Быстрые ответы</a></li>
+                  </ul>
+                </li>
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Уровни поддержки</a></li>
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Расписание</a></li>
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Группы</a></li>
               </ul>
             </li>
             <li class="nav-sidebar-menu--item">
               <div class="nav-sidebar-menu--item--wrap">
                 <div class="nav-sidebar-menu--item--title">Контакты</div>
               </div>
-              <ul class="nav-sidebar-menu--list--depth2"><a class="nav-sidebar-menu--item--depth2" href="/">Рабочий стол</a><a class="nav-sidebar-menu--item--depth2" href="/">Обращения</a><a class="nav-sidebar-menu--item--depth2" href="/">Графики</a>
+              <ul class="nav-sidebar-menu--list--depth2">
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Рабочий стол</a></li>
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Обращения</a></li>
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Графики</a></li>
                 <li class="nav-sidebar-menu--item--depth2">
                   <div class="nav-sidebar-menu--item--depth2--wrap">
                     <div class="nav-sidebar-menu--item--title2">3</div>
                   </div>
-                  <ul class="nav-sidebar-menu--list--depth3"><a class="nav-sidebar-menu--item--depth3" href="/">Категории</a><a class="nav-sidebar-menu--item--depth3" href="/">Критичность</a><a class="nav-sidebar-menu--item--depth3" href="/">Статусы</a><a class="nav-sidebar-menu--item--depth3" href="/">Оценки ответов</a><a class="nav-sidebar-menu--item--depth3" href="/">Сложность</a><a class="nav-sidebar-menu--item--depth3" href="/">Быстрые ответы</a></ul>
-                </li><a class="nav-sidebar-menu--item--depth2" href="/">Уровни поддержки</a><a class="nav-sidebar-menu--item--depth2" href="/">Расписание</a><a class="nav-sidebar-menu--item--depth2" href="/">Группы</a>
+                  <ul class="nav-sidebar-menu--list--depth3">
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Категории</a></li>
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Критичность</a></li>
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Статусы</a></li>
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Оценки ответов</a></li>
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Сложность</a></li>
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Быстрые ответы</a></li>
+                  </ul>
+                </li>
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Уровни поддержки</a></li>
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Расписание</a></li>
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Группы</a></li>
               </ul>
             </li>
           </ul>
@@ -328,19 +390,24 @@
           </div>
         </div>
         <div class="tablet-menu--content">
-          <ul class="nav-sidebar-menu--list"><a class="nav-sidebar-menu--item" href="/">
-              <div class="nav-sidebar-menu--item--wrap">
-                <div class="nav-sidebar-menu--item--title">О нас</div>
-              </div></a><a class="nav-sidebar-menu--item" href="/">
-              <div class="nav-sidebar-menu--item--wrap">
-                <div class="nav-sidebar-menu--item--title">Доставка и оплата</div>
-              </div></a><a class="nav-sidebar-menu--item" href="/">
-              <div class="nav-sidebar-menu--item--wrap">
-                <div class="nav-sidebar-menu--item--title">Контакты</div>
-              </div></a><a class="nav-sidebar-menu--item" href="/">
-              <div class="nav-sidebar-menu--item--wrap">
-                <div class="nav-sidebar-menu--item--title">FAQ</div>
-              </div></a></ul>
+          <ul class="nav-sidebar-menu--list">
+            <li class="nav-sidebar-menu--item"><a href="/">
+                <div class="nav-sidebar-menu--item--wrap">
+                  <div class="nav-sidebar-menu--item--title">О нас</div>
+                </div></a></li>
+            <li class="nav-sidebar-menu--item"><a href="/">
+                <div class="nav-sidebar-menu--item--wrap">
+                  <div class="nav-sidebar-menu--item--title">Доставка и оплата</div>
+                </div></a></li>
+            <li class="nav-sidebar-menu--item"><a href="/">
+                <div class="nav-sidebar-menu--item--wrap">
+                  <div class="nav-sidebar-menu--item--title">Контакты</div>
+                </div></a></li>
+            <li class="nav-sidebar-menu--item"><a href="/">
+                <div class="nav-sidebar-menu--item--wrap">
+                  <div class="nav-sidebar-menu--item--title">FAQ</div>
+                </div></a></li>
+          </ul>
         </div>
       </div>
       <div class="close-mobile--popups"></div>
@@ -354,13 +421,15 @@
           <div class="container">
             <div class="catalog-title--wrap">
               <div class="catalog-title">Хинкали</div>
-              <div class="catalog-menu-tabs">
-                <div class="catalog-menu-tab active">Хинкали калакури</div>
-                <div class="catalog-menu-tab">Хинкали мтиулури</div>
-                <div class="catalog-menu-tab">Хинкали казбегури</div>
-                <div class="catalog-menu-tab">Хинкали калакури</div>
-                <div class="catalog-menu-tab">Хинкали калакури</div>
-                <div class="catalog-menu-tab">Хинкали калакури</div>
+              <div class="catalog-menu-tabs catalog-menu-tab--container swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="catalog-menu-tab swiper-slide active">Хинкали калакури</div>
+                  <div class="catalog-menu-tab swiper-slide">Хинкали мтиулури</div>
+                  <div class="catalog-menu-tab swiper-slide">Хинкали казбегури</div>
+                  <div class="catalog-menu-tab swiper-slide">Хинкали калакури</div>
+                  <div class="catalog-menu-tab swiper-slide">Хинкали калакури</div>
+                  <div class="catalog-menu-tab swiper-slide">Хинкали калакури</div>
+                </div>
               </div>
             </div>
           </div>
@@ -417,10 +486,10 @@
                         <use xlink:href="static/img/svg/symbol/sprite.svg#arrow-down"></use>
                       </svg>
                     </div>
-                    <div class="catalog-sort-select--list">
+                    <ul class="catalog-sort-select--list">
                       <li class="catalog-sort-select--item">по дате</li>
                       <li class="catalog-sort-select--item">по цене</li>
-                    </div>
+                    </ul>
                   </div>
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 catalog-sort--col__sort">
@@ -434,10 +503,10 @@
                         <use xlink:href="static/img/svg/symbol/sprite.svg#arrow-down"></use>
                       </svg>
                     </div>
-                    <div class="catalog-sort-select--list">
+                    <ul class="catalog-sort-select--list">
                       <li class="catalog-sort-select--item">Японская</li>
                       <li class="catalog-sort-select--item">Китайская</li>
-                    </div>
+                    </ul>
                   </div>
                 </div>
                 <div class="col-xl-3 col-lg-6 col-md-6 catalog-sort--col__sort">
@@ -447,11 +516,11 @@
                         <use xlink:href="static/img/svg/symbol/sprite.svg#arrow-down"></use>
                       </svg>
                     </div>
-                    <div class="catalog-sort-select--list">
+                    <ul class="catalog-sort-select--list">
                       <li class="catalog-sort-select--item">Говядина</li>
                       <li class="catalog-sort-select--item">Курятина</li>
                       <li class="catalog-sort-select--item">Баранина</li>
-                    </div>
+                    </ul>
                   </div>
                 </div>
                 <div class="col-xl-3 col-lg-6 col-md-6 catalog-sort--col__sort">
@@ -461,10 +530,10 @@
                         <use xlink:href="static/img/svg/symbol/sprite.svg#arrow-down"></use>
                       </svg>
                     </div>
-                    <div class="catalog-sort-select--list">
+                    <ul class="catalog-sort-select--list">
                       <li class="catalog-sort-select--item">Любой</li>
                       <li class="catalog-sort-select--item">Любой2</li>
-                    </div>
+                    </ul>
                   </div>
                 </div>
                 <div class="col-xl-3 col-lg-6 col-md-6 catalog-sort--col__sort">
@@ -474,10 +543,10 @@
                         <use xlink:href="static/img/svg/symbol/sprite.svg#arrow-down"></use>
                       </svg>
                     </div>
-                    <div class="catalog-sort-select--list">
+                    <ul class="catalog-sort-select--list">
                       <li class="catalog-sort-select--item">Любые</li>
                       <li class="catalog-sort-select--item">Любые2</li>
-                    </div>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -485,49 +554,51 @@
                 <div class="section-container--product d-flex">
                   <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 index-menu--sidebar pl-0">
                     <div class="section-menu-sidebar--list">
-                      <div class="section-menu-sidebar--item"><img class="section-menu-sidebar--img" loading="lazy" src="/static/img/content/products/img1.png">
+                      <div class="section-menu-sidebar--item"><img class="section-menu-sidebar--img" loading="lazy" alt="pic" src="/static/img/content/products/img1.png">
                         <div class="section-menu-sidebar--name">Готовые ланчи</div>
                       </div>
-                      <div class="section-menu-sidebar--item"><img class="section-menu-sidebar--img" loading="lazy" src="/static/img/content/products/img2.png">
+                      <div class="section-menu-sidebar--item"><img class="section-menu-sidebar--img" loading="lazy" alt="pic" src="/static/img/content/products/img2.png">
                         <div class="section-menu-sidebar--name">Хинкали</div>
                       </div>
-                      <div class="section-menu-sidebar--item"><img class="section-menu-sidebar--img" loading="lazy" src="/static/img/content/products/img3.png">
+                      <div class="section-menu-sidebar--item"><img class="section-menu-sidebar--img" loading="lazy" alt="pic" src="/static/img/content/products/img3.png">
                         <div class="section-menu-sidebar--name">Чебуреки</div>
                       </div>
-                      <div class="section-menu-sidebar--item"><img class="section-menu-sidebar--img" loading="lazy" src="/static/img/content/products/img4.png">
+                      <div class="section-menu-sidebar--item"><img class="section-menu-sidebar--img" loading="lazy" alt="pic" src="/static/img/content/products/img4.png">
                         <div class="section-menu-sidebar--name">Манты</div>
                       </div>
-                      <div class="section-menu-sidebar--item"><img class="section-menu-sidebar--img" loading="lazy" src="/static/img/content/products/img5.png">
+                      <div class="section-menu-sidebar--item"><img class="section-menu-sidebar--img" loading="lazy" alt="pic" src="/static/img/content/products/img5.png">
                         <div class="section-menu-sidebar--name">Хачапури</div>
                       </div>
-                      <div class="section-menu-sidebar--item"><img class="section-menu-sidebar--img" loading="lazy" src="/static/img/content/products/img6.png">
+                      <div class="section-menu-sidebar--item"><img class="section-menu-sidebar--img" loading="lazy" alt="pic" src="/static/img/content/products/img6.png">
                         <div class="section-menu-sidebar--name">Самса</div>
                       </div>
-                      <div class="section-menu-sidebar--item"><img class="section-menu-sidebar--img" loading="lazy" src="/static/img/content/products/img7.png">
+                      <div class="section-menu-sidebar--item"><img class="section-menu-sidebar--img" loading="lazy" alt="pic" src="/static/img/content/products/img7.png">
                         <div class="section-menu-sidebar--name">Пирог</div>
                       </div>
-                      <div class="section-menu-sidebar--item"><img class="section-menu-sidebar--img" loading="lazy" src="/static/img/content/products/img8.png">
+                      <div class="section-menu-sidebar--item"><img class="section-menu-sidebar--img" loading="lazy" alt="pic" src="/static/img/content/products/img8.png">
                         <div class="section-menu-sidebar--name">Десерты</div>
                       </div>
-                      <div class="section-menu-sidebar--item"><img class="section-menu-sidebar--img" loading="lazy" src="/static/img/content/products/img9.png">
+                      <div class="section-menu-sidebar--item"><img class="section-menu-sidebar--img" loading="lazy" alt="pic" src="/static/img/content/products/img9.png">
                         <div class="section-menu-sidebar--name">Закуски</div>
                       </div>
-                      <div class="section-menu-sidebar--item"><img class="section-menu-sidebar--img" loading="lazy" src="/static/img/content/products/img10.png">
+                      <div class="section-menu-sidebar--item"><img class="section-menu-sidebar--img" loading="lazy" alt="pic" src="/static/img/content/products/img10.png">
                         <div class="section-menu-sidebar--name">Соусы</div>
                       </div>
-                      <div class="section-menu-sidebar--item"><img class="section-menu-sidebar--img" loading="lazy" src="/static/img/content/products/img11.png">
+                      <div class="section-menu-sidebar--item"><img class="section-menu-sidebar--img" loading="lazy" alt="pic" src="/static/img/content/products/img11.png">
                         <div class="section-menu-sidebar--name">Напитки</div>
                       </div>
                     </div>
                   </div>
                   <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 index-menu--content pr-0">
-                    <div class="catalog-menu-tabs">
-                      <div class="catalog-menu-tab active">Хинкали калакури</div>
-                      <div class="catalog-menu-tab">Хинкали мтиулури</div>
-                      <div class="catalog-menu-tab">Хинкали казбегури</div>
-                      <div class="catalog-menu-tab">Хинкали калакури</div>
-                      <div class="catalog-menu-tab">Хинкали калакури</div>
-                      <div class="catalog-menu-tab">Хинкали калакури</div>
+                    <div class="catalog-menu-tabs catalog-menu-tab--container swiper-container">
+                      <div class="swiper-wrapper">
+                        <div class="catalog-menu-tab swiper-slide active">Хинкали калакури</div>
+                        <div class="catalog-menu-tab swiper-slide">Хинкали мтиулури</div>
+                        <div class="catalog-menu-tab swiper-slide">Хинкали казбегури</div>
+                        <div class="catalog-menu-tab swiper-slide">Хинкали калакури</div>
+                        <div class="catalog-menu-tab swiper-slide">Хинкали калакури</div>
+                        <div class="catalog-menu-tab swiper-slide">Хинкали калакури</div>
+                      </div>
                     </div>
                     <div class="section-menu-content--list row">
                       <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 section-menu-content--col">
@@ -575,7 +646,7 @@
                                   </div>
                                   <div class="product-basket-product--count">
                                     <div class="product-basket-product--minus">-</div>
-                                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                     <div class="product-basket-product--plus">+</div>
                                   </div>
                                 </div>
@@ -615,7 +686,7 @@
                                   </div>
                                   <div class="product-basket-product--count">
                                     <div class="product-basket-product--minus">-</div>
-                                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                     <div class="product-basket-product--plus">+</div>
                                   </div>
                                 </div>
@@ -654,7 +725,7 @@
                                   </div>
                                   <div class="product-basket-product--count">
                                     <div class="product-basket-product--minus">-</div>
-                                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                     <div class="product-basket-product--plus">+</div>
                                   </div>
                                 </div>
@@ -693,7 +764,7 @@
                                   </div>
                                   <div class="product-basket-product--count">
                                     <div class="product-basket-product--minus">-</div>
-                                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                     <div class="product-basket-product--plus">+</div>
                                   </div>
                                 </div>
@@ -732,7 +803,7 @@
                                   </div>
                                   <div class="product-basket-product--count">
                                     <div class="product-basket-product--minus">-</div>
-                                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                     <div class="product-basket-product--plus">+</div>
                                   </div>
                                 </div>
@@ -771,7 +842,7 @@
                                   </div>
                                   <div class="product-basket-product--count">
                                     <div class="product-basket-product--minus">-</div>
-                                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                     <div class="product-basket-product--plus">+</div>
                                   </div>
                                 </div>
@@ -810,7 +881,7 @@
                                   </div>
                                   <div class="product-basket-product--count">
                                     <div class="product-basket-product--minus">-</div>
-                                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                     <div class="product-basket-product--plus">+</div>
                                   </div>
                                 </div>
@@ -849,7 +920,7 @@
                                   </div>
                                   <div class="product-basket-product--count">
                                     <div class="product-basket-product--minus">-</div>
-                                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                     <div class="product-basket-product--plus">+</div>
                                   </div>
                                 </div>
@@ -888,7 +959,7 @@
                                   </div>
                                   <div class="product-basket-product--count">
                                     <div class="product-basket-product--minus">-</div>
-                                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                     <div class="product-basket-product--plus">+</div>
                                   </div>
                                 </div>
@@ -927,7 +998,7 @@
                                   </div>
                                   <div class="product-basket-product--count">
                                     <div class="product-basket-product--minus">-</div>
-                                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                     <div class="product-basket-product--plus">+</div>
                                   </div>
                                 </div>
@@ -966,7 +1037,7 @@
                                   </div>
                                   <div class="product-basket-product--count">
                                     <div class="product-basket-product--minus">-</div>
-                                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                     <div class="product-basket-product--plus">+</div>
                                   </div>
                                 </div>
@@ -1005,7 +1076,7 @@
                                   </div>
                                   <div class="product-basket-product--count">
                                     <div class="product-basket-product--minus">-</div>
-                                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                     <div class="product-basket-product--plus">+</div>
                                   </div>
                                 </div>
@@ -1044,7 +1115,7 @@
                                   </div>
                                   <div class="product-basket-product--count">
                                     <div class="product-basket-product--minus">-</div>
-                                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                     <div class="product-basket-product--plus">+</div>
                                   </div>
                                 </div>
@@ -1083,7 +1154,7 @@
                                   </div>
                                   <div class="product-basket-product--count">
                                     <div class="product-basket-product--minus">-</div>
-                                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                     <div class="product-basket-product--plus">+</div>
                                   </div>
                                 </div>
@@ -1154,7 +1225,7 @@
                               </div>
                               <div class="product-basket-product--count">
                                 <div class="product-basket-product--minus">-</div>
-                                <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                 <div class="product-basket-product--plus">+</div>
                               </div>
                             </div>
@@ -1194,7 +1265,7 @@
                               </div>
                               <div class="product-basket-product--count">
                                 <div class="product-basket-product--minus">-</div>
-                                <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                 <div class="product-basket-product--plus">+</div>
                               </div>
                             </div>
@@ -1234,7 +1305,7 @@
                               </div>
                               <div class="product-basket-product--count">
                                 <div class="product-basket-product--minus">-</div>
-                                <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                 <div class="product-basket-product--plus">+</div>
                               </div>
                             </div>
@@ -1274,7 +1345,7 @@
                               </div>
                               <div class="product-basket-product--count">
                                 <div class="product-basket-product--minus">-</div>
-                                <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                 <div class="product-basket-product--plus">+</div>
                               </div>
                             </div>
@@ -1314,7 +1385,7 @@
                               </div>
                               <div class="product-basket-product--count">
                                 <div class="product-basket-product--minus">-</div>
-                                <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                 <div class="product-basket-product--plus">+</div>
                               </div>
                             </div>
@@ -1379,7 +1450,7 @@
                               </div>
                               <div class="product-basket-product--count">
                                 <div class="product-basket-product--minus">-</div>
-                                <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                 <div class="product-basket-product--plus">+</div>
                               </div>
                             </div>
@@ -1419,7 +1490,7 @@
                               </div>
                               <div class="product-basket-product--count">
                                 <div class="product-basket-product--minus">-</div>
-                                <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                 <div class="product-basket-product--plus">+</div>
                               </div>
                             </div>
@@ -1459,7 +1530,7 @@
                               </div>
                               <div class="product-basket-product--count">
                                 <div class="product-basket-product--minus">-</div>
-                                <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                 <div class="product-basket-product--plus">+</div>
                               </div>
                             </div>
@@ -1499,7 +1570,7 @@
                               </div>
                               <div class="product-basket-product--count">
                                 <div class="product-basket-product--minus">-</div>
-                                <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                 <div class="product-basket-product--plus">+</div>
                               </div>
                             </div>
@@ -1539,7 +1610,7 @@
                               </div>
                               <div class="product-basket-product--count">
                                 <div class="product-basket-product--minus">-</div>
-                                <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                 <div class="product-basket-product--plus">+</div>
                               </div>
                             </div>
@@ -1604,7 +1675,7 @@
                               </div>
                               <div class="product-basket-product--count">
                                 <div class="product-basket-product--minus">-</div>
-                                <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                 <div class="product-basket-product--plus">+</div>
                               </div>
                             </div>
@@ -1644,7 +1715,7 @@
                               </div>
                               <div class="product-basket-product--count">
                                 <div class="product-basket-product--minus">-</div>
-                                <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                 <div class="product-basket-product--plus">+</div>
                               </div>
                             </div>
@@ -1669,8 +1740,8 @@
           </div>
         </section>
         <div class="popups">
-          <div class="modal fade" id="popup-added-basket" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered mw-container" role="document">
+          <div class="modal fade" id="popup-added-basket" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered mw-container">
               <div class="modal-content popup-content">
                 <div class="popup-header modal-header pb-0">
                   <div class="popup-header--close__wrap">
@@ -2332,7 +2403,7 @@
                   <div class="popup-basket-notific swiper-container">
                     <div class="swiper-wrapper">
                       <div class="section-menu-content--col swiper-slide">
-                        <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/"><img class="section-menu-content--img__mobile" loading="lazy" src="/static/img/content/products/img10.png">
+                        <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/"><img class="section-menu-content--img__mobile" loading="lazy" alt="pic" src="/static/img/content/products/img10.png">
                             <div class="section-menu-content--item__info">
                               <div class="section-menu-content--name mb-10">Соус Томатный</div>
                               <div class="section-menu-content--desc mb-20">Пикантный соус с нежным томатным вкусом и чесноком.</div>
@@ -2351,7 +2422,7 @@
                         </div>
                       </div>
                       <div class="section-menu-content--col swiper-slide">
-                        <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/"><img class="section-menu-content--img__mobile" loading="lazy" src="/static/img/content/products/img12.png">
+                        <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/"><img class="section-menu-content--img__mobile" loading="lazy" alt="pic" src="/static/img/content/products/img12.png">
                             <div class="section-menu-content--item__info">
                               <div class="section-menu-content--name mb-10">Соус Чесночный</div>
                               <div class="section-menu-content--desc mb-20">Пикантный соус с нежным сливочно-чесночным вкусом.</div>
@@ -2370,7 +2441,7 @@
                         </div>
                       </div>
                       <div class="section-menu-content--col swiper-slide">
-                        <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/"><img class="section-menu-content--img__mobile" loading="lazy" src="/static/img/content/products/img12.png">
+                        <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/"><img class="section-menu-content--img__mobile" loading="lazy" alt="pic" src="/static/img/content/products/img12.png">
                             <div class="section-menu-content--item__info">
                               <div class="section-menu-content--name mb-10">Хинкали из баранины</div>
                               <div class="section-menu-content--desc mb-20">Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.</div>
@@ -2397,7 +2468,7 @@
                   <div class="popup-basket-notific swiper-container">
                     <div class="swiper-wrapper">
                       <div class="section-menu-content--col swiper-slide">
-                        <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/"><img class="section-menu-content--img__mobile" loading="lazy" src="/static/img/content/products/img10.png">
+                        <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/"><img class="section-menu-content--img__mobile" loading="lazy" alt="pic" src="/static/img/content/products/img10.png">
                             <div class="section-menu-content--item__info">
                               <div class="section-menu-content--name mb-10">Соус Томатный</div>
                               <div class="section-menu-content--desc mb-20">Пикантный соус с нежным томатным вкусом и чесноком.</div>
@@ -2416,7 +2487,7 @@
                         </div>
                       </div>
                       <div class="section-menu-content--col swiper-slide">
-                        <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/"><img class="section-menu-content--img__mobile" loading="lazy" src="/static/img/content/products/img12.png">
+                        <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/"><img class="section-menu-content--img__mobile" loading="lazy" alt="pic" src="/static/img/content/products/img12.png">
                             <div class="section-menu-content--item__info">
                               <div class="section-menu-content--name mb-10">Соус Чесночный</div>
                               <div class="section-menu-content--desc mb-20">Пикантный соус с нежным сливочно-чесночным вкусом.</div>
@@ -2435,7 +2506,7 @@
                         </div>
                       </div>
                       <div class="section-menu-content--col swiper-slide">
-                        <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/"><img class="section-menu-content--img__mobile" loading="lazy" src="/static/img/content/products/img12.png">
+                        <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/"><img class="section-menu-content--img__mobile" loading="lazy" alt="pic" src="/static/img/content/products/img12.png">
                             <div class="section-menu-content--item__info">
                               <div class="section-menu-content--name mb-10">Хинкали из баранины</div>
                               <div class="section-menu-content--desc mb-20">Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.</div>
@@ -2462,7 +2533,7 @@
                   <div class="popup-basket-notific swiper-container">
                     <div class="swiper-wrapper">
                       <div class="section-menu-content--col swiper-slide">
-                        <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/"><img class="section-menu-content--img__mobile" loading="lazy" src="/static/img/content/products/img10.png">
+                        <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/"><img class="section-menu-content--img__mobile" loading="lazy" alt="pic" src="/static/img/content/products/img10.png">
                             <div class="section-menu-content--item__info">
                               <div class="section-menu-content--name mb-10">Соус Томатный</div>
                               <div class="section-menu-content--desc mb-20">Пикантный соус с нежным томатным вкусом и чесноком.</div>
@@ -2481,7 +2552,7 @@
                         </div>
                       </div>
                       <div class="section-menu-content--col swiper-slide">
-                        <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/"><img class="section-menu-content--img__mobile" loading="lazy" src="/static/img/content/products/img12.png">
+                        <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/"><img class="section-menu-content--img__mobile" loading="lazy" alt="pic" src="/static/img/content/products/img12.png">
                             <div class="section-menu-content--item__info">
                               <div class="section-menu-content--name mb-10">Соус Чесночный</div>
                               <div class="section-menu-content--desc mb-20">Пикантный соус с нежным сливочно-чесночным вкусом.</div>
@@ -2500,7 +2571,7 @@
                         </div>
                       </div>
                       <div class="section-menu-content--col swiper-slide">
-                        <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/"><img class="section-menu-content--img__mobile" loading="lazy" src="/static/img/content/products/img12.png">
+                        <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/"><img class="section-menu-content--img__mobile" loading="lazy" alt="pic" src="/static/img/content/products/img12.png">
                             <div class="section-menu-content--item__info">
                               <div class="section-menu-content--name mb-10">Хинкали из баранины</div>
                               <div class="section-menu-content--desc mb-20">Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.</div>
@@ -2527,7 +2598,7 @@
                   <div class="popup-basket-notific swiper-container">
                     <div class="swiper-wrapper">
                       <div class="section-menu-content--col swiper-slide">
-                        <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/"><img class="section-menu-content--img__mobile" loading="lazy" src="/static/img/content/products/img10.png">
+                        <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/"><img class="section-menu-content--img__mobile" loading="lazy" alt="pic" src="/static/img/content/products/img10.png">
                             <div class="section-menu-content--item__info">
                               <div class="section-menu-content--name mb-10">Соус Томатный</div>
                               <div class="section-menu-content--desc mb-20">Пикантный соус с нежным томатным вкусом и чесноком.</div>
@@ -2546,7 +2617,7 @@
                         </div>
                       </div>
                       <div class="section-menu-content--col swiper-slide">
-                        <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/"><img class="section-menu-content--img__mobile" loading="lazy" src="/static/img/content/products/img12.png">
+                        <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/"><img class="section-menu-content--img__mobile" loading="lazy" alt="pic" src="/static/img/content/products/img12.png">
                             <div class="section-menu-content--item__info">
                               <div class="section-menu-content--name mb-10">Соус Чесночный</div>
                               <div class="section-menu-content--desc mb-20">Пикантный соус с нежным сливочно-чесночным вкусом.</div>
@@ -2565,7 +2636,7 @@
                         </div>
                       </div>
                       <div class="section-menu-content--col swiper-slide">
-                        <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/"><img class="section-menu-content--img__mobile" loading="lazy" src="/static/img/content/products/img12.png">
+                        <div class="section-menu-content--item"><a class="section-menu-content--item__top" href="/"><img class="section-menu-content--img__mobile" loading="lazy" alt="pic" src="/static/img/content/products/img12.png">
                             <div class="section-menu-content--item__info">
                               <div class="section-menu-content--name mb-10">Хинкали из баранины</div>
                               <div class="section-menu-content--desc mb-20">Баранина, Лук, Мясной бульон, Мука, Вода, Яйца куриные, Соль, Перец черный.</div>
@@ -2785,7 +2856,7 @@
                                 <div class="footer-basket-lanch__right">
                                   <div class="basket-product--count">
                                     <div class="basket-product--minus">-</div>
-                                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                     <div class="basket-product--plus">+</div>
                                   </div>
                                   <div class="footer-basket-lanch__right__attr">
@@ -2806,7 +2877,7 @@
                                 <div class="footer-basket-lanch__right">
                                   <div class="basket-product--count">
                                     <div class="basket-product--minus">-</div>
-                                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                     <div class="basket-product--plus">+</div>
                                   </div>
                                   <div class="footer-basket-lanch__right__attr">
@@ -2827,7 +2898,7 @@
                                 <div class="footer-basket-lanch__right">
                                   <div class="basket-product--count">
                                     <div class="basket-product--minus">-</div>
-                                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                     <div class="basket-product--plus">+</div>
                                   </div>
                                   <div class="footer-basket-lanch__right__attr">
@@ -2848,7 +2919,7 @@
                                 <div class="footer-basket-lanch__right">
                                   <div class="basket-product--count">
                                     <div class="basket-product--minus">-</div>
-                                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                     <div class="basket-product--plus">+</div>
                                   </div>
                                   <div class="footer-basket-lanch__right__attr">
@@ -2868,7 +2939,7 @@
                       <div class="footer-basket-slider--right__bottom">
                         <div class="basket-product--count">
                           <div class="basket-product--minus">-</div>
-                          <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                          <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                           <div class="basket-product--plus">+</div>
                         </div>
                       </div>
@@ -2888,7 +2959,7 @@
                       <div class="footer-basket-slider--right__bottom">
                         <div class="basket-product--count">
                           <div class="basket-product--minus">-</div>
-                          <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                          <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                           <div class="basket-product--plus">+</div>
                         </div>
                       </div>
@@ -2908,7 +2979,7 @@
                       <div class="footer-basket-slider--right__bottom">
                         <div class="basket-product--count">
                           <div class="basket-product--minus">-</div>
-                          <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                          <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                           <div class="basket-product--plus">+</div>
                         </div>
                       </div>
@@ -2928,7 +2999,7 @@
                       <div class="footer-basket-slider--right__bottom">
                         <div class="basket-product--count">
                           <div class="basket-product--minus">-</div>
-                          <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                          <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                           <div class="basket-product--plus">+</div>
                         </div>
                       </div>
@@ -2959,7 +3030,7 @@
                                 <div class="footer-basket-lanch__right">
                                   <div class="basket-product--count">
                                     <div class="basket-product--minus">-</div>
-                                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                     <div class="basket-product--plus">+</div>
                                   </div>
                                   <div class="footer-basket-lanch__right__attr">
@@ -2980,7 +3051,7 @@
                                 <div class="footer-basket-lanch__right">
                                   <div class="basket-product--count">
                                     <div class="basket-product--minus">-</div>
-                                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                     <div class="basket-product--plus">+</div>
                                   </div>
                                   <div class="footer-basket-lanch__right__attr">
@@ -3001,7 +3072,7 @@
                                 <div class="footer-basket-lanch__right">
                                   <div class="basket-product--count">
                                     <div class="basket-product--minus">-</div>
-                                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                     <div class="basket-product--plus">+</div>
                                   </div>
                                   <div class="footer-basket-lanch__right__attr">
@@ -3022,7 +3093,7 @@
                                 <div class="footer-basket-lanch__right">
                                   <div class="basket-product--count">
                                     <div class="basket-product--minus">-</div>
-                                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                     <div class="basket-product--plus">+</div>
                                   </div>
                                   <div class="footer-basket-lanch__right__attr">
@@ -3042,7 +3113,7 @@
                       <div class="footer-basket-slider--right__bottom">
                         <div class="basket-product--count">
                           <div class="basket-product--minus">-</div>
-                          <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                          <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                           <div class="basket-product--plus">+</div>
                         </div>
                       </div>
@@ -3062,7 +3133,7 @@
                       <div class="footer-basket-slider--right__bottom">
                         <div class="basket-product--count">
                           <div class="basket-product--minus">-</div>
-                          <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                          <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                           <div class="basket-product--plus">+</div>
                         </div>
                       </div>
@@ -3098,7 +3169,7 @@
               <div class="main-button-transparent max-content bg-color-orange">Заказать ~ 537 ₽</div>
               <div class="basket-product--count footer-lanch--count">
                 <div class="basket-product--minus">-</div>
-                <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                 <div class="basket-product--plus">+</div>
               </div>
             </div>
@@ -3106,6 +3177,10 @@
             <div class="card-content-added-one-click main-button-transparent">Создать шаблон</div>
           </div>
         </div>
+      </div>
+      <div class="footer-planwet--order footer-planwet--order--plan">
+        <div class="footer-planwet--order__price">Итого: 632 ₽</div>
+        <div class="footer-planwet--order__button">Оформить заказ</div>
       </div>
       <footer class="pt-100">
         <div class="footer-top" style="background-image:url('/static/img/general/ban/bgbaner.jpg');">
@@ -3288,8 +3363,8 @@
         </div>
       </footer>
       <div class="popups">
-        <div class="modal fade" id="popup-auth" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <form class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal fade" id="popup-auth" tabindex="-1" role="dialog" aria-hidden="true">
+          <form class="modal-dialog modal-dialog-centered">
             <div class="modal-content popup-content">
               <div class="popup-header modal-header pb-0">
                 <div class="popup-header--close__wrap">
@@ -3313,13 +3388,29 @@
               </div>
               <div class="popup-footer modal-footer">
                 <button class="main-button w-170 m-0-auto mb-30" type="submit">Войти</button>
-                <div class="popup-not-reg">Еще нет аккаунта?<span data-dismiss="modal" data-toggle="modal" data-target="#popup-reg">Зарегистрируйтесь!</span></div>
+                <div class="popup-not-reg mb-30">Еще нет аккаунта?<span data-dismiss="modal" data-toggle="modal" data-target="#popup-reg">Зарегистрируйтесь!</span></div>
+                <div class="popup-login--social">
+                  <div class="popup-login--title">Или войдите через другой аккаунт:</div>
+                  <div class="popup-login--list"><a class="popup-login--item2" href="/">
+                      <svg class="icon icon-social-fb ">
+                        <use xlink:href="static/img/svg/symbol/sprite.svg#social-fb"></use>
+                      </svg></a><a class="popup-login--item2" href="/">
+                      <svg class="icon icon-social-inst ">
+                        <use xlink:href="static/img/svg/symbol/sprite.svg#social-inst"></use>
+                      </svg></a><a class="popup-login--item2" href="/">
+                      <svg class="icon icon-social-twit ">
+                        <use xlink:href="static/img/svg/symbol/sprite.svg#social-twit"></use>
+                      </svg></a><a class="popup-login--item2" href="/">
+                      <svg class="icon icon-social-whats ">
+                        <use xlink:href="static/img/svg/symbol/sprite.svg#social-whats"></use>
+                      </svg></a></div>
+                </div>
               </div>
             </div>
           </form>
         </div>
-        <div class="modal fade" id="popup-reg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <form class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal fade" id="popup-reg" tabindex="-1" role="dialog" aria-hidden="true">
+          <form class="modal-dialog modal-dialog-centered">
             <div class="modal-content popup-content">
               <div class="popup-header modal-header pb-0">
                 <div class="popup-header--close__wrap">
@@ -3376,8 +3467,8 @@
             </div>
           </form>
         </div>
-        <div class="modal fade" id="popup-code" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <form class="modal-dialog modal-dialog-centered mw-430" role="document">
+        <div class="modal fade" id="popup-code" tabindex="-1" role="dialog" aria-hidden="true">
+          <form class="modal-dialog modal-dialog-centered mw-430">
             <div class="modal-content popup-content">
               <div class="popup-header modal-header pb-0">
                 <div class="popup-header--close__wrap">
@@ -3405,8 +3496,8 @@
             </div>
           </form>
         </div>
-        <div class="modal fade" id="popup-callback" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <form class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal fade" id="popup-callback" tabindex="-1" role="dialog" aria-hidden="true">
+          <form class="modal-dialog modal-dialog-centered">
             <div class="modal-content popup-content">
               <div class="popup-header modal-header pb-0">
                 <div class="popup-header--close__wrap">
@@ -3434,8 +3525,8 @@
             </div>
           </form>
         </div>
-        <div class="modal fade" id="popup-add-review" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <form class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal fade" id="popup-add-review" tabindex="-1" role="dialog" aria-hidden="true">
+          <form class="modal-dialog modal-dialog-centered">
             <div class="modal-content popup-content">
               <div class="popup-header modal-header pb-0">
                 <div class="popup-header--close__wrap">
@@ -3446,7 +3537,7 @@
                   </div>
                 </div>
                 <div class="popup-header--title">Оставьте отзыв</div>
-                <div class="popup-header--desc text-center">Помогите нам сделать сервис удобнее, для нас важен каждый комментарий!</div>
+                <div class="popup-header--desc p-0-40">Помогите нам сделать сервис удобнее, для нас важен каждый комментарий!</div>
               </div>
               <div class="popup-body modal-body p-40-70">
                 <div class="popup-input--wrapper">
@@ -3465,8 +3556,8 @@
             </div>
           </form>
         </div>
-        <div class="modal fade" id="popup-call-sub" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal fade" id="popup-call-sub" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content popup-content">
               <div class="popup-header modal-header pb-0">
                 <div class="popup-svg-icon">
@@ -3482,8 +3573,8 @@
             </div>
           </div>
         </div>
-        <div class="modal fade" id="popup-call-sub2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal fade" id="popup-call-sub2" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content popup-content">
               <div class="popup-header modal-header pb-0">
                 <div class="popup-svg-icon">
@@ -3502,8 +3593,8 @@
             </div>
           </div>
         </div>
-        <div class="modal fade" id="popup-call-error" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal fade" id="popup-call-error" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content popup-content">
               <div class="popup-header modal-header pb-0">
                 <div class="popup-svg-icon">
@@ -3540,6 +3631,22 @@
           <div class="popup-footer modal-footer">
             <button class="main-button w-170 m-0-auto mb-30" type="submit">Войти</button>
             <div class="popup-not-reg">Еще нет аккаунта?<span data-custom-dismiss="modal" data-custom-modal="#custom-mobile-reg">Зарегистрируйтесь!</span></div>
+            <div class="popup-login--social">
+              <div class="popup-login--title">Или войдите через другой аккаунт:</div>
+              <div class="popup-login--list"><a class="popup-login--item2" href="/">
+                  <svg class="icon icon-social-fb ">
+                    <use xlink:href="static/img/svg/symbol/sprite.svg#social-fb"></use>
+                  </svg></a><a class="popup-login--item2" href="/">
+                  <svg class="icon icon-social-inst ">
+                    <use xlink:href="static/img/svg/symbol/sprite.svg#social-inst"></use>
+                  </svg></a><a class="popup-login--item2" href="/">
+                  <svg class="icon icon-social-twit ">
+                    <use xlink:href="static/img/svg/symbol/sprite.svg#social-twit"></use>
+                  </svg></a><a class="popup-login--item2" href="/">
+                  <svg class="icon icon-social-whats ">
+                    <use xlink:href="static/img/svg/symbol/sprite.svg#social-whats"></use>
+                  </svg></a></div>
+            </div>
           </div>
         </form>
         <div class="popup-mobile-added" id="custom-mobile-reg">
@@ -3686,7 +3793,7 @@
                   <div class="mobile-mini-basket--name">Хинкали из баранины</div>
                   <div class="basket-product--count">
                     <div class="basket-product--minus">-</div>
-                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                     <div class="basket-product--plus">+</div>
                   </div>
                 </div>
@@ -3696,7 +3803,7 @@
                   <div class="mobile-mini-basket--name">Хинкали из баранины</div>
                   <div class="basket-product--count">
                     <div class="basket-product--minus">-</div>
-                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                     <div class="basket-product--plus">+</div>
                   </div>
                 </div>
@@ -3706,7 +3813,7 @@
                   <div class="mobile-mini-basket--name">Хинкали из баранины</div>
                   <div class="basket-product--count">
                     <div class="basket-product--minus">-</div>
-                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                     <div class="basket-product--plus">+</div>
                   </div>
                 </div>
@@ -3722,7 +3829,7 @@
               </div>
               <div class="basket-product--count">
                 <div class="basket-product--minus">-</div>
-                <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                 <div class="basket-product--plus">+</div>
               </div>
             </div>
@@ -3750,7 +3857,7 @@
                     </div>
                     <div class="basket-product--count">
                       <div class="basket-product--minus">-</div>
-                      <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                      <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                       <div class="basket-product--plus">+</div>
                     </div>
                   </div>
@@ -3761,7 +3868,7 @@
                       <div class="mobile-mini-basket--name">Хинкали из баранины</div>
                       <div class="basket-product--count">
                         <div class="basket-product--minus">-</div>
-                        <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                        <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                         <div class="basket-product--plus">+</div>
                       </div>
                       <div class="mobile-lanch-basket--comp--delete">
@@ -3776,7 +3883,7 @@
                       <div class="mobile-mini-basket--name">Хинкали из баранины</div>
                       <div class="basket-product--count">
                         <div class="basket-product--minus">-</div>
-                        <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                        <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                         <div class="basket-product--plus">+</div>
                       </div>
                       <div class="mobile-lanch-basket--comp--delete">
@@ -3793,7 +3900,7 @@
                   <div class="mobile-mini-basket--name">Хинкали из баранины</div>
                   <div class="basket-product--count">
                     <div class="basket-product--minus">-</div>
-                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                     <div class="basket-product--plus">+</div>
                   </div>
                 </div>
@@ -3803,7 +3910,7 @@
                   <div class="mobile-mini-basket--name">Хинкали из баранины</div>
                   <div class="basket-product--count">
                     <div class="basket-product--minus">-</div>
-                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                     <div class="basket-product--plus">+</div>
                   </div>
                 </div>
@@ -3813,7 +3920,7 @@
                   <div class="mobile-mini-basket--name">Хинкали из баранины</div>
                   <div class="basket-product--count">
                     <div class="basket-product--minus">-</div>
-                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                     <div class="basket-product--plus">+</div>
                   </div>
                 </div>
@@ -3829,7 +3936,7 @@
               </div>
               <div class="basket-product--count">
                 <div class="basket-product--minus">-</div>
-                <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                 <div class="basket-product--plus">+</div>
               </div>
             </div>
@@ -3840,7 +3947,7 @@
           <div class="popup-header modal-header pb-0">
             <div class="popup-mobile-line--close"></div>
             <div class="popup-header--title">Оставьте отзыв</div>
-            <div class="popup-header--desc">Помогите нам сделать сервис удобнее, для нас важен каждый комментарий!</div>
+            <div class="popup-header--desc text-center">Помогите нам сделать сервис удобнее, для нас важен каждый комментарий!</div>
           </div>
           <div class="popup-body modal-body p-4 pb-0">
             <div class="popup-input--wrapper">
@@ -3932,66 +4039,51 @@
     <script src="static/js/sliders.js"></script>
     <script src="static/js/jquery.hoverIntent.min.js"></script>
     <script src="static/js/jquery.simplePagination.js"></script>
-    <script src="static/js/datepicker.ru-RU.js"></script>
     <script src="static/js/jquery-ui.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
     <script src="static/js/jquery.animateNumber.js"></script>
     <script>
-      ymaps.ready(function () {
-      	var myMap = new ymaps.Map('map', {
-      				center: [55.751574, 37.573856],
-      				zoom: 9
-      			}, {
-      				searchControlProvider: 'yandex#search'
-      			}),
+      $(document).ready(function () {
+          // Фильтр цена
+          $(function () {
+              $('#filter-slider').slider({
+                  animate: true,
+                  range: true,
+                  min: 300,
+                  max: 1000000,
+                  values: [300, 1000000],
+                  slide: function (event, ui) {
       
-      			// Создаём макет содержимого.
-      			MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-      					'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-      			),
+                      $('.ui-slider-handle:eq(0) .price-range-min').html(ui.values[0]);
+                      $('.ui-slider-handle:eq(1) .price-range-max').html(ui.values[1]);
+                      $('.price-range-both').html('<i>' + ui.values[0] + ' - </i>' + ui.values[1]);
+                      // $('#filter-dot-slide1').val(ui.values[0]);
+                      // $('#filter-dot-slide2').val(ui.values[1]);
+                      $('#hidden1').val(ui.values[0]);
+                      $('#hidden2').val(ui.values[1]);
       
-      			myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-      				hintContent: 'Собственный значок метки',
-      				balloonContent: 'Это красивая метка'
-      			}, {
-      				// Опции.
-      				// Необходимо указать данный тип макета.
-      				iconLayout: 'default#image',
-      				// Своё изображение иконки метки.
-      				iconImageHref: 'static/img/general/map.png',
-      				// Размеры метки.
-      				iconImageSize: [33, 33],
-      				// Смещение левого верхнего угла иконки относительно
-      				// её "ножки" (точки привязки).
-      				iconImageOffset: [-5, -38]
-      			}),
       
-      			myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
-      				//hintContent: 'Собственный значок метки с контентом',
-      				//balloonContent: 'А эта — новогодняя',
-      				iconContent: '12'
-      			}, {
-      				// Опции.
-      				// Необходимо указать данный тип макета.
-      				iconLayout: 'default#imageWithContent',
-      				// Своё изображение иконки метки.
-      				iconImageHref: 'images/ball.png',
-      				// Размеры метки.
-      				iconImageSize: [48, 48],
-      				// Смещение левого верхнего угла иконки относительно
-      				// её "ножки" (точки привязки).
-      				iconImageOffset: [-24, -24],
-      				// Смещение слоя с содержимым относительно слоя с картинкой.
-      				iconContentOffset: [15, 15],
-      				// Макет содержимого.
-      				iconContentLayout: MyIconContentLayout
-      			});
+                  },
+              });
       
-      	myMap.geoObjects
-      			.add(myPlacemark);
+              $("input.sliders-filters").change(function () {
+                  var $this = $(this);
+                  $("#filter-slider").slider("values", $this.data("index"), $this.val());
+              });
       
+              var min = $("#filter-slider").slider("option", "min");
+              var max = $("#filter-slider").slider("option", "max");
+              $(".min-values").text(min);
+              $(".max-values").text(max);
+      
+              $('#price-reset').click(function () {
+                  $('#hidden1').val('');
+                  $('#hidden2').val('');
+              });
+      
+          });
+          $(".ui-slider-handle").draggable({axis: "x"});
       });
-      
     </script>
   </body>
 </html>

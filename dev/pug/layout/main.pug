@@ -22,10 +22,6 @@ html(lang="ru-RU")
 		link(rel="preload" href="static/fonts/Roboto-Black.woff2" as="font" type="font/woff2" crossorigin)
 		link(rel="preload" href="static/fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin)
 		link(rel="preload" href="static/fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin)
-		link(rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css")
-
-		script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
-		script(src="https://api-maps.yandex.ru/2.1/?apikey=<5ff43003-e2a2-4431-8031-44e816cd9630>&lang=ru_RU")
 	body(class=pageClass)
 		.wrapper
 			include ../modules/header
@@ -45,6 +41,9 @@ html(lang="ru-RU")
 				include ../popups/popup-call-sub
 				include ../popups/popup-call-sub2
 				include ../popups/popup-call-error
+				include ../popups/popup-code-order
+				include ../popups/popup-code-submit
+
 			.popups-mobile
 				include ../popups-mobile/popup-auth
 				include ../popups-mobile/popup-reg
@@ -57,19 +56,60 @@ html(lang="ru-RU")
 				include ../popups-mobile/popup-lanch-order
 				include ../popups-mobile/popup-add-review
 				include ../popups-mobile/popup-filter
+				include ../popups-mobile/popup-code-order
+				include ../popups-mobile/popup-code-submit
 
-		script(src="static/js/jquery.min.js")
-		script(src="static/js/libs.min.js")
-		script(src="static/js/main.js")
-		script(src="static/js/sliders.js")
-		script(src="static/js/jquery.hoverIntent.min.js")
-		script(src="static/js/jquery.simplePagination.js")
-		script(src="static/js/datepicker.ru-RU.js")
-		script(src="static/js/jquery-ui.js")
-		script(src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js")
-		script(src="static/js/jquery.animateNumber.js")
 		script.
-			ymaps.ready(function () {
+			setTimeout(function () {
+				var elem0 = document.createElement('script');
+				elem0.type = 'text/javascript';
+				elem0.src = 'static/js/jquery.min.js';
+				document.getElementsByTagName('body')[0].appendChild(elem0);
+			}, 1700);
+			setTimeout(function () {
+				var elem1 = document.createElement('script');
+				elem1.type = 'text/javascript';
+				elem1.src = 'static/js/libs.min.js';
+				document.getElementsByTagName('body')[0].appendChild(elem1);
+			}, 1800);
+			setTimeout(function () {
+				var elem2 = document.createElement('script');
+				elem2.type = 'text/javascript';
+				elem2.src = 'static/js/main.js';
+				document.getElementsByTagName('body')[0].appendChild(elem2);
+			}, 1900);
+			setTimeout(function () {
+				var elem3 = document.createElement('script');
+				elem3.type = 'text/javascript';
+				elem3.src = 'static/js/sliders.js';
+				document.getElementsByTagName('body')[0].appendChild(elem3);
+			}, 1900);
+			setTimeout(function () {
+				var elem4 = document.createElement('script');
+				elem4.type = 'text/javascript';
+				elem4.src = 'static/js/jquery.hoverIntent.min.js';
+				document.getElementsByTagName('body')[0].appendChild(elem4);
+			}, 1900);
+			setTimeout(function () {
+				var elem5 = document.createElement('script');
+				elem5.type = 'text/javascript';
+				elem5.src = 'static/js/datepicker.ru-RU.js';
+				document.getElementsByTagName('body')[0].appendChild(elem5);
+			}, 1900);
+			setTimeout(function () {
+				var elem6 = document.createElement('script');
+				elem6.type = 'text/javascript';
+				elem6.src = 'static/js/jquery.animateNumber.js';
+				document.getElementsByTagName('body')[0].appendChild(elem6);
+			}, 1900);
+
+			setTimeout(function () {
+				var elem = document.createElement('script');
+				elem.type = 'text/javascript';
+				elem.src = 'https://api-maps.yandex.ru/2.1/?apikey=<5ff43003-e2a2-4431-8031-44e816cd9630>&lang=ru_RU&onload=getYaMap';
+				document.getElementsByTagName('body')[0].appendChild(elem);
+			}, 2000);
+			function getYaMap(){
 				var myMap = new ymaps.Map('map', {
 							center: [55.751574, 37.573856],
 							zoom: 9
@@ -121,7 +161,6 @@ html(lang="ru-RU")
 
 				myMap.geoObjects
 						.add(myPlacemark);
-
-			});
+			}
 
 		block script

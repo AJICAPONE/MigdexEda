@@ -23,24 +23,25 @@ block content
     .popups-mobile
         include ../popups-mobile/popup-basket-added
         include ../popups-mobile/popup-one-click
-        include ../popups-mobile/popup-attention
         include ../popups-mobile/popup-complex
         include ../popups-mobile/popup-card-update
+        include ../popups-mobile/popup-attention
 
 block script
     script.
-        $("#popup-attention").modal('show');
-        var mobile_auto = function () {
-            if ($(window).width() <= 768) {
-                $(window).on('load', function () {
+        setTimeout(function () {
+            $("#popup-attention").modal('show');
+            var mobile_auto = function () {
+                if ($(window).width() <= 768) {
                     $('.card-header-fixed--added #custom-mobile-attention').addClass('active');
                     $('.card-header-fixed--added .content').addClass('mobile-popup-bg');
                     $('header').addClass('header-transform-hidden');
                     $('body').addClass('overflow-hidden');
-                });
-            }
-        };
-        mobile_auto();
-        $(window).resize(mobile_auto);
+                }
+            };
+            mobile_auto();
+            $(window).resize(mobile_auto);
+        }, 1900);
+
 
 

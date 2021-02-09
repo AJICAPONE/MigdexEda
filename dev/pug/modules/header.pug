@@ -43,7 +43,7 @@ header
                                 .main-button-transparent.max-content Заказать
                                 .basket-product--count
                                     .basket-product--minus -
-                                    input.basket-product--input(type="text" value="1" min="1"  readonly)
+                                    input.basket-product--input(type="text" value="1" data-min="1"  readonly)
                                     .basket-product--plus +
                         .card-content-added-one-click.main-button-transparent(data-toggle="modal" data-target="#popup-one-click") Купить в 1 клик
     .header-mobile-search
@@ -65,9 +65,11 @@ header
                             +icon('basket')
                         .product-basket-product--count
                             .product-basket-product--minus -
-                            input.basket-product--input(type="text" value="1" min="1"  readonly)
+                            input.basket-product--input(type="text" value="1" data-min="1"  readonly)
                             .product-basket-product--plus +
                 .mobile-lanch-search--button
                     +icon('search')
-
+    .footer-planwet--order.footer-planwet--order--mob
+        .footer-planwet--order__price Итого: 632 ₽
+        .footer-planwet--order__button Оформить заказ
 

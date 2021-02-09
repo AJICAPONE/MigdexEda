@@ -5,8 +5,15 @@ global.$ = {
     gulp: require('gulp'),
     del: require('del'),
     fs: require('fs'),
+    imagemin: require('gulp-imagemin'),
+    optipng: require('imagemin-optipng'),
+    mozjpeg: require('imagemin-mozjpeg'),
+    pngquant: require('imagemin-pngquant'),
+    jpegRecompress: require('imagemin-jpeg-recompress'),
+    cache: require('gulp-cache'),
+
     browserSync: require('browser-sync').create(),
-    gp: require('gulp-load-plugins')()
+    gp: require('gulp-load-plugins')(),
 };
 
 $.path.task.forEach(function(taskPath) {

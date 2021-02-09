@@ -34,7 +34,7 @@
   size(50px)
   background-color #fff
   border-radius 50%
-  box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.25);
   cursor pointer
   .icon
     size(15.5px)
@@ -64,7 +64,7 @@
   .icon-planwet-arrow
     display none
 
-.my-swiper-pagination,.mobile-delivery-pagination,.card-swiper-pagination
+.my-swiper-pagination,.mobile-delivery-pagination,.card-swiper-pagination,.video-swiper-pagination
   position absolute
   height 20px
   display flex
@@ -97,13 +97,13 @@
 .card-swiper-pagination
   display none
   bottom 10px !important
-.mobile-delivery-pagination
+.mobile-delivery-pagination,.video-swiper-pagination
   display none
   position relative
   bottom 0 !important
-.mobile-delivery-pagination .swiper-pagination-bullet-active:before
+.mobile-delivery-pagination .swiper-pagination-bullet-active:before,.video-swiper-pagination .swiper-pagination-bullet-active:before
   background-color color21
-.mobile-delivery-pagination span
+.mobile-delivery-pagination span,.video-swiper-pagination span
   margin-right 10px
   background-color rgba(33,33,33,0.12)
 .section-title
@@ -130,7 +130,7 @@
   background-color #fff
   transition .3s ease
 .section-menu-sidebar--item.active
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.06);
   border 1px solid transparent
   &:after
     content ''
@@ -176,7 +176,7 @@
   width 100%
   transition .3s ease
   &:hover
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.06);
 .section-menu-content--col
   display flex
   margin-bottom 30px
@@ -199,7 +199,6 @@
   -webkit-line-clamp: 3;
   line-clamp: 3;
   display: -webkit-box;
-  display: box;
   word-wrap: break-word;
   -webkit-box-orient: vertical;
   box-orient: vertical;
@@ -322,7 +321,7 @@
   display flex
   justify-content center
   align-items center
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
   outline none
   size(46px)
@@ -331,7 +330,7 @@
     size(12px)
     fill #FF651D
   &:active
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.05);
 
 .popular-swiper-button-prev.swiper-button-disabled,.popular-swiper-button-next.swiper-button-disabled,.review-swiper-button-prev.swiper-button-disabled,.review-swiper-button-next.swiper-button-disabled,.review-v-swiper-button-next.swiper-button-disabled,.review-v-swiper-button-prev.swiper-button-disabled,.recommend-swiper-button-next.swiper-button-disabled,.recommend-swiper-button-prev.swiper-button-disabled,.watched-swiper-button-next.swiper-button-disabled,.watched-swiper-button-prev.swiper-button-disabled,.migdex-swiper-arrow-prev.swiper-button-disabled,.migdex-swiper-arrow-next.swiper-button-disabled,.lk-swiper-arrows-next.swiper-button-disabled,.lk-swiper-arrows-prev.swiper-button-disabled,.faq-swiper-arrows-next.swiper-button-disabled,.faq-swiper-arrows-prev.swiper-button-disabled
   background-color #F2F2F2
@@ -393,13 +392,13 @@
           color colorMain
           background-color #fff
           border-radius 10px
-          box-shadow: 0px 0px 20px rgba(0,0,0,0.05);
+          box-shadow: 0 0 20px rgba(0,0,0,0.05);
     li:first-child,li:last-child
       a
         display flex
         justify-content center
         align-items center
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
         border-radius: 10px;
         outline none
         size(41px)
@@ -408,7 +407,7 @@
           size(12px)
           fill #FF651D
         &:active
-          box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 0 rgba(0, 0, 0, 0.15);
     li.active
       span
         display flex
@@ -417,7 +416,7 @@
         color colorMain
         background-color #fff
         border-radius 10px
-        box-shadow: 0px 0px 10px rgba(0,0,0,0.15);
+        box-shadow: 0 0 10px rgba(0,0,0,0.15);
         size(41px)
         font-family Rb700
         font-size 13px
@@ -510,7 +509,7 @@
   position relative
   padding 25px
   background: #FFFFFF;
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.06);
   border-radius: 15px;
 .review-card-review__top
   display flex
@@ -562,7 +561,7 @@
   justify-content center
   align-items center
   border: 5px solid #FFFFFF;
-  box-shadow: 0px 0px 40px -5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 40px -5px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   cursor pointer
 .review-card-video--icon
@@ -624,7 +623,6 @@
   -webkit-line-clamp: 2;
   line-clamp: 2;
   display: -webkit-box;
-  display: box;
   word-wrap: break-word;
   -webkit-box-orient: vertical;
   box-orient: vertical;
@@ -642,7 +640,6 @@
   -webkit-line-clamp: 2;
   line-clamp: 2;
   display: -webkit-box;
-  display: box;
   word-wrap: break-word;
   -webkit-box-orient: vertical;
   box-orient: vertical;
@@ -776,7 +773,7 @@
     size(48px,29px)
 .delivery-map--right
   border 5px solid #fff
-  box-shadow: 0px 0px 40px -5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 40px -5px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   ymaps
     border-radius 10px
@@ -951,7 +948,7 @@
     fill rgba(33,33,33,0.4)
 .catalog-sort-select.active
   background-color #fff
-  box-shadow: 0px 0px 25px -5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 25px -5px rgba(0, 0, 0, 0.1);
   span
     color color21
   .icon
@@ -1263,11 +1260,11 @@
   height 100%
   border-radius 10px
   transition .2s ease
-  box-shadow: 0px 0px 0px rgba(0,0,0,0);
+  box-shadow: 0 0 0 rgba(0,0,0,0);
   z-index 0
   &:hover
     transform scale(1.03) translateZ(10px)
-    box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
 .g1
   grid-area: g1
 .g2
@@ -1323,7 +1320,7 @@
     transition .2s ease
   &:hover
     background-color colorMain
-    box-shadow: 0px 10px 15px -6px rgba(255, 101, 29, 0.3);
+    box-shadow: 0 10px 15px -6px rgba(255, 101, 29, 0.3);
     span
       color #fff
 .lanch-delete-product,.lanch-delete-product2
@@ -1336,7 +1333,7 @@
   border-radius 50%
   background-color #fff
   cursor pointer
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   z-index: 2;
   .icon
     size(10px)
@@ -1345,7 +1342,7 @@
   display flex
 .lanch-components--block
   padding 20px
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.06);
   border-radius: 10px;
   margin-bottom 20px
 .lanch-components--top
@@ -1428,7 +1425,7 @@
   .header-mini-basket__item
     position relative
     background-color #fff
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.06);
     border-radius: 10px;
     border-bottom 0
     margin-bottom 30px
@@ -1467,7 +1464,7 @@
 .basket-free-delivery
   display flex
   align-items center
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.06);
   border-radius: 10px;
   padding 20px
 .basket-free-delivery--title
@@ -1491,7 +1488,7 @@
 
 .basket-promo
   display flex
-  align-items center
+  align-items flex-start
 .basket-promo--wrap
   width 73%
   margin-right 30px
@@ -1516,6 +1513,7 @@
   display flex
   flex-direction column
   margin-bottom 20px
+  position relative
   label
     font-family Rb400
     font-size 12px
@@ -1571,7 +1569,7 @@
   margin-right 30px
   margin-bottom 30px
   cursor pointer
-  width 30%
+  width 30.7%
   transition all linear .2s
 
   &:hover
@@ -1673,7 +1671,7 @@
     background: colorMain;
     width: 1.7px;
     height: 1.7px;
-    box-shadow: 2px 0px 0 colorMain, -2px 0px 0 colorMain, 4px 0 0 colorMain, 4px -2px 0 colorMain, 4px -4px 0 colorMain, 4px -6px 0 colorMain, 4px -8px 0 colorMain, 4px -10px 0 colorMain
+    box-shadow: 2px 0 0 colorMain, -2px 0 0 colorMain, 4px 0 0 colorMain, 4px -2px 0 colorMain, 4px -4px 0 colorMain, 4px -6px 0 colorMain, 4px -8px 0 colorMain, 4px -10px 0 colorMain
     transform: rotate(45deg);
 
 
@@ -1714,10 +1712,10 @@
   &:last-child
     margin-right 0
   &:hover
-    box-shadow: 0px 10px 15px -6px rgba(255, 101, 29, 0.3);
+    box-shadow: 0 10px 15px -6px rgba(255, 101, 29, 0.3);
 .tab-item.active
   background-color colorMain
-  box-shadow: 0px 10px 15px -6px rgba(255, 101, 29, 0.3);
+  box-shadow: 0 10px 15px -6px rgba(255, 101, 29, 0.3);
   color #fff
 .pay-tabs--wrap
   display flex
@@ -1745,7 +1743,7 @@
   border-radius 5px
   padding 30px 0
   width 430px
-  right 0px
+  right 0
   top 30px
   height 237px
 .pay-card--input
@@ -2034,7 +2032,7 @@
   height max-content
   &:hover
     .article-video--icon
-      box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.25);
 .article-recept--title
   font-family Ow600
   font-size 24px
@@ -2154,7 +2152,7 @@
   //justify-content flex-end
   padding 20px
   background-color #fff
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.06);
   border-radius: 15px;
   width 100%
   overflow hidden
@@ -2198,7 +2196,7 @@
 .mb-50
   margin-bottom 50px
 .team-about-item
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.06);
   border-radius: 10px;
   background-color #fff
 .team-about--img
@@ -2206,7 +2204,7 @@
   background-size contain
   height 220px
   width 100%
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 10px 10px 0 0;
 .team-about-text--wrap
   padding 20px
   padding-top 10px
@@ -2292,7 +2290,7 @@
   .lanch-components--middle
     border-bottom 0
   .lanch-components--middle
-    margin-bottom 0px
+    margin-bottom 0
   .favourite-links.active
     color color21
   .lk-exit-button
@@ -2384,7 +2382,7 @@
     display none
     top 60px
     background-color #fff
-    box-shadow: 0px 0px 25px -5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 25px -5px rgba(0, 0, 0, 0.1);
     width 100%
     left 0
     right 0
@@ -2530,13 +2528,13 @@
   padding 15px 25px
 .o-status-send
   background: #FFCE54;
-  box-shadow: 0px 10px 15px -6px rgba(255, 206, 84, 0.3);
+  box-shadow: 0 10px 15px -6px rgba(255, 206, 84, 0.3);
 .o-status-sended
   background #A0D468
-  box-shadow: 0px 10px 15px -6px rgba(160, 212, 104, 0.3);
+  box-shadow: 0 10px 15px -6px rgba(160, 212, 104, 0.3);
 .o-status-cancel
   background #FC5252
-  box-shadow: 0px 10px 15px -6px rgba(252, 82, 82, 0.3);
+  box-shadow: 0 10px 15px -6px rgba(252, 82, 82, 0.3);
 .lk-order-right--wrap
   display flex
   flex-direction column
@@ -2583,7 +2581,7 @@
   cursor pointer
   transition all linear .2s
   &:hover
-    box-shadow: 0px 10px 15px -6px rgba(255, 101, 29, 0.3);
+    box-shadow: 0 10px 15px -6px rgba(255, 101, 29, 0.3);
 .lk-tabs-content-tab
   display none
 .lk-tabs-content-tab.active
@@ -2820,7 +2818,7 @@
   justify-content space-between
   align-items center
   position fixed
-  top 0px
+  top 0
   left 0
   right 0
   background-color #fff
@@ -2929,7 +2927,7 @@
   align-items center
   position relative
   padding 16px
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.06);
   border-radius 10px
   margin-bottom 16px
   &:last-child
@@ -2988,7 +2986,7 @@
   justify-content space-between
   background-color #fff
   border-radius 10px 10px 0 0
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.06)
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.06)
   padding 16px
   user-select none
 
@@ -3076,7 +3074,7 @@
   align-items center
   justify-content center
   background-color #F9F9F9
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 10px 10px 0 0;
   position relative
   padding 16px
   .popup-mobile-title
@@ -3400,7 +3398,7 @@
 .mobile-lanch-search--top
   display flex
   position relative
-  box-shadow: 0px 5px 20px -10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 20px -10px rgba(0, 0, 0, 0.1);
   padding 12px 16px
   background-color #fff
   z-index 2
@@ -3504,7 +3502,7 @@
   top 100px
   z-index 2
   padding 30px
-  box-shadow: 0px 0px 40px -5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 40px -5px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 .section-map
   padding 60px 0
@@ -3542,7 +3540,7 @@
   background-color #fff
   border-radius 15px
   padding 40px
-  box-shadow: 0px 0px 25px -5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 25px -5px rgba(0, 0, 0, 0.1);
 .faq-icon
   margin-bottom 50px
   display flex
@@ -3569,7 +3567,7 @@
   justify-content space-between
   align-items center
   background-color #fff
-  box-shadow: 0px 0px 25px -5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 25px -5px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   padding 15px
   width 100%
@@ -3682,7 +3680,7 @@
   display flex
   justify-content center
   align-items center
-  box-shadow: 0px 0px 25px -5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 25px -5px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   background-color #fff
   size(39px)
@@ -3954,7 +3952,7 @@
   background-color #fff
 .faq-swiper-arrows-prev.swiper-button-disabled,.faq-swiper-arrows-next.swiper-button-disabled
   background-color #fff
-  box-shadow: 0px 0px 20px rgba(0,0,0,0.05);
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
 .mb-60
   margin-bottom 60px
 .section8.section-delivery
@@ -4121,7 +4119,7 @@
   &:last-child
     margin-right 0
   &:hover
-    box-shadow: 0px 0px 20px rgba(253, 191, 90, 0.2);
+    box-shadow: 0 0 20px rgba(253, 191, 90, 0.2);
 .popup-login--title
   font-family Rb500
   font-size 15px
@@ -4169,7 +4167,7 @@
   font-family Ow400
   font-size 14px
   height 30px
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.06);
   border-radius: 10px 5px;
   padding 2px 25px
 .popup-complex--item
@@ -4375,7 +4373,7 @@ progress::-moz-progress-bar
   background-color #fff
   color rgba(33,33,33,0.3)
   border 1px solid #fff
-  box-shadow: 0px 10px 15px -6px rgba(255,255,255,0.3);
+  box-shadow: 0 10px 15px -6px rgba(255,255,255,0.3);
 .opacity-show::before
   display none
 .m-0-16
@@ -4396,7 +4394,7 @@ progress::-moz-progress-bar
 .product-lanch-card--rebuild.active
   background-color colorMain
   color #fff
-  box-shadow: 0px 10px 15px -6px rgba(255, 101, 29, 0.3);
+  box-shadow: 0 10px 15px -6px rgba(255, 101, 29, 0.3);
 .lk-add-position
   display flex
   justify-content center
@@ -4459,14 +4457,14 @@ progress::-moz-progress-bar
     line-clamp: 3
 .card-cart-added--col-d
   .card-cart-added--basket
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.06);
     padding 30px
     .main-button
       font-size 14px
 .fw-900
   font-family Rb900
 .footer-basket-slider--item.swiper-slide-active + .swiper-slide + .swiper-slide + .swiper-slide
-  border-right: 0px solid #fff;
+  border-right: 0 solid #fff;
 .header-mini-basket__over--wrap
   display flex
   align-items center
@@ -4546,7 +4544,7 @@ progress::-moz-progress-bar
   justify-content center
 .datepicker-dropdown
   border none
-  box-shadow: 0px 0px 25px -11px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 25px -11px rgba(0, 0, 0, 0.15);
   border-radius 5px
 .datepicker-panel>ul>li[data-view="month next"], .datepicker-panel>ul>li[data-view="month prev"], .datepicker-panel>ul>li[data-view="year next"], .datepicker-panel>ul>li[data-view="year prev"], .datepicker-panel>ul>li[data-view="years next"], .datepicker-panel>ul>li[data-view="years prev"], .datepicker-panel>ul>li[data-view=next]
   background-color #FF651D
@@ -4579,7 +4577,6 @@ progress::-moz-progress-bar
 
 .review-card-review__bottom
   display: -webkit-box;
-  display: box;
   overflow: hidden;
   text-overflow: ellipsis;
   -ms-text-overflow: ellipsis;
@@ -4623,3 +4620,165 @@ progress::-moz-progress-bar
     border-radius 15px
 .datepicker-container
   width 230.5px
+.lanch-construct-tabs
+  flex-wrap wrap
+  overflow-x visible
+.catalog-menu-tab--container .catalog-menu-tab
+  width max-content
+.basket-promo--item__name
+  font-family Ow500
+  font-size 14px
+  color #A0D468
+  padding-left 30px
+.basket-promo--info
+  width 100%
+.basket-promo--wrap
+  align-items flex-start
+.basket-promo-input
+  margin-bottom 10px
+.promo-error
+  color colorMain
+.review-flex--buttons
+  display flex
+  align-items center
+  justify-content center
+.review-add--review
+  background-color #F2F2F2
+  color rgba(33,33,33,0.4)
+  border none
+  box-shadow none
+  font-family Ow400
+.review-show--more
+  font-family Ow400
+  margin-right 30px
+.p-0-40
+  padding 0 40px
+  display flex
+  align-items center
+  text-align center
+.required-input--info
+  display flex
+  align-items center
+  justify-content space-between
+  position absolute
+  bottom -25px
+  width 100%
+  opacity 0
+  transition all linear .2s
+  pointer-events none
+.required-input--info.active
+  opacity 1
+  pointer-events auto
+.required-input--submit
+  font-family Rb500
+  font-size 12px
+  color #A0D468
+.required-input--retry
+  font-family Rb500
+  font-size 12px
+  color rgba(33,33,33,0.4)
+.order-day--check__wrap
+  display flex
+  align-items center
+.order-day--check
+  display flex
+  justify-content center
+  align-items center
+  size(19px)
+  border: 1px solid rgba(33, 33, 33, 0.1);
+  border-radius 5px
+  background-color #F9F9F9
+  margin-right 10px
+  .icon
+    display none
+    size(13px)
+    fill colorMain
+.order-day--check__wrap.checked
+  .order-day--check
+    border: 1px solid colorMain
+    .icon
+      display block
+.order-day--name
+  font-family Rb400
+  font-size 16px
+  color color21
+.order-day--wrap
+  display flex
+  flex-direction column
+  width 48%
+.order-day--wrap__list
+  display flex
+  justify-content space-between
+.order-day--check__item
+  display flex
+  align-items center
+  justify-content space-between
+  margin-bottom 20px
+.color-red
+  color #ED5565
+.footer-planwet--order
+  display none
+  position fixed
+  background-color #fff
+  box-shadow: 0px -4px 20px -10px rgba(0, 0, 0, 0.05);
+  height 70px
+  bottom 0
+  right 0
+  left 0
+  padding 15px 30px
+  z-index 1000
+  transition all linear .5s
+
+
+.footer-planwet--order__price
+  font-family Ow600
+  font-size 19px
+  color color21
+.footer-planwet--order__button
+  display flex
+  justify-content center
+  align-items center
+  background-color #F2F2F2
+  border-radius 23px
+  height 40px
+  width 50%
+  max-width 339px
+  font-size 13px
+  font-family Ow400
+  color rgba(33,33,33,0.4)
+  transition all linear .2s
+  &:hover
+    background-color colorMain
+    color #fff
+.footer-planwet--order--mob
+  display none !important
+.no-delete
+  background-color #F2F2F2
+  color color21
+  border none
+  box-shadow none
+.popup-flex-footer
+  display flex
+  align-items center
+  justify-content center
+  padding-bottom 50px
+  .main-button
+    &:first-child
+      margin-right 30px
+.w-269
+  width 269px
+  text-align center
+.w-391
+  width 391px
+  text-align center
+.section-reg
+  .section-404-container--icon
+    margin-bottom 0
+    .icon
+      size(200px)
+  .section-404-container--title
+    font-size 24px
+    color colorMain
+    margin-bottom 60px
+
+

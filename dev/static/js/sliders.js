@@ -264,6 +264,10 @@ $(document).ready(function () {
             320: {
                 slidesPerView: 1,
                 spaceBetween: 16,
+                pagination: {
+                    el: '.video-swiper-pagination',
+                    clickable: true,
+                },
             },
             576: {
                 slidesPerView: 1,
@@ -303,7 +307,13 @@ $(document).ready(function () {
             },
         },
     });
-
+    var swiper_tabs_cat = new Swiper('.catalog-menu-tab--container', {
+        slidesPerView: 'auto',
+        // spaceBetween: 15,
+        observer: true,
+        watchOverflow: true,
+        observeParents: true,
+    });
     var swiper_popup_categ = new Swiper('.popup-tabs--container', {
         slidesPerView: 'auto',
         //centeredSlides: true,
@@ -409,6 +419,10 @@ $(document).ready(function () {
         },
 
     });
+
+
+
+
 
     var swiper_card = new Swiper('.team-container', {
         slidesPerView: 4,

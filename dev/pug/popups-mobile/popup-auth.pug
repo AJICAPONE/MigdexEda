@@ -14,3 +14,14 @@ form.popup-mobile-added#custom-mobile-auth
         button.main-button.w-170.m-0-auto.mb-30(type="submit") Войти
         .popup-not-reg Еще нет аккаунта?
             span(data-custom-dismiss="modal" data-custom-modal="#custom-mobile-reg") Зарегистрируйтесь!
+        .popup-login--social
+            .popup-login--title Или войдите через другой аккаунт:
+            .popup-login--list
+                a.popup-login--item2(href="/")
+                    +icon('social-fb')
+                a.popup-login--item2(href="/")
+                    +icon('social-inst')
+                a.popup-login--item2(href="/")
+                    +icon('social-twit')
+                a.popup-login--item2(href="/")
+                    +icon('social-whats')

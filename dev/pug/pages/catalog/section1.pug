@@ -2,13 +2,14 @@ section.section1.section-catalog
     .container
         .catalog-title--wrap
             .catalog-title Хинкали
-            .catalog-menu-tabs
-                .catalog-menu-tab.active Хинкали калакури
-                .catalog-menu-tab Хинкали мтиулури
-                .catalog-menu-tab Хинкали казбегури
-                .catalog-menu-tab Хинкали калакури
-                .catalog-menu-tab Хинкали калакури
-                .catalog-menu-tab Хинкали калакури
+            .catalog-menu-tabs.catalog-menu-tab--container.swiper-container
+                .swiper-wrapper
+                    .catalog-menu-tab.swiper-slide.active Хинкали калакури
+                    .catalog-menu-tab.swiper-slide Хинкали мтиулури
+                    .catalog-menu-tab.swiper-slide Хинкали казбегури
+                    .catalog-menu-tab.swiper-slide Хинкали калакури
+                    .catalog-menu-tab.swiper-slide Хинкали калакури
+                    .catalog-menu-tab.swiper-slide Хинкали калакури
     .catalog-found-sort--block
         .container
             .catalog-found-count 326 блюд
@@ -39,7 +40,7 @@ section.section1.section-catalog
                             span.d-flex.align-items-center Сортировать:
                                 span.catalog-sort-item--choise по популярности
                             +icon('arrow-down')
-                        .catalog-sort-select--list
+                        ul.catalog-sort-select--list
                             li.catalog-sort-select--item по дате
                             li.catalog-sort-select--item по цене
                 .col-xl-4.col-lg-6.col-md-6.catalog-sort--col__sort
@@ -52,7 +53,7 @@ section.section1.section-catalog
                             span.d-flex.align-items-center Кухня:
                                 span.catalog-sort-item--choise Грузинская
                             +icon('arrow-down')
-                        .catalog-sort-select--list
+                        ul.catalog-sort-select--list
                             li.catalog-sort-select--item Японская
                             li.catalog-sort-select--item Китайская
                 .col-xl-3.col-lg-6.col-md-6.catalog-sort--col__sort
@@ -61,7 +62,7 @@ section.section1.section-catalog
                             span.d-flex.align-items-center Тип блюда:
                                 span.catalog-sort-item--choise Говядина
                             +icon('arrow-down')
-                        .catalog-sort-select--list
+                        ul.catalog-sort-select--list
                             li.catalog-sort-select--item Говядина
                             li.catalog-sort-select--item Курятина
                             li.catalog-sort-select--item Баранина
@@ -71,7 +72,7 @@ section.section1.section-catalog
                             span.d-flex.align-items-center Тип приготовления:
                                 span.catalog-sort-item--choise Любой
                             +icon('arrow-down')
-                        .catalog-sort-select--list
+                        ul.catalog-sort-select--list
                             li.catalog-sort-select--item Любой
                             li.catalog-sort-select--item Любой2
                 .col-xl-3.col-lg-6.col-md-6.catalog-sort--col__sort
@@ -80,7 +81,7 @@ section.section1.section-catalog
                             span.d-flex.align-items-center Акция:
                                 span.catalog-sort-item--choise Любые
                             +icon('arrow-down')
-                        .catalog-sort-select--list
+                        ul.catalog-sort-select--list
                             li.catalog-sort-select--item Любые
                             li.catalog-sort-select--item Любые2
             .section-container.section-pagination--container(data-pagination-count="10")
@@ -88,46 +89,47 @@ section.section1.section-catalog
                     .col-xl-3.col-lg-3.col-md-12.col-sm-12.index-menu--sidebar.pl-0
                         .section-menu-sidebar--list
                             .section-menu-sidebar--item
-                                img(loading="lazy").section-menu-sidebar--img(src="/static/img/content/products/img1.png")
+                                img(loading="lazy" alt="pic").section-menu-sidebar--img(src="/static/img/content/products/img1.png")
                                 .section-menu-sidebar--name Готовые ланчи
                             .section-menu-sidebar--item
-                                img(loading="lazy").section-menu-sidebar--img(src="/static/img/content/products/img2.png")
+                                img(loading="lazy" alt="pic").section-menu-sidebar--img(src="/static/img/content/products/img2.png")
                                 .section-menu-sidebar--name Хинкали
                             .section-menu-sidebar--item
-                                img(loading="lazy").section-menu-sidebar--img(src="/static/img/content/products/img3.png")
+                                img(loading="lazy" alt="pic").section-menu-sidebar--img(src="/static/img/content/products/img3.png")
                                 .section-menu-sidebar--name Чебуреки
                             .section-menu-sidebar--item
-                                img(loading="lazy").section-menu-sidebar--img(src="/static/img/content/products/img4.png")
+                                img(loading="lazy" alt="pic").section-menu-sidebar--img(src="/static/img/content/products/img4.png")
                                 .section-menu-sidebar--name Манты
                             .section-menu-sidebar--item
-                                img(loading="lazy").section-menu-sidebar--img(src="/static/img/content/products/img5.png")
+                                img(loading="lazy" alt="pic").section-menu-sidebar--img(src="/static/img/content/products/img5.png")
                                 .section-menu-sidebar--name Хачапури
                             .section-menu-sidebar--item
-                                img(loading="lazy").section-menu-sidebar--img(src="/static/img/content/products/img6.png")
+                                img(loading="lazy" alt="pic").section-menu-sidebar--img(src="/static/img/content/products/img6.png")
                                 .section-menu-sidebar--name Самса
                             .section-menu-sidebar--item
-                                img(loading="lazy").section-menu-sidebar--img(src="/static/img/content/products/img7.png")
+                                img(loading="lazy" alt="pic").section-menu-sidebar--img(src="/static/img/content/products/img7.png")
                                 .section-menu-sidebar--name Пирог
                             .section-menu-sidebar--item
-                                img(loading="lazy").section-menu-sidebar--img(src="/static/img/content/products/img8.png")
+                                img(loading="lazy" alt="pic").section-menu-sidebar--img(src="/static/img/content/products/img8.png")
                                 .section-menu-sidebar--name Десерты
                             .section-menu-sidebar--item
-                                img(loading="lazy").section-menu-sidebar--img(src="/static/img/content/products/img9.png")
+                                img(loading="lazy" alt="pic").section-menu-sidebar--img(src="/static/img/content/products/img9.png")
                                 .section-menu-sidebar--name Закуски
                             .section-menu-sidebar--item
-                                img(loading="lazy").section-menu-sidebar--img(src="/static/img/content/products/img10.png")
+                                img(loading="lazy" alt="pic").section-menu-sidebar--img(src="/static/img/content/products/img10.png")
                                 .section-menu-sidebar--name Соусы
                             .section-menu-sidebar--item
-                                img(loading="lazy").section-menu-sidebar--img(src="/static/img/content/products/img11.png")
+                                img(loading="lazy" alt="pic").section-menu-sidebar--img(src="/static/img/content/products/img11.png")
                                 .section-menu-sidebar--name Напитки
                     .col-xl-9.col-lg-9.col-md-12.col-sm-12.index-menu--content.pr-0
-                        .catalog-menu-tabs
-                            .catalog-menu-tab.active Хинкали калакури
-                            .catalog-menu-tab Хинкали мтиулури
-                            .catalog-menu-tab Хинкали казбегури
-                            .catalog-menu-tab Хинкали калакури
-                            .catalog-menu-tab Хинкали калакури
-                            .catalog-menu-tab Хинкали калакури
+                        .catalog-menu-tabs.catalog-menu-tab--container.swiper-container
+                            .swiper-wrapper
+                                .catalog-menu-tab.swiper-slide.active Хинкали калакури
+                                .catalog-menu-tab.swiper-slide Хинкали мтиулури
+                                .catalog-menu-tab.swiper-slide Хинкали казбегури
+                                .catalog-menu-tab.swiper-slide Хинкали калакури
+                                .catalog-menu-tab.swiper-slide Хинкали калакури
+                                .catalog-menu-tab.swiper-slide Хинкали калакури
                         .section-menu-content--list.row
                             .col-xl-4.col-lg-4.col-md-4.col-sm-6.section-menu-content--col
                                 .section-menu-content--item.box-create--lanch
@@ -159,7 +161,7 @@ section.section1.section-catalog
                                                         +icon('basket')
                                                     .product-basket-product--count
                                                         .product-basket-product--minus -
-                                                        input.basket-product--input(type="text" value="1" min="1"  readonly)
+                                                        input.basket-product--input(type="text" value="1" data-min="1"  readonly)
                                                         .product-basket-product--plus +
                             .col-xl-4.col-lg-4.col-md-4.col-sm-6.section-menu-content--col
                                 .section-menu-content--item
@@ -183,7 +185,7 @@ section.section1.section-catalog
                                                         +icon('basket')
                                                     .product-basket-product--count
                                                         .product-basket-product--minus -
-                                                        input.basket-product--input(type="text" value="1" min="1"  readonly)
+                                                        input.basket-product--input(type="text" value="1" data-min="1"  readonly)
                                                         .product-basket-product--plus +
                             .col-xl-4.col-lg-4.col-md-4.col-sm-6.section-menu-content--col
                                 .section-menu-content--item
@@ -206,7 +208,7 @@ section.section1.section-catalog
                                                         +icon('basket')
                                                     .product-basket-product--count
                                                         .product-basket-product--minus -
-                                                        input.basket-product--input(type="text" value="1" min="1"  readonly)
+                                                        input.basket-product--input(type="text" value="1" data-min="1"  readonly)
                                                         .product-basket-product--plus +
                             .col-xl-4.col-lg-4.col-md-4.col-sm-6.section-menu-content--col
                                 .section-menu-content--item
@@ -229,7 +231,7 @@ section.section1.section-catalog
                                                         +icon('basket')
                                                     .product-basket-product--count
                                                         .product-basket-product--minus -
-                                                        input.basket-product--input(type="text" value="1" min="1"  readonly)
+                                                        input.basket-product--input(type="text" value="1" data-min="1"  readonly)
                                                         .product-basket-product--plus +
                             .col-xl-4.col-lg-4.col-md-4.col-sm-6.section-menu-content--col
                                 .section-menu-content--item
@@ -252,7 +254,7 @@ section.section1.section-catalog
                                                         +icon('basket')
                                                     .product-basket-product--count
                                                         .product-basket-product--minus -
-                                                        input.basket-product--input(type="text" value="1" min="1"  readonly)
+                                                        input.basket-product--input(type="text" value="1" data-min="1"  readonly)
                                                         .product-basket-product--plus +
                             .col-xl-4.col-lg-4.col-md-4.col-sm-6.section-menu-content--col
                                 .section-menu-content--item
@@ -275,7 +277,7 @@ section.section1.section-catalog
                                                         +icon('basket')
                                                     .product-basket-product--count
                                                         .product-basket-product--minus -
-                                                        input.basket-product--input(type="text" value="1" min="1"  readonly)
+                                                        input.basket-product--input(type="text" value="1" data-min="1"  readonly)
                                                         .product-basket-product--plus +
                             .col-xl-4.col-lg-4.col-md-4.col-sm-6.section-menu-content--col
                                 .section-menu-content--item
@@ -298,7 +300,7 @@ section.section1.section-catalog
                                                         +icon('basket')
                                                     .product-basket-product--count
                                                         .product-basket-product--minus -
-                                                        input.basket-product--input(type="text" value="1" min="1"  readonly)
+                                                        input.basket-product--input(type="text" value="1" data-min="1"  readonly)
                                                         .product-basket-product--plus +
                             .col-xl-4.col-lg-4.col-md-4.col-sm-6.section-menu-content--col
                                 .section-menu-content--item
@@ -321,7 +323,7 @@ section.section1.section-catalog
                                                         +icon('basket')
                                                     .product-basket-product--count
                                                         .product-basket-product--minus -
-                                                        input.basket-product--input(type="text" value="1" min="1"  readonly)
+                                                        input.basket-product--input(type="text" value="1" data-min="1"  readonly)
                                                         .product-basket-product--plus +
                             .col-xl-4.col-lg-4.col-md-4.col-sm-6.section-menu-content--col
                                 .section-menu-content--item
@@ -344,7 +346,7 @@ section.section1.section-catalog
                                                         +icon('basket')
                                                     .product-basket-product--count
                                                         .product-basket-product--minus -
-                                                        input.basket-product--input(type="text" value="1" min="1"  readonly)
+                                                        input.basket-product--input(type="text" value="1" data-min="1"  readonly)
                                                         .product-basket-product--plus +
                             .col-xl-4.col-lg-4.col-md-4.col-sm-6.section-menu-content--col
                                 .section-menu-content--item
@@ -367,7 +369,7 @@ section.section1.section-catalog
                                                         +icon('basket')
                                                     .product-basket-product--count
                                                         .product-basket-product--minus -
-                                                        input.basket-product--input(type="text" value="1" min="1"  readonly)
+                                                        input.basket-product--input(type="text" value="1" data-min="1"  readonly)
                                                         .product-basket-product--plus +
                             .col-xl-4.col-lg-4.col-md-4.col-sm-6.section-menu-content--col
                                 .section-menu-content--item
@@ -390,7 +392,7 @@ section.section1.section-catalog
                                                         +icon('basket')
                                                     .product-basket-product--count
                                                         .product-basket-product--minus -
-                                                        input.basket-product--input(type="text" value="1" min="1"  readonly)
+                                                        input.basket-product--input(type="text" value="1" data-min="1"  readonly)
                                                         .product-basket-product--plus +
                             .col-xl-4.col-lg-4.col-md-4.col-sm-6.section-menu-content--col
                                 .section-menu-content--item
@@ -413,7 +415,7 @@ section.section1.section-catalog
                                                         +icon('basket')
                                                     .product-basket-product--count
                                                         .product-basket-product--minus -
-                                                        input.basket-product--input(type="text" value="1" min="1"  readonly)
+                                                        input.basket-product--input(type="text" value="1" data-min="1"  readonly)
                                                         .product-basket-product--plus +
                             .col-xl-4.col-lg-4.col-md-4.col-sm-6.section-menu-content--col
                                 .section-menu-content--item
@@ -436,7 +438,7 @@ section.section1.section-catalog
                                                         +icon('basket')
                                                     .product-basket-product--count
                                                         .product-basket-product--minus -
-                                                        input.basket-product--input(type="text" value="1" min="1"  readonly)
+                                                        input.basket-product--input(type="text" value="1" data-min="1"  readonly)
                                                         .product-basket-product--plus +
                             .col-xl-4.col-lg-4.col-md-4.col-sm-6.section-menu-content--col
                                 .section-menu-content--item
@@ -459,7 +461,7 @@ section.section1.section-catalog
                                                         +icon('basket')
                                                     .product-basket-product--count
                                                         .product-basket-product--minus -
-                                                        input.basket-product--input(type="text" value="1" min="1"  readonly)
+                                                        input.basket-product--input(type="text" value="1" data-min="1"  readonly)
                                                         .product-basket-product--plus +
                         .catalog-load-more--wrap.section-bottom-pagination--wrap
                             .catalog-show-more Показать еще

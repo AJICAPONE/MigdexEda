@@ -242,7 +242,6 @@
       -webkit-line-clamp: 1;
       line-clamp: 1;
       display: -webkit-box;
-      display: box;
       word-wrap: break-word;
       -webkit-box-orient: vertical;
       box-orient: vertical;
@@ -261,7 +260,6 @@
         -webkit-line-clamp: 2;
         line-clamp: 2;
         display: -webkit-box;
-        display: box;
         word-wrap: break-word;
         -webkit-box-orient: vertical;
         box-orient: vertical;
@@ -893,6 +891,24 @@
       width 160px
     .footer-lanch--fast__flex .button-basket--product__wrap
       flex-flow row-reverse
+  .nav-sidebar-menu--depth2--link a
+    display flex
+    align-items center
+  .nav-sidebar-menu--item--depth2 a
+    color: rgba(33,33,33,0.4);
+  .order-tab
+    width 30.4%
+  .order-out-page
+    .footer-basket
+      display none
+    .footer-planwet--order
+      display flex
+      justify-content space-between
+      align-items center
+    footer
+      padding-bottom 70px
+  .footer-planwet--order--mob
+    display none !important
 @media screen and (max-width: 880px)
   .section-full-right__img
     right -20vh
@@ -903,6 +919,7 @@
     right -15vh
   .section-full-left__img
     transform translateX(-25%)
+
 @media screen and (max-width: 767.5px)
   .footer-basket-lanch__img,.header-mini-basket__img
     min-width 60px
@@ -1830,7 +1847,7 @@
     bottom 74px
     size(35px)
     border 1px solid #fff
-    z-index 200
+    z-index 199
     .icon
       size(17px)
   .mobile-lanch-search--button
@@ -1986,7 +2003,6 @@
   .article-comments--item__comment
     span
       display: -webkit-box;
-      display box
       padding-bottom 0
       overflow: hidden;
       text-overflow: ellipsis;
@@ -2014,7 +2030,6 @@
     float none
   .catalog-desc-p
     display: -webkit-box;
-    display box
     overflow: hidden;
     text-overflow: ellipsis;
     -ms-text-overflow: ellipsis;
@@ -2073,6 +2088,43 @@
     .section-menu-content--col
       .section-menu-content--desc
         display block
+  .popup-login--item2
+    display flex
+    justify-content center
+    align-items center
+    border 2px solid colorMain
+    border-radius 50%
+    size(40px)
+    margin-right 30px
+    &:last-child
+      margin-right 0
+    .icon
+      fill colorMain
+      size(21px)
+  .order-day--wrap__list
+    flex-direction column
+  .order-day--wrap
+    width 100%
+  .order-out-page
+    .footer-planwet--order
+      bottom auto
+      top 0
+      transform: translateY(-50vh);
+      will-change: transform;
+    .footer-planwet--order.active
+      transform translateY(0);
+    .lanch-components--bottom
+      .main-button
+        display none
+    .lanch-components--out--wrap
+      margin-bottom 0
+  .footer-planwet--order--plan
+    display none
+  .footer-planwet--order--plan
+    display none !important
+  .order-out-page
+    .footer-planwet--order--mob
+      display flex !important
 @media screen and (max-width: 575.5px)
   .lk-order-top
     flex-direction row
@@ -2921,7 +2973,7 @@
     width 100%
   .faq-question--info--wrapper
     width 100%
-  .review-v-card-review--col
+  .index-page .review-v-card-review--col
     padding-right 15px
   .lk-themes-edit-add--wrap .lk-themes--edit
     size(40px)
@@ -3006,8 +3058,6 @@
     margin 0 -15px
     .section-title
       margin-left 15px
-  .review-v-card-review--col
-    padding-right 0
   .reviews-page-list--video .review-v-card-review--col
     height 192px
   .reviews-page-list--video
@@ -3118,3 +3168,34 @@
     padding 0 40px
   .swiper-basket-complex-container
     padding-left 15px
+  .video-swiper-pagination
+    display flex
+    bottom 20px !important
+  .lanch-content-tabs .section-menu-content--item--mobile
+    width 100%
+  .basket-promo--item__name
+    text-align center
+    padding-left 0
+  .review-flex--buttons
+    flex-direction column
+  .review-show--more
+    margin-right 0
+    margin-bottom 16px !important
+  .reveiws-page .review-tab .main-button
+    margin-bottom 16px !important
+  .review-add--review
+    margin-bottom 0 !important
+  .required-input--info
+    line-height 0
+    position relative
+    bottom auto
+    margin-bottom 10px
+  .required-input--info.active
+    line-height 1.3
+  .footer-planwet--order__price
+    display none
+  .footer-planwet--order__button
+    width 100%
+    max-width 100%
+  .footer-planwet--order
+    height 60px

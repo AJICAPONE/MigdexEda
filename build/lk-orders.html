@@ -19,9 +19,6 @@
     <link rel="preload" href="static/fonts/Roboto-Black.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="static/fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="static/fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=&lt;5ff43003-e2a2-4431-8031-44e816cd9630&gt;&amp;lang=ru_RU"></script>
   </head>
   <body class="other-page lk-page lk-page-orders">
     <div class="wrapper">
@@ -66,7 +63,7 @@
                           <div class="header-mini-basket__right">
                             <div class="basket-product--count">
                               <div class="basket-product--minus">-</div>
-                              <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                              <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                               <div class="basket-product--plus">+</div>
                             </div>
                             <div class="header-mini-basket__right__attr">
@@ -87,7 +84,7 @@
                           <div class="header-mini-basket__right">
                             <div class="basket-product--count">
                               <div class="basket-product--minus">-</div>
-                              <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                              <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                               <div class="basket-product--plus">+</div>
                             </div>
                             <div class="header-mini-basket__right__attr">
@@ -140,7 +137,7 @@
                       <div class="main-button-transparent max-content">Заказать</div>
                       <div class="basket-product--count">
                         <div class="basket-product--minus">-</div>
-                        <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                        <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                         <div class="basket-product--plus">+</div>
                       </div>
                     </div>
@@ -181,7 +178,7 @@
                   </div>
                   <div class="product-basket-product--count">
                     <div class="product-basket-product--minus">-</div>
-                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                     <div class="product-basket-product--plus">+</div>
                   </div>
                 </div>
@@ -193,6 +190,10 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="footer-planwet--order footer-planwet--order--mob">
+          <div class="footer-planwet--order__price">Итого: 632 ₽</div>
+          <div class="footer-planwet--order__button">Оформить заказ</div>
         </div>
       </header>
       <div class="tablet-menu-sandwich">
@@ -212,41 +213,53 @@
               <div class="nav-sidebar-menu--item--wrap">
                 <div class="nav-sidebar-menu--item--title">Личный кабинет</div>
               </div>
-              <ul class="nav-sidebar-menu--list--depth2"><a class="nav-sidebar-menu--item--depth2" href="/">Личные данные</a><a class="nav-sidebar-menu--item--depth2" href="/">Адреса</a><a class="nav-sidebar-menu--item--depth2" href="/">Мои заказы</a><a class="nav-sidebar-menu--item--depth2" href="/">Подписка</a><a class="nav-sidebar-menu--item--depth2" href="/">Шаблоны</a></ul>
-            </li><a class="nav-sidebar-menu--item" href="/">
-              <div class="nav-sidebar-menu--item--wrap">
-                <div class="nav-sidebar-menu--item--title">О нас</div>
-              </div></a>
+              <ul class="nav-sidebar-menu--list--depth2">
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Личные данные</a></li>
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Адреса</a></li>
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Мои заказы</a></li>
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Подписка</a></li>
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Шаблоны</a></li>
+              </ul>
+            </li>
+            <li class="nav-sidebar-menu--item"><a href="/">
+                <div class="nav-sidebar-menu--item--wrap">
+                  <div class="nav-sidebar-menu--item--title">О нас</div>
+                </div></a></li>
             <li class="nav-sidebar-menu--item">
               <div class="nav-sidebar-menu--item--wrap">
                 <div class="nav-sidebar-menu--item--title">Меню</div>
               </div>
-              <ul class="nav-sidebar-menu--list--depth2"><a class="nav-sidebar-menu--item--depth2 nav-sidebar-menu--depth2--link" href="/">
-                  <div class="nav-sidebar-menu--item--depth2--icon">
-                    <svg class="icon icon-hinkal ">
-                      <use xlink:href="static/img/svg/symbol/sprite.svg#hinkal"></use>
-                    </svg>
-                  </div><span>Хинкали</span></a><a class="nav-sidebar-menu--item--depth2 nav-sidebar-menu--depth2--link" href="/">
-                  <div class="nav-sidebar-menu--item--depth2--icon">
-                    <svg class="icon icon-chebur ">
-                      <use xlink:href="static/img/svg/symbol/sprite.svg#chebur"></use>
-                    </svg>
-                  </div><span>Чебуреки</span></a><a class="nav-sidebar-menu--item--depth2 nav-sidebar-menu--depth2--link" href="/">
-                  <div class="nav-sidebar-menu--item--depth2--icon">
-                    <svg class="icon icon-manti ">
-                      <use xlink:href="static/img/svg/symbol/sprite.svg#manti"></use>
-                    </svg>
-                  </div><span>Манты</span></a><a class="nav-sidebar-menu--item--depth2 nav-sidebar-menu--depth2--link" href="/">
-                  <div class="nav-sidebar-menu--item--depth2--icon">
-                    <svg class="icon icon-hacha ">
-                      <use xlink:href="static/img/svg/symbol/sprite.svg#hacha"></use>
-                    </svg>
-                  </div><span>Хачапури</span></a><a class="nav-sidebar-menu--item--depth2 nav-sidebar-menu--depth2--link" href="/">
-                  <div class="nav-sidebar-menu--item--depth2--icon">
-                    <svg class="icon icon-samsa ">
-                      <use xlink:href="static/img/svg/symbol/sprite.svg#samsa"></use>
-                    </svg>
-                  </div><span>Самса</span></a>
+              <ul class="nav-sidebar-menu--list--depth2">
+                <li class="nav-sidebar-menu--item--depth2 nav-sidebar-menu--depth2--link"><a href="/">
+                    <div class="nav-sidebar-menu--item--depth2--icon">
+                      <svg class="icon icon-hinkal ">
+                        <use xlink:href="static/img/svg/symbol/sprite.svg#hinkal"></use>
+                      </svg>
+                    </div><span>Хинкали</span></a></li>
+                <li class="nav-sidebar-menu--item--depth2 nav-sidebar-menu--depth2--link"><a href="/">
+                    <div class="nav-sidebar-menu--item--depth2--icon">
+                      <svg class="icon icon-chebur ">
+                        <use xlink:href="static/img/svg/symbol/sprite.svg#chebur"></use>
+                      </svg>
+                    </div><span>Чебуреки</span></a></li>
+                <li class="nav-sidebar-menu--item--depth2 nav-sidebar-menu--depth2--link"><a href="/">
+                    <div class="nav-sidebar-menu--item--depth2--icon">
+                      <svg class="icon icon-manti ">
+                        <use xlink:href="static/img/svg/symbol/sprite.svg#manti"></use>
+                      </svg>
+                    </div><span>Манты</span></a></li>
+                <li class="nav-sidebar-menu--item--depth2 nav-sidebar-menu--depth2--link"><a href="/">
+                    <div class="nav-sidebar-menu--item--depth2--icon">
+                      <svg class="icon icon-hacha ">
+                        <use xlink:href="static/img/svg/symbol/sprite.svg#hacha"></use>
+                      </svg>
+                    </div><span>Хачапури</span></a></li>
+                <li class="nav-sidebar-menu--item--depth2 nav-sidebar-menu--depth2--link"><a href="/">
+                    <div class="nav-sidebar-menu--item--depth2--icon">
+                      <svg class="icon icon-samsa ">
+                        <use xlink:href="static/img/svg/symbol/sprite.svg#samsa"></use>
+                      </svg>
+                    </div><span>Самса</span></a></li>
                 <li class="nav-sidebar-menu--item--depth2">
                   <div class="nav-sidebar-menu--item--depth2--wrap">
                     <div class="nav-sidebar-menu--item--depth2--icon">
@@ -255,62 +268,110 @@
                       </svg>
                     </div><span>Пирог</span>
                   </div>
-                  <ul class="nav-sidebar-menu--list--depth3"><a class="nav-sidebar-menu--item--depth3" href="/">Осетинские пироги</a><a class="nav-sidebar-menu--item--depth3" href="/">Сванский кубдари</a><a class="nav-sidebar-menu--item--depth3" href="/">Хачапури на сковороде</a><a class="nav-sidebar-menu--item--depth3" href="/">Чепалгаш с картофелем</a><a class="nav-sidebar-menu--item--depth3" href="/">Хадурджин с фасолью</a></ul>
-                </li><a class="nav-sidebar-menu--item--depth2 nav-sidebar-menu--depth2--link" href="/">
-                  <div class="nav-sidebar-menu--item--depth2--icon">
-                    <svg class="icon icon-desert ">
-                      <use xlink:href="static/img/svg/symbol/sprite.svg#desert"></use>
-                    </svg>
-                  </div><span>Десерты</span></a><a class="nav-sidebar-menu--item--depth2 nav-sidebar-menu--depth2--link" href="/">
-                  <div class="nav-sidebar-menu--item--depth2--icon">
-                    <svg class="icon icon-zakus ">
-                      <use xlink:href="static/img/svg/symbol/sprite.svg#zakus"></use>
-                    </svg>
-                  </div><span>Закуски</span></a><a class="nav-sidebar-menu--item--depth2 nav-sidebar-menu--depth2--link" href="/">
-                  <div class="nav-sidebar-menu--item--depth2--icon">
-                    <svg class="icon icon-drinks ">
-                      <use xlink:href="static/img/svg/symbol/sprite.svg#drinks"></use>
-                    </svg>
-                  </div><span>Напитки</span></a>
+                  <ul class="nav-sidebar-menu--list--depth3">
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Осетинские пироги</a></li>
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Сванский кубдари</a></li>
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Хачапури на сковороде</a></li>
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Чепалгаш с картофелем</a></li>
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Хадурджин с фасолью</a></li>
+                  </ul>
+                </li>
+                <li class="nav-sidebar-menu--item--depth2 nav-sidebar-menu--depth2--link"><a href="/">
+                    <div class="nav-sidebar-menu--item--depth2--icon">
+                      <svg class="icon icon-desert ">
+                        <use xlink:href="static/img/svg/symbol/sprite.svg#desert"></use>
+                      </svg>
+                    </div><span>Десерты</span></a></li>
+                <li class="nav-sidebar-menu--item--depth2 nav-sidebar-menu--depth2--link"><a href="/">
+                    <div class="nav-sidebar-menu--item--depth2--icon">
+                      <svg class="icon icon-zakus ">
+                        <use xlink:href="static/img/svg/symbol/sprite.svg#zakus"></use>
+                      </svg>
+                    </div><span>Закуски</span></a></li>
+                <li class="nav-sidebar-menu--item--depth2 nav-sidebar-menu--depth2--link"><a href="/">
+                    <div class="nav-sidebar-menu--item--depth2--icon">
+                      <svg class="icon icon-drinks ">
+                        <use xlink:href="static/img/svg/symbol/sprite.svg#drinks"></use>
+                      </svg>
+                    </div><span>Напитки</span></a></li>
               </ul>
             </li>
             <li class="nav-sidebar-menu--item">
               <div class="nav-sidebar-menu--item--wrap">
                 <div class="nav-sidebar-menu--item--title">Доставка и оплата</div>
               </div>
-              <ul class="nav-sidebar-menu--list--depth2"><a class="nav-sidebar-menu--item--depth2" href="/">Рабочий стол</a><a class="nav-sidebar-menu--item--depth2" href="/">Обращения</a><a class="nav-sidebar-menu--item--depth2" href="/">Графики</a>
+              <ul class="nav-sidebar-menu--list--depth2">
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Рабочий стол</a></li>
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Обращения</a></li>
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Графики</a></li>
                 <li class="nav-sidebar-menu--item--depth2">
                   <div class="nav-sidebar-menu--item--depth2--wrap">
                     <div class="nav-sidebar-menu--item--title2">3</div>
                   </div>
-                  <ul class="nav-sidebar-menu--list--depth3"><a class="nav-sidebar-menu--item--depth3" href="/">Категории</a><a class="nav-sidebar-menu--item--depth3" href="/">Критичность</a><a class="nav-sidebar-menu--item--depth3" href="/">Статусы</a><a class="nav-sidebar-menu--item--depth3" href="/">Оценки ответов</a><a class="nav-sidebar-menu--item--depth3" href="/">Сложность</a><a class="nav-sidebar-menu--item--depth3" href="/">Быстрые ответы</a></ul>
-                </li><a class="nav-sidebar-menu--item--depth2" href="/">Уровни поддержки</a><a class="nav-sidebar-menu--item--depth2" href="/">Расписание</a><a class="nav-sidebar-menu--item--depth2" href="/">Группы</a>
+                  <ul class="nav-sidebar-menu--list--depth3">
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Категории</a></li>
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Критичность</a></li>
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Статусы</a></li>
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Оценки ответов</a></li>
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Сложность</a></li>
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Быстрые ответы</a></li>
+                  </ul>
+                </li>
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Уровни поддержки</a></li>
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Расписание</a></li>
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Группы</a></li>
               </ul>
             </li>
             <li class="nav-sidebar-menu--item">
               <div class="nav-sidebar-menu--item--wrap">
                 <div class="nav-sidebar-menu--item--title">Акции</div>
               </div>
-              <ul class="nav-sidebar-menu--list--depth2"><a class="nav-sidebar-menu--item--depth2" href="/">Рабочий стол</a><a class="nav-sidebar-menu--item--depth2" href="/">Обращения</a><a class="nav-sidebar-menu--item--depth2" href="/">Графики</a>
+              <ul class="nav-sidebar-menu--list--depth2">
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Рабочий стол</a></li>
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Обращения</a></li>
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Графики</a></li>
                 <li class="nav-sidebar-menu--item--depth2">
                   <div class="nav-sidebar-menu--item--depth2--wrap">
                     <div class="nav-sidebar-menu--item--title2">3</div>
                   </div>
-                  <ul class="nav-sidebar-menu--list--depth3"><a class="nav-sidebar-menu--item--depth3" href="/">Категории</a><a class="nav-sidebar-menu--item--depth3" href="/">Критичность</a><a class="nav-sidebar-menu--item--depth3" href="/">Статусы</a><a class="nav-sidebar-menu--item--depth3" href="/">Оценки ответов</a><a class="nav-sidebar-menu--item--depth3" href="/">Сложность</a><a class="nav-sidebar-menu--item--depth3" href="/">Быстрые ответы</a></ul>
-                </li><a class="nav-sidebar-menu--item--depth2" href="/">Уровни поддержки</a><a class="nav-sidebar-menu--item--depth2" href="/">Расписание</a><a class="nav-sidebar-menu--item--depth2" href="/">Группы</a>
+                  <ul class="nav-sidebar-menu--list--depth3">
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Категории</a></li>
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Критичность</a></li>
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Статусы</a></li>
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Оценки ответов</a></li>
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Сложность</a></li>
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Быстрые ответы</a></li>
+                  </ul>
+                </li>
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Уровни поддержки</a></li>
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Расписание</a></li>
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Группы</a></li>
               </ul>
             </li>
             <li class="nav-sidebar-menu--item">
               <div class="nav-sidebar-menu--item--wrap">
                 <div class="nav-sidebar-menu--item--title">Контакты</div>
               </div>
-              <ul class="nav-sidebar-menu--list--depth2"><a class="nav-sidebar-menu--item--depth2" href="/">Рабочий стол</a><a class="nav-sidebar-menu--item--depth2" href="/">Обращения</a><a class="nav-sidebar-menu--item--depth2" href="/">Графики</a>
+              <ul class="nav-sidebar-menu--list--depth2">
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Рабочий стол</a></li>
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Обращения</a></li>
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Графики</a></li>
                 <li class="nav-sidebar-menu--item--depth2">
                   <div class="nav-sidebar-menu--item--depth2--wrap">
                     <div class="nav-sidebar-menu--item--title2">3</div>
                   </div>
-                  <ul class="nav-sidebar-menu--list--depth3"><a class="nav-sidebar-menu--item--depth3" href="/">Категории</a><a class="nav-sidebar-menu--item--depth3" href="/">Критичность</a><a class="nav-sidebar-menu--item--depth3" href="/">Статусы</a><a class="nav-sidebar-menu--item--depth3" href="/">Оценки ответов</a><a class="nav-sidebar-menu--item--depth3" href="/">Сложность</a><a class="nav-sidebar-menu--item--depth3" href="/">Быстрые ответы</a></ul>
-                </li><a class="nav-sidebar-menu--item--depth2" href="/">Уровни поддержки</a><a class="nav-sidebar-menu--item--depth2" href="/">Расписание</a><a class="nav-sidebar-menu--item--depth2" href="/">Группы</a>
+                  <ul class="nav-sidebar-menu--list--depth3">
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Категории</a></li>
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Критичность</a></li>
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Статусы</a></li>
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Оценки ответов</a></li>
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Сложность</a></li>
+                    <li class="nav-sidebar-menu--item--depth3"><a href="/">Быстрые ответы</a></li>
+                  </ul>
+                </li>
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Уровни поддержки</a></li>
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Расписание</a></li>
+                <li class="nav-sidebar-menu--item--depth2"><a href="/">Группы</a></li>
               </ul>
             </li>
           </ul>
@@ -328,19 +389,24 @@
           </div>
         </div>
         <div class="tablet-menu--content">
-          <ul class="nav-sidebar-menu--list"><a class="nav-sidebar-menu--item" href="/">
-              <div class="nav-sidebar-menu--item--wrap">
-                <div class="nav-sidebar-menu--item--title">О нас</div>
-              </div></a><a class="nav-sidebar-menu--item" href="/">
-              <div class="nav-sidebar-menu--item--wrap">
-                <div class="nav-sidebar-menu--item--title">Доставка и оплата</div>
-              </div></a><a class="nav-sidebar-menu--item" href="/">
-              <div class="nav-sidebar-menu--item--wrap">
-                <div class="nav-sidebar-menu--item--title">Контакты</div>
-              </div></a><a class="nav-sidebar-menu--item" href="/">
-              <div class="nav-sidebar-menu--item--wrap">
-                <div class="nav-sidebar-menu--item--title">FAQ</div>
-              </div></a></ul>
+          <ul class="nav-sidebar-menu--list">
+            <li class="nav-sidebar-menu--item"><a href="/">
+                <div class="nav-sidebar-menu--item--wrap">
+                  <div class="nav-sidebar-menu--item--title">О нас</div>
+                </div></a></li>
+            <li class="nav-sidebar-menu--item"><a href="/">
+                <div class="nav-sidebar-menu--item--wrap">
+                  <div class="nav-sidebar-menu--item--title">Доставка и оплата</div>
+                </div></a></li>
+            <li class="nav-sidebar-menu--item"><a href="/">
+                <div class="nav-sidebar-menu--item--wrap">
+                  <div class="nav-sidebar-menu--item--title">Контакты</div>
+                </div></a></li>
+            <li class="nav-sidebar-menu--item"><a href="/">
+                <div class="nav-sidebar-menu--item--wrap">
+                  <div class="nav-sidebar-menu--item--title">FAQ</div>
+                </div></a></li>
+          </ul>
         </div>
       </div>
       <div class="close-mobile--popups"></div>
@@ -638,7 +704,7 @@
                                 <div class="footer-basket-lanch__right">
                                   <div class="basket-product--count">
                                     <div class="basket-product--minus">-</div>
-                                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                     <div class="basket-product--plus">+</div>
                                   </div>
                                   <div class="footer-basket-lanch__right__attr">
@@ -659,7 +725,7 @@
                                 <div class="footer-basket-lanch__right">
                                   <div class="basket-product--count">
                                     <div class="basket-product--minus">-</div>
-                                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                     <div class="basket-product--plus">+</div>
                                   </div>
                                   <div class="footer-basket-lanch__right__attr">
@@ -680,7 +746,7 @@
                                 <div class="footer-basket-lanch__right">
                                   <div class="basket-product--count">
                                     <div class="basket-product--minus">-</div>
-                                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                     <div class="basket-product--plus">+</div>
                                   </div>
                                   <div class="footer-basket-lanch__right__attr">
@@ -701,7 +767,7 @@
                                 <div class="footer-basket-lanch__right">
                                   <div class="basket-product--count">
                                     <div class="basket-product--minus">-</div>
-                                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                     <div class="basket-product--plus">+</div>
                                   </div>
                                   <div class="footer-basket-lanch__right__attr">
@@ -721,7 +787,7 @@
                       <div class="footer-basket-slider--right__bottom">
                         <div class="basket-product--count">
                           <div class="basket-product--minus">-</div>
-                          <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                          <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                           <div class="basket-product--plus">+</div>
                         </div>
                       </div>
@@ -741,7 +807,7 @@
                       <div class="footer-basket-slider--right__bottom">
                         <div class="basket-product--count">
                           <div class="basket-product--minus">-</div>
-                          <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                          <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                           <div class="basket-product--plus">+</div>
                         </div>
                       </div>
@@ -761,7 +827,7 @@
                       <div class="footer-basket-slider--right__bottom">
                         <div class="basket-product--count">
                           <div class="basket-product--minus">-</div>
-                          <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                          <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                           <div class="basket-product--plus">+</div>
                         </div>
                       </div>
@@ -781,7 +847,7 @@
                       <div class="footer-basket-slider--right__bottom">
                         <div class="basket-product--count">
                           <div class="basket-product--minus">-</div>
-                          <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                          <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                           <div class="basket-product--plus">+</div>
                         </div>
                       </div>
@@ -812,7 +878,7 @@
                                 <div class="footer-basket-lanch__right">
                                   <div class="basket-product--count">
                                     <div class="basket-product--minus">-</div>
-                                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                     <div class="basket-product--plus">+</div>
                                   </div>
                                   <div class="footer-basket-lanch__right__attr">
@@ -833,7 +899,7 @@
                                 <div class="footer-basket-lanch__right">
                                   <div class="basket-product--count">
                                     <div class="basket-product--minus">-</div>
-                                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                     <div class="basket-product--plus">+</div>
                                   </div>
                                   <div class="footer-basket-lanch__right__attr">
@@ -854,7 +920,7 @@
                                 <div class="footer-basket-lanch__right">
                                   <div class="basket-product--count">
                                     <div class="basket-product--minus">-</div>
-                                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                     <div class="basket-product--plus">+</div>
                                   </div>
                                   <div class="footer-basket-lanch__right__attr">
@@ -875,7 +941,7 @@
                                 <div class="footer-basket-lanch__right">
                                   <div class="basket-product--count">
                                     <div class="basket-product--minus">-</div>
-                                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                                     <div class="basket-product--plus">+</div>
                                   </div>
                                   <div class="footer-basket-lanch__right__attr">
@@ -895,7 +961,7 @@
                       <div class="footer-basket-slider--right__bottom">
                         <div class="basket-product--count">
                           <div class="basket-product--minus">-</div>
-                          <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                          <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                           <div class="basket-product--plus">+</div>
                         </div>
                       </div>
@@ -915,7 +981,7 @@
                       <div class="footer-basket-slider--right__bottom">
                         <div class="basket-product--count">
                           <div class="basket-product--minus">-</div>
-                          <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                          <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                           <div class="basket-product--plus">+</div>
                         </div>
                       </div>
@@ -951,7 +1017,7 @@
               <div class="main-button-transparent max-content bg-color-orange">Заказать ~ 537 ₽</div>
               <div class="basket-product--count footer-lanch--count">
                 <div class="basket-product--minus">-</div>
-                <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                 <div class="basket-product--plus">+</div>
               </div>
             </div>
@@ -959,6 +1025,10 @@
             <div class="card-content-added-one-click main-button-transparent">Создать шаблон</div>
           </div>
         </div>
+      </div>
+      <div class="footer-planwet--order footer-planwet--order--plan">
+        <div class="footer-planwet--order__price">Итого: 632 ₽</div>
+        <div class="footer-planwet--order__button">Оформить заказ</div>
       </div>
       <footer class="pt-100">
         <div class="footer-top" style="background-image:url('/static/img/general/ban/bgbaner.jpg');">
@@ -1141,8 +1211,8 @@
         </div>
       </footer>
       <div class="popups">
-        <div class="modal fade" id="popup-auth" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <form class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal fade" id="popup-auth" tabindex="-1" role="dialog" aria-hidden="true">
+          <form class="modal-dialog modal-dialog-centered">
             <div class="modal-content popup-content">
               <div class="popup-header modal-header pb-0">
                 <div class="popup-header--close__wrap">
@@ -1166,13 +1236,29 @@
               </div>
               <div class="popup-footer modal-footer">
                 <button class="main-button w-170 m-0-auto mb-30" type="submit">Войти</button>
-                <div class="popup-not-reg">Еще нет аккаунта?<span data-dismiss="modal" data-toggle="modal" data-target="#popup-reg">Зарегистрируйтесь!</span></div>
+                <div class="popup-not-reg mb-30">Еще нет аккаунта?<span data-dismiss="modal" data-toggle="modal" data-target="#popup-reg">Зарегистрируйтесь!</span></div>
+                <div class="popup-login--social">
+                  <div class="popup-login--title">Или войдите через другой аккаунт:</div>
+                  <div class="popup-login--list"><a class="popup-login--item2" href="/">
+                      <svg class="icon icon-social-fb ">
+                        <use xlink:href="static/img/svg/symbol/sprite.svg#social-fb"></use>
+                      </svg></a><a class="popup-login--item2" href="/">
+                      <svg class="icon icon-social-inst ">
+                        <use xlink:href="static/img/svg/symbol/sprite.svg#social-inst"></use>
+                      </svg></a><a class="popup-login--item2" href="/">
+                      <svg class="icon icon-social-twit ">
+                        <use xlink:href="static/img/svg/symbol/sprite.svg#social-twit"></use>
+                      </svg></a><a class="popup-login--item2" href="/">
+                      <svg class="icon icon-social-whats ">
+                        <use xlink:href="static/img/svg/symbol/sprite.svg#social-whats"></use>
+                      </svg></a></div>
+                </div>
               </div>
             </div>
           </form>
         </div>
-        <div class="modal fade" id="popup-reg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <form class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal fade" id="popup-reg" tabindex="-1" role="dialog" aria-hidden="true">
+          <form class="modal-dialog modal-dialog-centered">
             <div class="modal-content popup-content">
               <div class="popup-header modal-header pb-0">
                 <div class="popup-header--close__wrap">
@@ -1229,8 +1315,8 @@
             </div>
           </form>
         </div>
-        <div class="modal fade" id="popup-code" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <form class="modal-dialog modal-dialog-centered mw-430" role="document">
+        <div class="modal fade" id="popup-code" tabindex="-1" role="dialog" aria-hidden="true">
+          <form class="modal-dialog modal-dialog-centered mw-430">
             <div class="modal-content popup-content">
               <div class="popup-header modal-header pb-0">
                 <div class="popup-header--close__wrap">
@@ -1258,8 +1344,8 @@
             </div>
           </form>
         </div>
-        <div class="modal fade" id="popup-callback" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <form class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal fade" id="popup-callback" tabindex="-1" role="dialog" aria-hidden="true">
+          <form class="modal-dialog modal-dialog-centered">
             <div class="modal-content popup-content">
               <div class="popup-header modal-header pb-0">
                 <div class="popup-header--close__wrap">
@@ -1287,8 +1373,8 @@
             </div>
           </form>
         </div>
-        <div class="modal fade" id="popup-add-review" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <form class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal fade" id="popup-add-review" tabindex="-1" role="dialog" aria-hidden="true">
+          <form class="modal-dialog modal-dialog-centered">
             <div class="modal-content popup-content">
               <div class="popup-header modal-header pb-0">
                 <div class="popup-header--close__wrap">
@@ -1299,7 +1385,7 @@
                   </div>
                 </div>
                 <div class="popup-header--title">Оставьте отзыв</div>
-                <div class="popup-header--desc text-center">Помогите нам сделать сервис удобнее, для нас важен каждый комментарий!</div>
+                <div class="popup-header--desc p-0-40">Помогите нам сделать сервис удобнее, для нас важен каждый комментарий!</div>
               </div>
               <div class="popup-body modal-body p-40-70">
                 <div class="popup-input--wrapper">
@@ -1318,8 +1404,8 @@
             </div>
           </form>
         </div>
-        <div class="modal fade" id="popup-call-sub" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal fade" id="popup-call-sub" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content popup-content">
               <div class="popup-header modal-header pb-0">
                 <div class="popup-svg-icon">
@@ -1335,8 +1421,8 @@
             </div>
           </div>
         </div>
-        <div class="modal fade" id="popup-call-sub2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal fade" id="popup-call-sub2" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content popup-content">
               <div class="popup-header modal-header pb-0">
                 <div class="popup-svg-icon">
@@ -1355,8 +1441,8 @@
             </div>
           </div>
         </div>
-        <div class="modal fade" id="popup-call-error" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal fade" id="popup-call-error" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content popup-content">
               <div class="popup-header modal-header pb-0">
                 <div class="popup-svg-icon">
@@ -1372,6 +1458,53 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="modal fade" id="popup-code-order" tabindex="-1" role="dialog" aria-hidden="true">
+          <form class="modal-dialog modal-dialog-centered mw-430">
+            <div class="modal-content popup-content">
+              <div class="popup-header modal-header pb-0">
+                <div class="popup-header--close__wrap">
+                  <div class="popup-header--close popup-close-modal2" data-dismiss="modal">
+                    <svg class="icon icon-close2 ">
+                      <use xlink:href="static/img/svg/symbol/sprite.svg#close2"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="popup-header--title mb-10">Код подтвердения</div>
+                <div class="popup-header--desc d-flex flex-column align-items-center">На номер 8 (999) 123 45 67 был выслан код.<span>Введите код ниже:</span></div>
+              </div>
+              <div class="popup-body modal-body p-40-70">
+                <div class="popop-code--wrap code-auth--wrap">
+                  <input class="popup-input code-auth" type="text" name="digit" data-mask="0" placeholder="_">
+                  <input class="popup-input code-auth" type="text" name="digit" data-mask="0" placeholder="_">
+                  <input class="popup-input code-auth" type="text" name="digit" data-mask="0" placeholder="_">
+                  <input class="popup-input code-auth" type="text" name="digit" data-mask="0" placeholder="_">
+                </div>
+              </div>
+              <div class="popup-footer modal-footer pt-0">
+                <div class="popup-send--again">Отправить повторно</div>
+                <button class="main-button w-230 m-0-auto mb-30" data-dismiss="modal" data-toggle="modal" data-target="#popup-code-submit">Подтвердить</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal fade" id="popup-code-submit" tabindex="-1" role="dialog" aria-hidden="true">
+          <form class="modal-dialog modal-dialog-centered mw-430">
+            <div class="modal-content popup-content">
+              <div class="popup-header modal-header pb-0 mb-40">
+                <div class="popup-header--close__wrap">
+                  <div class="popup-header--close popup-close-modal2" data-dismiss="modal">
+                    <svg class="icon icon-close2 ">
+                      <use xlink:href="static/img/svg/symbol/sprite.svg#close2"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="popup-header--title mb-10">Вам отправлено письмо</div>
+                <div class="popup-header--desc d-flex flex-column align-items-center">На почту Trofimov@gmail.com было<span>отправлено письмо для подтверждения.</span></div>
+              </div>
+              <button class="main-button w-170 m-0-auto mb-30 popup-close-modal2" data-dismiss="modal">Ок</button>
+            </div>
+          </form>
         </div>
       </div>
       <div class="popups-mobile">
@@ -1393,6 +1526,22 @@
           <div class="popup-footer modal-footer">
             <button class="main-button w-170 m-0-auto mb-30" type="submit">Войти</button>
             <div class="popup-not-reg">Еще нет аккаунта?<span data-custom-dismiss="modal" data-custom-modal="#custom-mobile-reg">Зарегистрируйтесь!</span></div>
+            <div class="popup-login--social">
+              <div class="popup-login--title">Или войдите через другой аккаунт:</div>
+              <div class="popup-login--list"><a class="popup-login--item2" href="/">
+                  <svg class="icon icon-social-fb ">
+                    <use xlink:href="static/img/svg/symbol/sprite.svg#social-fb"></use>
+                  </svg></a><a class="popup-login--item2" href="/">
+                  <svg class="icon icon-social-inst ">
+                    <use xlink:href="static/img/svg/symbol/sprite.svg#social-inst"></use>
+                  </svg></a><a class="popup-login--item2" href="/">
+                  <svg class="icon icon-social-twit ">
+                    <use xlink:href="static/img/svg/symbol/sprite.svg#social-twit"></use>
+                  </svg></a><a class="popup-login--item2" href="/">
+                  <svg class="icon icon-social-whats ">
+                    <use xlink:href="static/img/svg/symbol/sprite.svg#social-whats"></use>
+                  </svg></a></div>
+            </div>
           </div>
         </form>
         <div class="popup-mobile-added" id="custom-mobile-reg">
@@ -1539,7 +1688,7 @@
                   <div class="mobile-mini-basket--name">Хинкали из баранины</div>
                   <div class="basket-product--count">
                     <div class="basket-product--minus">-</div>
-                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                     <div class="basket-product--plus">+</div>
                   </div>
                 </div>
@@ -1549,7 +1698,7 @@
                   <div class="mobile-mini-basket--name">Хинкали из баранины</div>
                   <div class="basket-product--count">
                     <div class="basket-product--minus">-</div>
-                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                     <div class="basket-product--plus">+</div>
                   </div>
                 </div>
@@ -1559,7 +1708,7 @@
                   <div class="mobile-mini-basket--name">Хинкали из баранины</div>
                   <div class="basket-product--count">
                     <div class="basket-product--minus">-</div>
-                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                     <div class="basket-product--plus">+</div>
                   </div>
                 </div>
@@ -1575,7 +1724,7 @@
               </div>
               <div class="basket-product--count">
                 <div class="basket-product--minus">-</div>
-                <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                 <div class="basket-product--plus">+</div>
               </div>
             </div>
@@ -1603,7 +1752,7 @@
                     </div>
                     <div class="basket-product--count">
                       <div class="basket-product--minus">-</div>
-                      <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                      <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                       <div class="basket-product--plus">+</div>
                     </div>
                   </div>
@@ -1614,7 +1763,7 @@
                       <div class="mobile-mini-basket--name">Хинкали из баранины</div>
                       <div class="basket-product--count">
                         <div class="basket-product--minus">-</div>
-                        <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                        <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                         <div class="basket-product--plus">+</div>
                       </div>
                       <div class="mobile-lanch-basket--comp--delete">
@@ -1629,7 +1778,7 @@
                       <div class="mobile-mini-basket--name">Хинкали из баранины</div>
                       <div class="basket-product--count">
                         <div class="basket-product--minus">-</div>
-                        <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                        <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                         <div class="basket-product--plus">+</div>
                       </div>
                       <div class="mobile-lanch-basket--comp--delete">
@@ -1646,7 +1795,7 @@
                   <div class="mobile-mini-basket--name">Хинкали из баранины</div>
                   <div class="basket-product--count">
                     <div class="basket-product--minus">-</div>
-                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                     <div class="basket-product--plus">+</div>
                   </div>
                 </div>
@@ -1656,7 +1805,7 @@
                   <div class="mobile-mini-basket--name">Хинкали из баранины</div>
                   <div class="basket-product--count">
                     <div class="basket-product--minus">-</div>
-                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                     <div class="basket-product--plus">+</div>
                   </div>
                 </div>
@@ -1666,7 +1815,7 @@
                   <div class="mobile-mini-basket--name">Хинкали из баранины</div>
                   <div class="basket-product--count">
                     <div class="basket-product--minus">-</div>
-                    <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                    <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                     <div class="basket-product--plus">+</div>
                   </div>
                 </div>
@@ -1682,7 +1831,7 @@
               </div>
               <div class="basket-product--count">
                 <div class="basket-product--minus">-</div>
-                <input class="basket-product--input" type="text" value="1" min="1" readonly>
+                <input class="basket-product--input" type="text" value="1" data-min="1" readonly>
                 <div class="basket-product--plus">+</div>
               </div>
             </div>
@@ -1693,7 +1842,7 @@
           <div class="popup-header modal-header pb-0">
             <div class="popup-mobile-line--close"></div>
             <div class="popup-header--title">Оставьте отзыв</div>
-            <div class="popup-header--desc">Помогите нам сделать сервис удобнее, для нас важен каждый комментарий!</div>
+            <div class="popup-header--desc text-center">Помогите нам сделать сервис удобнее, для нас важен каждый комментарий!</div>
           </div>
           <div class="popup-body modal-body p-4 pb-0">
             <div class="popup-input--wrapper">
@@ -1777,20 +1926,90 @@
             <div class="popup-reset-filter">Сбросить фильтр</div>
           </div>
         </div>
+        <div class="popup-mobile-added" id="custom-mobile-code--order">
+          <div class="popup-header modal-header pb-0">
+            <div class="popup-mobile-line--close"></div>
+            <div class="popup-header--title mb-10">Код подтвердения</div>
+            <div class="popup-header--desc--mobile--wrap">
+              <div class="popup-header--desc--mobile">На номер <span>8 (999) 123 45 67</span> был выслан код. Введите код ниже:</div>
+            </div>
+          </div>
+          <div class="popup-body modal-body p-40-70">
+            <div class="popop-code--wrap code-auth--wrap">
+              <input class="popup-input code-auth" type="text" name="digit" data-mask="0" placeholder="_">
+              <input class="popup-input code-auth" type="text" name="digit" data-mask="0" placeholder="_">
+              <input class="popup-input code-auth" type="text" name="digit" data-mask="0" placeholder="_">
+              <input class="popup-input code-auth" type="text" name="digit" data-mask="0" placeholder="_">
+            </div>
+          </div>
+          <div class="popup-footer modal-footer pt-0">
+            <div class="popup-send--again">Отправить повторно</div>
+            <button class="main-button w-230 m-0-auto mb-30" data-custom-dismiss="modal" data-custom-modal="#custom-mobile-code--submit">Подтвердить</button>
+          </div>
+        </div>
+        <div class="popup-mobile-added" id="custom-mobile-code--submit">
+          <div class="popup-header modal-header pb-0 mb-30">
+            <div class="popup-mobile-line--close"></div>
+            <div class="popup-header--title mb-10">Вам отправлено письмо</div>
+            <div class="popup-header--desc--mobile--wrap">
+              <div class="popup-header--desc--mobile">На почту <span>Trofimov@gmail.com</span> было отправлено письмо для подтверждения.</div>
+            </div>
+          </div>
+          <button class="main-button w-230 m-0-auto mb-30" data-custom-close="modal">Ок</button>
+        </div>
       </div>
     </div>
-    <script src="static/js/jquery.min.js"></script>
-    <script src="static/js/libs.min.js"></script>
-    <script src="static/js/main.js"></script>
-    <script src="static/js/sliders.js"></script>
-    <script src="static/js/jquery.hoverIntent.min.js"></script>
-    <script src="static/js/jquery.simplePagination.js"></script>
-    <script src="static/js/datepicker.ru-RU.js"></script>
-    <script src="static/js/jquery-ui.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
-    <script src="static/js/jquery.animateNumber.js"></script>
     <script>
-      ymaps.ready(function () {
+      setTimeout(function () {
+      	var elem0 = document.createElement('script');
+      	elem0.type = 'text/javascript';
+      	elem0.src = 'static/js/jquery.min.js';
+      	document.getElementsByTagName('body')[0].appendChild(elem0);
+      }, 1700);
+      setTimeout(function () {
+      	var elem1 = document.createElement('script');
+      	elem1.type = 'text/javascript';
+      	elem1.src = 'static/js/libs.min.js';
+      	document.getElementsByTagName('body')[0].appendChild(elem1);
+      }, 1800);
+      setTimeout(function () {
+      	var elem2 = document.createElement('script');
+      	elem2.type = 'text/javascript';
+      	elem2.src = 'static/js/main.js';
+      	document.getElementsByTagName('body')[0].appendChild(elem2);
+      }, 1900);
+      setTimeout(function () {
+      	var elem3 = document.createElement('script');
+      	elem3.type = 'text/javascript';
+      	elem3.src = 'static/js/sliders.js';
+      	document.getElementsByTagName('body')[0].appendChild(elem3);
+      }, 1900);
+      setTimeout(function () {
+      	var elem4 = document.createElement('script');
+      	elem4.type = 'text/javascript';
+      	elem4.src = 'static/js/jquery.hoverIntent.min.js';
+      	document.getElementsByTagName('body')[0].appendChild(elem4);
+      }, 1900);
+      setTimeout(function () {
+      	var elem5 = document.createElement('script');
+      	elem5.type = 'text/javascript';
+      	elem5.src = 'static/js/datepicker.ru-RU.js';
+      	document.getElementsByTagName('body')[0].appendChild(elem5);
+      }, 1900);
+      setTimeout(function () {
+      	var elem6 = document.createElement('script');
+      	elem6.type = 'text/javascript';
+      	elem6.src = 'static/js/jquery.animateNumber.js';
+      	document.getElementsByTagName('body')[0].appendChild(elem6);
+      }, 1900);
+      
+      setTimeout(function () {
+      	var elem = document.createElement('script');
+      	elem.type = 'text/javascript';
+      	elem.src = 'https://api-maps.yandex.ru/2.1/?apikey=<5ff43003-e2a2-4431-8031-44e816cd9630>&lang=ru_RU&onload=getYaMap';
+      	document.getElementsByTagName('body')[0].appendChild(elem);
+      }, 2000);
+      function getYaMap(){
       	var myMap = new ymaps.Map('map', {
       				center: [55.751574, 37.573856],
       				zoom: 9
@@ -1842,8 +2061,7 @@
       
       	myMap.geoObjects
       			.add(myPlacemark);
-      
-      });
+      }
       
     </script>
   </body>
